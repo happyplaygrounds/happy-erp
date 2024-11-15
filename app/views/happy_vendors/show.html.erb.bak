@@ -1,0 +1,19 @@
+<!-- <%#= link_to 'Home', root_path %> -->
+
+<div class="container">
+  <h2>Happy Vendor - <%= @happyvendor.vendor_name %></h2>
+  <br>
+  <div class="row">
+    <div class="col-sm-2">
+      Vendor Number: <%= @happyvendor.id %>
+    </div>
+    <div class="col-sm">
+      Name: <%= @happyvendor.vendor_name %>
+    </div>
+    <div class="col-sm">
+      Email: <%= @happyvendor.email %>
+    </div>
+  </div>
+<%= link_to 'Back', {:action => 'index'} %>
+</div>
+

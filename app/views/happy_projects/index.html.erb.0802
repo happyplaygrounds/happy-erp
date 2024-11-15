@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="card">
+  <div class="card-body">
+    <h2 class='card-title d-flex justify-content-between mb-4'>
+      <h2>Happy  Projects</h2>
+      <%#= link_to 'New Project', new_project_path, class: 'btn btn-primary' %>
+    </h2>
+
+    <% @happyProjects.each do |project| %>
+      <%= link_to project, class: 'text-decoration-none' do %>
+        <div class="card project-card mb-3">
+          <div class="card-body">
+            <div class="mb-3">
+              <span class="badge badge-<%#= project.badge_color %>">
+                <%#= project.status %>
+              </span>
+              <span class='text-secondary'>
+                <medium>
+                  <%= project.percent_complete %>% complete
+                  (<%= project.total_complete %>/<%= project.total_tasks %> tasks)
+                </medium>
+              </span>
+            </div>
+            <h5 class='card-title text-dark'><b>Project: </b><%= project.project_name %></h5>
+            <p class='text-secondary'><b>Description: </b><%= project.description %> <b>Planned start date: </b><%= project.planned_start_date %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+</div>
+

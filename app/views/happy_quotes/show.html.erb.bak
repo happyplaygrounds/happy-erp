@@ -1,0 +1,20 @@
+<!-- <%= link_to 'Home', root_path %> -->
+
+<div class="container">
+  <h2>Happy Quote - <%= @happyquote.id %></h2>
+  <br>
+  <div class="row">
+    <div class="col-sm-3">
+      <h1>Test</h1>
+      Customer Number: <%= @happyquote.happy_customer.id %>
+    </div>
+    <div class="col-sm-5">
+      Name: <%= @happyquote.happy_customer.customer_name %>
+    </div>
+    <div class="col-sm-4">
+      Email: <%= @happyquote.email %>
+    </div>
+  </div>
+<%#= link_to 'Back', {:action => 'index'} %>
+<%= link_to 'Back', happy_quotes_path(:customer_id => @happyquote.happy_customer_id, :customer_name => @happyquote.happy_customer.customer_name) %>
+</div>

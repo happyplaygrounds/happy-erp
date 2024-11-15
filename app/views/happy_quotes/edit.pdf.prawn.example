@@ -1,0 +1,41 @@
+
+# edit.pdf.prawn
+
+prawn_document do |pdf|
+
+10.times do
+        pdf.start_new_page
+    end
+
+    pdf.repeat :all do
+        pdf.move_down 50
+        pdf.pad(20) { pdf.text "This padded both before and after" }
+        pdf.pad(20) { pdf.text "This is an awesome page" }
+
+        # header
+        pdf.bounding_box [pdf.bounds.left, pdf.bounds.top], :width  => pdf.bounds.width do
+            pdf.font "Helvetica"
+            pdf.text "Here's My Fancy Header", :align => :center, :size => 25
+            pdf.stroke_horizontal_rule
+        end
+
+        # footer
+        pdf.bounding_box [pdf.bounds.left, pdf.bounds.bottom + 25], :width  => pdf.bounds.width do
+            pdf.font "Helvetica"
+            pdf.stroke_horizontal_rule
+            pdf.move_down(5)
+            pdf.text "And here's a sexy footer", :size => 16
+        end
+    end
+
+    string = "page <page> of <total>"
+    # Green page numbers 1 to 11
+    options = { :at => [pdf.bounds.right - 150, 0],
+     :width => 150,
+     :align => :right,
+     :page_filter => (1..11),
+     :start_count_at => 1,
+     :color => "007700" }
+    pdf.number_pages string, options
+end
+

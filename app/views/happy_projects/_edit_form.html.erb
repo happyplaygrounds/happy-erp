@@ -1,0 +1,155 @@
+<div class="container mb-5">
+  <h2>Happy Projects</h2>
+  <br>
+
+  <%#= link_to 'Home', root_path %>
+
+<%= simple_form_for @happyProject,
+  wrapper: :vertical_form,
+  wrapper_mappings: {
+    boolean:       :vertical_boolean,
+    check_boxes:   :vertical_collection,
+    date:          :vertical_multi_select,
+    datetime:      :vertical_multi_select,
+    file:          :vertical_file,
+    radio_buttons: :vertical_collection,
+    range:         :vertical_range,
+    time:          :vertical_multi_select
+  } do |f| %>
+
+  <%= f.error_notification %>
+
+  
+
+  <div class='header'>
+
+  <div class="form-group row">
+    <div class="col-3">
+        <%= f.input :project_name,  input_html: { size:20 } %>
+    </div>
+    <div class="col-9">
+        <%= f.input :description, input_html: { size:40 } %>
+    </div>
+  </div>
+
+
+
+  <div class="form-group row">
+    <div class="col-4">
+        <%= f.input :site_contact_name,  input_html: {size:20 } %>
+    </div>
+    <div class="col-4">
+        <%#= f.input :project_type, label: false, placeholder:  "Project type" %>
+        <%= f.input :project_type, collection: [['General Contractor','General Contractor'], ['Happy GC','Happy GC']] %>
+    </div>
+
+    <!-- <div class="col-4">
+        <%#= f.input :first_name, label: false, placeholder:  "First Name", input_html: { maxlength: 20, size:30 } %>
+    </div>
+    -->
+
+    <!-- <div class="col-4">
+        <%#= f.input :last_name, label: false, placeholder:  "Last Name" %>
+    </div> -->
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-4">
+      <%= f.input :site_contact_phone %>
+    </div>
+
+    <div class="col-4">
+      <%= f.input :site_contact_email %>
+    </div>
+
+    <div class="col-4">
+      <%= f.input :general_contractor %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-6">
+       <% if f.object.planned_start_date %>
+        <%= f.input :planned_start_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true %>
+      <% else %>
+        <%= f.input :planned_start_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true, selected: 0  %>
+      <% end %>
+    </div>
+    <div class="col-6">
+      <% if f.object.planned_end_date %>
+        <%= f.input :planned_end_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true %>
+      <% else %>
+        <%= f.input :planned_end_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true, selected: 0  %>
+      <% end %>
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-6">
+      <% if f.object.actual_start_date %>
+        <%= f.input :actual_start_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true %>
+      <% else %>
+        <%= f.input :actual_start_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true, selected: 0  %>
+      <% end %>
+    </div>
+    <div class="col-6">
+        <% if f.object.actual_end_date %>
+        <%= f.input :actual_end_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true %>
+      <% else %>
+        <%= f.input :actual_end_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true, selected: 0  %>
+      <% end %>
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-6">
+        <%= f.input :planned_budget %>
+    </div>
+    <div class="col-6">
+        <%= f.input :actual_budget %>
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-6">
+      <%= f.input :external_notes %>
+    </div>
+
+    <div class="col-6">
+      <%= f.input :internal_notes %>
+    </div>
+  </div>
+
+  <!-- <div class="form-group row">
+    <div class="col-md-6">
+      <%= f.input :reminder_date  %>
+    </div>
+    <div class="col-md-3">
+      <%= f.label :"send reminder" %><br />
+      <%= f.input :is_reminder, class: 'form-control' %>
+    </div>
+  </div> -->
+
+  </div>
+
+
+  <h3>Project Tasks - <%= link_to 'Click to Add a Happy Standard Process', happy_standard_processes_path(project_id: @happyProject.id, project_name: @happyProject.project_name) %></h3>
+
+  <div id='tasks'>
+    <%= f.simple_fields_for :happy_project_tasks do |line| %>
+              <%= render 'happy_project_task_fields', :f => line %>
+          <% end %>
+    <div class='links'>
+      <%= link_to_add_association 'add task', f, :happy_project_tasks %>
+    </div>
+  </div>
+      <%#= f.button :submit, class: "btn-primary" %>
+      <%= f.submit 'Save', id: "saveit", class: "btn-primary" %>
+      <%= link_to "Cancel", :back, class: "btn btn-outline-secondary" %>
+<% end %>
+</div>
+

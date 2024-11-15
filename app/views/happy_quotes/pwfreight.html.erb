@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>PlayWorld Frieght Form</h2>
+     <%= simple_form_for :submit, url: happy_quote_pwfreight_path(params[:happy_quote_id], vendor_id: 2, format: "pdf"), method: "GET" do |f| %>
+       <div class="row">
+         <div class="form-group row mb-0">
+          <%= f.input :customer_type, as: :radio_buttons,
+              collection: [['Residential', 'Residential'], ['Business', 'Business'],
+                       ['School', 'School'], ['Church', 'Church']],
+          label: false %>
+          </div>
+       </div>
+       <div class="row">
+           <div class="col-sm-9">
+            <%= f.submit 'Submit Freight Form', class: "btn-primary" %>
+            <%= link_to "Cancel", :back, class: "btn btn-outline-secondary" %>
+          </div>
+       </div>
+     <% end %>
+  <br>
+</div>
+

@@ -1,0 +1,155 @@
+<%#= debug @happyquote %>
+<%#= debug @happycustomer %>
+<div class="content">
+<%= simple_form_for @happyquote do |f| %>
+  <%= f.error_notification %>
+  <%#= f.association :happy_customer %>
+  <div class='header' data-controller='newquoteheader'>
+  <h3> Create a Quote Header</h3>
+
+  <div class="row">
+    <!-- <div class="col-md-2 align-self-center">
+      <h5>Quote Number: <%#= @happyquote.id %></h5>
+      <%#= f.input :number %>
+    </div> -->
+    <div class="col-md-4 align-self-center">
+      <h5>Customer: <%= link_to @happycustomer.customer_name, {controller: "happy_customers", action: "edit", id: @happycustomer.id } %></h5> 
+      <%= f.input :happy_customer_id, :as => :hidden, :input_html => { :value => @happycustomer.id } %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :terms, collection: [['Due on Receipt','Due on Receipt'], ['Net 30 days','Net 30 days']] %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :fob, collection: [['Company Truck','Company Truck'], ['LTL Carrier', 'LTL Carrier']] %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4 mx-auto">
+      <%= f.input :quote_date %>
+      <%#= f.input :quote_date, label: "Quote Date", as: :string, start_year: Time.now.year - 90, end_year: Time.now.year - 8, order: [:day, :month, :year] %>
+    </div>
+    <div class="col-4 mx-auto">
+      <%= f.input :estimated_delivery_date %>
+    </div>
+    <div class="col-4 mx-auto">
+      <%= f.input :email,  input_html: { autocomplete: 'email' }%>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-3">
+      <h4>Shipping Address</h4>
+    </div>
+    <div class="col-3">
+      <%= f.input :shipaddress_same_billaddress, label: "Same as Billing Address", :as => :boolean, input_html: { data: {target: 'newquoteheader.ship_same_bill', action: 'newquoteheader#toggleAddress' }} %>
+    </div>
+    <div class="col-6">
+        <h4>Billing Address</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <%= f.input :shipping_street1, label: false, placeholder: 'Street 1', input_html: { data: { target: 'newquoteheader.shipping_street1' } } %>
+    </div>
+    <div class="col-6 align-self-center">
+      <%= f.input :mailing_street1, label: false, input_html: { data: { target: 'newquoteheader.mailing_street1' }, value:  @happycustomer.mailing_street1, readonly: true,tabindex: -1} %>
+      <!-- <h4><%#= @happycustomer.mailing_street1 %></h4> -->
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <%= f.input :shipping_street2, label: false, placeholder: 'Street 2',  input_html: { data: { target: 'newquoteheader.shipping_street2' } } %>
+    </div>
+    <div class="col-6 align-self-top">
+      <%= f.input :mailing_street2, label: false, input_html: { data: { target: 'newquoteheader.mailing_street2' },value:  @happycustomer.mailing_street2, readonly: true,tabindex: -1} %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-3">
+      <%= f.input :shipping_city, label: false, placeholder: 'City', input_html: { data: { target: 'newquoteheader.shipping_city' } } %>
+    </div>
+    <div class="col-1">
+      <%= f.input :shipping_state, label: false, placeholder: 'State', input_html: { data: { target: 'newquoteheader.shipping_state' } }  %>
+    </div>
+    <div class="col-2">
+      <%= f.input :shipping_zipcode, label: false, placeholder: 'Zip Code', input_html: { data: { target: 'newquoteheader.shipping_zipcode' } }  %>
+    </div>
+    <div class="col-3">
+      <%= f.input :mailing_city, label: false, input_html: { data: { target: 'newquoteheader.mailing_city' }, value:  @happycustomer.mailing_city, readonly: true,tabindex: -1} %>
+    </div>
+    <div class="col-1">
+      <%= f.input :mailing_state, label: false, input_html: { data: { target: 'newquoteheader.mailing_state' },value:  @happycustomer.mailing_state, readonly: true,tabindex: -1} %>
+    </div>
+    <div class="col-2">
+      <%= f.input :mailing_zipcode, label: false, input_html: { data: { target: 'newquoteheader.mailing_zipcode' },value:  @happycustomer.mailing_zipcode, readonly: true,tabindex: -1} %>
+    </div>
+  </div>
+
+
+  <div class="row">
+      <div class="col-md-4">
+        <%= f.input :external_notes %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :internal_notes, input_html: { class: 'internalnotes' } %>
+      </div>
+      <div class="col-md-4">
+       <%= f.input :special_instructions, label: "P.O. Notes", input_html: { class: 'internalnotes' }  %>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-4">
+        <%= f.input :user_name, label: "PDF file name prefix" %>
+      </div>
+  </div>
+   <!-- <div class="row">
+      <div class="col-md-4">
+        <%#= f.hidden_field :user_id %>
+        <%#= current_user.email  %>
+      </div>
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
+      </div>
+   </div> --> 
+
+  </div> <!--  newquoteheader div for stimulus controller -->
+
+
+  <h3>Line Items</h3>
+
+  <div class='lines' data-controller='grand'>
+          <%= f.simple_fields_for :happy_quote_lines do |line| %>
+              <%= render 'happy_quote_line_fields', :f => line %>
+          <% end %>
+  <div class="row">
+      <div class="col-md-6">
+        <%#= f.input :internal_notes %>
+      </div>
+      <div class="col-md-6">
+        <%#= f.input :quote_subtotal, input_html: { data: { target: 'grand.subtot' } } %>
+      </div>
+  </div>
+  </div>
+
+  <p><%#= link_to "Printable Quote (PDF)", happy_quote_path(@happyquote, format: "pdf") %></p>
+
+    <div class='links'>
+      <%= link_to_add_association 'add line', f, :happy_quote_lines, class: 'btn btn-primary', data: { 
+        association_insertion_node: '.lines', association_insertion_method: :append }  %>
+    </div>
+  <br>
+  <%#= f.submit 'Save Quote', id: "saveit" %>
+
+  <div class="form-group row mb-0">
+    <div class="col-sm-9">
+      <%= f.submit 'Save Quote', id: "saveit", class: "btn-primary" %>
+      <%= link_to "Cancel", :back, class: "btn btn-outline-secondary" %>
+    </div>
+  </div>
+<% end %>
+</div>

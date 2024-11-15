@@ -1,0 +1,121 @@
+<div class="container mb-5">
+  <h2>Happy Customers</h2>
+  <br>
+
+  <%#= link_to 'Home', root_path %>
+
+<%= simple_form_for @happycustomer,
+  wrapper: :vertical_form,
+  wrapper_mappings: {
+    boolean:       :vertical_boolean,
+    check_boxes:   :vertical_collection,
+    date:          :vertical_multi_select,
+    datetime:      :vertical_multi_select,
+    file:          :vertical_file,
+    radio_buttons: :vertical_collection,
+    range:         :vertical_range,
+    time:          :vertical_multi_select
+  } do |f| %>
+
+  <%= f.error_notification %>
+
+  <%= f.input :customer_name %>
+
+  <div class="form-group row">
+    <div class="col-4">
+        <%= f.input :first_name, label: false, placeholder:  "First Name", input_html: { maxlength: 20, size:30 } %>
+    </div>
+
+    <div class="col-3">
+        <%= f.input :middle_name, label: false, placeholder:  "Middle Name"%>
+    </div>
+
+    <div class="col-4">
+        <%= f.input :last_name, label: false, placeholder:  "Last Name" %>
+    </div>
+
+    <div class="col-1">
+      <%= f.input :suffix, label: false, placeholder:  "Suffix" %>
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-4">
+      <%= f.input :title, label: false, placeholder:  "Title" %>
+    </div>
+
+    <div class="col-4">
+      <%= f.input :email, label: false, placeholder:  "Email" %>
+    </div>
+
+    <div class="col-4">
+       <%= f.input :website, label: false, placeholder:  "Website" %>
+    </div>
+
+  </div>
+
+  <div class="form-group row">
+    <div class="col-4">
+      <%= f.input :home_phone, label: false, placeholder:  "Home Phone" %>
+    </div>
+
+    <div class="col-4">
+      <%= f.input :business_phone, label: false, placeholder:  "Business Phone" %>
+    </div>
+
+    <div class="col-4">
+       <%= f.input :fax, label: false, placeholder:  "Fax" %>
+    </div>
+
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-12">
+      <%= f.input :mailing_street1, label: false, placeholder: "Address Line 1"%>
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-12">
+      <%= f.input :mailing_street2, label: false, placeholder: "Address Line 2"%>
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-4">
+      <%= f.input :mailing_city, label: false, placeholder: "City"%>
+    </div>
+    <div class="col-4">
+      <%= f.input :mailing_state, label: false, placeholder: "State"%>
+    </div>
+    <div class="col-4">
+      <%= f.input :mailing_zipcode, label: false, placeholder: "Zip"%>
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-4">
+      <%= f.input :terms, label: false, placeholder:  "Terms" %>
+    </div>
+
+    <div class="col-4">
+      <%= f.input :taxable, label: "Taxable" %>
+    </div>
+    <div class="col-4">
+    </div>
+  </div>
+
+
+  <div class="form-group row mb-0">
+    <div class="col-sm-9">
+      <%= f.button :submit, class: "btn-primary" %>
+      <%= link_to "Cancel", :back, class: "btn btn-outline-secondary" %>
+    </div>
+  </div>
+<% end %>
+</div>

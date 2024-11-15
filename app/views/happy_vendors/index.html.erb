@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>Happy Vendors</h2>
+     <%= simple_form_for :search, url: happy_vendors_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+     <%= f.input :vendor_name, input_html: {value: ""} %>
+     <%= f.submit "Search", class: "btn btn-primary" %>
+     <% end %>
+  <br>
+  <%= page_entries_info @vendors %>
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @vendors.each do |vendor| %>
+      <tr>
+        <td><%= vendor.id %></td>
+        <td><%= vendor.vendor_name %></td>
+        <td><%= vendor.email %></td>
+        <td><%= link_to 'Show', vendor %></td>
+        <td><%= link_to 'Edit', edit_happy_vendor_path(vendor) %></td>
+        <td><%#= link_to 'Destroy', customer, method: :delete,
+                                     data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'Quotes', happy_quotes_path(customer_id: customer.id) %></td>
+        <td><%#= link_to 'Orders', happy_orders_path %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+  <%= paginate @vendors, window: 2 %>
+<%= link_to 'New Vendor', new_happy_vendor_path %>
+</div>
+

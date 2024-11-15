@@ -1,0 +1,77 @@
+<%#= debug(params) %>
+<div class="container mb-5">
+   <% if (params.has_key?(:happy_vendor_id)) %>
+    <h2>Happy Project Member for <%= params[:vendor_name] %></h2>
+    <% else %>
+    <h2>Happy Project Member for <%= params[:customer_name] %></h2>
+   <% end %>
+  <br>
+
+  <%#= link_to 'Home', root_path %>
+
+<%= simple_form_for @happyProjectMember,
+  wrapper: :vertical_form,
+  wrapper_mappings: {
+    boolean:       :vertical_boolean,
+    check_boxes:   :vertical_collection,
+    date:          :vertical_multi_select,
+    datetime:      :vertical_multi_select,
+    file:          :vertical_file,
+    radio_buttons: :vertical_collection,
+    range:         :vertical_range,
+    time:          :vertical_multi_select
+  } do |f| %>
+
+  <%= f.error_notification %>
+
+
+  <div class="form-group row">
+    <div class="col-4">
+        <%= f.input :first_name, label: false, placeholder: "First Name" %>
+    </div>
+
+    <div class="col-4">
+        <%= f.input :last_name, label: false, placeholder: "Last Name"%>
+    </div>
+
+    <div class="col-4">
+        <%= f.input :title, label: false, placeholder: "Title" %>
+    </div>
+  </div>
+
+   <div class="form-group row">
+    <div class="col-4">
+        <%= f.input :role, label: false, placeholder: "Role" %>
+    </div>
+
+    <div class="col-4">
+        <%= f.input :email, label: false, placeholder: "Email"%>
+    </div>
+
+    <div class="col-4">
+        <%= f.input :phone_number, label: false, placeholder: "Phone Number" %>
+    </div>
+  </div>
+
+   <div class="form-group row">
+    <div class="col-4">
+        <%= f.input :is_muted, label: "Mute" %>
+    </div>
+  </div>
+
+   
+
+  <%= f.input :happy_customer_id, :as => :hidden, :input_html => { :value => params[:happy_customer_id]} %>
+  <%= f.input :happy_vendor_id, :as => :hidden, :input_html => { :value => params[:happy_vendor_id]} %>
+  <%= f.input :happy_project_id, :as => :hidden, :input_html => { :value => params[:happy_project_id]} %>
+  <%#= f.hidden_field :happy_project_id, :as => :hidden, :input_html => { :value => params[:happy_project_id]} %>
+
+
+  <div class="form-group row mb-0">
+    <div class="col-sm-9">
+      <%= f.button :submit, class: "btn-primary" %>
+      <%= link_to "Cancel", :back, class: "btn btn-outline-secondary" %>
+    </div>
+  </div>
+<% end %>
+</div>

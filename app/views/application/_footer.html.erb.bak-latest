@@ -1,0 +1,201 @@
+<% if @happyReminder.present? %>
+  <div class="container p-0 mt-4">
+  <%# get_today_reminders() %>
+<div class="row justify-content-between no-gutters">
+    <div class="col-4">
+      <% if @happyReminders.present? %>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+        View <%= @model_name[5...] %> Reminders
+      </button>
+      <% end %>
+    </div>
+    <div class="col-4 text-center">
+      <% if @todayReminderCount == 1 %>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#todayModalLong">
+        You have  <%= @todayReminderCount %> Reminder Today
+      </button>
+    <% else %>
+       <% if @todayReminderCount == 0 %>
+          <button type="button" class="btn btn-primary" >
+            You have  <%= @todayReminderCount %> Reminders Today
+          </button>
+        <% else %><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#todayModalLong">
+            You have  <%= @todayReminderCount %> Reminders Today
+          </button>
+        <% end %>
+    <% end %>
+    </div>
+    <div class="col-4 float-end">
+      <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal">
+        Create <%= @model_name[5...] %> Reminder
+      </button>
+    </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Happy Reminder</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for @happyReminder,
+  wrapper: :vertical_form,
+  wrapper_mappings: {
+    boolean:       :vertical_boolean,
+    check_boxes:   :vertical_collection,
+    date:          :vertical_multi_select,
+    datetime:      :vertical_multi_select,
+    file:          :vertical_file,
+    radio_buttons: :vertical_collection,
+    range:         :vertical_range,
+    time:          :vertical_multi_select
+  } do |f| %>
+
+  <%#= f.error_notification %>
+
+  <div class="form-group row">
+  <%= f.input :name %>
+
+  <%= f.input :content, required: true %>
+  <%= f.input :reminder_date %>
+  <%= f.input :remindable_id, :as => :hidden, :input_html => { :value => params[:id] } %>
+  <%= f.input :remindable_type, :as => :hidden, :input_html => { :value => @model_name } %>
+  </div>
+
+  <div class="form-group row mb-0">
+    <div class="col-sm-9">
+      <%= f.button :submit, "save", class: "btn-primary" %>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+<% end %>
+      </div>
+<!--
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+-->
+
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+<%#= link_to 'Back', {:action => 'index'} %>
+</div>
+
+    </div>
+</div>
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Happy Reminders</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+          <%= form_tag update_multiple_happy_reminders_path, method: :put do %>
+              <% @happyReminders.each do |reminder| %>
+                <%= fields_for "happy_reminders[]", reminder do |f| %>
+                  <div class="form-group row">
+                    <div class="field">
+                    <%= f.label :name %>
+                    <%= f.text_field :name %>
+                    </div>
+
+                    <div class="field">
+                    <%= f.label :content %>
+                    <%= f.text_area :content %>
+                    </div>
+                  
+                    <div class="field">
+                    <%= f.label :reminder_date %>
+                    <%= f.date_field :reminder_date %>
+                    </div>
+
+                    <%#= f.input :content %>
+                    <%#= f.input :reminder_date %>
+                    <%#= f.hidden_field :remindable_id, :as => :hidden, :input_html => { :value => params[:id] } %>
+                    <%#= f.hidden_field :remindable_type, :as => :hidden, :input_html => { :value => @model_name } %>
+                    </div>
+
+                <% end %>
+              <% end %>
+  <%= submit_tag "Update" %>
+          <% end %>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="todayModalLong" tabindex="-1" role="dialog" aria-labelledby="todayModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="todayModalLongTitle"> Today's Happy Reminders</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+          <%= form_tag update_multiple_happy_reminders_path, method: :put do %>
+              <% @todayReminders.each do |reminder| %>
+                <%= fields_for "happy_reminders[]", reminder do |f| %>
+                  <div class="form-group row">
+                    <div class="field">
+                    <%= f.label :name %> &nbsp&nbsp
+                    <%= f.text_field :name %>
+                    </div>
+
+                    <div class="field">
+                    <%= f.label :content %>
+                    <%= f.text_area :content %>
+                    </div>
+                  
+                    <div class="field">
+                    <%= f.label :reminder_date %>
+                    <%= f.date_field :reminder_date %>
+                    </div>
+
+                    <%#= f.input :content %>
+                    <%#= f.input :reminder_date %>
+                    <%#= f.hidden_field :remindable_id, :as => :hidden, :input_html => { :value => params[:id] } %>
+                    <%#= f.hidden_field :remindable_type, :as => :hidden, :input_html => { :value => @model_name } %>
+                    </div>
+
+                <% end %>
+              <% end %>
+  <%= submit_tag "Update" %>
+          <% end %>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+
+</div> <!--  container -->
+<% end %>

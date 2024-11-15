@@ -1,0 +1,23 @@
+<!--<%#= link_to 'Home', root_path %> -->
+
+<div class="container">
+  <h2>Happy Product - <%= @happyproduct.part_number %></h2>
+  <br>
+  <div class="row">
+    <div class="col-sm-3">
+      Part Number: <%= @happyproduct.part_number %>
+    </div>
+    <div class="col-sm-5">
+      Description: <%= @happyproduct.description %>
+    </div>
+    <div class="col-sm-2">
+      List Price: <%= @happyproduct.list_price %>
+    </div>
+    <div class="col-sm-2">
+      Weight: <%= @happyproduct.weight %>
+    </div>
+  </div>
+  <%#= link_to 'Edit', edit_happy_product_path(@happyproduct) %>
+<%= link_to 'Back', {:action => 'index'} %>
+</div>
+

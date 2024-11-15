@@ -1,0 +1,58 @@
+<div class='nested-fields border border-primary' data-controller='total grand' data-target="grand.subtotal">
+
+  <div class="form-row">
+    <div class="col-md-3">
+      <%= f.input :product_id %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :description %>
+    </div>
+    <div class="col-md-3">
+      <%= f.input :color %>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md-2">
+      <%= f.input :quantity, input_html: { data: { target: 'total.quantity grand.quantity', action: 'total#recalculate' } } %>
+    </div>
+    <div class="col-md-2">
+      <%= f.input :unit_price_amount, as: :currency, input_html: { data: { target: 'total.price grand.price', action: 'total#recalculate total#sumitup', id: 'unit_price' } } %>
+    </div>
+    <div class="col-md-2">
+      <%= f.input :total_line_amount, as: :currency, input_html: { data: { target: 'total.total grand.total' }, id: "linetotal" } %> 
+    </div>
+    <div class="col-md-2">
+      <%= f.input :tax_amount, input_html: { data: { target: 'total.subtotal grand.subtot' } }%>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-2">
+   <%= f.input :vendor_name,:collection => @happyvendors,:label_method => :vendor_name,:value_method => :id,:label => "Vendor" ,:include_blank => false %>
+      <%#= f.vendor_name :id %>
+    </div>
+    <div class="col-md-2">
+      <%= f.input :buyout_unit_price, as: :currency,  input_html: { data: { target: 'total.buyout', action: 'total#recalculate' } } %>
+    </div>
+    <div class="col-md-2">
+      <%= f.input :margin, as: :percent, :label => "Margin Percentage", input_html: { data: { target: 'total.margin' }, precision: 2 }%>
+    </div>
+  </div>
+
+
+  <div class="form-row">
+    <div class="col-md-5">
+      <%= f.input :external_notes %>
+    </div>
+    <div class="col-md-5">
+      <%= f.input :internal_notes %>
+    </div>
+    <div class="col-md-1 align-self-center">
+      <%= link_to_remove_association "remove line", f  %>
+    </div>
+
+  </div>
+
+</div>
+<br>
+

@@ -1,0 +1,154 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <p>
+      <h4 class="text-danger">Final</h4>
+      <h3>Purchase Order</h3>
+      P.O. #: <%= @happyvendor.id.to_s %>-<%= @happypo.number.to_s %>-<%= @happypo.sub.to_s %>
+      <br>
+      P.O. Date: <%= @happypo.order_date.strftime("%m-%d-%Y") %>
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <%= image_tag "https://d1wfqjcm45bc90.cloudfront.net/happy-erp-logo-v1.png"%>
+    </div>
+    <div class="col-sm-4 text-danger">
+      <p>Certified Woman Owned Small Business<br>
+      Native American Owned; TERO certified<br>
+      </p>
+    </div>
+  </div>
+  <br>
+  <div class="row">            
+    <div class="col-sm-4">     
+        <p> Happy Playgrounds, LLC<br> 8601 South Oxford Avenue<br> Tulsa, OK 74137
+        <br>(918) 851-9518<br> 
+        <%= current_user.email %>       
+        </p>
+    </div>
+    <div class="col-sm-4">     
+    </div>
+    <div class="col-sm-4 text-danger">
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-1">
+      VENDOR:
+    </div>
+    <div class="col-sm-3">
+      <p>
+      <%= @happyvendor.vendor_name %><br>
+      <%= @happyvendor.mailing_street1 %><br>
+      <% if @happyvendor.mailing_street2? %>      
+        <%= @happyvendor.mailing_street2 %><br>
+      <% end %>
+      <%= @happyvendor.mailing_city+", "+@happyvendor.mailing_state+" "+@happyvendor.mailing_zipcode %><br>
+      <%= @happyvendor.business_phone %>
+      </p>
+    </div>
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-2" align="right">
+      <p>SHIP TO:</p> 
+    </div>
+    <div class="col-sm-3">
+      <%= @happypo.happy_customer.customer_name %><br>
+      <%= @happypo.shipping_street1 %><br>
+      <% if @happypo.shipping_street2? %>
+        <%= @happypo.shipping_street2 %><br>
+      <% end %>
+      <%= @happypo.shipping_city %>, <%= @happypo.shipping_state %> <%= @happypo.shipping_zipcode %>
+    </div>
+  </div>
+  <br>
+
+<div class="row bg-secondary">
+  <div class="col-2 border">
+    <b>Part Number</b>
+  </div>
+  <div class="col-1 border">
+    <b>Qty</b>
+  </div>
+  <div class="col-1 border">
+    <b>UOM</b>
+  </div>
+  <div class="col-3 border">
+    <b>Description</b>
+  </div>
+  <div class="col-1 border">
+    <b>Color</b>
+  </div>
+  <div class="col-2 border">
+    <b class="float-right">Unit Price</b>
+  </div>
+  <div class="col-2 border">
+    <b class="float-right">Total</b>
+  </div>
+</div>
+
+<div>
+      <% @lines.each do |quote| %>
+        <div data-id="<%= quote.id %>" data-quoteid="<%= quote.id %>" class="card card-body-4">
+          <div class="row">
+          <div class="col-sm-2">
+                <%= quote.product_id %>
+          </div>
+          <div class="col-sm-1">
+                <%= quote.quantity %>
+          </div>
+          <div class="col-sm-1">
+                <%= quote.unit_of_measure %>
+          </div>
+          <div class="col-sm-3">
+                <%= quote.description %>
+          </div>
+          <div class="col-sm-1">
+                <%= quote.color %>
+          </div>
+          <div class="col-sm-2">
+                <div class="float-right">
+                  <%= number_to_currency(quote.unit_price) %>
+                </div>
+          </div>
+          <div class="col-sm-2">
+                <div class="float-right">
+                  <%= number_to_currency(quote.total_line_amount) %>
+                </div>
+          </div>
+        </div>
+        </div>
+      <% end %>
+  </div>
+
+  <br><br>
+<div class="row">
+  <div class="col-8">
+    <%= @happypo.external_notes %>
+    <%= @happypo.special_instructions %>
+  </div>
+ <div class="col-2 border">
+   <p>
+   <b>Sub Total</b><br>
+   <b>Tax</b><br>
+   <b>Discount</b><br>
+   <b>P.O. Amount</b><br>
+  </p>
+ </div>
+ <div class="col-2 border">
+   <p class="float-right">
+   <%= number_to_currency(@pototal) %><br>
+   <%#= number_to_currency(@taxAmount) %><br>
+   <%= number_to_currency(@discountAmount) %><br>
+   <%= number_to_currency(@pototal + @taxAmount - @discountAmount) %>
+   <%#= number_to_currency(@pototal - @discountAmount) %>
+  </p>
+ </div>
+ <p><%= link_to 'Printable P.O. (PDF)', happy_po_poprint_path(happy_po_id: @happypo.id, vendor_id:  @happyvendor.id, format: "pdf")%><br>
+ <%#= link_to 'Printable P.O. (PDF)', happy_quote_pocreate_path(params[:happy_quote_id], vendor_id:  @happyvendor.id, format: "pdf")%>
+ <%= link_to "Edit PO", edit_happy_po_path(@happypo) %><br>
+ <%= link_to 'View Purchase Orders', happy_quote_po_path(@happyquote, happy_customer_id: @happyquote.happy_customer_id) %><br>
+ <td><%#= link_to 'Finalize P.O.', happy_po_finalize_path(params[:happy_quote_id], vendor_id: @happyvendor.id, format: "html")%></td>
+</div>
+</div>

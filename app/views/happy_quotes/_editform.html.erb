@@ -1,0 +1,169 @@
+<%#= debug @happyquote %>
+<%#= debug @happycustomer %>
+<div class="content">
+<%= simple_form_for @happyquote do |f| %>
+  <%= f.error_notification %>
+  <h3>Edit Quote Header</h3>
+  <div class='header' data-controller='newquoteheader'> 
+  <%= link_to "Copy Quote", happy_quote_copy_path(:happy_quote_id => @happyquote.id,:number => @happyquote.number)  %>
+
+  <div class="row">
+    <div class="col-md-3 align-self-center">
+      <h5>Quote Number: <%= @happyquote.number %>-<%= @happyquote.sub %></h5>
+      <%#= f.input :number %>
+    </div>
+    <div class="col-md-4 align-self-center">
+      <h5>Customer: <%= link_to @happyquote.happy_customer.customer_name, {controller: "happy_customers", action: "edit", id: @happyquote.happy_customer.id } %></h5>
+    </div>
+    <div class="col-md-3">
+      <%= f.input :terms, collection: [['Due on Receipt','Due on Receipt'], ['Net 30 days','Net 30 days']] %>
+    </div>
+    <div class="col-md-2">
+      <%= f.input :fob, collection: [['Company Truck','Company Truck'], ['LTL Carrier', 'LTL Carrier']] %>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-4 mx-auto">
+      <%= f.input :quote_date %>
+      <%#= f.input :quote_date, label: "Quote Date", as: :string, start_year: Time.now.year - 90, end_year: Time.now.year - 8, order: [:day, :month, :year] %>
+    </div>
+    <div class="col-4 mx-auto">
+      <%= f.input :estimated_delivery_date %>
+    </div>
+    <div class="col-4 mx-auto">
+      <%= f.input :email %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-3">
+      <h3>Shipping Address</h3>
+    </div>
+    <div class="col-3">
+       <%= f.input :shipaddress_same_billaddress, label: "Same as Billing Address", :as => :boolean, input_html: { data: {'newquoteheader-target': 'ship_same_bill', action: 'newquoteheader#toggleAddress' }} %> 
+    </div>
+    <div class="col-6">
+        <h3>Billing Address</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <%= f.input :shipping_street1, label: false, placeholder: 'Street 1', input_html: { data: {'newquoteheader-target': 'shipping_street1' } } %>
+    </div>
+    <div class="col-6 align-self-center">
+      <%= f.input :mailing_street1, label: false, input_html: { data: { 'newquoteheader-target': 'mailing_street1' }, value:  @happycustomer.mailing_street1, readonly: true, tabindex: -1} %>
+      <!-- <h4><%#= @happycustomer.mailing_street1 %></h4> -->
+    </div>
+  </div>
+
+  <%= f.input :happy_customer_id, :as => :hidden, :input_html => { :value => @happycustomer.id } %>
+
+  <div class="row">
+    <div class="col-6">
+      <%= f.input :shipping_street2, label: false, placeholder: 'Street 2',  input_html: { data: { 'newquoteheader-target': 'shipping_street2' } } %>
+    </div>
+    <div class="col-6 align-self-top">
+      <%= f.input :mailing_street2, label: false, input_html: { data: { 'newquoteheader-target': 'mailing_street2' },value:  @happycustomer.mailing_street2, readonly: true,tabindex: -1} %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-3">
+      <%= f.input :shipping_city, label: false, placeholder: 'City', input_html: { data: { 'newquoteheader-target': 'shipping_city' } } %>
+    </div>
+    <div class="col-1">
+      <!-- <%#= f.input :shipping_state, label: false, placeholder: 'State', input_html: { data: { 'newquoteheader-target': 'shipping_state' } }  %> -->
+      <%= f.input :shipping_state, label: false, as: :select, collection: User::STATES, input_html: { data: { 'newquoteheader-target': 'shipping_state' } }%>
+    </div>
+    <div class="col-2">
+      <%= f.input :shipping_zipcode, label: false, placeholder: 'Zip Code', input_html: { data: { 'newquoteheader-target': 'shipping_zipcode' } }  %>
+    </div>
+    <div class="col-3">
+      <%= f.input :mailing_city, label: false, input_html: { data: { 'newquoteheader-target': 'mailing_city' }, value:  @happycustomer.mailing_city, readonly: true,tabindex: -1} %>
+    </div>
+    <div class="col-1">
+      <%= f.input :mailing_state, label: false, input_html: { data: { 'newquoteheader-target': 'mailing_state' },value:  @happycustomer.mailing_state, readonly: true,tabindex: -1} %>
+    </div>
+    <div class="col-2">
+      <%= f.input :mailing_zipcode, label: false, input_html: { data: { 'newquoteheader-target': 'mailing_zipcode' },value:  @happycustomer.mailing_zipcode, readonly: true,tabindex: -1} %>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-4">
+        <%= f.input :external_notes %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :internal_notes, input_html: { class: 'internalnotes' } %>
+      </div>
+      <div class="col-md-4">
+       <%= f.input :special_instructions, label: "P.O. Notes", input_html: { class: 'internalnotes' }  %>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2 d-flex align-self-center">
+       <%= f.input :tax_override  %>
+    </div>
+    <div class="col-md-2">
+        <%= f.input :tax_rate, as: :percent, label: "Tax Rate %", input_html: { data: {'newquoteheader-target': 'taxRate', action: 'newquoteheader#tax_calculate' }} %>
+    </div>
+    <div class="col-md-2">
+        <%= f.input :additional_tax_total, label: "Tax Total", input_html: { data: {'newquoteheader-target': 'taxTotal' }} %>
+    </div>
+    <div class="col-md-2">
+        <%= f.input :included_tax_total, label: "Taxable Amount", input_html: { data: {'newquoteheader-target': 'totalTaxAmount', action: 'update-tax@window->newquoteheader#setTotalTaxAmount' }, readonly: true,tabindex: -1} %>
+    </div>
+    <div class="col-md-2 d-flex align-self-center">
+       <%= f.input :discount_override, label: "Discount Override"  %>
+    </div>
+    <div class="col-md-2">
+        <%= f.input :discount_total, label: "Discount" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 d-flex align-self-center">
+       <%= f.input :user_name, label: "PDF file name prefix"  %>
+    </div>
+  </div>
+  <!-- </div>  newquoteheader div for stimulus controller -->
+
+  <h3>Line Items</h3>
+
+  <div class='lines' data-controller='grand'>
+          <%= f.simple_fields_for :happy_quote_lines do |line| %>
+              <%= render 'happy_quote_line_fields', :f => line %>
+          <% end %>
+  <div class="row">
+      <div class="col-md-6">
+        <%#= f.input :internal_notes %>
+      </div>
+      <div class="col-md-6">
+        <%#= f.input :quote_subtotal, input_html: { data: { target: 'grand.subtot' } } %>
+      </div>
+  </div>
+  </div>
+
+  </div> <!--  newquoteheader div for stimulus controller -->
+
+  <!--  <p><%#= link_to "Printable Quote (PDF)", edit_happy_quote_path(@happyquote, format: "pdf") %></p> -->
+
+   <div class='links'>
+      <%= link_to_add_association 'add line', f, :happy_quote_lines, class: 'btn btn-primary', data: {
+        association_insertion_node: '.lines', association_insertion_method: :append }  %>
+    </div>
+  <br>
+  <%#= f.submit 'Save Quote', id: "saveit" %>
+
+  <div class="form-group row mb-0">
+    <div class="col-sm-9">
+      <%= f.submit 'Save Quote', id: "saveit", class: "btn-primary" %>
+      <%= link_to "Cancel", :back, class: "btn btn-outline-secondary" %>
+    </div>
+  </div>
+
+<% end %>
+</div>

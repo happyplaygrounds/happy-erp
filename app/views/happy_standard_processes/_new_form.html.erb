@@ -1,0 +1,48 @@
+<div class="container mb-5">
+  <h2>Happy Standard Project Processes</h2>
+  <br>
+
+  <%#= link_to 'Home', root_path %>
+
+<%= simple_form_for @happyStandardProcess,
+  wrapper: :vertical_form,
+  wrapper_mappings: {
+    boolean:       :vertical_boolean,
+    check_boxes:   :vertical_collection,
+    date:          :vertical_multi_select,
+    datetime:      :vertical_multi_select,
+    file:          :vertical_file,
+    radio_buttons: :vertical_collection,
+    range:         :vertical_range,
+    time:          :vertical_multi_select
+  } do |f| %>
+
+  <%= f.error_notification %>
+
+  <%= f.input :process_name %>
+
+  <div class="form-group row">
+    <div class="col-4">
+        <%= f.input :description %>
+    </div>
+
+    <div class="col-3">
+        <%#= f.input :process_type, label: false, placeholder: "Process Type"%>
+        <%= f.input :process_type, collection: [['Playground','Playground'], ['Shade','Shade'], ['Shelter','Shelter'], ['Surfacing','Surfacing'], ['Purchasing','Purchasing'] ] %>
+    </div>
+
+    <div class="col-4">
+        <%= f.input :status %>
+    </div>
+
+  </div>
+
+
+  <div class="form-group row mb-0">
+    <div class="col-sm-9">
+      <%= f.button :submit, class: "btn-primary" %>
+      <%= link_to "Cancel", :back, class: "btn btn-outline-secondary" %>
+    </div>
+  </div>
+<% end %>
+</div>

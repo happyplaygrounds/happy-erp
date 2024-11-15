@@ -1,0 +1,119 @@
+<%#= debug(@happyProject) %>
+<%#= debug(@happyProjectCustomer) %>
+<div class="container">
+  <!-- <%#= link_to 'Home', root_path %> -->
+  <h2>Happy Project Team - <%= @happyProject.project_name %></h2>
+  <br>
+  <!-- 
+  <div class="row">
+    <div class="col-sm">
+      <p>
+      <%#= @happyStandardProcess.description %><br>
+      </p>
+    </div>
+  
+  </div>
+  -->
+
+
+  <div class="mb-2">
+    <h4>Happy Employees</h4>
+      <%= form_for(@happyProject) do |f| %>
+        <div class="field">
+          <%= hidden_field_tag "ht[happy_project_member_ids][]" %>
+          
+          <div class="ml-4">
+          <% @happyMembers.each do |member| %>
+           
+          <%= check_box_tag "ht[happy_project_member_ids][]", member.id, @happyProject.happy_project_member_ids.include?(member.id) %>
+          <%= link_to "#{member.first_name} #{member.last_name}", edit_happy_project_member_path(id: member.id, happy_project_id: params[:happy_project_id]) %>, <%= member.title%>, <%= member.role%>
+              <br>
+            
+          <% end %>
+           <br>
+        </div>          
+
+ <% if @happyProjectVendors.exists? %>  
+    <h4>Happy Vendors</h4>
+    <% @happyProjectVendors.each do |projectVendor| %>
+        <td><%= projectVendor.happy_vendor_id %></td>
+        <td>-<%= projectVendor.vendor_name %> - </td>
+         <%= link_to "Add new #{projectVendor.vendor_name} member", new_happy_project_member_path(happy_vendor_id: projectVendor.happy_vendor_id, vendor_name: projectVendor.vendor_name, happy_project_id: params[:happy_project_id]) %><br><br>
+        <div class="ml-4">
+
+         <%# HappyProjectMember.customer('9').each do |member| %>
+        <% #@happyVendorMembers.each do |member| %>
+           <% HappyProjectMember.vendor(projectVendor.happy_vendor_id).each do |member| %>
+          <%= check_box_tag "ht[happy_project_member_ids][]", member.id, @happyProject.happy_project_member_ids.include?(member.id) %>
+          
+          <%= link_to "#{member.first_name} #{member.last_name}", edit_happy_project_member_path(id: member.id, happy_project_id: params[:happy_project_id]) %>, <%= member.title%>, <%= member.role%>
+              <br>
+          <br>
+           
+        <% end %>
+        <br>
+        </div>
+    <% end%>
+   <% end %>
+
+          <h4>Happy Customer</h4>
+          <% @happyProjectCustomer.each do |projectCustomer| %>
+              <td><%= projectCustomer.id %></td>
+              <td>-<%= projectCustomer.customer_name %> - </td>
+              <%= link_to "Add new #{projectCustomer.customer_name} member", new_happy_project_member_path(happy_customer_id: projectCustomer.id, customer_name: projectCustomer.customer_name, happy_project_id: params[:happy_project_id]) %><br><br>
+                  <div class="ml-4">
+                  <% @happyCustomerMember.each do |member| %>
+                  
+                      <%= check_box_tag "ht[happy_project_member_ids][]", member.id, @happyProject.happy_project_member_ids.include?(member.id) %>
+          <%= link_to "#{member.first_name} #{member.last_name}", edit_happy_project_member_path(id: member.id, happy_project_id: params[:happy_project_id]) %>, <%= member.title%>, <%= member.role%>
+                    
+                  <% end %>
+                  <br>
+                  </div>
+          <% end %>
+        </div>
+            <%= f.submit class: 'btn btn-primary', :name => "addjoin" %>
+            <%= link_to "Cancel", :back, class: "btn btn-outline-secondary" %>
+        <% end %>
+  </div>
+      
+<!-- 
+<%# @happyVendorMembers.each do |vendorMember| %>
+        <td><%#= vendorMember.first_name %></td>
+        <td><%#= vendorMember.last_name %> - </td>
+<%# end %>
+
+
+  <%# if @happyProjectVendors.exists? %>  
+    <h1>Vendors</h1>
+    <%# @happyProjectVendors.each do |projectVendor| %>
+        <% #@happyVendorMembers.each do |vendorMember| %>
+          <td><%#= projectVendor.happy_vendor_id %></td>
+          <td><%#= projectVendor.vendor_name %> - </td>
+          <%# if projectVendor.happy_vendor_id = vendorMember.happy_vendor_id %>
+             <%#= link_to 'Add big boy', happy_project_member_path(happy_vendor_id: projectVendor.happy_vendor_id, vendor_name: projectVendor.vendor_name, happy_project_id: params[:happy_project_id]) %><br>
+             <#%= link_to 'View/Add Team Members', happy_project_team_path(id: '40', happy_project_id: params[:happy_project_id], happy_vendor_id: params[:happy_vendor_id] ), class: 'btn btn-light' %>
+             <% #break %>
+          <%# else %>
+            <%#= link_to 'Add', new_happy_project_member_path(happy_vendor_id: projectVendor.happy_vendor_id, vendor_name: projectVendor.vendor_name, happy_project_id: params[:happy_project_id]) %><br>
+          <br>
+           <% #end %>
+        <% #end %>
+    <% #end%>
+   <% #end %>
+   <% #if @happyProjectCustomer.exists? %> 
+    <h1>Customers</h1>
+   <%# @happyProjectCustomer.each do |projectCustomer| %>
+      <td><%#= projectCustomer.id %></td>
+      <td><%#= projectCustomer.customer_name %> - </td>
+       <%#= link_to 'Add', new_happy_project_member_path(customer_id: projectCustomer.id, customer_name: projectCustomer.customer_name, happy_project_id: params[:happy_project_id]) %><br>
+      <br>
+    <%# end%>
+  <#% end %>
+<%#= link_to 'New Happy Team Member', new_happy_project_member_path %><br>
+<%#= link_to 'New Happy Vendor Member', new_happy_project_member_path %><br>
+-->
+
+<%#= link_to 'Back', {:action => 'show'} %>
+</div>
+

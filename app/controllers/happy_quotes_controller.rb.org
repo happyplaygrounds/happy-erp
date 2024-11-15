@@ -1,0 +1,59 @@
+class HappyQuotesController < ApplicationController
+before_action :find_quote, only: [:show, :edit, :update, :destroy]
+
+  def index
+     @happyquote = HappyQuote.where("happy_customer_id = ?", params[:customer_id])
+  end
+
+  def new
+     @happyquote = HappyQuote.new
+  end
+
+  def show
+  end
+
+  def edit
+     @happyvendors = HappyVendor.all
+  end
+
+  def create
+    @happyquote = HappyQuote.new(happyquote_params)
+    if @happyquote.save
+      flash[:success] = "Quote saved!"
+      redirect_to @happyquote
+    else
+      flash[:alert] = "Contact not saved!"
+      # This line overrides the default rendering behavior, which
+      # would have been to render the "create" view.
+      render "new"
+    end
+  end
+
+  def update
+    if @happyquote.update(params[:happy_quote])
+      redirect_to @happyquote
+    else
+      render :action => 'edit'
+    end
+  end
+
+  def destroy
+    @happyquote.destroy
+    redirect_to action: "index"
+  end
+
+  def happyquote_params
+    params.require(:happy_quote).permit(:name, :email, happy_quote_line_attributes: [:id, :description, :product_id, :_destroy])
+  end
+
+private
+
+  def find_quote
+    @happyquote = HappyQuote.includes(:happy_customer).find(params[:id])
+  end
+
+  def happyquote_params
+    params.require(:happy_quote).permit(:name, :email, happy_quote_line_attributes: [:id, :description, :product_id, :_destroy])
+  end
+
+end

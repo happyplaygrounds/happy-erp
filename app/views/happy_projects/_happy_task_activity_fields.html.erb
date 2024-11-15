@@ -1,0 +1,45 @@
+<div class='nested-fields border border-primary'>
+                               
+  <div class="form-row">       
+    <div class="col-md-3">
+      <%= f.input :activity_name ,:label => "Actvity Name"  %>
+    </div>
+    <div class="col-md-6">     
+      <%= f.input :description %>
+    </div>
+    <div class="col-md-3">     
+      <%= f.input :lead_time %>    
+    </div>                     
+  </div>
+
+  <div class="form-row">       
+    <div class="col-md-3">
+      <%= f.input :priority ,:label => "Priority"  %>
+    </div>
+    <div class="col-md-6">     
+      <%= f.input :group %>
+    </div>
+    <div class="col-md-3">     
+      <%= f.input :dependency %>    
+    </div>                     
+  </div>
+
+  <div class="form-row">       
+    <div class="col-md-3">
+      <%= f.input :duration ,:label => "Duration"  %>
+    </div>
+    <div class="col-md-6">     
+      <%= f.input :duration_unit %>
+    </div>
+    <div class="col-md-3">     
+      <%= f.input :is_vendor %>    
+    </div>                     
+  </div>
+
+  <div class="form-row">
+    <div class="col-md-2 align-self-center">
+      <%= link_to_remove_association "remove line", f, class: 'btn btn-primary' %>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,6 @@
+class HappyQuote < ApplicationRecord
+  belongs_to :happy_customer, optional: true
+  has_many :happy_quote_lines, inverse_of: :happy_quote
+
+  accepts_nested_attributes_for :happy_quote_lines, reject_if: :all_blank, allow_destroy: true
+end

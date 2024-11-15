@@ -1,0 +1,54 @@
+<div class="container">
+
+  <h2>Happy Standard Project Activities</h2>
+  
+  <div class="customer-index-form">
+     <%= simple_form_for :search, url: happy_standard_activities_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+     <label>
+        <%= f.input :activity_name, input_html: {value: ""} %>
+     </label>
+
+     <label>
+        <%= f.submit "Search", class: "btn btn-primary" %>
+     </label>
+     <% end %>
+  </div>
+
+  <%= page_entries_info @happyStandardActivities %>
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Activity ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @happyStandardActivities.each do |standardActivity| %>
+      <tr>
+        <td><%= standardActivity.id %></td>
+        <td><%= standardActivity.activity_name %></td>
+        <td><%= standardActivity.description %></td>
+        <td><%= link_to 'Show', standardActivity %></td>
+        <td><%= link_to 'Edit', edit_happy_standard_activity_path(standardActivity) %></td>
+        <td><%= link_to 'Destroy', standardActivity, method: :delete,
+                                     data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'Quotes', happy_quotes_path(customer_id: customer.id, customer_name: customer.customer_name) %></td>
+        <td><%#= link_to 'Orders', happy_orders_path %></td>
+        <td><%#= link_to 'Vendors', happy_vendors_path %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+  <%= paginate @happyStandardActivities, window: 2 %>
+<%= link_to 'New Activity', new_happy_standard_activity_path %>
+</div>

@@ -1,0 +1,3 @@
+$('#product_id input').change(funtion() {
+  $(".happy_quote_happy_quote_lines_color").hide();
+}

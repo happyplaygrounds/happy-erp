@@ -1,0 +1,118 @@
+<%#= debug @happyProject %>
+<div class="container">
+  <!-- <%#= link_to 'Home', root_path %> -->
+  <h2>Happy Project - <%= @happyProject.project_name %></h2>
+  <br>
+  <div class="row">
+    <div class="col-sm">
+      <!--<p>
+      <%#= @happyProject.project_name %><br>
+      </p> -->
+      <% if @happyProjectMembersCount %>
+      <p>
+     
+      <%= link_to 'View Team Members', happy_project_add_path(id: @happyProject.id,happy_project_id: @happyProject.id, happy_quote_id: @happyProject.happy_quote_id, happy_customer_id: @happyProject.happy_customer_id), class: 'btn btn-light' %>
+      <%#= link_to 'View/Add Team Members', happy_project_members_path(happy_project_id: @happyProject.id, happy_quote_id: @happyProject.happy_quote_id ), class: 'btn btn-light' %>
+      <%#= link_to 'View/Add Team Members', happy_project_team_path(happy_project_id: @happyProject.id, happy_quote_id: @happyProject.happy_quote_id ), class: 'btn btn-light' %>
+         - (<%= @happyProjectMembersCount %>)<br>
+      </p>
+      <% else %>
+      <p>
+      <%= link_to 'Create Project Team', new_happy_project_members_path(happy_project_id: @happyProject.id, happy_quote_id: @happyProject.happy_quote_id ), class: 'btn btn-light' %>
+        <!--  - (<%= @happyProjectMembersCount %>)<br> -->
+      </p>
+      <% end %>
+    </div>
+  </div>
+
+
+<div class="card">
+  <div class="card-body">
+    <h2 class='card-title d-flex justify-content-between mb-4'>
+      <div class="mb-3">
+              <span class="badge badge-<%= @happyProject.badge_color %>">
+                <%= @happyProject.status %>
+              </span>
+              <span class='text-secondary'>
+                <small>
+                  <!--
+                  <%#= @happyProject.percent_complete %>% complete
+                  (<%#= @happyProject.total_complete %>/<%#= @happyProject.total_tasks %> tasks)
+                  -->
+                </small>
+              </span>
+      </div>
+
+      <span><%#= @happyProject.project_name %></span>
+      <div>
+        <%= link_to 'Edit', edit_happy_project_path(@happyProject), class: 'btn btn-light' %>
+        <%= link_to 'Destroy', @happyProject, method: :delete, class: 'btn btn-dark', data: { confirm: 'Are you sure?' } %>
+      </div>
+    </h2>
+
+    <div class="mb-4">
+      <h6><%= link_to "Add Happy Standard Process", happy_standard_processes_path(:project_id => @happyProject.id, :project_name => @happyProject.project_name), class: 'btn btn-light' %> </h6>
+      
+      <%= form_for([@happyProjectTask.happy_project, @happyProjectTask]) do |f| %>
+        <% if @happyProjectTask.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@happyProjectTask.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+            <ul>
+            <% @happyProjectTask.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <%= f.hidden_field :status, value: 'not-started' %>
+        <div class="input-group">
+          <%= f.text_field :description, class: 'form-control', placeholder: 'Enter task description...', required: true %>
+          <div class="input-group-append">
+            <%= f.submit class: 'btn btn-primary' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+
+    <h4>Tasks</h4>
+    <% @happyProject.happy_project_tasks.each do |task| %>
+      <% if task.persisted? %>
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <span class="badge badge-<%= task.badge_color %> mb-3"><%= task.status %></span>
+              <div>
+                <%= link_to 'Edit', edit_happy_project_path(@happyProject), class: 'btn btn-light' %>
+                <%#= link_to 'Edit', edit_happy_project_happy_project_task_path(task.happy_project, task), class: 'btn btn-light btn-sm' %>
+                <%= link_to 'Destroy', [task.happy_project, task], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-dark btn-sm' %>
+              </div>
+            </div>
+            <h5 class='card-title mb-2'>
+              <span><%= task.task_name %></span>
+            </h5>
+            <p><%= task.description %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end%>
+
+  </div>
+</div>
+
+
+
+  <div class="row">
+    <div class="col-9">
+        <%= link_to 'Back', happy_projects_path, class: 'btn btn-secondary mb-3' %>
+    </div>
+    <div class="col-3">
+      <%#= link_to 'Add Reminder', new_happy_note_path(project_id: @happyProject.id), class: 'btn btn-light' %>
+      <!-- Button trigger modal 
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Create Project Reminder
+</button> -->
+</div>
+  </div>
+

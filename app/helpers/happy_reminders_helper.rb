@@ -1,0 +1,3 @@
+
+module HappyRemindersHelper
+end

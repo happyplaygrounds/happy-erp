@@ -1,0 +1,51 @@
+<%#= debug @happycustomer %>
+<%#= debug @happyquote %>
+<div class="container">        
+    <% if !params[:customer_name] and !@cust_id %>
+     <%= simple_form_for :search, url: happy_quotes_path, method: "GET", wrapper: :inline_form, html: { class: 'form-inline' } do |f| %>
+     <%= f.input_field :number, label: "Quote Number", input_html: {value: ""} %>
+     <%= f.submit "Search", class: "btn btn-primary" %>
+    <% end %>
+   <% else %>
+  <% if params[:customer_name] %>
+      <h2>Happy Quotes for - <%= params[:customer_name]%> </h2>
+  <% else %>
+      <h2>Happy Quote </h2>
+  <% end %>
+  <br>
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Quote</th>            
+        <th>Quote Date</th>          
+        <th>Email</th>         
+        <th></th>         
+        <th></th>         
+        <th></th>         
+        <th></th>         
+        <th></th>         
+      </tr>
+    </thead>                   
+    <tbody>
+      <% @happyquote.each do |quote| %>
+      <tr>
+        <td><%= quote.number %>-<%= quote.sub %></td>     
+        <td><%= quote.quote_date %></td>
+        <td><%= quote.email %></td>  
+        <td><%= link_to 'Show', quote %></td>
+        <td><%= link_to 'Edit', edit_happy_quote_path(quote) %></td>
+        <!-- <td><%#= link_to 'Sortable Quote', happy_quote_sortlines_path(quote,id: quote.id,happy_customer_id: params[:customer_id]) %></td> -->
+        <td><%= link_to 'Purchase Orders', happy_quote_po_path(quote, happy_customer_id: params[:customer_id]) %></td>
+        <td><%#= link_to 'Destroy', quote, method: :delete,
+                                     data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+  <% if  params[:customer_id] %>
+     <%= link_to 'New Quote', new_happy_quote_path(happy_customer_id: params[:customer_id]) %> 
+  <% end %>
+<% end %>
+</div>

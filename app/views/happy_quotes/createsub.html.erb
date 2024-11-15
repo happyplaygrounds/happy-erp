@@ -1,0 +1,43 @@
+<%#= debug @happyquote %>
+<%#= debug @happycustomer %>
+<h1>here</h1>
+ <%= link_to 'Home', root_path %>
+
+<div class="container">
+  <h1>Happy Quote - <%= @happyquote.id %></h1>
+  <br>
+  <div class="row">
+    <div class="col-sm">
+      Customer Number: <%= @happyquote.id %>
+    </div>
+    <div class="col-sm">
+      Name: <%= @happyquote.happy_customer.customer_name %>
+    </div>
+    <div class="col-sm">
+      Email: <%= @happyquote.fob %>
+    </div>
+    <div class="col-sm">
+      Newsub: <%= @newsub %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      copy <%= @happyquote.number %>-<%= @happyquote.sub %> to  <%= @happyquote.number %>-<%= @newsub %>
+    </div>
+    <div class="col-sm">
+      Name: <%= @happyquote.happy_customer.customer_name %>
+    </div>
+    <div class="col-sm">
+      Email: <%= @happyquote.fob %>
+    </div>
+    <div class="col-sm">
+      Newsub: <%= @newsub %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <%= link_to 'Yes', {:action => 'createsub'} %>
+    </div>
+  </div>
+<%= link_to 'Back', {:action => 'index'} %>
+</div>

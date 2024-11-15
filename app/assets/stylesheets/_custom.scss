@@ -1,0 +1,55 @@
+* {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+ }
+
+ body {
+    padding-top: 130px;
+  }
+
+h1 { 
+  color: red;
+}
+
+.input-group-addon {
+	margin-bottom: 0px;
+	margin-top: 5px;
+}
+
+.navbar {
+	margin: 0px 100px 15px 100px;
+	font-size: 17px;
+}
+
+.nav-devise {
+	padding: 0px 50px 0px 0px;
+}
+
+.nav-image {
+  width: 200px;
+  height: 100px;
+}
+
+.navbar-brand {
+	padding: 0px 70px 0px 0px;
+}
+
+#saveit {
+	margin: 0px 0px 40px 0px;
+}
+
+@media only screen and (min-width: 576px) { 
+   .form-inline label {
+    padding-right: 20px;
+    }
+}
+
+.form-inline > *  {
+   margin-right:7px;
+}
+
+.customer-index-form {
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+

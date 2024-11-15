@@ -1,0 +1,149 @@
+<div class='nested-fields border border-primary'>
+                               
+  <div class="form-row">       
+    <div class="col-md-3">
+      <%= f.input :task_name ,:label => "Task Name"  %>
+    </div>
+    <div class="col-md-6">     
+      <%= f.input :description %>
+    </div>
+    <div class="col-md-3">     
+      <%= f.input :lead_time %>    
+    </div>                     
+  </div>
+
+  <div class="form-row">       
+    <div class="col-md-3">
+      <%#= f.input :planned_start_date, as: :date, start_year: Date.today.year,
+                              end_year: Date.today.year - 12, discard_day: true,
+                              order: [:month, :year]  %>
+      <% if f.object.planned_start_date %>
+        <%= f.input :planned_start_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true %>
+      <% else %>
+        <%= f.input :planned_start_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true, selected: 0  %>
+      <% end %>
+    </div>
+    <div class="col-md-3">
+    <% if f.object.planned_end_date %>
+        <%= f.input :planned_end_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true %>
+      <% else %>
+        <%= f.input :planned_end_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true, selected: 0  %>
+      <% end %>     
+    </div>                     
+    <div class="col-md-3">
+    <% if f.object.actual_start_date %>
+        <%= f.input :actual_start_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true %>
+      <% else %>
+        <%= f.input :actual_start_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true, selected: 0  %>
+      <% end %>      
+    </div>                     
+    <div class="col-md-3">
+    <% if f.object.actual_end_date %>
+        <%= f.input :actual_end_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true %>
+      <% else %>
+        <%= f.input :actual_end_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true, selected: 0  %>
+      <% end %>       
+    </div>                     
+  </div>
+
+  <div class="form-row">       
+    <div class="col-3">
+      <%= f.label :status %><br />
+      <%= f.select :status, HappyProjectTask::STATUS_OPTIONS, {}, class: 'form-control' %>
+    </div>
+    <div class="col-md-3">
+      <%#= f.input :priority ,:label => "Priority"  %>
+      <%= f.label :priority %>
+      <%= f.select :priority, HappyProjectTask::PRIORITY_OPTIONS, {}, class: 'form-control' %>
+    </div>
+    <div class="col-md-3">     
+      <%= f.input :dependency %>    
+    </div>                     
+    <div class="col-md-3">     
+      <%= f.input :sales_order %>    
+    </div>                     
+  </div>
+
+
+  <div class="form-row">       
+    <div class="col-md-3">
+      <% if f.object.order_date %>
+        <%= f.input :order_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true %>
+      <% else %>
+        <%= f.input :order_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true, selected: 0  %>
+      <% end %>
+    </div>
+    <div class="col-md-3"> 
+    <% if f.object.ship_date %>
+        <%= f.input :ship_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true %>
+      <% else %>
+        <%= f.input :ship_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true, selected: 0  %>
+      <% end %>        
+    </div>                     
+    <div class="col-md-3">
+    <% if f.object.estimated_delivery_date %>
+        <%= f.input :estimated_delivery_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true %>
+      <% else %>
+        <%= f.input :estimated_delivery_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true, selected: 0  %>
+      <% end %>        
+    </div>                     
+    <div class="col-md-3"> 
+    <% if f.object.receipt_date %>
+        <%= f.input :receipt_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true %>
+      <% else %>
+        <%= f.input :receipt_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true, selected: 0  %>
+      <% end %>        
+    </div>                     
+  </div>
+
+
+  <div class="form-row">       
+    <div class="col-md-4">     
+    <% if f.object.happy_vendor_id %>
+      <%= f.input :happy_vendor_id,:collection => @happyvendors,:label_method => :vendor_name,:value_method => :id,:label => "Vendor" ,:include_blank => false, input_html: { class: "js-basic-single" } %>
+    <% else %>
+      <%= f.input :happy_vendor_id,:collection => @happyvendors,:label_method => :vendor_name,:value_method => :id,:label => "Vendor" ,:include_blank => false, selected: 1, input_html: { class: "js-basic-single" } %>
+    <% end %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :duration ,:label => "Duration"  %>
+    </div>
+    <div class="col-md-4">     
+      <%#= f.input :duration_unit %>
+      <%= f.label :duration_unit %>
+      <%= f.select :duration_unit, HappyProjectTask::DURATION_OPTIONS, {}, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-row">       
+    <div class="col-md-6">
+      <%= f.input :external_notes  %>
+    </div>
+    <div class="col-md-6">     
+      <%= f.input :internal_notes %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-6">
+      <!--  <%= f.input :reminder_date, as: :date, start_year: Date.today.year, order: [:month, :day, :year], :include_blank => true, selected: 0  %> -->
+    </div>
+    <div class="col-md-3">     
+      <!-- <%= f.label :"send reminder" %><br /> 
+      <%= f.input :is_reminder, class: 'form-control' %> -->
+    </div>
+    <div class="col-md-3 align-self-center">
+      <%= link_to_remove_association "remove line", f, class: 'btn btn-primary' %>
+    </div>
+  </div>
+
+  <!--
+  <div class="form-row">
+    <div class="col-md-2 align-self-center">
+      <%#= link_to_remove_association "remove line", f, class: 'btn btn-primary' %>
+    </div>
+  </div>
+  -->
+
+</div>
+<br>

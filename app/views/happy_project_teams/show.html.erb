@@ -1,0 +1,41 @@
+<%= debug(params) %>
+<%= debug(@happyProject) %>
+<div class="container">
+  <!-- <%#= link_to 'Home', root_path %> -->
+  <h2>Happy Project Team - <%#= @happyProjectTeam.team_name %></h2>
+  <br>
+  <div class="row">
+    <div class="col-sm">
+      <p>
+      <%#= @happyStandardProcess.description %><br>
+      </p>
+    </div>
+  </div>
+
+
+  <div class="mb-4">
+    <h6>Choose below project members</h6><br>
+      <%= form_for(@happyProject) do |f| %>
+        <div class="field">
+          <%= hidden_field_tag "ht[happy_project_member_ids][]" %>
+          <%# HappyProjectMember.where("happy_vendor_id = ?", '2').each do |member| %>
+          <%# if params[:happy_vendor_id] %>
+            <%# HappyProjectMember.vendor('2').each do |member| %>
+          <%# else %>
+            <% HappyProjectMember.customer('9').each do |member| %>
+          <%# end %>
+
+              <%= check_box_tag "ht[happy_project_member_ids][]", member.id, @happyProject.happy_project_member_ids.include?(member.id) %>
+              <%= member.first_name %> <%= member.last_name %> <%= member.title%> <%= member.role%> <br>
+          
+          <% end %>
+          </div>
+          
+             <br>
+            <%= f.submit class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+
+<%= link_to 'Back', {:action => 'show'} %>
+</div>
+

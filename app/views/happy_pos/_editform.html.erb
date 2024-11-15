@@ -1,0 +1,196 @@
+<%#= debug @happypo %>
+<%#= debug @happycustomer %>
+<div class="content">
+<%= simple_form_for @happypo do |f| %>
+  <%= f.error_notification %>
+  <h3>Edit PO Header</h3>
+  <!-- 
+  <div class='header' data-controller='newpoheader'> 
+  -->
+  <%#= link_to "Copy PO", happy_quote_copy_path(:happy_quote_id => @happyquote.id,:number => @happyquote.number)  %>
+
+  <div class="row">
+    <div class="col-md-4 align-self-center">
+      <h5>PO Number: <%= @happypo.number %>-<%= @happypo.sub %></h5>
+      <%#= f.input :number %>
+    </div>
+    <div class="col-md-4 align-self-center">
+      <h5>Customer: <%= link_to @happypo.happy_customer.customer_name, {controller: "happy_customers", action: "edit", id: @happypo.happy_customer.id } %></h5>
+    </div>
+    <div class="col-md-4 align-self-center">
+      <%= f.input :quote_date, readonly: true, disabled: true %>
+    </div>
+    <!--
+    <div class="col-md-3">
+      <%#= f.input :terms, collection: [['Due on Receipt','Due on Receipt'], ['Net 30 days','Net 30 days']] %>
+    </div>
+    <div class="col-md-2">
+      <%#= f.input :fob, collection: [['Company Truck','Company Truck'], ['LTL Carrier', 'LTL Carrier']] %>
+    </div>
+    -->
+
+  </div>
+
+  <div class="row">
+    <!--
+    <div class="col-4 mx-auto">
+      <%#= f.input :quote_date %>
+      <%#= f.input :quote_date, label: "PO Date", as: :string, start_year: Time.now.year - 90, end_year: Time.now.year - 8, order: [:day, :month, :year] %>
+    </div>
+    -->
+    <div class="col-6 mx-auto">
+      <%= f.input :requested_ship_date %>
+    </div>
+    <div class="col-6 mx-auto">
+      <%= f.input :estimated_delivery_date %>
+    </div>
+    <div class="col-6 mx-auto">
+      <%= f.input :deliver_not_before_date %>
+    </div>
+    <div class="col-6 mx-auto">
+      <%= f.input :deliver_not_after_date %>
+    </div>
+    <!--
+    <div class="col-4 mx-auto">
+      <%= f.input :email %>
+    </div>
+    -->
+  </div>
+
+  <div class="row">
+    <div class="col-1">
+      <h5>Vendor:</h5>
+    </div>
+    <div class="col-3">
+      <h4 class="align-text-bottom" style="background-color:#E5E4E2"> <%= @happyvendor.vendor_name %></h4>
+    </div>
+    <div class="col-2">
+    </div>
+    <div class="col-6">
+      <h3>Ship To Address</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <h4 class="align-text-bottom" style="background-color:#E5E4E2; text-indent: 90px;"> <%= @happyvendor.mailing_street1 %></h4>
+    </div>
+    <div class="col-6 align-self-center">
+      <%= f.input :shipping_street1, label: false, input_html: { data: { target: 'newquoteheader.shipping_street1' }, value:  @happypo.shipping_street1, tabindex: -1} %>
+      <!-- <h4><%#= @happycustomer.mailing_street1 %></h4> -->
+    </div>
+  </div>
+
+  <%#= f.input :happy_customer_id, :as => :hidden, :input_html => { :value => @happycustomer.id } %>
+
+  <div class="row">
+    <div class="col-6 align-self-top">
+      <% if @happyvendor.mailing_street2? %>
+      <h4 class="align-text-bottom" style="background-color:#E5E4E2; text-indent: 90px;"> <%= @happyvendor.mailing_street2 %></h4>
+    <% else %>
+      <h4 class="align-text-bottom" style="background-color:#E5E4E2; text-indent: 90px;">&nbsp</h4>
+    <% end %>
+    </div>
+    <div class="col-6 align-self-top">
+      <%= f.input :shipping_street2, label: false, input_html: { data: { target: 'newquoteheader.shipping_street2' },value:  @happypo.shipping_street2, tabindex: -1} %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <h4 class="align-text-bottom" style="background-color:#E5E4E2; text-indent: 90px;"> <%= @happyvendor.mailing_city %>, <%= @happyvendor.mailing_state %> <%= @happyvendor.mailing_zipcode %></h4>
+    </div>
+    <div class="col-3">
+      <%= f.input :shipping_city, label: false, input_html: { data: { target: 'newquoteheader.shipping_city' }, value:  @happypo.shipping_city, tabindex: -1} %>
+    </div>
+    <div class="col-1">
+      <%= f.input :shipping_state, label: false, input_html: { data: { target: 'newquoteheader.shipping_state' },value:  @happypo.shipping_state,tabindex: -1} %>
+    </div>
+    <div class="col-2">
+      <%= f.input :shipping_zipcode, label: false, input_html: { data: { target: 'newquoteheader.shipping_zipcode' },value:  @happypo.shipping_zipcode, tabindex: -1} %>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-4">
+        <%= f.input :external_notes %>
+      </div>
+      <div class="col-md-4">
+        <%= f.input :internal_notes, input_html: { class: 'internalnotes' } %>
+      </div>
+      <div class="col-md-4">
+       <%= f.input :special_instructions, label: "P.O. Notes", input_html: { class: 'internalnotes' }  %>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 d-flex align-self-center">
+       <%= f.input :user_name, label: "PDF file name prefix"  %>
+    </div>
+    <!--
+    <div class="col-md-2 d-flex align-self-center">
+       <%#= f.input :tax_override  %>
+    </div>
+    <div class="col-md-2">
+        <%#= f.input :tax_rate, as: :percent, label: "Tax Rate %", input_html: { data: {target: 'newquoteheader.taxRate', action: 'newquoteheader#tax_calculate' }} %>
+    </div>
+    -->
+    <div class="col-md-2">
+        <%#= f.input :additional_tax_total, label: "Tax Total", input_html: { data: {target: 'newquoteheader.taxTotal' }} %>
+    </div>
+    <div class="col-md-2">
+        <%#= f.input :included_tax_total, label: "Taxable Amount", input_html: { data: {target: 'newquoteheader.totalTaxAmount', action: 'update-tax@window->newquoteheader#setTotalTaxAmount' }, readonly: true,tabindex: -1} %>
+    </div>
+    <div class="col-md-2 d-flex align-self-center">
+       <%= f.input :discount_override, label: "Discount Override"  %>
+    </div>
+    <div class="col-md-2">
+        <%= f.input :discount_total, label: "Discount" %>
+    </div>
+  </div>
+
+  <!--
+  <div class="row">
+    <div class="col-md-4 d-flex align-self-center">
+       <%#= f.input :user_name, label: "PDF file name prefix"  %>
+    </div>
+  </div>
+  -->
+  <!-- </div>  newquoteheader div for stimulus controller -->
+
+  <h3>Line Items</h3>
+
+  <div class='lines' data-controller='grandpo'>
+          <%= f.simple_fields_for :happy_po_lines do |line| %>
+              <%= render 'happy_po_line_fields', :f => line %>
+          <% end %>
+  <div class="row">
+      <div class="col-md-6">
+        <%#= f.input :internal_notes %>
+      </div>
+      <div class="col-md-6">
+        <%#= f.input :quote_subtotal, input_html: { data: { target: 'grand.subtot' } } %>
+      </div>
+  </div>
+  </div>
+
+  <!-- </div> --> <!--  newquoteheader div for stimulus controller -->
+
+  <!--  <p><%#= link_to "Printable PO (PDF)", edit_happy_quote_path(@happypo, format: "pdf") %></p> -->
+
+   <div class='links'>
+      <%= link_to_add_association 'add line', f, :happy_po_lines, class: 'btn btn-primary', data: {
+        association_insertion_node: '.lines', association_insertion_method: :append }  %>
+    </div>
+  <br>
+  <%#= f.submit 'Save PO', id: "saveit" %>
+
+  <div class="form-group row mb-0">
+    <div class="col-sm-9">
+      <%= f.submit 'Save PO', id: "saveit", class: "btn-primary" %>
+      <%= link_to "Cancel", :back, class: "btn btn-outline-secondary" %>
+    </div>
+  </div>
+
+<% end %>
+</div>

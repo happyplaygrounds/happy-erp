@@ -1,0 +1,50 @@
+<div class='nested-fields' data-controller='total'>
+
+  <div class="row">
+    <div class="col-sm">
+      <%= f.input :quantity, input_html: { data: { target: 'total.quantity', action: 'total#recalculate' } } %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :product_id %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :description %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :color %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :unit_price_amount, input_html: { data: { target: 'total.price', action: 'total#recalculate' } } %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :total_line_amount, input_html: { data: { target: 'total.total' } } %> 
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm">
+      <%= f.input :quantity, input_html: { data: { target: 'total.quantity', action: 'total#recalculate' } } %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :product_id %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :description %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :color %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :unit_price_amount, input_html: { data: { target: 'total.price', action: 'total#recalculate' } } %>
+    </div>
+    <div class="col-sm">
+      <%= f.input :total_line_amount, input_html: { data: { target: 'total.total' } } %>
+    </div>
+    <div class="col-sm">
+      <%= link_to_remove_association "remove line", f %>
+    </div>
+  </div>
+
+</div>

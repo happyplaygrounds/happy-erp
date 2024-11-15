@@ -1,0 +1,31 @@
+<div class="container">
+  <!-- <%#= link_to 'Home', root_path %> -->
+  <h2>Happy Standard Task - <%= @happyStandardTask.task_name %></h2>
+  <br>
+  <div class="row">
+    <div class="col-sm">
+      <p>
+      <%= @happyStandardTask.description %><br>
+      <%= @happyStandardTask.happy_task_category_id %><br>
+      </p>
+    </div>
+  </div>
+
+
+  <div class="mb-4">
+      <h6>Activities</h6>
+      <div class="field">
+          <p>
+        <% HappyStandardActivity.where(happy_task_category_id: @happyStandardTask.happy_task_category_id).each do |activity| %>
+          <!-- <%#= f.check_box :activity_ids %> -->
+          <%= check_box_tag "happy_standard_task[activity_ids][]", activity.id, @happyStandardTask.happy_standard_activity_ids.include?(activity.id) %> 
+           <%= activity.activity_name %>
+        <% end %>
+          </p>
+      </div>
+    </div>
+      <h6>Add a <%= @happyStandardTask.task_name %> Activity</h6>
+
+<%= link_to 'Back', {:action => 'index'} %>
+</div>
+

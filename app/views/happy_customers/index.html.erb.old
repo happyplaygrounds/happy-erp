@@ -1,0 +1,77 @@
+<div class="container">
+  <h2>Happy Playgrounds Customers</h2>
+     <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+     <%= f.input :company_name, input_html: {value: ""} %>
+     <%= f.submit "Search", class: "btn btn-primary" %>
+     <% end %>
+  <br>
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.id %></td>
+        <td><%= customer.company_name %></td>
+        <td><%= customer.email %></td>
+        <td><%= link_to 'Show', customer %></td>
+        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+        <td><%= link_to 'Destroy', customer, method: :delete,
+                                     data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Quotes', customer %></td>
+        <td><%= link_to 'Orders', edit_customer_path(customer) %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 offset-sm-2">
+      <h1>Happy Playgrounds Customers</h1>
+     <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+     <%= f.input :company_name, input_html: {value: ""} %>
+     <%= f.submit "Search", class: "btn btn-primary" %>
+     <% end %>
+      <% @customers.each do |customer| %>
+        <h3><%= customer.company_name %></h3>
+        <p><%= customer.email %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<h1>Happy Playgrounds Customer</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+<% @customers.each do |customer| %>
+  <tr>
+    <td><%= customer.company_name %></td>
+    <td><%= customer.email %></td>
+    <td><%= link_to 'Show', customer %></td>
+    <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+    <td><%= link_to 'Destroy', customer, method: :delete,
+                                     data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br>
+
+<%= link_to 'New Customer', new_customer_path %>

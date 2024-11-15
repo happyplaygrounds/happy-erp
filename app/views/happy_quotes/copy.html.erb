@@ -1,0 +1,39 @@
+<%#= debug @happyquote %>
+<%#= debug @happycustomer %>
+ <%#= link_to 'Home', root_path %>
+
+<div class="container">
+  <h2>Happy Quote - <%= @happyquote.number %></h2>
+  <br>
+  <div class="row">
+    <div class="col-sm-2">
+      Customer ID: <%= @happyquote.happy_customer_id %>
+    </div>
+    <div class="col-sm-3">
+      Name: <%= @happyquote.happy_customer.customer_name %>
+    </div>
+    <div class="col-sm-5">
+      Email: <%= @happyquote.email %>
+    </div>
+    <div class="col-sm-2">
+      Newsub: <%= @newsub %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      Copied Quote <%= @happyquote.number %>-<%= @happyquote.sub %> to  <%= @happyquote.number %>-<%= @newsub %>
+    </div>
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <%#= link_to "Yes", happy_quote_createsub_path(:happy_quote_id => @happyquote.id)  %>
+    </div>
+  </div>
+<%#= link_to 'Back', {:action => 'index'} %>
+</div>

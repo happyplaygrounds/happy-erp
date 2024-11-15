@@ -1,0 +1,2 @@
+$("#exampleModal").find(".modal-body").html("<%= j (render 'new') %>");
+$("#exampleModal").modal();

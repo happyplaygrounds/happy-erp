@@ -1,0 +1,74 @@
+<%#= debug(params) %>
+<%#= debug(@happyTeam) %>
+<%#= params[:project_id] %>
+<%#= @happyTeam.happy_project_member_ids %>
+<div class="container">
+
+
+      <% @happyTeam.each do |teamMember| %>
+        <h3><%= teamMember.team_name %></h3>
+        <% end %>
+  <h2>Happy Project Team Members</h2>
+  
+  <div class="customer-index-form">
+     <%= simple_form_for :search, url: happy_project_teams_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+     <label>
+        <%= f.input :last_name, input_html: {value: ""} %>
+     </label>
+
+     <label>
+        <%= f.submit "Search", class: "btn btn-primary" %>
+     </label>
+     <% end %>
+  </div>
+
+  <%#= page_entries_info @happyTeamMembers %>
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Member ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @happyTeamMembers.each do |projectMember| %>
+      <tr>
+        <td><%= projectMember.id %></td>
+        <td><%= projectMember.first_name %></td>
+        <td><%= projectMember.last_name %></td>
+        <td><%= projectMember.email %></td>
+        <td><%= projectMember.phone_number %></td>
+        <!--
+        <%# if params[:project_id] %> 
+          <td><%#=link_to "Add to Project - #{params[:project_name]}", happy_project_loadprocess_path(happy_project_id:  params[:project_id], id: projectMember.id) %></td>
+          <td></td>
+        <%# else %>
+          -->
+        <td><%= link_to 'Show', projectMember %></td>
+        <!-- <td><%#= link_to 'Add Standard Task', happy_standard_tasks_path%></td> -->
+        <td><%#= link_to 'Edit', edit_happy_customer_path(customer) %></td>
+        <td><%#= link_to 'Destroy', customer, method: :delete,
+                                     data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'Quotes', happy_quotes_path(customer_id: customer.id, customer_name: customer.customer_name) %></td>
+        <td><%#= link_to 'Orders', happy_orders_path %></td>
+        <td><%#= link_to 'Vendors', happy_vendors_path %></td>
+        <% end %>
+      </tr>
+      <%# end %>
+    </tbody>
+  </table>
+  </div>
+  <%= paginate @happyProjectMembers, window: 2 %>
+<%= link_to 'New Happy Team Member', new_happy_project_member_path %><br>
+<%= link_to 'New Happy Vendor Member', new_happy_project_member_path %><br>
+<%= link_to 'New Happy Customer Member', new_happy_project_member_path %>
+</div>

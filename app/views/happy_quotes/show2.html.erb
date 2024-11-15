@@ -1,0 +1,65 @@
+<div class="container">
+
+  <!-- logopath = 'HP_Logo.jpg'    --> 
+
+
+  
+
+
+  <div class="row">
+    <div class="col-sm-3">
+        <p> Happy Playgrounds, LLC<br> 8601 South Oxford Avenue<br> Tulsa, OK 74137
+        <br>(918) 851-9518<br>
+        <%= current_user.email %>
+        </p>
+    </div>
+    <div class="col-sm-5">
+      <%= image_tag ""https://happypg-prod.s3.amazonaws.com/logo_v1.png"%>
+    </div>
+    <div class="col-sm-4">
+      <p>Certified Woman Owned Small Business<br>
+      Native American Owned; TERO certified<br>
+      </p>
+    </div
+  </div>
+
+</div>
+
+
+  pdf.image open("https://happypg-prod.s3.amazonaws.com/logo_v1.png"), :width => 150, :position => :center
+
+  pdf.text_box @happyquote.happy_customer.customer_name, :at => [address_x,  pdf.cursor]
+  pdf.text_box "Attention: " + @happyquote.happy_customer.first_name + " " + @happyquote.happy_customer.last_name, :at => [address_x,  pdf.cursor]
+  pdf.text_box @happyquote.happy_customer.mailing_street1, :at => [address_x,  pdf.cursor]
+  pdf.text_box @happyquote.happy_customer.mailing_street2, :at => [address_x,  pdf.cursor]
+  pdf.text_box @happyquote.happy_customer.mailing_city + ", " + @happyquote.happy_customer.mailing_state + " " + @happyquote.happy_customer.mailing_zipcode, :at => [address_x,  pdf.cursor]
+
+  quote_number=@happyquote.id.to_s+"-"+@happyquote.sub.to_s
+  quote_header_data = [
+    ["Quote #", quote_number],
+    ["Quote Date", @happyquote.quote_date.strftime("%m-%d-%Y")],
+    ["Quote Amount", number_to_currency(@quotetotal)]
+  ]
+
+     quote_items_header = ["Item", "Quantity","UOM", "Description","Color", "Unit Price", "Total"]
+
+
+  @happyquote.happy_quote_lines.map do |item|
+           quote_items_data << [ item.product_id, item.quantity, item.unit_of_measure,item.description,item.color, number_to_currency(item.unit_price), number_to_currency(item.total_line_amount) ]
+           if !item.external_notes.blank? 
+                ex_notes = "**  "+item.external_notes+"  **"
+		quote_items_data <<  [" ", " "," ", ex_notes, " "," ", " "]           end 
+  end
+
+
+    ["Sub Total", number_to_currency(@quotetotal)],
+    ["Tax", number_to_currency(@taxAmount)],
+    ["Discount", number_to_currency(@discountAmount)],
+    ["Quote Amount", number_to_currency(@quotetotal + @taxAmount - @discountAmount)]
+  ]
+
+
+  external_notes_data = [ 
+    [@happyquote.external_notes]
+  ]
+

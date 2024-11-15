@@ -1,0 +1,78 @@
+<div class="container mb-5">
+  <h2>Edit - Happy Project Tasks</h2>
+  <br>
+
+  <%#= link_to 'Home', root_path %>
+
+<%= simple_form_for ([@happyProject, @happyProjectTask]),
+  wrapper: :vertical_form,
+  wrapper_mappings: {
+    boolean:       :vertical_boolean,
+    check_boxes:   :vertical_collection,
+    date:          :vertical_multi_select,
+    datetime:      :vertical_multi_select,
+    file:          :vertical_file,
+    radio_buttons: :vertical_collection,
+    range:         :vertical_range,
+    time:          :vertical_multi_select
+  } do |f| %>
+
+  <%= f.error_notification %>
+
+  <div class="form-group row">
+    <div class="col-4">
+       <%= f.input :task_name, label: "Task Name" %>
+    </div>
+    <div class="col-8">
+      <%= f.label :status %><br />
+      <%= f.select :status, HappyProjectTask::STATUS_OPTIONS, {}, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-4">
+        <%= f.input :description, label: "Description" %>
+    </div>
+
+    <div class="col-3">
+        <%= f.input :priority, label: "Priority"%>
+    </div>
+
+    <div class="col-4">
+        <%#= f.input :group, label: "Group" %>
+    </div>
+
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-4">
+      <%= f.input :dependency, label: "Dependency" %>
+    </div>
+
+    <div class="col-4">
+      <%= f.input :is_vendor, label: "Vendor" %>
+    </div>
+
+  </div>
+
+  <div class="form-group row">
+    <div class="col-4">
+      <%#= f.input :duration, label: false, placeholder: "Duration" %>
+    </div>
+
+    <div class="col-4">
+      <%#= f.input :duration_unit, label: false, placeholder: "Duration Unit" %>
+    </div>
+
+  </div>
+
+
+  <div class="form-group row mb-0">
+    <div class="col-sm-9">
+      <%= f.button :submit, class: "btn-primary" %>
+      <%= link_to "Cancel", :back, class: "btn btn-outline-secondary" %>
+    </div>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,7 @@
+class HappyOrder < ApplicationRecord
+  belongs_to :happycustomer
+  has_many :happyorderlines inverse_of: :happyorder
+  accepts_nested_attributes_for :happyorderlines, reject_if: :all_blank, allow_destroy: true
+
+  before_save { self.email = email.downcase }
+end

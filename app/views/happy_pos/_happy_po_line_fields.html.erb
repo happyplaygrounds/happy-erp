@@ -1,0 +1,88 @@
+<div class='nested-fields border border-primary' data-controller='totalpo productpo'>
+
+  <div class="form-row">
+    <div class="col-md-3">
+      <%= f.input :product_id,:label => "Part Number",input_html: { data: { target: 'product.productid', action: 'product#productinfo' }, id: 'product_id' }  %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :description, input_html: { data: { target: 'product.description' } }%>
+    </div>
+    <div class="col-md-3">
+      <%= f.input :color %>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="col-md-2">
+      <%= f.input :quantity, input_html: { data: { target: 'product.quantity totalpo.quantity grandpo.quantity', action: 'totalpo#recalculate grandpo#calculate' } } %>
+    </div>
+    <div class="col-md-1">
+      <%= f.input :unit_of_measure, :label => "UOM", collection: [['EA','EA'], ['FT','FT'], ['SQ FT','SQ FT']],  include_blank: false %>
+    </div>
+    <div class="col-md-1">
+      <%= f.input :weight, :label => "Weight",  input_html: { data: { target: 'product.weight' } } %>
+    </div>
+    <div class="col-md-2">
+      <%#= f.input :unit_price, as: :currency, input_html: { data: { target: 'totalpo.price', action: 'totalpo#recalculate', id: 'unit_price' } } %>
+      <%= f.input :unit_price, as: :currency, required: true, input_html: { data: { target: 'totalpo.price grandpo.price product.price', action: 'totalpo#recalculate grandpo#calculate' }, value: number_with_precision(f.object.unit_price, precision: 2) , class: "internalnotes" } %>
+    </div>
+    <div class="col-md-1 d-flex align-self-center">
+      <%= f.input :taxable,:as => :boolean, input_html: { data: { target: 'newquoteheader.taxable totalpo.taxable', action: 'click->totalpo#setTaxAmount newquoteheader#setTotalTaxAmount' } }  %>
+    </div>
+    <div class="col-md-2">
+      <%= f.input :total_line_amount, as: :currency, input_html: { data: { target: 'product.total totalpo.total grandpo.total newquoteheader.total' }, class: "commanumber total_line_amount", readonly: true, tabindex: -1  } %> 
+    </div>
+    <!-- <div id="cash-out">0</div> -->
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
+      <%= f.input :po_subtotal, as: :currency, input_html: {id: 'quote_subtotals', data: { target: 'totalpo.subtotal grandpo.subtot' }, readonly: true, tabindex: -1 }%>
+    </div>
+  </div>
+  <!--
+  <div class="form-row">
+    <div class="col-md-2">
+    <% if f.object.happy_vendor_id %>
+      <%#= f.input :happy_vendor_id,:collection => @happyvendors,:label_method => :vendor_name,:value_method => :id,:label => "Vendor" ,:include_blank => false, input_html: { data: { target: 'product.vendorid' } }, value: :happy_vendor_id %>
+    <% else %>
+      <%#= f.input :happy_vendor_id,:collection => @happyvendors,:label_method => :vendor_name,:value_method => :id,:label => "Vendor" ,:include_blank => false, selected: 1, input_html: { data: { target: 'product.vendorid' } } %>
+    <% end %>
+     <%#= f.hidden_field :vendor_name%> 
+    </div>
+      <%#= f.input :purchase_discount, as: :hidden, input_html: { data: { target: 'product.purchaseDisc totalpo.purchaseDisc' }, tabindex: -1 } %>
+      <%#= f.input :tax_amount, as: :hidden, input_html: { data: { target: 'totalpo.taxAmount newquoteheader.taxAmount' }, tabindex: -1 } %>
+    <div class="col-md-2">
+      <%#= f.input :buyout_unit_price, as: :currency,  input_html: { data: { target: 'totalpo.buyout grandpo.buyout product.buyout', action: 'total#recalculate grandpo#calculate' },value: number_with_precision(f.object.buyout_unit_price, precision: 2) } %>
+    </div>
+    <div class="col-md-2">
+      <%#= f.input :total_cost_amount, as: :currency, input_html: { data: { target: 'product.totalCost totalpo.totalCost grandpo.totalCost' }, class: "commanumber total_cost_amount", readonly: true, tabindex: -1 } %> 
+    </div>
+    <div class="col-md-2">
+      <%#= f.input :sell_discount, as: :currency, :label => "Vendor Discount",input_html: { value: number_with_precision(f.object.sell_discount, precision: 2) , class: "internalnotes" } %>
+    </div>
+    <div class="col-md-2">
+      <%#= f.input :margin, as: :percent, :label => "Margin %", input_html: { data: { target: 'totalpo.margin' }, precision: 2, readonly: true, value: 0,  tabindex: -1 }%>
+    </div>
+    <div class="col-md-2">
+      <%#= f.input :quote_margin, as: :percent, input_html: {id: 'quote_margins', data: { target: 'grandpo.margin' }, readonly: true, tabindex: -1 }%>
+    </div>
+  </div>
+  -->
+
+
+  <div class="form-row">
+    <div class="col-md-5">
+      <%= f.input :external_notes %>
+    </div>
+    <div class="col-md-5">
+      <%= f.input :internal_notes %>
+    </div>
+    <div class="col-md-2 align-self-center">
+      <%= link_to_remove_association "remove line", f, class: 'btn btn-primary', input_html: { data: { target: 'totalpo.remove', action: 'newquoteheader#setTotalTaxAmount' } }  %>
+    </div>
+
+  </div>
+
+</div>
+<br>
+

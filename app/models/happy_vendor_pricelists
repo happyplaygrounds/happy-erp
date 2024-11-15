@@ -1,0 +1,4 @@
+class HappyPricelists < ApplicationRecord
+  belongs_to :happy_vendors    
+end
+~      

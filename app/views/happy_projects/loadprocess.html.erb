@@ -1,0 +1,45 @@
+<%#= debug @happyquote %>
+<%#= debug @happycustomer %>
+ <%#= link_to 'Home', root_path %>
+
+<div class="container">
+  <h2>Happy Project Tasks - <%= @happyProject.project_name %></h2>
+  <br>
+
+   <% @happyProjectTasks.each do |projectTask| %>
+        
+  <div class="row">
+    <div class="col-sm-3">
+      Task Name: <%= projectTask.task_name %>
+    </div>
+    <div class="col-sm-6">
+      Task Description: <%= projectTask.description %>
+    </div>
+    <!-- 
+    <div class="col-sm-5">
+      Email: <%#= @happyquote.email %>
+    </div>
+    <div class="col-sm-2">
+      Newsub: <%#= @newsub %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      Copied Quote <%#= @happyquote.number %>-<%#= @happyquote.sub %> to  <%#= @happyquote.number %>-<%#= @newsub %>
+    </div>
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+  <% end %>
+  -->
+  <div class="row">
+    <div class="col-sm">
+      <%#= link_to "Yes", happy_quote_createsub_path(:happy_quote_id => @happyquote.id)  %>
+    </div>
+  </div>
+<%#= link_to 'Back', {:action => 'index'} %>
+</div>

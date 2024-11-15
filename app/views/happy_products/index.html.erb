@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>Happy Products</h2>
+     <%= simple_form_for :search, url: happy_products_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+     <%= f.input :part_number, input_html: {value: ""} %>
+     <%= f.input :description, input_html: {value: ""} %>
+     <%= f.submit "Search", class: "btn btn-primary" %>
+     <% end %>
+  <br>
+  <%= page_entries_info @products %>
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Part Number</th>
+        <th>Description</th>
+        <th>List Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+      <tr>
+        <td><%= product.part_number %></td>
+        <td><%= product.description %></td>
+        <td><%= product.list_price %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%#= link_to 'Edit', edit_happy_product_path(product) %></td>
+        <td><%#= link_to 'Destroy', customer, method: :delete,
+                                     data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'Quotes', happy_quotes_path(customer_id: customer.id) %></td>
+        <td><%#= link_to 'Orders', happy_orders_path %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+  <%= paginate @products, window: 2 %>
+<%#= link_to 'New Product', new_happy_product_path %>
+</div>
+

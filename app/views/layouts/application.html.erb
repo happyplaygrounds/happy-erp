@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HIIQ</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= action_cable_meta_tag %>
+
+    <link rel="icon" href="https://erp.happyplaygrounds.com/favicon.ico?v=2" />
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand:600&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "_custom", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "home", "data-turbo-track": "reload" %>
+    <%#= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_importmap_tags %>
+
+  </head>
+
+  <body>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <div class="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag(:div, class: "alert alert-#{name}") do%>
+            <%=msg%>
+            <button type="button" class="close" data-bs-dismiss="alert">&times;</button>
+        <%end%>
+      <% end %>
+    <!-- <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %> -->
+    <%= yield %>
+    </div>
+  </body>
+    <footer>
+      <%= render 'layouts/footer' if params[:action] = "show" and params[:controller] != "happy_products" %>
+    </footer>
+</html>

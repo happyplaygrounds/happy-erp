@@ -1,0 +1,201 @@
+<br>
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-4">
+        <p> Happy Playgrounds, LLC<br> 8601 South Oxford Avenue<br> Tulsa, OK 74137
+        <br>(918) 851-9518<br>
+        <%= current_user.email %>
+        </p>
+    </div>
+    <div class="col-sm-4">
+      <%= image_tag "https://d1wfqjcm45bc90.cloudfront.net/happy-erp-logo-v1.png"%>
+    </div>
+    <div class="col-sm-4 text-danger">
+      <p>Certified Woman Owned Small Business<br>
+      Native American Owned; TERO certified<br>
+      </p>
+    </div>
+  </div>
+  <br><br>
+<div class="row">
+  <div class="col-8">
+      <p>
+      <%= @happyquote.happy_customer.customer_name %><br>
+      Attention: <%= @happyquote.happy_customer.first_name %> <%= @happyquote.happy_customer.last_name %><br>
+      <%= @happyquote.happy_customer.mailing_street1 %><br>
+      <% if @happyquote.happy_customer.mailing_street2? %>
+        <%= @happyquote.happy_customer.mailing_street2 %><br>
+      <% end %>
+      <%= @happyquote.happy_customer.mailing_city %> <%= @happyquote.happy_customer.mailing_state%> <%= @happyquote.happy_customer.mailing_zipcode %>
+      </p>
+  </div>
+  <div class="col-2">
+    <p><b>Quote # </b><br>
+      <b>Quote Date</b><br>
+      <b>Order Date</b><br>
+      <b>Quote Amount</b><br>
+      </p>
+  </div>
+  <div class="col-2">
+    <p>
+    <%= @happyquote.number %>-<%= @happyquote.sub.to_s %><br>
+    <%= @happyquote.quote_date.strftime("%m-%d-%Y") %><br>
+    <% if @happyquote.order_date.nil? %>
+        <span>Not Ordered</span><br>
+    <% else %>
+        <%= @happyquote.order_date.strftime("%m-%d-%Y") %><br>
+    <% end %>
+    <%= number_to_currency(@quotetotal + @taxAmount - @discountAmount) %>
+      </p>
+  </div>
+</div>
+  <br><br>
+
+<div class="row bg-secondary">
+  <div class="col-2 border">
+    <b>Part Number</b>
+  </div>
+  <div class="col-1 border">
+    <b>Qty</b>
+  </div>
+  <div class="col-1 border">
+    <b>UOM</b>
+  </div>
+  <div class="col-3 border">
+    <b>Description</b>
+  </div>
+  <div class="col-1 border">
+    <b>Color</b>
+  </div>
+  <div class="col-2 border">
+    <b class="float-right">Unit Price</b>
+  </div>
+  <div class="col-2 border">
+    <b class="float-right">Total</b>
+  </div>
+</div>
+
+<div data-controller="drag" data-drag-url-value="/happy_quotes/:id/move">
+      <% @lines.each do |quote| %>
+        <div data-id="<%= quote.id %>" data-quoteid="<%= quote.id %>" class="card card-body-4">
+          <div class="row" data-toggle="tooltip" title="Use mouse to left click and hold on line item then drag it to the new position on the quote" data-sortable-handle>
+         <% if quote.quantity != 0 %>
+          <div class="col-sm-2">
+                <%= quote.product_id %>
+          </div>
+          <div class="col-sm-1">
+                <%= quote.quantity %>
+          </div>
+          <div class="col-sm-1">
+                <%= quote.unit_of_measure %>
+          </div>
+          <div class="col-sm-3">
+                <%= quote.description %>
+          </div>
+          <div class="col-sm-1">
+                <%= quote.color %>
+          </div>
+          <div class="col-sm-2">
+               <div class="float-right">
+                 <%= number_to_currency(quote.unit_price) %>
+               </div>
+          </div>
+          <div class="col-sm-2">
+               <div class="float-right">
+                <%= number_to_currency(quote.total_line_amount) %>
+               </div>
+          </div>
+        <% else %>
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-1">
+          </div>
+          <div class="col-sm-1">
+          </div>
+          <div class="col-sm-3">
+                <%= quote.description %>
+          </div>
+          <div class="col-sm-1">
+          </div>
+          <div class="col-sm-2">
+               <div class="float-right">
+               </div>
+          </div>
+          <div class="col-sm-2">
+               <div class="float-right">
+               </div>
+          </div>
+        <% end %>
+
+         </div>
+        </div>
+      <% end %>
+  </div>
+
+  <br><br>
+<div class="row">
+ <% if @happyquote.external_notes? %>
+  <div class="col-1">
+  <b>External Notes:</b>
+  </div>
+  <div class="col-7">
+    <textarea rows="4" cols="50" readonly>
+    <%= @happyquote.external_notes %>
+    </textarea>
+  </div>
+ <% else %>
+  <div class="col-8">
+  </div>
+ <% end %>
+ <div class="col-2 border">
+   <p>
+   <b>Sub Total</b><br>
+   <b>Tax</b><br>
+   <% if @discountAmount > 0 %>
+    <b>Discount</b><br>
+   <% end %>
+   <b>Quote Amount</b><br>
+  </p>
+ </div>
+ <div class="col-2 border">
+   <p class="float-right">
+   <%= number_to_currency(@quotetotal) %><br>
+   <%= number_to_currency(@taxAmount) %><br>
+   <% if @discountAmount > 0 %>
+      <%= number_to_currency(@discountAmount) %><br>
+   <% end %>
+   <%= number_to_currency(@quotetotal + @taxAmount - @discountAmount) %>
+  </p>
+ </div>
+ 
+</div>
+
+ <!-- <% if @happyquote.external_notes? %>
+
+ <div class="row">
+  <b>Notes:</b>
+  <div class="col-12">
+    <textarea readonly rows="4" cols="50">
+    <%#= @happyquote.external_notes %>
+    </textarea
+  </div>
+ </div>
+ 
+ <% end %> -->
+
+ <br>
+<div class="row">
+ <p><%= link_to "Printable Quote (PDF)", edit_happy_quote_path(@happyquote, format: "pdf") %><br>
+ <%= link_to "Edit Quote", edit_happy_quote_path(@happyquote) %><br>
+ <%= link_to 'View Purchase Orders', happy_quote_po_path(@happyquote, happy_customer_id: @happyquote.happy_customer_id) %><br>
+
+ <% if @pwfreight > 0 %>
+    <%= link_to "PlayWorld Freight Form", happy_quote_pwfreight_path(params[:id], vendor_id: 2, format: "html") %>
+ <% end %>
+ <%#= link_to "PlayWorld Freight Form", happy_quote_pwfreight_path(params[:id], vendor_id: 2, format: "pdf") %>
+ </p>
+</div>
+</div>
+
+

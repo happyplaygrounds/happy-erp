@@ -1,0 +1,3 @@
+class HappyOrderLine < ApplicationRecord
+  belongs_to :happyorder
+end

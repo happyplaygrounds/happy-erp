@@ -1,0 +1,15 @@
+<div class="container">
+  <!-- <%#= link_to 'Home', root_path %> -->
+  <h2>Happy Standard Activity - <%= @happyStandardActivity.activity_name %></h2>
+  <br>
+  <div class="row">
+    <div class="col-sm">
+      <p>
+      <%= @happyStandardActivity.description %><br>
+      </p>
+    </div>
+  </div>
+
+<%= link_to 'Back', {:action => 'index'} %>
+</div>
+

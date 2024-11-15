@@ -1,0 +1,228 @@
+    <% get_today_reminders() %>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" href="#">
+    <%= image_tag "https://d1wfqjcm45bc90.cloudfront.net/happy-erp-logo-v1.png"%>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="visually-hidden">(current)</span></a>
+      </li>
+
+      <!--
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Quotes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/happy_quotes">Search</a>
+          <a class="dropdown-item" href="#">Add</a>
+          <a class="dropdown-item" href="#">Copy</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Request Quote Approval</a> 
+        </div>
+      </li>
+      -->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Quotes
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/happy_quotes">Search</a></li>
+          </ul>
+        </li>
+
+      <!--
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Orders
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Search</a>
+          <a class="dropdown-item" href="#">Add</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Request Order Review</a>
+        </div>
+      </li>
+      <div class="dropdown">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown link
+  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
+      -->
+
+
+      <!--
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      -->
+
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Customer
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="/happy_customers">Search</a></li>
+          <!-- <a class="dropdown-item" href="#">Add</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Request New Customer Review</a> -->
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Vendor
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/happy_vendors">Search</a>
+          <!-- <a class="dropdown-item" href="#">Add</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Request New Vendor Setup</a> -->
+        </ul>
+      </li>
+
+  <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="/happy_products" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Products
+  </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/happy_products">Search</a>
+        </div>
+      </li>
+      
+
+      <% if not current_user.nil? %>
+<% if current_user.id == 1 || current_user.id == 2  %>
+    <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="/happy_projects" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Projects
+  </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/happy_projects">Search</a>
+          <a class="dropdown-item" href="/happy_standard_tasks">Standard Tasks</a>
+          <a class="dropdown-item" href="/happy_standard_processes">Standard Processes</a>
+        </div>
+  </li> 
+<% end %>
+<% end %>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="https://happyplaygrounds.github.io/erp-docs" target="_blank">Happy Docs</a>
+      </li>
+      <!--
+      <li class="nav-item">
+        <a class="nav-link" href="#">Quotes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+      -->
+    </ul>
+        <% if user_signed_in? %>
+        <span>
+          <span class="nav-devise">User: <%= current_user.email %>
+            <% if @todayReminderCount > 0 %> 
+                <a data-toggle="modal" data-target="#navModalLong">
+                  <!-- &nbsp;&nbsp;<i class='fas fa-bell' style='font-size:24px'></i> -->
+                  <img src="https://d1wfqjcm45bc90.cloudfront.net/bell.png" alt="Space" />
+                </a>
+            <% end %>
+          </span>
+            <%#= link_to('Logout', destroy_user_session_path, method: :delete) %>
+            <%#= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete } %>
+            <%#= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :"delete" } %>
+            <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete } %>
+            <%#= link_to "Sign out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %>
+
+
+        </span>
+        <% else %>
+        <span>
+            <%= link_to('Login', new_user_session_path) %>
+        </span>
+        <% end %>
+    <!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    -->
+  </div>
+</nav>
+<br>
+
+<!-- Modal -->
+<!-- if below and if where form is are important  -->
+          <% if @todayReminders %>
+
+<div class="modal fade" id="navModalLong" tabindex="-1" role="dialog" aria-labelledby="navModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="navModalLongTitle"> Today's Happy Reminders</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+          <%= form_tag update_multiple_happy_reminders_path, method: :put do %>
+              <% @todayReminders.each do |reminder| %>
+                <%= fields_for "happy_reminders[]", reminder do |f| %>
+                  <div class="form-group row">
+                    <div class="field">
+                    <%= f.label :name %> 
+                    <%= f.text_field :name %>
+                    </div>
+
+                    <div class="field">
+                    <%= f.label :content %>
+                    <%= f.text_area :content %>
+                    </div>
+
+                    <div class="field">
+                    <%= f.label :reminder_date %>
+                    <%= f.date_field :reminder_date %>
+                    </div>
+
+                    <%#= f.input :content %>
+                    <%#= f.input :reminder_date %>
+                    <%#= f.hidden_field :remindable_id, :as => :hidden, :input_html => { :value => params[:id] } %>
+                    <%#= f.hidden_field :remindable_type, :as => :hidden, :input_html => { :value => @model_name } %>
+                    </div>
+
+                <% end %>
+           <% end %>
+  <%= submit_tag "Update" %>
+          <% end %>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+
+              <% end %>

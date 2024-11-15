@@ -1,0 +1,94 @@
+<div class="container mb-5">
+  <h2>Happy Standard Tasks</h2>
+  <br>
+
+  <%#= link_to 'Home', root_path %>
+
+<%= simple_form_for @happyStandardTask,
+  wrapper: :vertical_form,
+  wrapper_mappings: {
+    boolean:       :vertical_boolean,
+    check_boxes:   :vertical_collection,
+    date:          :vertical_multi_select,
+    datetime:      :vertical_multi_select,
+    file:          :vertical_file,
+    radio_buttons: :vertical_collection,
+    range:         :vertical_range,
+    time:          :vertical_multi_select
+  } do |f| %>
+
+  <%= f.error_notification %>
+
+  <%= f.input :task_name, label: false, placeholder: "Task Name" %>
+
+  <div class="form-group row">
+    <div class="col-4">
+        <%= f.input :description, label: "Description" %>
+    </div>
+
+    <div class="col-2">
+        <%= f.input :priority, label: "Priority"%>
+    </div>
+
+    <div class="col-6">
+      <% if f.object.happy_task_category_id %>
+      <%= f.input :happy_task_category_id,:collection => @happyTaskCategories,:label_method => :name,:value_method => :id,:label => "Category" ,:include_blank => false, input_html: { class: "js-basic-single" } %>
+    <% else %>
+      <%= f.input :happy_task_category_id,:collection => @happyTaskCategories,:label_method => :name,:value_method => :id,:label => "Category" ,:include_blank => false, selected: 1, input_html: { class: "js-basic-single" } %>
+    <% end %>
+    </div>
+
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-4">
+      <%= f.input :dependency, label: false, placeholder: "Dependency" %>
+    </div>
+
+    <div class="col-4">
+      <%= f.input :is_vendor, label: "Vendor" %>
+    </div>
+
+  </div>
+
+  <div class="form-group row">
+    <div class="col-4">
+      <%#= f.input :duration, label: false, placeholder: "Duration" %>
+    </div>
+
+    <div class="col-4">
+      <%#= f.input :duration_unit, label: false, placeholder: "Duration Unit" %>
+    </div>
+
+  </div>
+
+  <h3>Task Activities</h3>
+
+  <div class='lines'>
+          <%= f.simple_fields_for :happy_standard_actvities do |line| %>
+              <%= render 'happy_standard_activity_fields', :f => line %>
+          <% end %>
+  <div class="row">
+      <div class="col-md-6">
+        <%#= f.input :internal_notes %>
+      </div>
+      <div class="col-md-6">
+        <%#= f.input :quote_subtotal, input_html: { data: { target: 'grand.subtot' } } %>
+      </div>
+  </div>
+  </div>
+
+    <div class='links'>
+      <%= link_to_add_association 'add line', f, :happy_standard_activities, class: 'btn btn-primary', data: { 
+        association_insertion_node: '.lines', association_insertion_method: :append }  %>                                             </div>
+  <br>
+
+  <div class="form-group row mb-0">
+    <div class="col-sm-9">
+      <%= f.button :submit, class: "btn-primary" %>
+      <%= link_to "Cancel", :back, class: "btn btn-outline-secondary" %>
+    </div>
+  </div>
+<% end %>
+</div>

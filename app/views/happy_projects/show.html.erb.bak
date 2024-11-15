@@ -1,0 +1,93 @@
+<div class="container">
+  <!-- <%#= link_to 'Home', root_path %> -->
+  <h2>Happy Customer - <%= @happyproject.project_name %></h2>
+  <br>
+  <div class="row">
+    <div class="col-sm">
+      <p>
+      <%= @happyproject.project_name %><br>
+      </p>
+    </div
+  </div>
+     <!-- 
+      <%#= @happyproject.street1 %><br>
+      <%# if @happyproject.street2? %>
+        <%##= @happyproject.street2 %><br>
+      <%# end %>
+      <%#= @happyproject.city %> <%#= @happyproject.state%> <%#= @happyproject.zipcode %><br>
+     <%#= @happyproject.business_phone %>
+      </p>
+    </div>
+    <div class="col-sm">
+      <p>
+      <%#= @happyproject.first_name %> <%#= @happyproject.last_name%>,  <%#= @happyproject.title %><br>
+      <%# if @happyproject.taxable? %>
+        <strong>Taxable</strong><br>
+      <%# end %>
+      <%#= @happyproject.terms %>
+      </p>
+    </div>
+    <div class="col-sm">
+      Email: <%#= @happyproject.email %>
+    </div>
+  </div>
+  
+ <div class="row bg-secondary">
+  <div class="col-2 border">
+    <b>Quote</b>
+  </div>
+  <div class="col-2 border">
+    <b>Quote Date</b>
+  </div>
+  <div class="col-2 border">
+    <b>FOB</b>
+  </div>
+  <div class="col-2 border">
+    <b class="float-right">Tax</b>
+  </div>
+  <div class="col-2 border">
+    <b class="float-right">Discount</b>
+  </div>
+  <div class="col-2 border">
+    <b class="float-right">Total</b>
+  </div>
+</div>
+
+<%# @happyquotes.each do |quote| %>
+        <div class="card card-body-4">
+          <div class="row">
+          <div class="col-sm-2">
+            <%# quotenum = quote.number.to_s + "-" + quote.sub.to_s %>
+                <%#= link_to quotenum, {controller: "happy_quotes", action: "show", id: quote.id } %>
+          </div>
+          <div class="col-sm-2">
+                <%#= quote.quote_date %>
+          </div>
+          <div class="col-sm-2">
+                <%#= quote.fob %>
+          </div>
+          <div class="col-sm-2">
+               <div class="float-right">
+                 <%#= number_to_currency(quote.additional_tax_total) %>
+               </div>
+          </div>
+          <div class="col-sm-2">
+               <div class="float-right">
+                 <%#= number_to_currency(quote.discount_total) %>
+               </div>
+          </div>
+          <div class="col-sm-2">
+               <div class="float-right">
+                <%#= number_to_currency(quote.total) %>
+               </div>
+          </div>
+          </div>
+        </div>
+<% end %>
+
+     -->
+
+
+<%= link_to 'Back', {:action => 'index'} %>
+</div>
+

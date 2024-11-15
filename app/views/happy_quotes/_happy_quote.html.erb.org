@@ -1,0 +1,4 @@
+<li>
+  <strong><%= happy_quote.id %></strong><br>
+  <%= render 'form' %>
+</li>

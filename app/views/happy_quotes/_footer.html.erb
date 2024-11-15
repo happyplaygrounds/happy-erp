@@ -1,0 +1,24 @@
+<!-- Footer -->
+
+<div class="row">
+    <div class="col-md-4">
+      <%= f.input :special_instructions, label: false, placeholder: 'Zip Code'  %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :internal_notes %>
+    </div>
+    <div class="col-md-4">
+      <%= f.input :external_notes %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 mx-auto">
+      <%#= f.input :quote_date %>
+      <%= f.input :quote_date, label: "Quote Date", as: :string, start_year: Time.now.year - 90, end_year: Time.now.year - 8, order: [:day, :month, :year] %>
+    </div>
+    <div class="col-6 mx-auto">
+      <%= f.input :estimated_delivery_date %>
+    </div>
+  </div>
+

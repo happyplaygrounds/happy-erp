@@ -1,0 +1,31 @@
+<div class="container">
+  <!-- <%#= link_to 'Home', root_path %> -->
+  <h2>Happy Standard Project Process - <%= @happyStandardProcess.process_name %></h2>
+  <br>
+  <div class="row">
+    <div class="col-sm">
+      <p>
+      <%= @happyStandardProcess.description %><br>
+      </p>
+    </div>
+  </div>
+
+
+  <div class="mb-4">
+    <h6>Select below tasks</h6><br>
+      <%= form_for(@happyStandardProcess) do |f| %>
+        <div class="field">
+          <%= hidden_field_tag "hp[happy_standard_task_ids][]" %>
+          <% HappyStandardTask.all.each do |task| %>
+            <%= check_box_tag "hp[happy_standard_task_ids][]", task.id, @happyStandardProcess.happy_standard_task_ids.include?(task.id) %>
+            <%= task.task_name %>
+          <% end %>
+          </div>
+             <br>
+            <%= f.submit class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+
+<%= link_to 'Back', {:action => 'index'} %>
+</div>
+

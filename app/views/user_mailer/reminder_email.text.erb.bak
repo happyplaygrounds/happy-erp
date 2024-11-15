@@ -1,0 +1,11 @@
+Hi <%#= @user.first_name %>,
+
+<%#= @event.title %> is in <%= @time %>!
+Event date: <%#= @happyReminder.reminder_date.strftime("%A, %B %-d, %Y")%>
+
+Missing a gift for:
+<#% @people.each do |person| %>
+<%#= person %>
+<#% end %>
+
+Find a gift on Gift Wrap: <%#= @url %>

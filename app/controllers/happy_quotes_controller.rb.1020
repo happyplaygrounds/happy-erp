@@ -1,0 +1,163 @@
+class HappyQuotesController < ApplicationController
+before_action :find_quote, only: [:show, :edit, :update, :destroy]
+
+  def index
+     @happyquote = HappyQuote.where("happy_customer_id = ?", params[:customer_id])
+  end
+
+  def new
+     @happyquote = HappyQuote.new
+  end
+
+  def show
+     respond_to do |format|
+      format.html
+      format.pdf 
+    end
+  end
+
+  def simple
+     respond_to do |format|
+      format.html
+      format.pdf 
+    end
+  end
+
+  def edit
+     @happyvendors = HappyVendor.all
+     @filename = "happy_quote.pdf"
+     @balance = 0
+     @quotetotal = @balance + HappyQuoteLine.sum('total_line_amount')
+     respond_to do |format|
+      format.html
+      format.pdf 
+    end
+     origin = TaxCloud::Address.new(        
+             :address1 => '8601 South Oxford Ave', 
+             :address2 => '',     
+             :city => 'Tulsa',             
+             :state => 'OK',
+             :zip5 => '74137')
+      destination = TaxCloud::Address.new(   
+             :address1 => '6300 Hinkson Road', 
+             :address2 => '',     
+             :city => 'Little Rock',             
+             :state => 'AR',
+             :zip5 => '72209-4798')
+  
+   transaction = TaxCloud::Transaction.new(  
+             :customer_id => '4',            
+             :cart_id => '1',  
+             :origin => origin,
+             :destination => destination)
+      transaction.cart_items << TaxCloud::CartItem.new(
+             :index => 0,      
+             :item_id => 'SKU-100',          
+             :price => @quotetotal,  
+             :quantity => 1)   
+  
+      @lookup = transaction.lookup # this will return a TaxCloud::Responses::Lookup instance                                                         
+      @taxAmount = @lookup.tax_amount
+      puts @lookup.tax_amount
+  end
+
+  def create
+    @happyquote = HappyQuote.new(happyquote_params)
+    if @happyquote.save
+      flash[:success] = "Quote saved!"
+      redirect_to @happyquote
+    else
+      flash[:alert] = "Quote not saved!"
+      # This line overrides the default rendering behavior, which
+      # would have been to render the "create" view.
+      render "new"
+    end
+  end
+
+  def update
+    params[:happy_quote][:happy_quote_lines_attributes].each do |line_number, params|
+      puts "here"
+      puts line_number
+      puts params[:total_line_amount]
+      params[:total_line_amount] = params[:total_line_amount].gsub(/[\s,]/ ,"")
+    end
+    if @happyquote.update(happyquote_params)
+       @happyquote.save
+      redirect_to @happyquote
+    else
+      render :action => 'edit'
+    end
+  end
+
+  def remove_commas(num)
+    #newnum = (num.replace(/,/g, ''))
+    return newnum
+  end
+
+  def destroy
+    @happyquote.destroy
+    redirect_to action: "index"
+  end
+
+  def calculate_sales_tax
+      origin = TaxCloud::Address.new(
+             :address1 => '162 East Avenue',
+             :address2 => 'Third Floor',
+             :city => 'Norwalk',
+             :state => 'CT',
+             :zip5 => '06851')
+      destination = TaxCloud::Address.new(
+             :address1 => '3121 West Government Way',
+             :address2 => 'Suite 2B',
+             :city => 'Seattle',
+             :state => 'WA',
+             :zip5 => '98199')
+
+   transaction = TaxCloud::Transaction.new(
+             :customer_id => '1',
+             :cart_id => '1',
+             :origin => origin,
+             :destination => destination)
+      transaction.cart_items << TaxCloud::CartItem.new(
+             :index => 0,
+             :item_id => 'SKU-100',
+             :tic => TaxCloud::TaxCodes::GENERAL,
+             :price => 10.00,
+             :quantity => 1)
+
+      lookup = transaction.lookup # this will return a TaxCloud::Responses::Lookup instance
+      lookup.tax_amount # total tax amount
+      lookup.cart_items.each do |cart_item|
+           cart_item.tax_amount # tax for a single item
+      end
+     puts lookup.tax_amount
+   end
+
+private
+
+  def find_quote
+    @happyquote = HappyQuote.includes(:happy_customer).find(params[:id])
+  end
+
+  def happyquote_params
+    params.require(:happy_quote).permit(
+   :terms, :fob, :quote_date, :estimated_delivery_date,
+   :shipping_street1, :shipping_street2, :shipping_city,
+   :shipping_state, :shipping_pobox,
+    happy_quote_lines_attributes: [:id, :product_id,
+     :description,
+     :color,
+     :quantity,
+     :unit_price_amount,
+     :total_line_amount,
+     :vendor_name,
+     :buyout_unit_price,
+     :margin,
+     :external_notes,
+     :internal_notes,
+     :_destroy]
+)
+    
+  end
+
+end

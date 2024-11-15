@@ -1,0 +1,4 @@
+class HappyQuoteLine < ApplicationRecord
+  belongs_to :happy_quote
+   #belongs_to :happy_vendor
+end

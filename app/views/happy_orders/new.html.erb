@@ -1,0 +1,47 @@
+
+
+<h1>New Order</h1>
+
+
+
+<%= form_with scope: :happyorder, local: true do |form| %>
+  <p>
+    <%= form.label :order %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+
+<%= simple_form_for @happyorder,
+wrapper: :horizontal_form,
+  wrapper_mappings: {
+    boolean:       :horizontal_boolean,
+    check_boxes:   :horizontal_collection,
+    date:          :horizontal_multi_select,
+    datetime:      :horizontal_multi_select,
+    file:          :horizontal_file,
+    radio_buttons: :horizontal_collection,
+    range:         :horizontal_range,
+    time:          :horizontal_multi_select
+  } do |f| %>
+  <%= f.input :number %>
+  <%= f.input :status, input_html: { maxlength: 1, size: 1} %>
+  <%= f.input :quote_date %>
+  <%= f.input :shipping_method %>
+  <%= f.button :submit %>
+<% end %>
+
+<h1>Hello World</h1>
+<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+  Tooltip on top
+</button>
+

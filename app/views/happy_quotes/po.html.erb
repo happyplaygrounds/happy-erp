@@ -1,0 +1,92 @@
+<%#= debug @happyproject %>
+<%#= debug @happyquote %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <!--
+      <h3>Happy Vendors for Quote # - <%#= params[:happy_quote_id] %></h3> -->
+      <h3>Happy Vendors for Quote # - <%= @happyquote.number.to_s %>-<%= @happyquote.sub.to_s %></h3>
+    </div>
+    <div class="col-sm-6">
+      <% if @happyproject.present? %> 
+        <%# @happyproject.each do |project| %>
+        <!-- <h3><%#= link_to 'Create Happy Project', new_happy_project_path(params[:happy_quote_id], params[:happy_customer_id], format: "html")%> - Locations - <%= @numberLocations %></h3>  -->
+          <h3><%= link_to 'View Project', happy_project_path(id: @happyproject.id, format: "html")%> - Locations - <%= @numberLocations %></h3> 
+          <%# end %>
+      <% else %>
+                  <h3><%= link_to 'Create Happy Project', happy_install_sites_path(happy_quote_id: params[:happy_quote_id] , happy_customer_id: params[:happy_customer_id], format: "html")%> - Locations - <%= @numberLocations %></h3>
+          <!--    <h3><%#= link_to 'Create Happy Project', new_happy_customer_location_path(happy_customer_id: params[:happy_customer_id], format: "html")%> - Locations - <%= @numberLocations %></h3>  -->
+      <% end %>
+    </div>
+  </div>
+     <%#= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+     <%#= f.input :vendor_name, input_html: {value: ""} %>
+     <%#= f.submit "Search", class: "btn btn-primary" %>
+  <div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Draft PO's</th>
+        <th>Final PO's</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @happyquotevendors.each do |vendor| %>
+      <tr>
+        <td><%= vendor.happy_vendor_id %></td>
+        <td><%= vendor.vendor_name %></td>
+
+          
+          <% final = 0 %>
+          <% if @happyPo %>
+          <% @happyPo.each do |po| %>
+
+             <% if (po.happy_vendor_id == vendor.happy_vendor_id) %>
+                <td></td>
+                <!-- <td><%#= link_to 'View Final P.O.', happy_po_poprint_path(po.id, vendor_id: vendor.happy_vendor_id, format: "html")%></td> -->
+                <!--  <td><%#= link_to 'View Final P.O.', happy_po_path(po.id, vendor_id: vendor.happy_vendor_id, format: "html")%></td> -->
+                <td><%= link_to 'View Final P.O.', happy_quote_pocreate_path(params[:happy_quote_id], vendor_id: vendor.happy_vendor_id, status: "final", format: "html")%></td>
+                <% final = 1 %>
+             <% end %>
+          <% end %>
+             <% if (final == 0) %>
+                <td><%= link_to 'View Draft P.O.', happy_quote_pocreate_path(params[:happy_quote_id], vendor_id: vendor.happy_vendor_id, status: "draft", format: "html")%></td>
+             <% end %>
+              <td><%#= po.happy_vendor_id %></td>
+              <td><%#= vendor.happy_vendor_id %></td>
+              <td><%#= po.happy_vendor_id %></td>
+              <td><%#= po.happy_quote_id %></td>
+              <td><%#= vendor.happy_vendor_id %></td>
+              <td><%#= params[:happy_quote_id] %></td>
+          <% end %>
+
+                <td><%#= link_to 'View Draft P.O.', happy_quote_pocreate_path(params[:happy_quote_id], vendor_id: vendor.happy_vendor_id, format: "html")%></td>
+
+        <td><%#= link_to 'View Draft P.O.', happy_quote_pocreate_path(params[:happy_quote_id], vendor_id: vendor.happy_vendor_id, format: "html")%></td>
+        <td><%#= link_to 'Finalize P.O.', happy_quote_pocreate_path(params[:happy_quote_id], vendor_id: vendor.happy_vendor_id, format: "html")%></td>
+        <td><%#= link_to 'Finalize P.O.', happy_po_finalize_path(params[:happy_quote_id], vendor_id: vendor.happy_vendor_id, format: "html")%></td>
+        <% if @happyproject.present? %>
+        <td><%= link_to 'Add Project Task', new_happy_project_happy_project_task_path(happy_project_id: @happyproject.id, format: "html")%></td>
+      <% end %>
+        <td><%#= link_to 'Printable P.O. (PDF)', happy_quote_pocreate_path(params[:happy_quote_id], vendor_id: vendor.happy_vendor_id, format: "pdf")%></td>
+        <td><%#= vendor.first_name %></td>
+        <td><%#= link_to 'Show', vendor %></td>
+        <td><%#= link_to 'Edit', edit_happy_vendor_path(vendor) %></td>
+        <td><%#= link_to 'Destroy', customer, method: :delete,
+                                     data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'Quotes', happy_quotes_path(customer_id: customer.id) %></td>
+        <td><%#= link_to 'Orders', happy_orders_path %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+<%= link_to 'New Vendor', new_happy_vendor_path %>
+</div>

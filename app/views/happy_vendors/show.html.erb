@@ -1,0 +1,84 @@
+<!-- this is the show view -->
+<div class="container">
+  <!-- <%#= link_to 'Home', root_path %> -->
+  <h2>Happy Vendor - <%= @happyvendor.vendor_name %></h2>
+  <br>
+  <div class="row">
+    <div class="col-sm">
+      <p>
+      <%= @happyvendor.vendor_name %><br>
+      
+      <%= @happyvendor.mailing_street1 %><br>
+      <% if @happyvendor.mailing_street2? %>
+        <%= @happyvendor.mailing_street2 %><br>
+      <% end %>
+      <%= @happyvendor.mailing_city %> <%= @happyvendor.mailing_state%> <%= @happyvendor.mailing_zipcode %><br>
+     <%= @happyvendor.business_phone %>
+      </p>
+    </div>
+    <div class="col-sm">
+      <p>
+      <%= @happyvendor.first_name %> <%= @happyvendor.last_name%>,  <%= @happyvendor.title %><br>
+      <% if @happyvendor.taxable? %>
+        <strong>Taxable</strong><br>
+      <% end %>
+      <%= @happyvendor.terms %>
+      </p>
+    </div>
+    <div class="col-sm">
+      Email: <%= @happyvendor.email %>
+    </div>
+  </div>
+  
+ <div class="row bg-secondary">
+  <div class="col-2 border">
+    <b>PO Number</b>
+  </div>
+  <div class="col-2 border">
+    <b>Approx Order Date</b>
+  </div>
+  <div class="col-4 border">
+    <b>Instructions</b>
+  </div>
+  <div class="col-2 border">
+    <b class="float-right">Purchase Disc</b>
+  </div>
+  <div class="col-2 border">
+    <b class="float-right">Total</b>
+  </div>
+</div>
+
+<% @happypos.each do |po| %>
+        <div class="card card-body-4">
+          <div class="row">
+          <div class="col-sm-2">
+            <% ponum = po.happy_vendor_id.to_s + "-" + po.number.to_s %>
+                <%= link_to ponum, happy_quote_pocreate_path(happy_quote_id: po.number, vendor_id: po.happy_vendor_id, format: "html")%>
+                <%#= link_to ponum, {controller: "happy_quotes", action: "show", id: po.number } %>
+                <%#= link_to ponum, {controller: "happy_quotes", action: "pocreate", id: po.number } %>
+                <%#= ponum %>
+          </div>
+          <div class="col-sm-2">
+                <%= po.order_date %>
+          </div>
+          <div class="col-sm-4">
+                <%= po.special_instructions %>
+          </div>
+          <div class="col-sm-2">
+               <div class="float-right">
+                 <%= number_to_percentage(po.purchase_discount) %>
+               </div>
+          </div>
+          <div class="col-sm-2">
+               <div class="float-right">
+                 <%= number_to_currency(po.po_amount) %>
+               </div>
+          </div>
+          </div>
+        </div>
+<% end %>
+
+
+<%= link_to 'Back', {:action => 'index'} %>
+</div>
+

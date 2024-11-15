@@ -1,0 +1,76 @@
+<div class="container mb-5">
+  <h2>Happy Standard Tasks</h2>
+  <br>
+
+  <%#= link_to 'Home', root_path %>
+
+<%= simple_form_for @happyStandardTask,
+  wrapper: :vertical_form,
+  wrapper_mappings: {
+    boolean:       :vertical_boolean,
+    check_boxes:   :vertical_collection,
+    date:          :vertical_multi_select,
+    datetime:      :vertical_multi_select,
+    file:          :vertical_file,
+    radio_buttons: :vertical_collection,
+    range:         :vertical_range,
+    time:          :vertical_multi_select
+  } do |f| %>
+
+  <%= f.error_notification %>
+
+  <div class='header'>
+  <%= f.input :task_name %>
+  <div class="form-group row">
+    <div class="col-4">
+        <%= f.input :description, label: "Description" %>
+    </div>
+    <div class="col-2">
+        <%= f.input :priority, label: "Priority"%>
+    </div>
+    <div class="col-6">
+      <% if f.object.happy_task_category_id %>
+      <%= f.input :happy_task_category_id,:collection => @happyTaskCategories,:label_method => :name,:value_method => :id,:label => "Category" ,:include_blank => false, input_html: { class: "js-basic-single" } %>
+    <% else %>
+      <%= f.input :happy_task_category_id,:collection => @happyTaskCategories,:label_method => :name,:value_method => :id,:label => "Category" ,:include_blank => false, selected: 1, input_html: { class: "js-basic-single" } %>
+    <% end %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-4">
+      <%= f.input :dependency, label: false, placeholder: "Dependency" %>
+    </div>
+
+    <div class="col-4">
+      <%= f.input :is_vendor, label: "Vendor" %>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-4">
+      <%#= f.input :duration, label: false, placeholder: "Duration" %>
+    </div>
+    <div class="col-4">
+      <%#= f.input :duration_unit, label: false, placeholder: "Duration Unit" %>
+    </div>
+  </div>
+
+  </div> 
+  <!-- uncomment the line below and the div class links to add back activities -->
+  <!-- <h3>Standard Task Activities</h3> -->
+
+  <div id='tasks'>
+    <%= f.simple_fields_for :happy_standard_activities do |line| %>
+              <%= render 'happy_standard_activity_fields', :f => line %>
+          <% end %>
+    <%#= f.simple_fields_for :happy_standard_activities do |task| %>
+      <%#= render 'happy_standard_activity_fields', :f => task %>
+    <%# end %>
+    <!-- this works just took out for simplicty sake -->
+    <!-- <div class='links'>
+      <%#= link_to_add_association 'add activity', f, :happy_standard_activities %>
+    </div> -->
+  </div>
+  <%= f.submit 'Save', id: "saveit", class: "btn-primary" %>
+  <%= link_to "Cancel", :back, class: "btn btn-outline-secondary" %>
+<% end %> 
+

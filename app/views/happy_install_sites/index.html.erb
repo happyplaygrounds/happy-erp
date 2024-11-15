@@ -1,0 +1,68 @@
+<%#= debug(@happyInstallSites) %>
+<%#= debug(@happyInstallSite) %>
+
+<div class="container">
+
+<% if @happyCustomer.nil? %>
+<h2>All Install Sites for Happy Playgrounds</h2>
+    
+        <%= form_tag(happy_install_sites_path, method: :get) do %>
+            <span>Search by Customer Name:</span>
+            <%= text_field_tag(:search, params[:search]) %>
+            <%= submit_tag ("Search") %>
+        <% end %>
+     <%#= simple_form_for :search, url: happy_projects_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+     <%#= f.input :part_number, input_html: {value: ""} %>
+     <%#= f.input :description, input_html: {value: ""} %>
+     <%#= f.submit "Search", class: "btn btn-primary" %>
+     <%# end %>
+  <br>
+  <% else %>
+    <h2>Happy Install Sites for - <%= @happyCustomer.customer_name %></h2> 
+  <% end %>
+      
+ <!-- <h2>Happy Install Sites for - <%#= @happyCustomer.customer_name %></h2> -->
+
+
+  <%= page_entries_info @happyInstallSites %>
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Location Name</th>
+        <th>Customer Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @happyInstallSites.each do |location| %>
+      <tr>
+        <td><%= location.site_name %></td>
+        <td><%= location.happy_customer.customer_name %></td>
+        <td><%= location.description %></td>
+        <td><%#= project.general_contractor %></td>
+        <td><%= link_to 'Show', location %></td>
+
+        <% if params[:happy_quote_id] %>
+            <td><%= link_to 'Choose', new_happy_project_path(happy_quote_id: params[:happy_quote_id], happy_customer_id: location.happy_customer.id, happy_install_site_id: location.id) %></td>
+        <% end %>
+        <td><%#= link_to 'Edit', edit_happy_project_path(project) %></td>
+        <td><%#= link_to 'Destroy', customer, method: :delete,
+                                     data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'Quotes', happy_quotes_path(customer_id: customer.id) %></td>
+        <td><%#= link_to 'Orders', happy_orders_path %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+  <%= paginate @happyInstallSites, window: 2 %>
+
+<% if params[:happy_customer_id] %>
+  <%= link_to 'Add Install Site', new_happy_install_site_path(happy_customer_id: params[:happy_customer_id], format: "html"), class: 'btn btn-primary' %>
+  <%= link_to "Cancel", :back, class: "btn btn-outline-secondary" %>
+<% end %>
+</div>
+
+ 
+

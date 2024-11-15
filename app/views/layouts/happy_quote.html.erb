@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quotes</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <head>
+    <%#= render "/happy_quotes/head" %>
+  </head>
+  <body id="<%#= canonical_id @page %>" class="<%#= view_template_class @page %>">
+    <%#= site_bar -%>
+    <div id="page_container">
+            <%= render "/happy_quotes/header" -%>
+      <main id="page" role="main">
+             <%= yield %>
+      </main>
+      <footer role="contentinfo">
+        <%= render "/happy_quotes/footer" -%>
+      </footer>
+    </div>
+  </body>
+  <!-- <body>
+    <%#= yield %>
+  </body> -->
+</html>

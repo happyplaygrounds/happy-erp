@@ -1,0 +1,83 @@
+<!-- # this is the show view -->
+<div class="container">
+  <!-- <%#= link_to 'Home', root_path %> -->
+  <h2>Happy Install Site - <%= @happyInstallSite.site_name %></h2>
+  <br>
+  <div class="row">
+    <div class="col-sm">
+      <p>
+      <%= @happyInstallSite.site_name %><br>
+      
+      <%= @happyInstallSite.street1 %><br>
+      <% if @happyInstallSite.street2? %>
+        <%= @happyInstallSite.street2 %><br>
+      <% end %>
+      <%= @happyInstallSite.city %> <%= @happyInstallSite.state%> <%= @happyInstallSite.postal_code %><br>
+     <%= @happyInstallSite.phone %>
+      </p>
+    </div>
+    <div class="col-sm">
+      <p>
+      <%= @happyInstallSite.site_name %><br>
+      </div>
+    <div class="col-sm">
+      Email: <%= @happyInstallSite.email %>
+    </div>
+  </div>
+  
+ <!-- <div class="row bg-secondary">
+  <div class="col-2 border">
+    <b>PO Number</b>
+  </div>
+  <div class="col-2 border">
+    <b>Approx Order Date</b>
+  </div>
+  <div class="col-4 border">
+    <b>Instructions</b>
+  </div>
+  <div class="col-2 border">
+    <b class="float-right">Purchase Disc</b>
+  </div>
+  <div class="col-2 border">
+    <b class="float-right">Total</b>
+  </div>
+</div> -->
+
+<!-- <% if false %>
+<% @happypos.each do |po| %>
+        <div class="card card-body-4">
+          <div class="row">
+          <div class="col-sm-2">
+            <% ponum = po.happy_vendor_id.to_s + "-" + po.number.to_s %>
+                <%#= link_to ponum, happy_quote_pocreate_path(happy_quote_id: po.number, vendor_id: po.happy_vendor_id, format: "html")%>
+                <%#= link_to ponum, {controller: "happy_quotes", action: "show", id: po.number } %>
+                <%#= link_to ponum, {controller: "happy_quotes", action: "pocreate", id: po.number } %>
+                <%#= ponum %>
+          </div>
+          <div class="col-sm-2">
+                <%#= po.order_date %>
+          </div>
+          <div class="col-sm-4">
+                <%#= po.special_instructions %>
+          </div>
+          <div class="col-sm-2">
+               <div class="float-right">
+                 <%#= number_to_percentage(po.purchase_discount) %>
+               </div>
+          </div>
+          <div class="col-sm-2">
+               <div class="float-right">
+                 <%#= number_to_currency(po.po_amount) %>
+               </div>
+          </div>
+          </div>
+        </div>
+<% end %> 
+
+
+<% end %> -->
+
+
+<%= link_to 'Back to Install Sites', {:action => 'index', happy_customer_id: @happyInstallSite.happy_customer_id } %>
+</div>
+

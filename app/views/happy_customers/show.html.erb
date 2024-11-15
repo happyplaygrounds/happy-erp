@@ -1,0 +1,102 @@
+<div class="container">
+  <!-- <%#= link_to 'Home', root_path %> -->
+  <h2>Happy Customer - <%= @happycustomer.customer_name %></h2>
+  <br>
+  <div class="row">
+    <div class="col-sm">
+      <p>
+      <%= @happycustomer.customer_name %><br>
+      
+      <%= @happycustomer.mailing_street1 %><br>
+      <% if @happycustomer.mailing_street2? %>
+        <%= @happycustomer.mailing_street2 %><br>
+      <% end %>
+      <%= @happycustomer.mailing_city %> <%= @happycustomer.mailing_state%> <%= @happycustomer.mailing_zipcode %><br>
+     <%= @happycustomer.business_phone %>
+      </p>
+    </div>
+    <div class="col-sm">
+      <p>
+      <%= @happycustomer.first_name %> <%= @happycustomer.last_name%>,  <%= @happycustomer.title %><br>
+      <% if @happycustomer.taxable? %>
+        <strong>Taxable</strong><br>
+      <% end %>
+      <%= @happycustomer.terms %>
+      </p>
+    </div>
+    <div class="col-sm">
+      Email: <%= @happycustomer.email %>
+    </div>
+  </div>
+  
+ <div class="row bg-secondary">
+  <div class="col-1 border">
+    <b>Quote</b>
+  </div>
+  <div class="col-2 border">
+    <b>Quote Date</b>
+  </div>
+  <div class="col-2 border">
+    <b class="float-right">Total</b> 
+    <!-- <b>PDF Prefix</b> -->
+  </div>
+  <div class="col-5 border">
+    <b>External Notes</b>
+  </div>
+  <!--
+  <div class="col-2 border">
+    <b class="float-right">Tax</b>
+  </div>
+  <div class="col-2 border">
+    <b class="float-right">Discount</b>
+  </div>
+  -->
+  <div class="col-2 border">
+    <b>PDF Prefix</b>
+    <!-- <b class="float-right">Total</b> -->
+  </div>
+</div>
+
+<% @happyquotes.each do |quote| %>
+        <div class="card card-body-4">
+          <div class="row">
+          <div class="col-sm-1">
+            <% quotenum = quote.number.to_s + "-" + quote.sub.to_s %>
+                <%= link_to quotenum, {controller: "happy_quotes", action: "show", id: quote.id } %>
+          </div>
+          <div class="col-sm-2">
+                <%= quote.quote_date.strftime("%m-%d-%Y") %>
+          </div>
+          <div class="col-sm-2">
+               <div class="float-right">
+                <%= number_to_currency(quote.total) %>
+               </div>
+          </div>
+          <div class="col-sm-5">
+               <div>
+                 <%= quote.external_notes %>
+               </div>
+          </div>
+          <!--
+          <div class="col-sm-2">
+               <div class="float-right">
+                 <%= number_to_currency(quote.additional_tax_total) %>
+               </div>
+          </div>
+          <div class="col-sm-2">
+               <div class="float-right">
+                 <%= number_to_currency(quote.discount_total) %>
+               </div>
+          </div>
+          -->
+          <div class="col-sm-2">
+                <%= quote.user_name %>
+          </div>
+          </div>
+        </div>
+<% end %>
+
+
+<%= link_to 'Back', {:action => 'index'} %>
+</div>
+

@@ -1,0 +1,64 @@
+<%#= debug(params) %>
+<%#= params[:project_id] %>
+<div class="container">
+
+
+  <h2>Happy Standard Project Processes</h2>
+  
+  <div class="customer-index-form">
+     <%= simple_form_for :search, url: happy_standard_processes_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+     <label>
+        <%= f.input :process_name, input_html: {value: ""} %>
+     </label>
+
+     <label>
+        <%= f.submit "Search", class: "btn btn-primary" %>
+     </label>
+     <% end %>
+  </div>
+
+  <%= page_entries_info @happyStandardProcesses %>
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Process ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @happyStandardProcesses.each do |standardProcess| %>
+      <tr>
+        <td><%= standardProcess.id %></td>
+        <td><%= standardProcess.process_name %></td>
+        <td><%= standardProcess.description %></td>
+        <% if params[:project_id] %> 
+          <td><%=link_to "Add Process - #{params[:project_name]}", happy_project_loadprocess_path(happy_project_id:  params[:project_id], id: standardProcess.id) %></td>
+          <td></td>
+        <% else %>
+        <td><%= link_to 'Show', standardProcess %></td>
+        <td><%= link_to 'Add Standard Task', happy_standard_tasks_path%></td>
+        <td><%#= link_to 'Edit', edit_happy_customer_path(customer) %></td>
+        <td><%#= link_to 'Destroy', customer, method: :delete,
+                                     data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'Quotes', happy_quotes_path(customer_id: customer.id, customer_name: customer.customer_name) %></td>
+        <td><%#= link_to 'Orders', happy_orders_path %></td>
+        <td><%#= link_to 'Vendors', happy_vendors_path %></td>
+        <% end %>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+  <%= paginate @happyStandardProcesses, window: 2 %>
+<%= link_to 'New Process', new_happy_standard_process_path, class: 'btn btn-primary'%>
+<%= link_to "Cancel", :back, class: "btn btn-outline-secondary" %>
+</div>
