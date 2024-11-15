@@ -4,7 +4,7 @@ import "controllers"
 
 import "popper"
 import "bootstrap"
-import "@rails/request.js"
+import "@rails/requestjs.js"
 
 import "jquery"; // this import first
 import "custom/main"
