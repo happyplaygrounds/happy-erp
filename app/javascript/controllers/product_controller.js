@@ -35,7 +35,7 @@ export default class extends Controller {
 
          // async myMethod () {
   	// works const request = new FetchRequest('get', `http://localhost:3000/happy_products/productinfo?productid=${value}`)
-  	const request = new FetchRequest('get', `http://localhost:3000/happy_products/productinfo?productid=${value}`, 
+  	const request = new FetchRequest('get', `/happy_products/productinfo?productid=${value}`, 
 		{ responseKind: "json" },
 		{ headers: "any"})
   	const response = await request.perform()
