@@ -23,6 +23,7 @@
       <%= render 'layouts/navigation' %>
     </header>
     <div class="container">
+      <% flash.delete(:timedout) %>
       <% flash.each do |name, msg| %>
         <%= content_tag(:div, class: "alert alert-#{name}") do%>
             <%=msg%>
