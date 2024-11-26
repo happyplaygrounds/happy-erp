@@ -24,13 +24,13 @@
     </header>
     <div class="container">
 
-      # Accessing the flash hash and removing the :timedout key
+      <%# Accessing the flash hash and removing the :timedout key %>
 
       <% if flash[:timedout] %>
 
         <% flash.delete(:timedout) %>
 
-      # Now, the :timedout key is no longer in the flash hash
+        <%# Now, the :timedout key is no longer in the flash hash %>
 
       <% end %>
 
