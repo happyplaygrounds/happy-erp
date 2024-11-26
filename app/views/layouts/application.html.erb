@@ -23,7 +23,17 @@
       <%= render 'layouts/navigation' %>
     </header>
     <div class="container">
-      <% flash.delete(:timedout) %>
+
+      # Accessing the flash hash and removing the :timedout key
+
+      <% if flash[:timedout] %>
+
+        <% flash.delete(:timedout) %>
+
+      # Now, the :timedout key is no longer in the flash hash
+
+      <% end %>
+
       <% flash.each do |name, msg| %>
         <%= content_tag(:div, class: "alert alert-#{name}") do%>
             <%=msg%>
