@@ -231,6 +231,7 @@ include Reminder
     
 
     @happyquotedup.sub = @newsub
+    @happyquotedup.order_date = ''
       #@happyquotedup.copy = true
     @happyquotedup.save
     @newid = @happyquotedup.id
