@@ -92,7 +92,7 @@ quote_items_totals_data = [
     ["Sub Total", number_to_currency(@pototal)],
     ["Tax", number_to_currency(@taxAmount)],
     ["Discount", number_to_currency(@discountAmount)],
-    ["Purchase Order Amount", number_to_currency(@pototal + @taxAmount - @discountAmount)]
+    ["Purchase Order Amount", number_to_currency(@pototal + @taxAmount - @discountAmount)],
   ]
 
   pdf.table(quote_items_totals_data, :position => quote_header_x, :width => 200) do
@@ -103,6 +103,16 @@ quote_items_totals_data = [
     style(row(2).columns(0), :borders => [:top, :left, :bottom])
     style(row(2).columns(1), :borders => [:top, :right, :bottom])
   end
+
+  		#pdf.move_down 60
+  		pdf.move_down lineheight_y
+  		pdf.fill_color "DA251D"
+  		pdf.text_box "Please submit all invoices to: ", :at => [quote_certs_x,  pdf.cursor], :mode => :fill
+  		pdf.move_down lineheight_y
+  		pdf.text_box "accounting@happyplaygrounds.com", :at => [quote_certs_x,  pdf.cursor], :mode => :fill
+  		pdf.fill_color "000000"
+  
+
 
   #pdf.move_down 10
 
@@ -190,7 +200,9 @@ end
   		pdf.fill_color "DA251D"
   		pdf.text_box "Certified Woman Owned Small Business", :at => [quote_certs_x,  pdf.cursor], :mode => :fill
   		pdf.move_down lineheight_y
-  		pdf.text_box "Native American Owned; TERO certified", :at => [quote_certs_x,  pdf.cursor], :mode => :fill
+  		pdf.text_box "Native American Owned:", :at => [quote_certs_x,  pdf.cursor], :mode => :fill
+  		pdf.move_down lineheight_y
+  		pdf.text_box "TERO and CESO certified", :at => [quote_certs_x,  pdf.cursor], :mode => :fill
   		pdf.fill_color "000000"
   
 

@@ -69,29 +69,8 @@ include Reminder
 
        puts "freight"
        puts @pwfreight
-       puts "user id"
-       puts @happyquote.user_id_add
 
      discount_tax_calc
-
-     #if @happyquote.user_id_add.present?
-       #@happyquote.user_id_add = 1
-     #end
-
-     if @happyquote.user_id_add
-        #@userAdd = User.find(@happyquote.user_id_add)
-        @userAdd = User.find(current_user.id)
-        puts "userAdd"
-        puts @userAdd.username
-       end
-       if @happyquote.user_id_update
-        #@userUpdate = User.find(@happyquote.user_id_update)
-         @userUpdate = User.find(current_user.id)
-       end
-
-    @happyquotevendors=HappyQuoteLine.joins(:happy_vendor).where("happy_quote_id =?",params[:happy_quote_id]).distinct.select('happy_vendor_id','happy_vendors.vendor_name', 'first_name') 
-    @happyquote = HappyQuote.includes(:happy_customer).includes(:happy_quote_lines).order("happy_quote_lines.position asc").find(params[:id])
- 
 
      @happyquote.update_column(:total, @quotetotal)
 
@@ -162,7 +141,6 @@ include Reminder
     # works with happy_customer has many commented out @happyquote = current_user.happy_quotes.new(happyquote_params)
      @happyquote = @happycustomer.happy_quotes.new(happyquote_params)
      @happyquote.user_id = @user.id
-     @happyquote.user_id_add = @user.id
     # below works but gives database error look at hidden form fields
      #@happyquote.user=(current_user)
      #@happyquote = @happycustomer.happy_quotes.new(happyquote_params,current_user)
@@ -187,7 +165,6 @@ include Reminder
       puts line_number
       puts params[:total_line_amount]
       params[:total_line_amount] = params[:total_line_amount].gsub(/[\s,]/ ,"")
-     @happyquote.user_id_update = current_user.id
     end
     if @happyquote.update(happyquote_params)
        @happyquote.save
@@ -278,8 +255,7 @@ include Reminder
     @happycustomer = HappyCustomer.find(params[:happy_customer_id])
     @happyproject=HappyProject.find_by("happy_quote_id = ?", params[:happy_quote_id])
     @numberLocations=HappyInstallSite.where("happy_customer_id = ?", params[:happy_customer_id]).count
-    # works @happyquotevendors=HappyQuoteLine.joins(:happy_vendor).where("happy_quote_id =?",params[:happy_quote_id]).distinct.select('happy_vendor_id','happy_vendors.vendor_name', 'first_name') 
-    @happyquotevendors=HappyQuoteLine.joins(:happy_vendor).where('happy_quote_lines.happy_quote_id = ?', params[:happy_quote_id]).group('happy_quote_lines.happy_vendor_id', 'happy_vendors.vendor_name').select('happy_quote_lines.happy_vendor_id, happy_vendors.vendor_name, sum(total_line_amount) as total, sum(total_cost_amount) as cost')
+    @happyquotevendors=HappyQuoteLine.joins(:happy_vendor).where("happy_quote_id =?",params[:happy_quote_id]).distinct.select('happy_vendor_id','happy_vendors.vendor_name', 'first_name') 
     #@happyquote = HappyQuote.includes(:happy_customer).includes(:happy_quote_lines).where("happy_vendor_id =?", params[:vendor_id]).order("happy_quote_lines.position asc").find(params[:happy_quote_id])
     @happyquote=HappyQuote.find(params[:happy_quote_id])
     puts "Po test1"
@@ -441,8 +417,7 @@ private
    :shipping_street1, :shipping_street2, :shipping_city, :shipping_state, :shipping_zipcode,
    :mailing_street1, :mailing_street2, :mailing_city, :mailing_state, :mailing_zipcode,
    :special_instructions, :internal_notes, :external_notes,:user_id,
-   :tax_override, :tax_rate, :additional_tax_total,:discount_override,
-   :discount_total, :user_name, :included_tax_total,
+   :tax_override, :tax_rate, :additional_tax_total,:included_tax_total,:discount_override, :discount_total, :user_name,
     happy_quote_lines_attributes: [:id, :product_id,
      :description,
      :color,
@@ -462,10 +437,8 @@ private
      :sell_discount,
      :quote_subtotal,
      :quote_margin,
-     :cost_override,
      :external_notes,
      :internal_notes,
-     :active,
      :_destroy]
 )
   end

@@ -30,9 +30,9 @@
         <th>Name</th>
         <th>Draft PO's</th>
         <th>Final PO's</th>
-        <th></th>
-        <th></th>
-        <th></th>
+        <th>Total Net Price</th>
+        <th>Total Cost</th>
+        <th>Margin %</th>
         <th></th>
         <th></th>
       </tr>
@@ -58,23 +58,43 @@
           <% end %>
              <% if (final == 0) %>
                 <td><%= link_to 'View Draft P.O.', happy_quote_pocreate_path(params[:happy_quote_id], vendor_id: vendor.happy_vendor_id, status: "draft", format: "html")%></td>
+                <td></td>
              <% end %>
-              <td><%#= po.happy_vendor_id %></td>
-              <td><%#= vendor.happy_vendor_id %></td>
-              <td><%#= po.happy_vendor_id %></td>
-              <td><%#= po.happy_quote_id %></td>
-              <td><%#= vendor.happy_vendor_id %></td>
-              <td><%#= params[:happy_quote_id] %></td>
           <% end %>
+
+              <% margin = (((vendor.total- vendor.cost) / vendor.total) * 100).round(2) %>
+
+              <td><%= number_to_currency(vendor.total) %></td>
+              <td><%= number_to_currency(vendor.cost) %></td>
+              <% if margin < 10 %>
+                <% badgeColor="badge rounded-pill bg-danger text-light" %>
+              <% elsif margin >= 10 && margin < 18 %>
+                <% badgeColor="badge rounded-pill bg-warning" %>
+              <% else margin >= 18 %>
+                <% badgeColor="badge rounded-pill bg-success" %>
+              <% end %>
+
+              <% if vendor.total < 0 || vendor.cost < 0 %>
+                <% badgeColor="badge rounded-pill bg-danger text-light" %>
+              <% end %>
+
+              <td><h5><span class="<%= badgeColor %>"> <%= margin %> </span> %</h5></td>
+
+
+                <!--
+              <td><%#= (((vendor.total- vendor.cost) / vendor.total) * 100).round(2) %></td>
+              <td><%#= po.happy_vendor_id %></td>
 
                 <td><%#= link_to 'View Draft P.O.', happy_quote_pocreate_path(params[:happy_quote_id], vendor_id: vendor.happy_vendor_id, format: "html")%></td>
 
         <td><%#= link_to 'View Draft P.O.', happy_quote_pocreate_path(params[:happy_quote_id], vendor_id: vendor.happy_vendor_id, format: "html")%></td>
         <td><%#= link_to 'Finalize P.O.', happy_quote_pocreate_path(params[:happy_quote_id], vendor_id: vendor.happy_vendor_id, format: "html")%></td>
         <td><%#= link_to 'Finalize P.O.', happy_po_finalize_path(params[:happy_quote_id], vendor_id: vendor.happy_vendor_id, format: "html")%></td>
+                -->
         <% if @happyproject.present? %>
         <td><%= link_to 'Add Project Task', new_happy_project_happy_project_task_path(happy_project_id: @happyproject.id, format: "html")%></td>
       <% end %>
+      <!--
         <td><%#= link_to 'Printable P.O. (PDF)', happy_quote_pocreate_path(params[:happy_quote_id], vendor_id: vendor.happy_vendor_id, format: "pdf")%></td>
         <td><%#= vendor.first_name %></td>
         <td><%#= link_to 'Show', vendor %></td>
@@ -83,6 +103,7 @@
                                      data: { confirm: 'Are you sure?' } %></td>
         <td><%#= link_to 'Quotes', happy_quotes_path(customer_id: customer.id) %></td>
         <td><%#= link_to 'Orders', happy_orders_path %></td>
+      -->
       </tr>
       <% end %>
     </tbody>

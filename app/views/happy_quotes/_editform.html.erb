@@ -1,8 +1,26 @@
 <%#= debug @happyquote %>
 <%#= debug @happycustomer %>
+
+
 <div class="content">
 <%= simple_form_for @happyquote do |f| %>
   <%= f.error_notification %>
+
+
+  <% if @happyquote.errors.any? %>
+  <div id="error_explanation">
+    <!-- <h2><%#= pluralize(@happyquote.errors.count, "error") %> prohibited this quote from being saved:</h2> -->
+    <ul>
+      <% @happyquote.errors.full_messages.each_with_index do |error, index | %>
+        <% if index == 0 %>
+          <li><%= error %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+
   <h3>Edit Quote Header</h3>
   <div class='header' data-controller='newquoteheader'> 
   <%= link_to "Copy Quote", happy_quote_copy_path(:happy_quote_id => @happyquote.id,:number => @happyquote.number)  %>

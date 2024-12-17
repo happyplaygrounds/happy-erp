@@ -7,8 +7,8 @@
 //   <h1 data-target="hello.output"></h1>
 // </div>
 
-import { Controller } from "@hotwired/stimulus"
-import Sortable from "sortablejs"
+import { Controller } from "@hotwired/stimulus";
+import Sortable from "sortablejs";
 import { patch } from "@rails/request.js";
 //import Rails from "@rails/ujs"
 
@@ -19,7 +19,7 @@ export default class extends Controller {
 	this.sortable = Sortable.create(this.element, {
 		animation: 350,
       		ghostClass: "bg-gray-200",
-		onEnd: this.end.bind(this),
+		onEnd: this.onEnd.bind(this),
 		handle: "[data-sortable-handle]",
 	});
   }
@@ -28,10 +28,10 @@ export default class extends Controller {
     		this.sortable.destroy();
   		}
 
-	end(event) {
+	onEnd(event) {
 		console.log(event)
 		let { newIndex, item } = event;
-		const id = event.item.dataset.id
+		const id = item.dataset.id
 		const quoteid = event.item.dataset.quoteid
 		const data = new FormData()
 		data.append("position", event.newIndex + 1)

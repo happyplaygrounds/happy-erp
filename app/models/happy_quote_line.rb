@@ -2,6 +2,7 @@ class HappyQuoteLine < ApplicationRecord
 
   attr_accessor :quote_subtotal
   attr_accessor :quote_margin
+  attr_accessor :cost_override
   #before_save :total_line_amount
   belongs_to :happy_quote
   acts_as_list scope: :happy_quote 
@@ -13,6 +14,7 @@ class HappyQuoteLine < ApplicationRecord
   validates :unit_of_measure,     presence: true
   validates :unit_price,          presence: true, numericality: true
   validates :buyout_unit_price,   presence: true, numericality: true
+  validate :unit_price_greater_buyout_unit_price
 
   # below are new setters for currency fields
 
@@ -53,5 +55,15 @@ class HappyQuoteLine < ApplicationRecord
   #validates :first_kiss,  presence: true, timeliness: { type: :datetime, after: '20:00' }
   #validates :terms,       acceptance: true
 
+private
+
+def unit_price_greater_buyout_unit_price
+  puts "model cost_override"
+  puts cost_override
+  if unit_price > 0
+    errors.add(:unit_price, "must be greater that unit cost") unless
+    ((buyout_unit_price <= unit_price) || cost_override == "1")
+  end
+end
 
 end

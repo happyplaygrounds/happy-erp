@@ -20,77 +20,13 @@ prawn_document(filename: test, disposition: "attachment") do |pdf|
   lineheight_y = 12            
   font_size = 9                
   
-  #pdf.move_down initialmove_y  
-  ####
+  pdf.move_down initialmove_y  
   
-        #pdf.text pdf.cursor, :size => 14
-        # header
-        pdf.bounding_box [pdf.bounds.left, pdf.bounds.top], :width  => pdf.bounds.width do
-          
-  		pdf.text "PLAYWORLD FREIGHT QUOTE FORM", align: :center, size: 14, style: :bold
-  		pdf.fill_color "0093DD"
-  		pdf.text "freight@playworld.com", align: :center, size: 12, style: :bold
-  		pdf.fill_color "000000"
-  		pdf.text "LTL FREIGHT QUOTES VALID FOR 60 DAYS", align: :center, size: 14, style: :bold
-  		pdf.text "Truckload/Direct Ship Quotes Valid 30 DAYS", align: :center, size: 14, style: :bold
-                pdf.move_down 12
-
-  $submitted_by = @username.gsub(/\./,' ')
-
-  table1_header_data = [ 
-    ["DISTRIBUTOR:", "Happy Playgrounds"],
-    ["SUBMITTED BY:", $submitted_by],
-    ["DATE:", " "]
-  ]
-
-  pdf.table(table1_header_data, :position => freight_table1_x, :width => 280, :cell_style => { :size => 10 }) do
-    style(row(0..2).columns(0..1), :padding => [1, 5, 1, 5], :borders => [:top, :left, :right, :bottom])
-    style(column(1), :align => :left, :width => 172)
-  end
-
-  pdf.move_down 12
-  $cityState =  @happyquote.shipping_city + ", " + @happyquote.shipping_state;
-  puts ($cityState)
-
-  table1_header_data = [ 
-    ["CONSIGNEE NAME: ", @happyquote.happy_customer.customer_name],
-    ["CITY & STATE: ", $cityState],
-    ["CONTACT:", " "],
-    ["EMAIL: ", @useremail]
-  ]
-
-  pdf.table(table1_header_data, :position => freight_table1_x, :width => 280, :cell_style => { :size => 10 }) do
-    style(row(0..2).columns(0..1), :padding => [1, 5, 1, 5], :borders => [:top, :left, :right, :bottom])
-    style(column(1), :align => :left)
-  end
-
-  pdf.move_cursor_to 60.0
-  $address =  @happyquote.shipping_street1 +  @happyquote.shipping_street2;
-
-  table1_header_data = [ 
-    ["ADDRESS:", $address],
-    ["ZIP CODE:", @happyquote.shipping_zipcode],
-    ["TELEPHONE:", " "],
-  ]
-
-  pdf.table(table1_header_data, :position => freight_table2_x, :width => 225, :cell_style => { :size => 10 }) do
-    style(row(0..2).columns(0..1), :padding => [1, 5, 1, 5], :borders => [:top, :left, :right, :bottom])
-    style(column(1), :align => :left, :width => 152)
-  end
-
-
-  pdf.move_down 20
-
-    end # end bounding box for header
-
-  ###
   # Add the font style and size
   pdf.font "Helvetica"         
   pdf.font_size font_size  
 
      #body
-     pdf.move_down 20
-     #pdf.text pdf.bounds.top, :size => 14
      pdf.bounding_box [pdf.bounds.left, (pdf.bounds.top - 220)], :width  => pdf.bounds.width + 30, :height => 580 do
      pdf.text "FREIGHT DETAILS:", align: :center, size: 11, style: :bold
      #pdf.text "(ATTACH BOM, DRAWING, OR PRICING SCHEDULE LISTING ALL PRODUCT TO BE SHIPPED BY PLAYWORLD)", align: :center, size: 10
@@ -116,49 +52,44 @@ prawn_document(filename: test, disposition: "attachment") do |pdf|
                 puts("loop #$loopCount");
                 puts("index #{index}");
                 puts("#{@happyquote.happy_quote_lines.size}");
-                $last_row = @happyquote.happy_quote_lines.size + 1
-                puts("last_row #{$last_row}");
-                #if $loopCount <= 14
+                if $loopCount <= 14
                   if not item.active
 		  	number_with_precision($weight, :precision => 2, :delimiter => ',')
            	  	quote_items_data << [ item.quantity, item.product_id,number_with_precision((item.weight*item.quantity), :precision => 2, :delimiter => ',') ]
                 	$weight = $weight + (item.weight*item.quantity) 
-			
-           	   	quote_items_data2 << [ " ", " "," " ]
                 	$loopCount +=1;
                   else
 		  	number_with_precision($weight, :precision => 2, :delimiter => ',')
            	  	quote_items_data2 << [ item.quantity, item.product_id,number_with_precision((item.weight*item.quantity), :precision => 2, :delimiter => ',') ]
                 	$weight2 = $weight2 + (item.weight*item.quantity) 
-           	   	quote_items_data << [ " ", " "," " ]
                 	$loopCount2 +=1;
            	  	#quote_items_data2 << [ item.quantity, item.product_id,(item.weight*item.quantity) ]
            	  end
-                #end
+                end
 
   end
 
-  #$remainingCells = 14 - $loopCount
+  $remainingCells = 14 - $loopCount
 
-  #$i=0
+  $i=0
 
-  #while $i < $remainingCells do 
-  #              if $i < (14 - $loopCount)
-  #         	   quote_items_data << [ " ", " "," " ]
-  #              end
-  #     $i +=1
-  #end
+  while $i < $remainingCells do 
+                if $i < (14 - $loopCount)
+           	   quote_items_data << [ " ", " "," " ]
+                end
+       $i +=1
+  end
 
-  #$remainingCells2 = 14 - $loopCount2
+  $remainingCells2 = 14 - $loopCount2
 
-  #$i=0
+  $i=0
 
-  #while $i < $remainingCells2 do 
-  #              if $i < (14 - $loopCount2)
-  #         	   quote_items_data2 << [ " ", " "," " ]
-  #              end
-  #     $i +=1
-  #end
+  while $i < $remainingCells2 do 
+                if $i < (14 - $loopCount2)
+           	   quote_items_data2 << [ " ", " "," " ]
+                end
+       $i +=1
+  end
 
 
 
@@ -183,7 +114,7 @@ prawn_document(filename: test, disposition: "attachment") do |pdf|
     style(columns(0), :width => 50)
     style(columns(1), :width => 140)
     style(columns(2), :width => 60)
-    style(row($last_row).columns(1), :text_color => 'FF0000',  :align => :right)
+    style(row(15).columns(1), :text_color => 'FF0000',  :align => :right)
   end
 
      pdf.move_cursor_to last_measured_y 
@@ -203,7 +134,7 @@ prawn_document(filename: test, disposition: "attachment") do |pdf|
     style(columns(0), :width => 50)
     style(columns(1), :width => 140)
     style(columns(2), :width => 60)
-    style(row($last_row).columns(1), :text_color => 'FF0000',  :align => :right)
+    style(row(15).columns(1), :text_color => 'FF0000',  :align => :right)
   end
 
 
@@ -216,26 +147,20 @@ prawn_document(filename: test, disposition: "attachment") do |pdf|
         end
 
 
-     if pdf.cursor < 350
+     if pdf.cursor < 200
         #pdf.text pdf.cursor, :size => 14
         pdf.start_new_page
-        #pdf.stroke_horizontal_rule
+        pdf.stroke_horizontal_rule
         subtotal_y = 500 
-        pdf.move_cursor_to 770 
-        puts ("TOP");
      else
-        #pdf.text pdf.cursor, :size => 14
         subtotal_y = pdf.cursor - 25 
-        puts ("BOTTOM");
      end
-
-     #pdf.text "bottom before end", align: :center, size: 12, style: :bold
 
      last_measured_y = pdf.cursor
 
-     #pdf.text "top after end", align: :center, size: 12, style: :bold
+    
+     pdf.move_down 10
 
-     pdf.move_down 20
 
      pdf.text "DELIVERY DETAILS:", align: :center, size: 12, style: :bold
 
@@ -301,14 +226,75 @@ prawn_document(filename: test, disposition: "attachment") do |pdf|
      	pdf.draw_text "Steps, Tree Log, Rabbit, Hammerhead Shark", :at => [340, pdf.cursor], size: 9
         pdf.move_down 10
      	pdf.draw_text "-Site Amenities (not ZZXX product)", :at => [340, pdf.cursor], size: 9
-
-     end # end for quote table loop
  
 
 #end # end bounding box for subtotal
 
 
+end
 
+
+    pdf.repeat :all do
+
+        # header
+        pdf.bounding_box [pdf.bounds.left, pdf.bounds.top], :width  => pdf.bounds.width do
+          
+  		pdf.text "PLAYWORLD FREIGHT QUOTE FORM", align: :center, size: 14, style: :bold
+  		pdf.fill_color "0093DD"
+  		pdf.text "freight@playworld.com", align: :center, size: 12, style: :bold
+  		pdf.fill_color "000000"
+  		pdf.text "LTL FREIGHT QUOTES VALID FOR 60 DAYS", align: :center, size: 14, style: :bold
+  		pdf.text "Truckload/Direct Ship Quotes Valid 30 DAYS", align: :center, size: 14, style: :bold
+                pdf.move_down 12
+
+  $submitted_by = @username.gsub(/\./,' ')
+
+  table1_header_data = [ 
+    ["DISTRIBUTOR:", "Happy Playgrounds"],
+    ["SUBMITTED BY:", $submitted_by],
+    ["DATE:", " "]
+  ]
+
+  pdf.table(table1_header_data, :position => freight_table1_x, :width => 280, :cell_style => { :size => 10 }) do
+    style(row(0..2).columns(0..1), :padding => [1, 5, 1, 5], :borders => [:top, :left, :right, :bottom])
+    style(column(1), :align => :left, :width => 172)
+  end
+
+  pdf.move_down 12
+  $cityState =  @happyquote.shipping_city + ", " + @happyquote.shipping_state;
+  puts ($cityState)
+
+  table1_header_data = [ 
+    ["CONSIGNEE NAME: ", @happyquote.happy_customer.customer_name],
+    ["CITY & STATE: ", $cityState],
+    ["CONTACT:", " "],
+    ["EMAIL: ", @useremail]
+  ]
+
+  pdf.table(table1_header_data, :position => freight_table1_x, :width => 280, :cell_style => { :size => 10 }) do
+    style(row(0..2).columns(0..1), :padding => [1, 5, 1, 5], :borders => [:top, :left, :right, :bottom])
+    style(column(1), :align => :left)
+  end
+
+  pdf.move_cursor_to 60.0
+  $address =  @happyquote.shipping_street1 +  @happyquote.shipping_street2;
+
+  table1_header_data = [ 
+    ["ADDRESS:", $address],
+    ["ZIP CODE:", @happyquote.shipping_zipcode],
+    ["TELEPHONE:", " "],
+  ]
+
+  pdf.table(table1_header_data, :position => freight_table2_x, :width => 225, :cell_style => { :size => 10 }) do
+    style(row(0..2).columns(0..1), :padding => [1, 5, 1, 5], :borders => [:top, :left, :right, :bottom])
+    style(column(1), :align => :left, :width => 152)
+  end
+
+
+  pdf.move_down 30
+        end
+
+    end # this end needs to be identified. Won't work if removed
 
 end # Prawn ddo
 

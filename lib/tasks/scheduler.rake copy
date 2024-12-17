@@ -1,0 +1,55 @@
+#!/usr/bin/env ruby
+desc "This task is called by the Heroku scheduler add-on"
+##task :update_feed => :environment do
+#  puts "Updating feed..."
+#  NewsFeed.update
+#  puts "done."
+#end
+
+task :send_reminders => :environment do
+  reminders = HappyReminder.where("DATE(reminder_date) = ?", Date.today)  
+  #mail_users = HappyReminder.select(:user_id).where("DATE(reminder_date) = ?", Date.today).distinct  
+  #mail_users = User.joins(:happy_reminders).where("Date(reminder_date) = ?",Date.today).distinct
+  #mail_users = User.all
+
+  if reminders.count > 0
+    reminders.each do |reminder|
+      UserMailer.with(reminder: reminder).reminder_email.deliver_now
+    end
+  end
+
+#  if reminders.count > 0
+#    mail_users.each do |user|
+#      puts user
+#      UserMailer.with(user: user).reminder_email.deliver_now
+#    end
+#  end
+
+  #reminders.each_slice do |reminder|
+    #puts reminder.name
+    #puts reminder.content
+    #UserMailer.with(happyReminder: reminder).reminder_email.deliver
+  #end
+  #reminders.each do |reminder|
+  #  UserMailer.with(happyReminder: reminder).reminder_email.deliver
+  #end
+  puts "Cleaning old sessions..."
+  #DB["select * from happy_notes"]
+end
+
+
+task :send_calendars => :environment do
+      #ReminderMailer.with(user: user).reminder_email.deliver_now
+      UserMailer.calendar_email.deliver_now
+
+  #reminders.each_slice do |reminder|
+    #puts reminder.name
+    #puts reminder.content
+    #UserMailer.with(happyReminder: reminder).reminder_email.deliver
+  #end
+  #reminders.each do |reminder|
+  #  UserMailer.with(happyReminder: reminder).reminder_email.deliver
+  #end
+  puts "Cleaning old sessions..."
+  #DB["select * from happy_notes"]
+end

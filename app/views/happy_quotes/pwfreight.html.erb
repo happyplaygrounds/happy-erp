@@ -5,8 +5,7 @@
          <div class="form-group row mb-0">
           <%= f.input :customer_type, as: :radio_buttons,
               collection: [['Residential', 'Residential'], ['Business', 'Business'],
-                       ['School', 'School'], ['Church', 'Church']],
-          label: false %>
+                       ['School', 'School'], ['Church', 'Church']], legend_tag: false %>
           </div>
        </div>
        <div class="row">

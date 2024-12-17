@@ -220,7 +220,9 @@ end
   pdf.fill_color "DA251D"
   pdf.text_box "Certified Woman Owned Small Business", :at => [quote_certs_x,  pdf.cursor], :mode => :fill
   pdf.move_down lineheight_y
-  pdf.text_box "Native American Owned; TERO certified", :at => [quote_certs_x,  pdf.cursor], :mode => :fill
+  pdf.text_box "Native American Owned:", :at => [quote_certs_x,  pdf.cursor], :mode => :fill
+  pdf.move_down lineheight_y
+  pdf.text_box "TERO and CESO certified", :at => [quote_certs_x,  pdf.cursor], :mode => :fill
   pdf.fill_color "000000"
   
 

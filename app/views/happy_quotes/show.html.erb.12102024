@@ -11,10 +11,9 @@
     <div class="col-sm-4">
       <%= image_tag "https://d1wfqjcm45bc90.cloudfront.net/happy-erp-logo-v1.png"%>
     </div>
-    <div class="col-sm-4 text-danger align-right">
+    <div class="col-sm-4 text-danger">
       <p>Certified Woman Owned Small Business<br>
-      Native American Owned: <br> 
-      TERO and CESO certified
+      Native American Owned; TERO certified<br>
       </p>
     </div>
   </div>
@@ -136,7 +135,6 @@
 
   <br><br>
 <div class="row">
-
  <% if @happyquote.external_notes? %>
   <div class="col-1">
   <b>External Notes:</b>
@@ -173,8 +171,6 @@
  
 </div>
 
-
-
  <!-- <% if @happyquote.external_notes? %>
 
  <div class="row">
@@ -190,7 +186,6 @@
 
  <br>
 <div class="row">
-  <div class="col-8">
  <p><%= link_to "Printable Quote (PDF)", edit_happy_quote_path(@happyquote, format: "pdf") %><br>
  <%= link_to "Edit Quote", edit_happy_quote_path(@happyquote) %><br>
  <%= link_to 'View Purchase Orders', happy_quote_po_path(@happyquote, happy_customer_id: @happyquote.happy_customer_id) %><br>
@@ -200,31 +195,6 @@
  <% end %>
  <%#= link_to "PlayWorld Freight Form", happy_quote_pwfreight_path(params[:id], vendor_id: 2, format: "pdf") %>
  </p>
-  </div>
-
- <div class="col-2">
-   <p class="float-right">
-   User Add:<br>
-   Add DateTime:<br>
-   User Update:<br>
-   Update DateTime:<br>
-  </p>
- </div>
- <div class="col-2">
-   <p class="float-left">
-   <% if @userAdd %>
-    <%= @userAdd.username %><br>
-    <%= @happyquote.created_at.localtime.strftime '%Y-%m-%d %H:%M:%S' %><br>
-   <% end %>
-
-   <% if @userUpdate  %>
-      <%= @userUpdate.username %><br>
-    <% else %>
-      Not set<br>
-   <% end %>
-   <%= @happyquote.updated_at.localtime.strftime '%Y-%m-%d %H:%M:%S' %><br>
-
-  </p>
 </div>
 </div>
 

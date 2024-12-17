@@ -43,35 +43,35 @@
       </div>
       <div class="modal-body">
         <%= simple_form_for @happyReminder,
-  wrapper: :vertical_form,
-  wrapper_mappings: {
-    boolean:       :vertical_boolean,
-    check_boxes:   :vertical_collection,
-    date:          :vertical_multi_select,
-    datetime:      :vertical_multi_select,
-    file:          :vertical_file,
-    radio_buttons: :vertical_collection,
-    range:         :vertical_range,
-    time:          :vertical_multi_select
-  } do |f| %>
+                  wrapper: :vertical_form,
+                  wrapper_mappings: {
+                    boolean:       :vertical_boolean,
+                    check_boxes:   :vertical_collection,
+                    date:          :vertical_multi_select,
+                    datetime:      :vertical_multi_select,
+                    file:          :vertical_file,
+                    radio_buttons: :vertical_collection,
+                    range:         :vertical_range,
+                    time:          :vertical_multi_select
+                  } do |f| %>
 
-  <%#= f.error_notification %>
+                  <%#= f.error_notification %>
+                
+                  <%= f.input :name,class: "form-control" %>
 
-  <%= f.input :name,class: "form-control" %>
+                  <%= f.input :content, required: true, class: "form-control", :input_html => { :cols => 5, :rows => 10 } %>
+                  <%= f.input :reminder_date %>
+                  <%= f.input :remindable_id, :as => :hidden, :input_html => { :value => params[:id] } %>
+                  <%= f.input :remindable_type, :as => :hidden, :input_html => { :value => @model_name } %>
 
-  <%= f.input :content, required: true, class: "form-control", :input_html => { :cols => 5, :rows => 10 } %>
-  <%= f.input :reminder_date %>
-  <%= f.input :remindable_id, :as => :hidden, :input_html => { :value => params[:id] } %>
-  <%= f.input :remindable_type, :as => :hidden, :input_html => { :value => @model_name } %>
-  </div>
-
-  <div class="form-group row mb-0">
-    <div class="col-sm-9">
-      <%= f.button :submit, "save", class: "btn-primary" %>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    </div>
-  </div>
-<% end %>
+              <div class="form-group row mb-0">
+                <div class="col-sm-9">
+                  <%= f.button :submit, "save", class: "btn-primary" %>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+        <% end %>
+       </div>
 <!--
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
