@@ -119,6 +119,7 @@ prawn_document(filename: test, disposition: "attachment") do |pdf|
                 $last_row = @happyquote.happy_quote_lines.size + 1
                 puts("last_row #{$last_row}");
                 #if $loopCount <= 14
+                if item.weight != 0
                   if not item.active
 		  	number_with_precision($weight, :precision => 2, :delimiter => ',')
            	  	quote_items_data << [ item.quantity, item.product_id,number_with_precision((item.weight*item.quantity), :precision => 2, :delimiter => ',') ]
@@ -134,6 +135,7 @@ prawn_document(filename: test, disposition: "attachment") do |pdf|
                 	$loopCount2 +=1;
            	  	#quote_items_data2 << [ item.quantity, item.product_id,(item.weight*item.quantity) ]
            	  end
+                end
                 #end
 
   end
