@@ -113,6 +113,7 @@ prawn_document(filename: test, disposition: "attachment") do |pdf|
   $loopCount2 = 0;
   $weight2 = 0;
   @happyquote.happy_quote_lines.map.with_index do |item, index|
+	if item.weight != 0
                 puts("loop #$loopCount");
                 puts("index #{index}");
                 puts("#{@happyquote.happy_quote_lines.size}");
@@ -135,6 +136,7 @@ prawn_document(filename: test, disposition: "attachment") do |pdf|
            	  	#quote_items_data2 << [ item.quantity, item.product_id,(item.weight*item.quantity) ]
            	  end
                 #end
+         end
 
   end
 
