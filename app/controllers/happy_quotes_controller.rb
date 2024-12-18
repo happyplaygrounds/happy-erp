@@ -324,7 +324,7 @@ include Reminder
      #@discountAmount = HappyQuoteLine.where("happy_quote_id =? and happy_vendor_id =?", params[:happy_quote_id], params[:vendor_id]).sum('sell_discount')
      #@pototal = @balance + HappyQuoteLine.where("happy_quote_id =? and happy_vendor_id =?", params[:happy_quote_id], params[:vendor_id]).sum('total_cost_amount')
     #@happyquote = HappyQuote.includes(:happy_customer).includes(:happy_quote_lines).where("happy_vendor_id =?", params[:vendor_id]).order("happy_quote_lines.position asc").find(params[:happy_quote_id])
-    @happyquote = HappyQuote.includes(:happy_customer).includes(:happy_quote_lines).where("happy_vendor_id =? and :weight != ?", @vendor_id, 0).order("happy_quote_lines.position asc").find(params[:happy_quote_id])
+    @happyquote = HappyQuote.includes(:happy_customer).includes(:happy_quote_lines).where("happy_vendor_id =? and weight != ?", @vendor_id, 0).order("happy_quote_lines.position asc").find(params[:happy_quote_id])
      #@happyquote.update_attribute(:order_date, Date.today)
      @lines = @happyquote.happy_quote_lines
      if params[:product_id]
