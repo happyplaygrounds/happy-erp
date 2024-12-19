@@ -357,7 +357,7 @@ DEPENDENCIES
   cocoon
   devise
   globalid (~> 1.0)
-  icalendar (~> 2.8)
+  icalendar (~> 2.10, >= 2.10.3)
   importmap-rails
   jbuilder
   kaminari

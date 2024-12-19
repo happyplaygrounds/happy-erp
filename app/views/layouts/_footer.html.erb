@@ -4,14 +4,14 @@
 <div class="row justify-content-between no-gutters">
     <div class="col-4">
       <% if @happyReminders.present? %>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
         View <%= @model_name[5...] %> Reminders
       </button>
       <% end %>
     </div>
     <div class="col-4 text-center">
       <% if @todayReminderCount == 1 %>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#todayModalLong">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#todayModalLong">
         You have  <%= @todayReminderCount %> Reminder Today
       </button>
     <% else %>
@@ -19,14 +19,14 @@
           <button type="button" class="btn btn-primary" >
             You have  <%= @todayReminderCount %> Reminders Today
           </button>
-        <% else %><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#todayModalLong">
+        <% else %><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#todayModalLong">
             You have  <%= @todayReminderCount %> Reminders Today
           </button>
         <% end %>
     <% end %>
     </div>
     <div class="col-4 float-end">
-      <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal">
+      <button type="button" class="btn btn-primary float-right" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Create <%= @model_name[5...] %> Reminder
       </button>
     </div>
@@ -37,7 +37,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Happy Reminder</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -67,14 +67,14 @@
               <div class="form-group row mb-0">
                 <div class="col-sm-9">
                   <%= f.button :submit, "save", class: "btn-primary" %>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
               </div>
         <% end %>
        </div>
 <!--
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div>
 -->
@@ -98,7 +98,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Happy Reminders</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -135,7 +135,7 @@
           <% end %>
         </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
     </div>
@@ -152,7 +152,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="todayModalLongTitle"> Today's Happy Reminders</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -209,7 +209,7 @@
           <% end %>
         </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
     </div>
