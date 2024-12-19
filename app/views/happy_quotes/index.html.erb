@@ -36,7 +36,7 @@
         <td><%= link_to 'Show', quote %></td>
         <td><%= link_to 'Edit', edit_happy_quote_path(quote) %></td>
         <!-- <td><%#= link_to 'Sortable Quote', happy_quote_sortlines_path(quote,id: quote.id,happy_customer_id: params[:customer_id]) %></td> -->
-        <td><%= link_to 'Purchase Orders', happy_quote_po_path(quote, happy_customer_id: params[:customer_id]) %></td>
+        <td><%= link_to 'Purchase Orders', happy_quote_po_path(quote, happy_customer_id: @cust_id) %></td>
         <td><%#= link_to 'Destroy', quote, method: :delete,
                                      data: { confirm: 'Are you sure?' } %></td>
       </tr>
