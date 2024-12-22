@@ -79,14 +79,14 @@ include Reminder
      #end
 
      if @happyquote.user_id_add
-        #@userAdd = User.find(@happyquote.user_id_add)
-        @userAdd = User.find(current_user.id)
+        @userAdd = User.find(@happyquote.user_id_add)
+        #@userAdd = User.find(current_user.id)
         puts "userAdd"
         puts @userAdd.username
        end
        if @happyquote.user_id_update
-        #@userUpdate = User.find(@happyquote.user_id_update)
-         @userUpdate = User.find(current_user.id)
+        @userUpdate = User.find(@happyquote.user_id_update)
+        #@userUpdate = User.find(current_user.id)
        end
 
     @happyquotevendors=HappyQuoteLine.joins(:happy_vendor).where("happy_quote_id =?",params[:happy_quote_id]).distinct.select('happy_vendor_id','happy_vendors.vendor_name', 'first_name') 
