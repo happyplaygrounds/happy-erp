@@ -11,13 +11,13 @@ include Reminder
       puts @number
       #@happyquote = HappyQuote.where("number = ? and happy_customer_id = ?", @number, 13)
       @happyquote = HappyQuote.find_by_id(@number)
-      if !@happyquote.nil?
+      if @happyquote.nil?
+          flash.now[:alert] = "Quote #{@number} not found!"
+      else
           @cust_id = @happyquote.happy_customer_id
           @happyquote = HappyQuote.where("happy_customer_id = ? and number = ?", @happyquote.happy_customer_id, @number).order("number asc")
           puts "cust_id"
           puts @cust_id
-      else 
-          flash.now[:alert] = "Quote #{@number} not found!"
       end
 
     else

@@ -14,7 +14,7 @@ export default class extends Controller {
   static targets = [ "productid","quantity",  "price", "weight", "description", "purchaseDisc", "buyout", "total", "totalCost", "vendorid" ]
 
   connect() {
-	  console.log("ProductConnect1", this.element)
+	  console.log("ProductConnect1 test2", this.element)
 	  console.log("ProductConnect2", this.sourceTarget)
 	  console.log("ProductConnect3", this.sourceTargets)
 	  this.element[this.identifier] = this
@@ -46,6 +46,7 @@ export default class extends Controller {
 			  console.log("body",body);
 			  console.log("body id",Object.values(body)[0]);
 		          var productArray = Object.values(body)[0];
+			  console.log("arraylength", productArray);
 	                 }
 	     if (productArray.length != 0)
 	       {
@@ -86,14 +87,14 @@ export default class extends Controller {
 	       }
 	    else
 	    {
-		  	  this.weightTarget.value = 0.0;
-		  	  this.priceTarget.value = 0.0;
-		  	  this.purchaseDiscTarget.value = 0.0;
-                          this.buyoutTarget.value = 0.0;  
-                          this.totalTarget.value = 0.0;  
-                          this.totalCostTarget.value = 0.0;  
-                          this.quantityTarget.value = 0.0;  
-                          this.vendoridTarget.value = 1;  
+		  	  //this.weightTarget.value = 0.0;
+		  	  //this.priceTarget.value = 0.0;
+		  	  //this.purchaseDiscTarget.value = 0.0;
+                          //this.buyoutTarget.value = 0.0;  
+                          //this.totalTarget.value = 0.0;  
+                          //this.totalCostTarget.value = 0.0;  
+                          //this.quantityTarget.value = 0.0;  
+                          //this.vendoridTarget.value = 1;  
                           console.log("NoVendorID",this.vendoridTarget.value);
 	    }
 
