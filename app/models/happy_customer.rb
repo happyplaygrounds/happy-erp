@@ -3,6 +3,7 @@ class HappyCustomer < ApplicationRecord
   has_many :happy_orders
   has_many :happy_reminders, as: :remindable
   has_many :happy_install_sites
+  geocoded_by :address, latitude: :mailing_lat, longitude: :mailing_long
   #belongs_to :user
 
   validates :customer_name,      presence: true
@@ -16,4 +17,9 @@ class HappyCustomer < ApplicationRecord
   validates :mailing_city,      presence: true
   validates :mailing_state,      presence: true
   validates :mailing_zipcode,      presence: true
+
+  def address
+  [mailing_street1, mailing_street2, mailing_city, mailing_state, mailing_zipcode, mailing_country].compact.join(', ')
+  end
+
 end

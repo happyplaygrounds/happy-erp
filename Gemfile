@@ -79,6 +79,7 @@ gem 'devise'
 gem 'pundit'
 
 gem 'aws-sdk-s3'
+gem 'aws-sdk-locationservice', '~> 1.4'
 gem 'kaminari'
 gem 'acts_as_list'
 #gem 'icalendar', '~> 2.8'
@@ -89,3 +90,5 @@ gem 'requestjs-rails'
 
 gem 'ostruct', '~> 0.1.0'
 gem 'logger', '~> 1.6'
+
+gem 'geocoder', '~> 1.8', '>= 1.8.5'
