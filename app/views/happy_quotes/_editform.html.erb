@@ -3,7 +3,7 @@
 
 
 <div class="content">
-<%= simple_form_for @happyquote do |f| %>
+  <%= simple_form_for @happyquote,  data: { turbo: false } do |f| %>
   <%= f.error_notification %>
 
 
