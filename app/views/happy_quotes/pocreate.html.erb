@@ -98,6 +98,7 @@
       <% @lines.each do |quote| %>
         <div data-id="<%= quote.id %>" data-quoteid="<%= quote.id %>" class="card card-body-4">
           <div class="row">
+        <% if quote.quantity != 0 %>
           <div class="col-sm-2">
                 <%= quote.product_id %>
           </div>
@@ -123,8 +124,29 @@
                   <%= number_to_currency(quote.total_cost_amount) %>
                 </div>
           </div>
-        </div>
-        </div>
+        <% else %>
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-1">
+          </div>
+          <div class="col-sm-1">
+          </div>
+          <div class="col-sm-3">
+                <%= quote.description %>
+          </div>
+          <div class="col-sm-1">
+          </div>
+          <div class="col-sm-2">
+               <div class="float-right">
+               </div>
+          </div>
+          <div class="col-sm-2">
+               <div class="float-right">
+               </div>
+          </div>
+        <% end %>
+       </div>
+    </div>
       <% end %>
   </div>
 
