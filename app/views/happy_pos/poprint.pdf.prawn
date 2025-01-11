@@ -29,7 +29,7 @@ prawn_document(filename: test, disposition: "attachment") do |pdf|
   po_items_data << po_items_header
 
   @happypo.happy_po_lines.map do |item|
-	if  item.quantity == 0          
+	if item.quantity == 0          
            po_items_data << [ " ", " ", " ","heading-"+item.description," ", " ", " " ]
  	else
            po_items_data << [ item.product_id, item.quantity, item.unit_of_measure,item.description,item.color, number_to_currency(item.buyout_unit_price), number_to_currency(item.total_cost_amount) ]
