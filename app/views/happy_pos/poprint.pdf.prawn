@@ -29,7 +29,11 @@ prawn_document(filename: test, disposition: "attachment") do |pdf|
   po_items_data << po_items_header
 
   @happypo.happy_po_lines.map do |item|
+	if  item.quantity == 0          
+           po_items_data << [ " ", " ", " ","heading-"+item.description," ", " ", " " ]
+ 	else
            po_items_data << [ item.product_id, item.quantity, item.unit_of_measure,item.description,item.color, number_to_currency(item.buyout_unit_price), number_to_currency(item.total_cost_amount) ]
+        end
   end
 
 
@@ -51,6 +55,15 @@ prawn_document(filename: test, disposition: "attachment") do |pdf|
     style(columns(2), :width => 30)
     style(columns(3), :width => 200)
     style(columns(4), :width => 65)
+    column(3).style do |cell|
+       #if cell.content.match(/[\n,*]/)
+       #  cell.style(:font_style => :italic)
+       #end
+       if cell.content.slice(0,8) == "heading-"
+         cell.content = cell.content.slice(8..-1)
+         cell.style(:font_style => :bold)
+       end
+    end
   end
 
      if pdf.cursor < 200
