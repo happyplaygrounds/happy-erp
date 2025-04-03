@@ -298,9 +298,9 @@ include Reminder
      @discountAmount = 0
      @quotetotal = 0
      @vendor_id = 2
-     if !@happyquote 
-         @happyquote = HappyQuote.new
-     end 
+     #if !@happyquote 
+     #    @happyquote = HappyQuote.new
+     #end 
      params.each do |key,value|
        Rails.logger.warn "Param #{key}: #{value}"
      end
