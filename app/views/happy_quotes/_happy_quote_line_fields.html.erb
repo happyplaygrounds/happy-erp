@@ -17,7 +17,7 @@
       <%= f.input :quantity, input_html: { data: { 'product-target': 'quantity','grand-target': 'quantity', 'total-target': 'quantity', action: 'total#recalculate'} } %>
     </div>
     <div class="col-md-1">
-      <%= f.input :unit_of_measure, :label => "UOM", collection: [['EA','EA'], ['FT','FT'], ['SQ FT','SQ FT']],  include_blank: false %>
+      <%= f.input :unit_of_measure, :label => "UOM", collection: [['EA','EA'], ['FT','FT'], ['SQ FT','SQ FT'], ['CY', 'CY']],  include_blank: false %>
     </div>
     <div class="col-md-1">
       <%= f.input :weight, :label => "Weight",  input_html: { data: { 'product-target': 'weight' } } %>
