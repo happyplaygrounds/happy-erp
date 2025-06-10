@@ -102,7 +102,8 @@ export default class TotalController extends Controller {
 
     console.log("Margin", Margin)
 	
-    console.log(this.application.getControllerForElementAndIdentifier(this.element, "total"));
+    // this is erroring out  
+    // console.log(this.application.getControllerForElementAndIdentifier(this.element, "total"));
 
 
     

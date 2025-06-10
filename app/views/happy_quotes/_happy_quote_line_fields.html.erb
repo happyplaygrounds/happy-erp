@@ -14,7 +14,7 @@
 
   <div class="row">
     <div class="col-md-2">
-      <%= f.input :quantity, input_html: { data: { 'product-target': 'quantity','grand-target': 'quantity', 'total-target': 'quantity', action: 'total#recalculate'} } %>
+      <%= f.input :quantity, input_html: { data: { 'product-target': 'quantity','grand-target': 'quantity', 'total-target': 'quantity', action: 'total#recalculate grand#calculate'} } %>
     </div>
     <div class="col-md-1">
       <%= f.input :unit_of_measure, :label => "UOM", collection: [['EA','EA'], ['FT','FT'], ['SQ FT','SQ FT'], ['CY', 'CY']],  include_blank: false %>
