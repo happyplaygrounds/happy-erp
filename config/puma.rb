@@ -34,3 +34,6 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
+
+# Heroku roouter update July 2025 https://www.heroku.com/blog/pumas-routers-keepalives-ohmy/#the-solution
+enable_keep_alives false
