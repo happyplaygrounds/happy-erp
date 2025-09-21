@@ -17,10 +17,8 @@ prawn_document(filename: test, disposition: "attachment") do |pdf|
   initial_y = pdf.cursor       
   initialmove_y = 5            
   address_x = 0                
-  #quote_header_x = 325         
-  quote_header_x = 385         
-  quote_certs_x = 375          
-  logo_x = 188          
+  quote_header_x = 325         
+  quote_certs_x = 355          
   lineheight_y = 12            
   font_size = 9                
   
@@ -110,14 +108,14 @@ end
       if @discountAmount > 0
 	quote_items_totals_data = [ 
     	["Sub Total", number_to_currency(@quotetotal)],
-    	["Tax", number_to_currency(@taxAmount)],
+    	["Estimated Sales Tax", number_to_currency(@taxAmount)],
     	["Discount", number_to_currency(@discountAmount)],
     	["Quote Amount", number_to_currency(@quotetotal + @taxAmount - @discountAmount)]
   	]
       else
 	quote_items_totals_data = [ 
     	["Sub Total", number_to_currency(@quotetotal)],
-    	["Tax", number_to_currency(@taxAmount)],
+    	["Estimated Sales Tax", number_to_currency(@taxAmount)],
     	["Quote Amount", number_to_currency(@quotetotal + @taxAmount - @discountAmount)]
   	]
       end
@@ -125,6 +123,7 @@ end
   pdf.table(quote_items_totals_data, :position => quote_header_x, :width => 215) do
     style(row(0..1).columns(0..1), :padding => [1, 5, 1, 5], :borders => [])
     style(row(0), :font_style => :bold)
+    style(row(1), :font_style => :bold)
     style(row(2), :background_color => 'e9e9e9', :border_color => 'dddddd', :font_style => :bold)
     style(column(1), :align => :right)
     style(row(2).columns(0), :borders => [:top, :left, :bottom])
@@ -218,30 +217,14 @@ end
   last_measured_y = pdf.cursor
   pdf.move_cursor_to pdf.bounds.height
 
-
-  quote_number=@happyquote.number+"-"+@happyquote.sub.to_s
-  quote_header_data = [ 
-    ["Quote #", quote_number],
-    ["Quote Date", @happyquote.quote_date.strftime("%m-%d-%Y")],
-    ["Quote Amount", number_to_currency(@quotetotal + @taxAmount - @discountAmount)]
-  ]
-
-  pdf.table(quote_header_data, :position => quote_header_x, :width => 150) do
-    style(row(0..1).columns(0..1), :padding => [1, 5, 1, 5], :borders => [])
-    style(row(2), :background_color => 'e9e9e9', :border_color => 'dddddd', :font_style => :bold)
-    style(column(1), :align => :right)
-    style(row(2).columns(0), :borders => [:top, :left, :bottom])
-    style(row(2).columns(1), :borders => [:top, :right, :bottom])
-  end
-
- # pdf.move_down lineheight_y
- # pdf.fill_color "DA251D"
- # pdf.text_box "Certified Woman Owned Small Business", :at => [quote_certs_x,  pdf.cursor], :mode => :fill
- # pdf.move_down lineheight_y
- # pdf.text_box "Native American Owned:", :at => [quote_certs_x,  pdf.cursor], :mode => :fill
- # pdf.move_down lineheight_y
- # pdf.text_box "TERO and CESO certified", :at => [quote_certs_x,  pdf.cursor], :mode => :fill
- # pdf.fill_color "000000"
+  pdf.move_down lineheight_y
+  pdf.fill_color "DA251D"
+  pdf.text_box "Certified Woman Owned Small Business", :at => [quote_certs_x,  pdf.cursor], :mode => :fill
+  pdf.move_down lineheight_y
+  pdf.text_box "Native American Owned:", :at => [quote_certs_x,  pdf.cursor], :mode => :fill
+  pdf.move_down lineheight_y
+  pdf.text_box "TERO and CESO certified", :at => [quote_certs_x,  pdf.cursor], :mode => :fill
+  pdf.fill_color "000000"
   
 
   last_measured_y = pdf.cursor
@@ -249,52 +232,19 @@ end
 
   require 'open-uri'
   pdf.image URI.open("https://happypg-prod.s3.amazonaws.com/logo_v1.png"), :width => 150, :position => :center
-  pdf.move_down 7
-  pdf.fill_color "C62828"
-  pdf.text "Certified Woman Owned Small Business", align: :center, size: 8.5, :mode => :fill
-#  pdf.text_box "Native American Owned", :at => [logo_x + 20,  pdf.cursor], :mode => :fill
-  pdf.text "Native American Owned", align: :center, size: 8.5,  :mode => :fill
-  pdf.text "TERO & CESO Certified", align: :center, size: 8.5,  :mode => :fill
-  pdf.fill_color "000000"
 
   pdf.move_cursor_to last_measured_y
 
-
-  #pdf.move_down 30
-
-  #quote_number=@happyquote.number+"-"+@happyquote.sub.to_s
-  #quote_header_data = [ 
-    #["Quote #", quote_number],
-    #["Quote Date", @happyquote.quote_date.strftime("%m-%d-%Y")],
-    #["Quote Amount", number_to_currency(@quotetotal + @taxAmount - @discountAmount)]
-  #]
-
-  #pdf.table(quote_header_data, :position => quote_header_x, :width => 215) do
-    #style(row(0..1).columns(0..1), :padding => [1, 5, 1, 5], :borders => [])
-    #style(row(2), :background_color => 'e9e9e9', :border_color => 'dddddd', :font_style => :bold)
-    #style(column(1), :align => :right)
-    #style(row(2).columns(0), :borders => [:top, :left, :bottom])
-    #style(row(2).columns(1), :borders => [:top, :right, :bottom])
-  #end
-
-
   # client address
-  #pdf.move_down 65
-  pdf.move_down 14
+  pdf.move_down 65
   last_measured_y = pdf.cursor
 
 
-  pdf.text_box "BILL TO:", :at => [address_x,  pdf.cursor], :style => :bold
-  pdf.text_box "SHIP TO:", :at => [quote_header_x,  pdf.cursor], :style => :bold
-  pdf.move_down lineheight_y
   pdf.text_box @happyquote.happy_customer.customer_name, :at => [address_x,  pdf.cursor]
-  pdf.text_box @happyquote.shipping_street1, :at => [quote_header_x,  pdf.cursor]
   pdf.move_down lineheight_y
   pdf.text_box "Attention: " + @happyquote.happy_customer.first_name + " " + @happyquote.happy_customer.last_name, :at => [address_x,  pdf.cursor]
-  pdf.text_box @happyquote.shipping_street2, :at => [quote_header_x,  pdf.cursor]
   pdf.move_down lineheight_y
   pdf.text_box @happyquote.happy_customer.mailing_street1, :at => [address_x,  pdf.cursor]
-  pdf.text_box @happyquote.shipping_city + ", " + @happyquote.shipping_state + " " + @happyquote.shipping_zipcode, :at => [quote_header_x,  pdf.cursor]
   if !@happyquote.happy_customer.mailing_street2.blank? 
   	pdf.move_down lineheight_y
   	pdf.text_box @happyquote.happy_customer.mailing_street2, :at => [address_x,  pdf.cursor]
@@ -302,56 +252,23 @@ end
   pdf.move_down lineheight_y
   pdf.text_box @happyquote.happy_customer.mailing_city + ", " + @happyquote.happy_customer.mailing_state + " " + @happyquote.happy_customer.mailing_zipcode, :at => [address_x,  pdf.cursor]
 
-  #pdf.move_cursor_to 37.0 # was 53 no idea why had to hardcode was pdf.move_cursor_to last_measured_y
-  #pdf.move_up 50
+  pdf.move_cursor_to 37.0 # was 53 no idea why had to hardcode was pdf.move_cursor_to last_measured_y
 
   #quote_number=@happyquote.id.to_s+"-"+@happyquote.sub.to_s
-  #quote_header_ship_data = [ 
-    #["SHIP TO:"],
-    #[@happyquote.shipping_street1],
-    #[@happyquote.shipping_street2],
-    #[@happyquote.shipping_city + ", " + @happyquote.shipping_state + " " + @happyquote.shipping_zipcode]
-  #]
-#
-  #pdf.table(quote_header_ship_data, :position => quote_header_x, :width => 215) do
-    #style(row(0..1).columns(0..1), :padding => [1, 5, 1, 5], :borders => [])
-    #style(row(2), :background_color => 'e9e9e9', :border_color => 'dddddd', :font_style => :bold)
-  #  style(column(1), :align => :right)
-  #  style(row(2).columns(0), :borders => [:top, :left, :bottom])
-  #  style(row(2).columns(1), :borders => [:top, :right, :bottom])
-  #end
+  quote_number=@happyquote.number+"-"+@happyquote.sub.to_s
+  quote_header_data = [ 
+    ["Quote #", quote_number],
+    ["Quote Date", @happyquote.quote_date.strftime("%m-%d-%Y")],
+    ["Quote Amount", number_to_currency(@quotetotal + @taxAmount - @discountAmount)]
+  ]
 
-  #pdf.text_box "SHIP TO:", :at => [address_x,  pdf.cursor], :style => :bold
-  #pdf.move_down lineheight_y
-  #pdf.text_box @happyquote.happy_customer.customer_name, :at => [address_x,  pdf.cursor]
-  #pdf.move_down lineheight_y
-  #pdf.text_box  @happyquote.happy_customer.first_name + " " + @happyquote.happy_customer.last_name, :at => [address_x,  pdf.cursor]
-  #pdf.move_down lineheight_y
-  #pdf.text_box @happyquote.shipping_street1, :at => [address_x,  pdf.cursor]
-  #if !@happyquote.shipping_street2.blank? 
-  	#pdf.move_down lineheight_y
-  	#pdf.text_box @happyquote.shipping_street2, :at => [address_x,  pdf.cursor]
-  #end
-  #pdf.move_down lineheight_y
-  #pdf.text_box @happyquote.shipping_city + ", " + @happyquote.shipping_state + " " + @happyquote.shipping_zipcode, :at => [address_x,  pdf.cursor]
-
-  #pdf.move_cursor_to 37.0 # was 53 no idea why had to hardcode was pdf.move_cursor_to last_measured_y
-
-  ##quote_number=@happyquote.id.to_s+"-"+@happyquote.sub.to_s
-  #quote_number=@happyquote.number+"-"+@happyquote.sub.to_s
-  #quote_header_data = [ 
-    #["Quote #", quote_number],
-    #["Quote Date", @happyquote.quote_date.strftime("%m-%d-%Y")],
-    #["Quote Amount", number_to_currency(@quotetotal + @taxAmount - @discountAmount)]
-  #]
-
-  #pdf.table(quote_header_data, :position => quote_header_x, :width => 215) do
-    #style(row(0..1).columns(0..1), :padding => [1, 5, 1, 5], :borders => [])
-    #style(row(2), :background_color => 'e9e9e9', :border_color => 'dddddd', :font_style => :bold)
-    #style(column(1), :align => :right)
-    #style(row(2).columns(0), :borders => [:top, :left, :bottom])
-    #style(row(2).columns(1), :borders => [:top, :right, :bottom])
-  #end
+  pdf.table(quote_header_data, :position => quote_header_x, :width => 215) do
+    style(row(0..1).columns(0..1), :padding => [1, 5, 1, 5], :borders => [])
+    style(row(2), :background_color => 'e9e9e9', :border_color => 'dddddd', :font_style => :bold)
+    style(column(1), :align => :right)
+    style(row(2).columns(0), :borders => [:top, :left, :bottom])
+    style(row(2).columns(1), :borders => [:top, :right, :bottom])
+  end
 
   pdf.move_down 45
         end
