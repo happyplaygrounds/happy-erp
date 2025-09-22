@@ -110,14 +110,14 @@ end
       if @discountAmount > 0
 	quote_items_totals_data = [ 
     	["Sub Total", number_to_currency(@quotetotal)],
-    	["Tax", number_to_currency(@taxAmount)],
+    	["Estimated Tax", number_to_currency(@taxAmount)],
     	["Discount", number_to_currency(@discountAmount)],
     	["Quote Amount", number_to_currency(@quotetotal + @taxAmount - @discountAmount)]
   	]
       else
 	quote_items_totals_data = [ 
     	["Sub Total", number_to_currency(@quotetotal)],
-    	["Tax", number_to_currency(@taxAmount)],
+    	["Estimated Tax", number_to_currency(@taxAmount)],
     	["Quote Amount", number_to_currency(@quotetotal + @taxAmount - @discountAmount)]
   	]
       end
