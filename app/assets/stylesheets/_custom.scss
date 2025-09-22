@@ -52,54 +52,31 @@ h1 {
 	margin-bottom: 20px;
 	margin-top: 20px;
 }
-/* TEST: this must show if file is loaded */
-body { background: lime !important; }
 
-
-
-/* Scope everything to avoid surprises */
+/* Force table to honor colgroup widths this is for the happy_quotes index page */
 #quotes-table .table {
-  table-layout: fixed !important;
-  width: 100% !important;
-  border-collapse: collapse; /* avoid width inflation from borders/padding */
+  table-layout: fixed;
+  width: 100%;
 }
 
-/* Equal widths via <col> (others total 60% ⇒ 20%+20%) */
+/* Equal widths for the two notes columns */
 #quotes-table col.col-internal-notes,
 #quotes-table col.col-external-notes {
-  width: 20% !important;
+  width: 20%;
+}
+#quotes-table col.col-email {
+  width: 18%;
 }
 
-/* Belt + suspenders: enforce on the actual header + cells */
+/* Allow wrapping inside those cells */
+#quotes-table th:nth-child(3),
+#quotes-table td:nth-child(3),
 #quotes-table th:nth-child(4),
 #quotes-table td:nth-child(4),
 #quotes-table th:nth-child(5),
 #quotes-table td:nth-child(5) {
-  width: 20% !important;
-  white-space: normal !important;   /* beat .table-responsive nowrap */
-  overflow-wrap: anywhere;          /* break long tokens/URLs */
-  word-break: break-word;           /* fallback */
-  min-width: 0;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-/* If notes contain links, allow them to wrap as well */
-#quotes-table td:nth-child(4) a,
-#quotes-table td:nth-child(5) a {
+  white-space: normal;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
 
-/* TEMP: help verify selectors apply—add a subtle background */
-#quotes-table th:nth-child(4),
-#quotes-table td:nth-child(4),
-#quotes-table th:nth-child(5),
-#quotes-table td:nth-child(5) {
-  background: rgba(255, 200, 0, 0.08);  /* temporary */
-}
-/* TEMP: should affect EVERY Bootstrap table cell on the page */
-.table.table-fixed td, .table.table-fixed th { outline: 1px dashed magenta !important; }
-
-
-body { background: hotpink !important; }
