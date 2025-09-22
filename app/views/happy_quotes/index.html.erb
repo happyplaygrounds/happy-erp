@@ -1,11 +1,11 @@
 <%#= debug @happycustomer %>
 <%#= debug @happyquote %>
 <div class="container">        
-    <% if !params[:customer_name] and !@cust_id %>
-     <%= simple_form_for :search, url: happy_quotes_path, method: "GET", wrapper: :inline_form, html: { class: 'form-inline' } do |f| %>
-     <%= f.input_field :number, label: "Quote Number", input_html: {value: ""} %>
-     <%= f.submit "Search", class: "btn btn-primary" %>
-    <% end %>
+  <% if params[:customer_name].blank? && @cust_id.blank? %>
+  <%= form_with url: happy_quotes_path, method: :get, scope: :search, local: true do |f| %>
+    <%= f.text_field :number, value: params.dig(:search, :number) %>
+    <%= f.submit "Search", class: "btn btn-primary" %>
+  <% end %>
    <% else %>
   <% if params[:customer_name] %>
       <h2>Happy Quotes for - <%= params[:customer_name]%> </h2>
