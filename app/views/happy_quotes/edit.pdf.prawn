@@ -17,7 +17,7 @@ prawn_document(filename: test, disposition: "attachment") do |pdf|
   initial_y = pdf.cursor       
   initialmove_y = 5            
   address_x = 0                
-  #quote_header_x = 325         
+  quote_sub_x = 325         
   quote_header_x = 385         
   quote_certs_x = 375          
   logo_x = 188          
@@ -122,7 +122,7 @@ end
   	]
       end
 
-  pdf.table(quote_items_totals_data, :position => quote_header_x, :width => 215) do
+  pdf.table(quote_items_totals_data, :position => quote_sub_x, :width => 215) do
     style(row(0..1).columns(0..1), :padding => [1, 5, 1, 5], :borders => [])
     style(row(0), :font_style => :bold)
     style(row(2), :background_color => 'e9e9e9', :border_color => 'dddddd', :font_style => :bold)
