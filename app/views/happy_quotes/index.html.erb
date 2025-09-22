@@ -13,17 +13,17 @@
       <h2>Happy Quote </h2>
   <% end %>
   <br>
-  <div class="table-responsive">
+  <div class="table-responsive" id="quotes-table">
   <table class="table table-fixed">
     <colgroup>
-      <col style="width:10%">
       <col style="width:12%">
-      <col style="width:18%">
-      <col class="col-notes">   <!-- Internal Notes column -->
-      <col class="col-notes">   <!-- External Notes column -->
+      <col style="width:12%">
+      <col style="width:12%">
+      <col class="col-internal-notes">   <!-- Internal Notes column -->
+      <col class="col-external-notes">   <!-- External Notes column -->
       <col style="width:5%">
       <col style="width:5%">
-      <col style="width:10%">
+      <col style="width:14%">
     </colgroup>
 
     <thead>
@@ -45,8 +45,8 @@
           <td><%= quote.number %>-<%= quote.sub %></td>
           <td><%= quote.quote_date %></td>
           <td><%= quote.email %></td>
-          <td><%= quote.internal_notes %></td>  <!-- no per-cell class needed -->
-          <td><%= quote.external_notes %></td>  <!-- no per-cell class needed -->
+          <td><%= quote.internal_notes.presence || "&nbsp;".html_safe %></td>
+          <td><%= quote.external_notes.presence || "&nbsp;".html_safe %></td>
           <td><%= link_to 'Show', quote %></td>
           <td><%= link_to 'Edit', edit_happy_quote_path(quote) %></td>
           <td><%= link_to 'Purchase Orders', happy_quote_po_path(quote, happy_customer_id: @cust_id) %></td>
