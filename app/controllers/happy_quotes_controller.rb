@@ -4,21 +4,22 @@ include Reminder
 
   def index
 
-    @search = params["search"]
-    if @search.present?
-      puts "got in index"       
-        @number = @search["number"]
-      puts @number
-      #@happyquote = HappyQuote.where("number = ? and happy_customer_id = ?", @number, 13)
-      @happyquote = HappyQuote.find_by_id(@number)
-      if @happyquote.nil?
-          flash.now[:alert] = "Quote #{@number} not found!"
-      else
-          @cust_id = @happyquote.happy_customer_id
-          @happyquote = HappyQuote.where("happy_customer_id = ? and number = ?", @happyquote.happy_customer_id, @number).order("number asc")
-          puts "cust_id"
-          puts @cust_id
-      end
+  @search = params.fetch(:search, {}).permit(:number, :customer_name, :cust_id)
+  @search_number = @search[:number].presence
+
+  if @search_number
+    @happyquote = HappyQuote.find_by(id: @search_number)
+
+    if @happyquote.nil?
+      flash.now[:alert] = "Quote #{@search_number} not found!"
+      @search_number = nil   # clears the input after invalid search
+    else
+      @cust_id = @happyquote.happy_customer_id
+      @happyquote = HappyQuote.where(
+        happy_customer_id: @cust_id,
+        number: @search_number
+      ).order(:number)
+    end
 
     else
 

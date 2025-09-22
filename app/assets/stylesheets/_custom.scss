@@ -53,3 +53,18 @@ h1 {
 	margin-top: 20px;
 }
 
+/* Make widths from <colgroup> take effect and prevent table auto-stretching */
+.table-fixed { table-layout: fixed; width: 100%; }
+
+/* Give External Notes some room (width on <col> is supported) */
+.table-fixed col.col-notes { width: 40%; }
+
+/* Override .table-responsive's nowrap for the 7th column cells */
+.table-responsive .table-fixed td:nth-child(5),
+.table-responsive .table-fixed th:nth-child(5) {
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  word-break: break-word;   /* fallback */
+  min-width: 0;
+}
+

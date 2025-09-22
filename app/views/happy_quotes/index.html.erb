@@ -3,7 +3,7 @@
 <div class="container">        
   <% if params[:customer_name].blank? && @cust_id.blank? %>
   <%= form_with url: happy_quotes_path, method: :get, scope: :search, local: true do |f| %>
-    <%= f.text_field :number, value: params.dig(:search, :number) %>
+    <%= f.text_field :number, value: @search_number %>
     <%= f.submit "Search", class: "btn btn-primary" %>
   <% end %>
    <% else %>
@@ -13,37 +13,48 @@
       <h2>Happy Quote </h2>
   <% end %>
   <br>
-  <div class="table-responsive">          
-  <table class="table">
+  <div class="table-responsive">
+  <table class="table table-fixed">
+    <colgroup>
+      <col style="width:10%">
+      <col style="width:12%">
+      <col style="width:18%">
+      <col class="col-notes">   <!-- Internal Notes column -->
+      <col class="col-notes">   <!-- External Notes column -->
+      <col style="width:5%">
+      <col style="width:5%">
+      <col style="width:10%">
+    </colgroup>
+
     <thead>
       <tr>
-        <th>Quote</th>            
-        <th>Quote Date</th>          
-        <th>Email</th>         
-        <th></th>         
-        <th></th>         
-        <th></th>         
-        <th></th>         
-        <th></th>         
+        <th>Quote</th>
+        <th>Quote Date</th>
+        <th>Email</th>
+        <th>Internal Notes</th>
+        <th>External Notes</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    </thead>                   
+    </thead>
+
     <tbody>
       <% @happyquote.each do |quote| %>
-      <tr>
-        <td><%= quote.number %>-<%= quote.sub %></td>     
-        <td><%= quote.quote_date %></td>
-        <td><%= quote.email %></td>  
-        <td><%= link_to 'Show', quote %></td>
-        <td><%= link_to 'Edit', edit_happy_quote_path(quote) %></td>
-        <!-- <td><%#= link_to 'Sortable Quote', happy_quote_sortlines_path(quote,id: quote.id,happy_customer_id: params[:customer_id]) %></td> -->
-        <td><%= link_to 'Purchase Orders', happy_quote_po_path(quote, happy_customer_id: @cust_id) %></td>
-        <td><%#= link_to 'Destroy', quote, method: :delete,
-                                     data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <tr>
+          <td><%= quote.number %>-<%= quote.sub %></td>
+          <td><%= quote.quote_date %></td>
+          <td><%= quote.email %></td>
+          <td><%= quote.internal_notes %></td>  <!-- no per-cell class needed -->
+          <td><%= quote.external_notes %></td>  <!-- no per-cell class needed -->
+          <td><%= link_to 'Show', quote %></td>
+          <td><%= link_to 'Edit', edit_happy_quote_path(quote) %></td>
+          <td><%= link_to 'Purchase Orders', happy_quote_po_path(quote, happy_customer_id: @cust_id) %></td>
+        </tr>
       <% end %>
     </tbody>
   </table>
-  </div>
+</div>
   <% if  params[:customer_id] %>
      <%= link_to 'New Quote', new_happy_quote_path(happy_customer_id: params[:customer_id]) %> 
   <% end %>
