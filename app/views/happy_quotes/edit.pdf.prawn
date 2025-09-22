@@ -291,7 +291,7 @@ end
   pdf.text_box @happyquote.shipping_street1, :at => [quote_header_x,  pdf.cursor]
   pdf.move_down lineheight_y
   pdf.text_box "Attention: " + @happyquote.happy_customer.first_name + " " + @happyquote.happy_customer.last_name, :at => [address_x,  pdf.cursor]
-  if !@happyquote.happy_customer.shipping_street2.blank? 
+  if !@happyquote.shipping_street2.blank? 
   	pdf.move_down lineheight_y
   	pdf.text_box @happyquote.shipping_street2, :at => [quote_header_x,  pdf.cursor]
   end
