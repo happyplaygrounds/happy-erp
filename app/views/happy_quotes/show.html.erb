@@ -50,14 +50,14 @@
   <div class="col-2">
       <p>
       <b>SHIP TO:</b><br>
-      <%= @happyquote.mailing_street1 %><br>
-      <% if @happyquote.mailing_street2.present? %>
-        <%= @happyquote.mailing_street2 %><br>
+      <%= @happyquote.shipping_street1 %><br>
+      <% if @happyquote.shipping_street2.present? %>
+        <%= @happyquote.shipping_street2 %><br>
       <% else %>
-        <%= @happyquote.mailing_city %> <%= @happyquote.mailing_state%> <%= @happyquote.mailing_zipcode %>
+        <%= @happyquote.shipping_city %> <%= @happyquote.shipping_state%> <%= @happyquote.shipping_zipcode %>
       <% end %>
-      <% if !@happyquote.mailing_street2.blank? %>
-        <%= @happyquote.mailing_city %> <%= @happyquote.mailing_state%> <%= @happyquote.mailing_zipcode %>
+      <% if !@happyquote.shipping_street2.blank? %>
+        <%= @happyquote.shipping_city %> <%= @happyquote.shipping_state%> <%= @happyquote.shipping_zipcode %>
       <% end %>
       </p>
   </div>

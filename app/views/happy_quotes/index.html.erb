@@ -16,11 +16,11 @@
   <div class="table-responsive" id="quotes-table">
   <table class="table table-fixed">
     <colgroup>
+      <col style="width:8%">
       <col style="width:10%">
-      <col style="width:10%">
-      <col class="col-email">   <!-- Internal Notes column -->
       <col class="col-internal-notes">   <!-- Internal Notes column -->
       <col class="col-external-notes">   <!-- External Notes column -->
+      <col class="col-special-instructions">   <!-- External Notes column -->
       <col style="width:5%">
       <col style="width:5%">
       <col style="width:12%">
@@ -30,9 +30,9 @@
       <tr>
         <th>Quote</th>
         <th>Quote Date</th>
-        <th>Email</th>
         <th>Internal Notes</th>
         <th>External Notes</th>
+        <th>PO  Notes</th>
         <th></th>
         <th></th>
         <th></th>
@@ -44,9 +44,9 @@
         <tr>
           <td><%= quote.number %>-<%= quote.sub %></td>
           <td><%= quote.quote_date %></td>
-          <td><%= quote.email %></td>
           <td><%= quote.internal_notes.presence || "&nbsp;".html_safe %></td>
           <td><%= quote.external_notes.presence || "&nbsp;".html_safe %></td>
+          <td><%= quote.special_instructions.presence || "&nbsp;".html_safe %></td>
           <td><%= link_to 'Show', quote %></td>
           <td><%= link_to 'Edit', edit_happy_quote_path(quote) %></td>
           <td><%= link_to 'Purchase Orders', happy_quote_po_path(quote, happy_customer_id: @cust_id) %></td>

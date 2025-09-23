@@ -61,11 +61,9 @@ h1 {
 
 /* Equal widths for the two notes columns */
 #quotes-table col.col-internal-notes,
+#quotes-table col.col-special-instructions,
 #quotes-table col.col-external-notes {
   width: 20%;
-}
-#quotes-table col.col-email {
-  width: 18%;
 }
 
 /* Allow wrapping inside those cells */
