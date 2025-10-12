@@ -207,8 +207,10 @@ end
   pdf.text_box "8601 South Oxford Avenue", :at => [address_x,  pdf.cursor]
   pdf.move_down lineheight_y
   pdf.text_box "Tulsa, OK 74137", :at => [address_x,  pdf.cursor]
+  pdf.move_down lineheight_y + 2
+  pdf.text_box "Oklahoma: (918) 992-3278", :at => [address_x,  pdf.cursor]
   pdf.move_down lineheight_y
-  pdf.text_box "(918) 851-9518", :at => [address_x,  pdf.cursor]
+  pdf.text_box "Arkansas: (479) 364-6145", :at => [address_x,  pdf.cursor]
   pdf.move_down lineheight_y
   pdf.fill_color "0093DD"
   pdf.text_box @useremail, :at => [address_x,  pdf.cursor], :size => 8, :mode => :fill
