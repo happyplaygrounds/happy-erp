@@ -37,4 +37,4 @@ plugin :tmp_restart
 
 # Heroku roouter update July 2025 https://www.heroku.com/blog/pumas-routers-keepalives-ohmy/#the-solution
 #enable_keep_alives false
-enable_keep_alives(false) if respond_to?(:enable_keep_alives)
+#enable_keep_alives(false) if respond_to?(:enable_keep_alives)
