@@ -20,7 +20,12 @@ class HappyCustomersController < ApplicationController
   end
 
   def show
-    @happyquotes = HappyQuote.where("happy_customer_id = ?", params[:id]).order("number DESC, sub DESC")
+     if not current_user.admin? and !@search.present?
+        @happyquotes = HappyQuote.where("happy_customer_id = ? and user_id = ?", params[:id], current_user.id).order("number desc, sub desc")
+     else
+        @happyquotes = HappyQuote.where("happy_customer_id = ?", params[:id]).order("number desc, sub desc")
+     end
+    @@happyquotes = HappyQuote.where("happy_customer_id = ?", params[:id]).order("number DESC, sub DESC")
     @quotetotal = HappyQuoteLine.where("happy_quote_id =?",params[:id]).sum('total_line_amount')
     @model_name = controller_name.classify
     @happyReminder = HappyReminder.new
