@@ -79,4 +79,13 @@ Rails.application.routes.draw do
 
         get '/happy_products/productinfo', action: :productinfo,  controller: 'happy_products'
         resources :happy_products
+
+        # added for jwt 11/16/2025
+        namespace :api do
+          namespace :v1 do
+          post   'login',  to: 'sessions#create'
+          delete 'logout', to: 'sessions#destroy'
+          end
+        end
+
 end

@@ -77,6 +77,8 @@ gem 'cocoon'
 gem 'prawn-rails'
 #gem 'zip_tax'
 gem 'devise'
+# Added 11/16/2025
+gem 'devise-jwt'
 gem 'pundit'
 
 gem 'aws-sdk-s3'
