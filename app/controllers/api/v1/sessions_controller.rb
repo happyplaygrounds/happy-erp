@@ -1,38 +1,36 @@
 
-# app/controllers/api/v1/sessions_controller.rb
 class Api::V1::SessionsController < Devise::SessionsController
   respond_to :json
 
-  # 🚫 Disable CSRF checks entirely for this controller
   skip_forgery_protection
 
   # POST /api/v1/login
   def create
-    self.resource = warden.authenticate!(auth_options)
-    sign_in(resource_name, resource)
-    respond_with(resource)
+    email    = params.dig(:user, :email)
+    password = params.dig(:user, :password)
+
+    user = User.find_for_database_authentication(email: email)
+
+    if user&.valid_password?(password)
+      sign_in(resource_name, user)
+
+      render json: {
+        user: {
+          id: user.id,
+          email: user.email
+        }
+      }, status: :ok
+    else
+      render json: { error: "Invalid email or password" },
+             status: :unauthorized
+    end
   end
 
   # DELETE /api/v1/logout
   def destroy
+    user = current_user
     sign_out(resource_name)
-    respond_to_on_destroy
-  end
-
-  private
-
-  def respond_with(resource, _opts = {})
-    render json: {
-      user: {
-        id: resource.id,
-        email: resource.email
-      }
-      # JWT is already added to the Authorization header by devise-jwt
-    }, status: :ok
-  end
-
-  def respond_to_on_destroy
-    head :no_content
+    render json: { message: "Logged out", user_id: user&.id }, status: :ok
   end
 end
 
