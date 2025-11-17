@@ -7,7 +7,7 @@ class Api::V1::SessionsController < Devise::SessionsController
   skip_before_action :verify_authenticity_token, only: [:create, :destroy]
 
   # If you want to be explicit, you can also null out the session:
-  # protect_from_forgery with: :null_session
+   protect_from_forgery with: :null_session
 
   def create
     self.resource = warden.authenticate!(auth_options)
