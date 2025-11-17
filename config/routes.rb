@@ -83,9 +83,12 @@ Rails.application.routes.draw do
         # added for jwt 11/16/2025
         namespace :api do
           namespace :v1 do
-          post   'login',  to: 'sessions#create'
-          delete 'logout', to: 'sessions#destroy'
+            devise_for :users,
+            path: '',
+            path_names: { sign_in: 'login', sign_out: 'logout' },
+            controllers: { sessions: 'api/v1/sessions' }
           end
         end
+
 
 end
