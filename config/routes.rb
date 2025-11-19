@@ -87,6 +87,14 @@ Rails.application.routes.draw do
             path: '',
             path_names: { sign_in: 'login', sign_out: 'logout' },
             controllers: { sessions: 'api/v1/sessions' }
+
+            # KPIs for the Overview tab
+            get "kpis/overview", to: "kpis#overview"
+            get "kpis/team",     to: "team_kpis#index"
+
+            # Quotes for the Pipeline tab (and detail view later)
+            resources :quotes, only: [:index, :show]
+
           end
         end
 

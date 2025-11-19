@@ -19,6 +19,15 @@ class HappyQuote < ApplicationRecord
   validates :shipping_state,      presence: true
   validates :shipping_zipcode,      presence: true
 
+
+  scope :active, -> { where(active: true) }
+
+  WON_STATUSES = %w[accepted ordered complete won].freeze
+
+  def won?
+    WON_STATUSES.include?(status.to_s.downcase)
+  end
+
   #validates :name,        presence: true, length: { minimum: 3 }
   #validates :email,       presence: true, format: { with: /.+@.+\.{1}.{2,}/ }
   #validates :password,    length: { within: 8..40 }

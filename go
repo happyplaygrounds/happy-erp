@@ -3,7 +3,7 @@ curl -i -X POST https://happy-erp-staging-06aaab13bac9.herokuapp.com/api/v1/logi
   -d '{
     "user": {
       "email": "brian.collins@happyplaygrounds.com",
-      "password": "Oxford-8601"
+      "password": "Happy-8601"
     }
   }'
 
