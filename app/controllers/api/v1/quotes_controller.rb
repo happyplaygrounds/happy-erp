@@ -1,4 +1,3 @@
-
 # app/controllers/api/v1/quotes_controller.rb
 #
 module Api
