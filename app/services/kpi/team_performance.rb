@@ -7,7 +7,10 @@ module Kpi
     end
 
     def call
-      quotes = HappyQuote.active.where(quote_date: @from..@to)
+      quotes = HappyQuote
+        .active
+        .includes(:user)
+        .where(quote_date: @from..@to)
 
       lines = HappyQuoteLine
         .joins(:happy_quote)
@@ -19,7 +22,13 @@ module Kpi
       per_user = {}
 
       quotes.find_each do |q|
-        key = q.user_name.presence || "Unknown"
+        sales_user = q.user
+        user_identifier = sales_user&.email
+
+
+        # Fallbacks:
+        key = user_identifier.presence || q.user_name.presence || "Unknown"
+
         per_user[key] ||= {
           user_name: key,
           quotes_count: 0,

@@ -23,5 +23,10 @@ module ErpUp7NewJ
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Added these 11/20/2025 Per Chatgpt when setting up APIs
+    config.time_zone = "Central Time (US & Canada)"   # or your real business tz
+    config.active_record.default_timezone = :local    # optional, if you want AR to use that zone
+
   end
 end
