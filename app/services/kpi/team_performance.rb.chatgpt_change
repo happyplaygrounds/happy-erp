@@ -1,3 +1,4 @@
+
 # app/services/kpi/team_performance.rb
 module Kpi
   class TeamPerformance
@@ -7,7 +8,11 @@ module Kpi
     end
 
     def call
-      quotes = HappyQuote.active.where(quote_date: @from..@to)
+      # Preload user_add to avoid N+1 user lookup
+      quotes = HappyQuote
+        .active
+        .includes(:user_add) # <- THIS loads Devise::User from user_id_add
+        .where(quote_date: @from..@to)
 
       lines = HappyQuoteLine
         .joins(:happy_quote)
@@ -19,9 +24,14 @@ module Kpi
       per_user = {}
 
       quotes.find_each do |q|
-        key = q.user_name.presence || "Unknown"
+        # 🔥 The real Devise user email
+        sales_email = q.user_add&.email
+
+        # fallback if user deleted or missing
+        key = sales_email.presence || "Unknown"
+
         per_user[key] ||= {
-          user_name: key,
+          user_name: key,         # <- This is now the actual Devise user email
           quotes_count: 0,
           quotes_value: 0.0,
           won_count: 0,
@@ -32,27 +42,31 @@ module Kpi
         entry = per_user[key]
         entry[:quotes_count] += 1
         entry[:quotes_value] += q.total.to_f
-
-        entry[:won_count] += 1 if q.won?
+        entry[:won_count]    += 1 if q.won?
 
         rev = revenue_by_quote[q.id] || 0.0
-        cst = cost_by_quote[q.id] || 0.0
+        cst = cost_by_quote[q.id]    || 0.0
+
         entry[:revenue] += rev.to_f
         entry[:cost]    += cst.to_f
       end
 
       per_user.values.map do |entry|
         margin = entry[:revenue] - entry[:cost]
-        win_rate = if entry[:quotes_count].positive?
-                     entry[:won_count].to_f / entry[:quotes_count]
-                   else
-                     0.0
-                   end
-        margin_pct = if entry[:revenue].positive?
-                       margin / entry[:revenue]
-                     else
-                       0.0
-                     end
+
+        win_rate =
+          if entry[:quotes_count].positive?
+            entry[:won_count].to_f / entry[:quotes_count]
+          else
+            0.0
+          end
+
+        margin_pct =
+          if entry[:revenue].positive?
+            margin / entry[:revenue]
+          else
+            0.0
+          end
 
         entry.merge(
           margin: margin,
