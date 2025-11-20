@@ -32,11 +32,20 @@ module Kpi
     # ------------------------------------------
     # Base scopes for your data
     # ------------------------------------------
-
+    #
     def base_quotes
-      #HappyQuote.active.where.not(status: %w[canceled archived])
+      recent_range = (reference_date - 90.days)..reference_date
+
       HappyQuote
-    end
+          .where(quote_date: recent_range)
+          #.where.not(status: %w[canceled archived])
+      end
+
+
+    #def base_quotes
+    #  #HappyQuote.active.where.not(status: %w[canceled archived])
+    #  HappyQuote
+    #end
 
     def open_quotes
       base_quotes.where(status: [nil, "", "draft", "open", "sent", "pending"])
