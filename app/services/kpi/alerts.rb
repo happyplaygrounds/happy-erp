@@ -14,6 +14,7 @@ module Kpi
 
     def call
       [].tap do |alerts|
+        add_alert(alerts, "no_quotes_today", no_quotes_today_count)
         add_alert(alerts, "expiring",           expiring_quotes_count)
         add_alert(alerts, "high_value_pending", high_value_pending_count)
         add_alert(alerts, "stale_pipeline",     stale_quotes_count)
@@ -77,7 +78,15 @@ module Kpi
       open_quotes.where("quote_date < ?", cutoff).count
     end
 
-    # 4. Quotes with low margin %
+    #4 No quotes today
+    def no_quotes_today_count
+      count = HappyQuote.where(quote_date: reference_date).count
+      return 0 unless count.zero?
+      1
+      end
+
+
+    # 5. Quotes with low margin %
     def low_margin_quotes_count
       lines = HappyQuoteLine
                 .joins(:happy_quote)

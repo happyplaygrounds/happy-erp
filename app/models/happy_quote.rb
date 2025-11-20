@@ -22,11 +22,50 @@ class HappyQuote < ApplicationRecord
 
   scope :active, -> { where(active: true) }
 
+  STATUSES = {
+    draft:    "draft",
+    sent:     "sent",
+    pending:  "pending",
+    accepted: "accepted",
+    ordered:  "ordered",
+    complete: "complete",
+    won:      "won",
+    lost:     "lost",
+    canceled: "canceled",
+    archived: "archived"
+  }.freeze
+
   WON_STATUSES = %w[accepted ordered complete won].freeze
+  LOST_STATUSES = %w[lost rejected].freeze
+
+  before_validation :ensure_status
+
+  def normalized_status
+    status.to_s.downcase
+  end
 
   def won?
-    WON_STATUSES.include?(status.to_s.downcase)
+    WON_STATUSES.include?(normalized_status)
   end
+
+  def lost?
+    LOST_STATUSES.include?(normalized_status)
+  end
+
+  def archived?
+    normalized_status == "archived"
+  end
+
+  def open?
+    !(won? || lost? || archived?)
+  end
+
+  private
+
+  def ensure_status
+    self.status = "draft" if status.blank?
+  end
+
 
   #validates :name,        presence: true, length: { minimum: 3 }
   #validates :email,       presence: true, format: { with: /.+@.+\.{1}.{2,}/ }
