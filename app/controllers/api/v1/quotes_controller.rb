@@ -28,12 +28,16 @@ module Api
 
       def base_scope
         # if you want to ignore stale `active` and just filter by status, you can change this
-        HappyQuote.where.not(status: %w[canceled archived])
+        #HappyQuote.where.not(status: %w[canceled archived])
+        HappyQuote
       end
 
       def limit_param
-        [params[:limit].to_i.presence || 100, 500].min
+          limit = params[:limit].to_i
+          limit = 100 if limit <= 0
+          [limit, 500].min
       end
+
 
       def quote_json(q)
         {
