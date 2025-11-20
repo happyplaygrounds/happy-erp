@@ -34,7 +34,8 @@ module Kpi
     # ------------------------------------------
 
     def base_quotes
-      HappyQuote.active.where.not(status: %w[canceled archived])
+      #HappyQuote.active.where.not(status: %w[canceled archived])
+      HappyQuote
     end
 
     def open_quotes
