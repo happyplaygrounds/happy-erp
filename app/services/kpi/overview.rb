@@ -74,11 +74,9 @@ module Kpi
     end
 
     def alerts
-      [
-        expiring_quotes_alert,
-        high_value_pending_alert
-      ].compact
+      Kpi::Alerts.new(reference_date: reference_date).call
     end
+
 
     def expiring_quotes_alert
       soon = reference_date..(reference_date + 7.days)
