@@ -33,6 +33,7 @@ Rails.application.routes.draw do
           get 'copy'
           get 'createsub'
           get 'sortlines'
+          patch :set_status, on: :member
         end
 
         resources :happy_pos do

@@ -1,6 +1,67 @@
 <div class="container">
 
   <div class="row">
+
+    <div class="row my-3">
+    <div class="col-12 d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center gap-2 mb-2">
+      <span class="fw-semibold">Status:</span>
+
+      <% s = (@happyquote.status.presence || "open").downcase %>
+      <% badge_class =
+          case s
+          when "won"     then "bg-success"
+          when "lost"    then "bg-danger"
+          when "pending" then "bg-warning text-dark"
+          when "sent"    then "bg-primary"
+          when "draft"   then "bg-secondary"
+          else                "bg-info text-dark"
+          end
+      %>
+
+      <span class="badge rounded-pill <%= badge_class %> px-3 py-2">
+        <%= s.upcase %>
+      </span>
+
+      <small class="text-muted ms-2">
+        Updated <%= time_ago_in_words(@happyquote.updated_at.localtime) %> ago
+      </small>
+      </div>
+    
+
+      <% s = (@happyquote.status.presence || "open").downcase %>
+
+      <% unless %w[won lost].include?(s) %>
+        <div class="btn-group ms-2" role="group" aria-label="Quote status actions">
+
+          <%= button_to "Mark Pending",
+                set_status_happy_quote_path(@happyquote, status: "pending"),
+                method: :patch,
+                data: { turbo_confirm: "Mark this quote PENDING?" },
+                class: "btn btn-outline-secondary btn-sm rounded-pill px-3" %>
+
+          <%= button_to "Mark Lost",
+                set_status_happy_quote_path(@happyquote, status: "lost"),
+                method: :patch,
+                data: { turbo_confirm: "Mark this quote LOST?" },
+          class: "btn btn-outline-danger btn-sm rounded-pill px-3" %>
+
+          <%= button_to "Mark Won",
+                set_status_happy_quote_path(@happyquote, status: "won"),
+                method: :patch,
+                data: { turbo_confirm: "Mark this quote WON?" },
+                class: "btn btn-outline-success btn-sm rounded-pill px-3" %>
+
+        </div>
+      <% else %>
+        <small class="text-muted ms-2 fst-italic">
+          Finalized — status locked
+        </small>
+      <% end %>
+
+    </div>
+    </div>
+
     <div class="col-sm-4">
         <p> Happy Playgrounds, LLC<br> 8601 South Oxford Avenue<br> Tulsa, OK 74137
         <br>

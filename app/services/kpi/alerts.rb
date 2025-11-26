@@ -49,7 +49,7 @@ module Kpi
     #end
 
     def open_quotes
-      base_quotes.where(status: [nil, "", "draft", "open", "sent", "pending"])
+      base_quotes.where(status: [nil, "",  "open", "sent", "pending"])
     end
 
     # ------------------------------------------

@@ -122,6 +122,13 @@ include Reminder
      #@happyquote = HappyQuote.where("happy_customer_id = ?", params[:customer_id])
     @happyquote = HappyQuote.includes(:happy_customer).includes(:happy_quote_lines).order("happy_quote_lines.position asc").find(params[:id])
      puts "******below happyquote ******"
+     # ✅ mark as sent only when PDF is generated
+     Rails.logger.info "FORMAT=#{request.format}"
+     Rails.logger.info "PARAMS_FORMAT=#{params[:format].inspect}"
+
+     if params[:format] == "pdf" && (@happyquote.status.blank? || @happyquote.status == "open")
+       @happyquote.update_column(:status, "sent")
+     end
      puts @happyquote.happy_customer_id
      @happycustomer = HappyCustomer.find(@happyquote.happy_customer_id)
      @useremail = current_user.email
@@ -350,9 +357,23 @@ include Reminder
      #@quotetotal = @balance + HappyQuoteLine.sum('total_line_amount').where("happy_quote_id =?",params[:id])
      #@happyquote = HappyQuote.where("happy_customer_id = ?", params[:customer_id])
      @happyquote = HappyQuote.includes(:happy_customer).includes(:happy_quote_lines).where("happy_vendor_id =?", params[:vendor_id]).order("happy_quote_lines.position asc").find(params[:happy_quote_id])
-     if @happyquote.order_date.nil? 
-       @happyquote.update_attribute(:order_date, Date.today)
+     
+     # Added status per chatgpt
+     #
+     #unless %w[won lost].include?(@happyquote.status)
+     #   @happyquote.update_column(:status, "won")
+     #   Rails.logger.info "Marked quote #{@happyquote.id} WON via PO finalize"
+     #end
+
+
+     #if @happyquote.order_date.nil? 
+     #  @happyquote.update_attribute(:order_date, Date.today)
+     #end
+
+     if params[:status] == "final" && @happyquote.order_date.nil?
+        @happyquote.update_column(:order_date, Date.current)
      end
+
        insertPo = request.format
        puts "insertPo"
        puts insertPo
@@ -420,6 +441,31 @@ include Reminder
       @happyquoteline.insert_at(params[:position].to_i)
     head :ok
   end
+
+      # PATCH /happy_quotes/:id/set_status?status=pending|lost|won|open|sent|draft
+  def set_status
+    @happyquote = HappyQuote.find(params[:id])
+
+    new_status = params[:status].to_s.downcase
+
+    allowed = %w[draft open sent pending won lost]
+    unless allowed.include?(new_status)
+      redirect_to @happyquote, alert: "Invalid status" and return
+    end
+
+    # prevent humans from overwriting finalized quotes
+    if %w[won lost].include?(@happyquote.status) && new_status != @happyquote.status
+      redirect_to @happyquote, alert: "Quote already finalized as #{@happyquote.status}." and return
+    end
+
+    @happyquote.update!(
+      status: new_status,
+      user_id_update: current_user.id
+    )
+
+    redirect_to @happyquote, notice: "Marked quote #{new_status.upcase}."
+  end
+
 
 private
 

@@ -369,9 +369,19 @@ before_action :find_po, only: [:show, :edit, :update, :destroy]
      #@quotetotal = @balance + HappyQuoteLine.sum('total_line_amount').where("happy_quote_id =?",params[:id])
      #@happyquote = HappyQuote.where("happy_customer_id = ?", params[:customer_id])
      @happyquote = HappyQuote.includes(:happy_customer).includes(:happy_quote_lines).where("happy_vendor_id =?", params[:vendor_id]).order("happy_quote_lines.position asc").find(params[:happy_po_id])
-     if @happyquote.order_date.nil? 
-       @happyquote.update_attribute(:order_date, Date.today)
-     end
+
+      # ✅ PO finalized => quote is WON (unless already final)
+      if @happyquote.present? && !%w[won lost].include?(@happyquote.status)
+        @happyquote.update_columns(
+          status: "won",
+          state: "PO",                  # optional, keep your business label
+          order_date: Date.current,
+          user_id_update: current_user.id
+        )
+        Rails.logger.info "Marked quote #{@happyquote.id} WON via PO finalize"
+      end
+
+
        insertPo = request.format
        puts "insertPo"
        puts insertPo
