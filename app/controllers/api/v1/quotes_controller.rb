@@ -48,6 +48,7 @@ module Api
           status: q.status,
           state: q.state,
           quote_date: q.quote_date,
+          estimated_delivery_date: q.estimated_delivery_date,
           user_name: q.user_name.presence || q.user&.email
         }
       end
