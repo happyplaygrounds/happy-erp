@@ -1,6 +1,13 @@
 # app/services/kpi/overview.rb
 module Kpi
   class Overview
+    EXPIRING_VALIDITY_DAYS   = 30
+    EXPIRING_WARNING_DAYS    = 7
+    HIGH_VALUE_THRESHOLD     = 100_000.0
+    STALE_DAYS               = 45
+    LOW_MARGIN_THRESHOLD_PCT = 0.15
+
+
     def initialize(reference_date: Date.current)
       @reference_date = reference_date
     end
@@ -82,10 +89,17 @@ module Kpi
 
 
     def expiring_quotes_alert
-      soon = reference_date..(reference_date + 7.days)
+
+      validity_days = EXPIRING_VALIDITY_DAYS
+      warning_days  = EXPIRING_WARNING_DAYS
+
+
+      expiry_start = reference_date - validity_days
+      expiry_end   = expiry_start + warning_days
+      #soon = reference_date..(reference_date + 7.days)
+      
       count = base_scope
-        .where(estimated_delivery_date: soon)
-        .where(status: %w[open sent pending])
+        .where(quote_date: expiry_start..expiry_end)
         .count
 
       return if count.zero?
