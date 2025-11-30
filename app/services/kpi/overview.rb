@@ -19,7 +19,10 @@ module Kpi
     attr_reader :reference_date
 
     def base_scope
-      HappyQuote.active
+      recent_range = (reference_date - 90.days)..reference_date
+
+      HappyQuote
+        .where(quote_date: recent_range)
     end
 
     def today_range
