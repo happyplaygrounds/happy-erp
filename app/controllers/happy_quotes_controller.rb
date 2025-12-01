@@ -366,9 +366,9 @@ include Reminder
      #end
 
 
-     #if @happyquote.order_date.nil? 
-     #  @happyquote.update_attribute(:order_date, Date.today)
-     #end
+     if @happyquote.order_date.nil? 
+       @happyquote.update_attribute(:order_date, Date.today)
+     end
 
      if params[:status] == "final" && @happyquote.order_date.nil?
         @happyquote.update_column(:order_date, Date.current)
