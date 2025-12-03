@@ -29,6 +29,16 @@
     </div>
   </div>
   
+  <div class="row bg-light border-top border-bottom fw-semibold text-muted py-1 small">
+  <div class="col-1 border">Quote</div>
+  <div class="col-2 border text-center">Quote Date</div>
+  <div class="col-1 border text-center">Status</div>
+  <div class="col-2 border text-end">Total</div>
+  <div class="col-4 border">External Notes</div>
+  <div class="col-2 border">PDF Prefix</div>
+</div>
+
+  <!--
  <div class="row bg-secondary">
   <div class="col-1 border">
     <b>Quote</b>
@@ -37,27 +47,82 @@
     <b>Quote Date</b>
   </div>
   <div class="col-2 border">
+    <b>Status</b>
+  </div>
+  <div class="col-2 border">
     <b class="float-right">Total</b> 
-    <!-- <b>PDF Prefix</b> -->
+    <!~~ <b>PDF Prefix</b> ~~>
   </div>
   <div class="col-5 border">
     <b>External Notes</b>
   </div>
-  <!--
+  <!~~
   <div class="col-2 border">
     <b class="float-right">Tax</b>
   </div>
   <div class="col-2 border">
     <b class="float-right">Discount</b>
   </div>
-  -->
+  ~~>
   <div class="col-2 border">
     <b>PDF Prefix</b>
-    <!-- <b class="float-right">Total</b> -->
+    <!~~ <b class="float-right">Total</b> ~~>
   </div>
 </div>
+-->
 
 <% @happyquotes.each do |quote| %>
+        <% s = (quote.status.presence || "open").downcase %>
+        <% badge_class =
+            case s
+            when "won"     then "bg-success"
+            when "lost"    then "bg-danger"
+            when "pending" then "bg-warning text-dark"
+            when "sent"    then "bg-primary"
+            when "draft"   then "bg-secondary"
+            else                "bg-info text-dark"
+            end
+        %>
+
+        <div class="row py-2 <%= cycle('bg-white', 'bg-light') %> border-bottom align-items-center">
+
+      <!-- Quote -->
+      <div class="col-sm-1">
+        <% quotenum = "#{quote.number}-#{quote.sub}" %>
+        <%= link_to quotenum, {controller: "happy_quotes", action: "show", id: quote.id } %>
+      </div>
+
+      <!-- Quote Date -->
+      <div class="col-sm-2 pe-0 text-nowrap text-center">
+          <%= quote.quote_date.strftime("%-m/%-d/%Y") %>
+      </div>
+
+
+      <!-- Status -->
+      <div class="col-sm-1 text-center">
+        <span class="badge rounded-pill <%= badge_class %> px-2 py-1 small">
+          <%= s.upcase %>
+        </span>
+
+      </div>
+
+      <!-- Total -->
+      <div class="col-sm-2 text-end">
+        <%= number_to_currency(quote.total) %>
+      </div>
+
+      <!-- Notes -->
+      <div class="col-sm-4 text-truncate">
+        <%= quote.external_notes %>
+      </div>
+
+      <!-- PDF Prefix (looks like user/owner in your data) -->
+      <div class="col-sm-2 text-truncate">
+        <%= quote.user_name %>
+      </div>
+  </div>
+
+<!--
         <div class="card card-body-4">
           <div class="row">
           <div class="col-sm-1">
@@ -66,6 +131,11 @@
           </div>
           <div class="col-sm-2">
                 <%= quote.quote_date.strftime("%m-%d-%Y") %>
+          </div>
+          <div class="col-sm-2">
+            <span class="badge rounded-pill <%= badge_class %> px-3 py-2">
+              <%= s.upcase %>
+            </span>
           </div>
           <div class="col-sm-2">
                <div class="float-right">
@@ -77,23 +147,12 @@
                  <%= quote.external_notes %>
                </div>
           </div>
-          <!--
-          <div class="col-sm-2">
-               <div class="float-right">
-                 <%= number_to_currency(quote.additional_tax_total) %>
-               </div>
-          </div>
-          <div class="col-sm-2">
-               <div class="float-right">
-                 <%= number_to_currency(quote.discount_total) %>
-               </div>
-          </div>
-          -->
           <div class="col-sm-2">
                 <%= quote.user_name %>
           </div>
           </div>
         </div>
+-->
 <% end %>
 
 
