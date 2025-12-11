@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_11_16_165524) do
+ActiveRecord::Schema[7.1].define(version: 2025_12_10_000916) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -84,6 +84,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_11_16_165524) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "lock_version", default: 0
+    t.string "company_name_normalized"
     t.index ["company_name"], name: "index_happy_customer_companies_on_company_name"
     t.index ["happy_company_id"], name: "index_happy_customer_companies_on_happy_companies_id", unique: true
   end
@@ -634,7 +635,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_11_16_165524) do
     t.decimal "total", precision: 10, scale: 2, default: "0.0", null: false
     t.decimal "order_subtotal", precision: 10, scale: 2, default: "0.0", null: false
     t.decimal "adjustment_total", precision: 10, scale: 2, default: "0.0", null: false
-    t.string "state"
+    t.string "state", default: "draft"
     t.string "user_name"
     t.decimal "payment_total", precision: 10, scale: 2, default: "0.0"
     t.string "shipment_state"
@@ -665,11 +666,11 @@ ActiveRecord::Schema[7.1].define(version: 2025_11_16_165524) do
     t.boolean "copy", default: false
     t.datetime "canceled_at", precision: nil
     t.integer "canceler_id"
-    t.string "status"
+    t.string "status", default: "open"
     t.bigint "user_id"
     t.bigint "user_id_add"
     t.bigint "user_id_update"
-    t.boolean "active", default: false
+    t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "lock_version", default: 0
