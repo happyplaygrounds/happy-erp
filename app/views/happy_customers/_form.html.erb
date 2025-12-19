@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Happy Playgrounds Customers</h2>
+  <h2>Customer Contactss</h2>
   <br>
 
   <%= link_to 'Home', root_path %>
@@ -20,6 +20,11 @@
   <%= f.error_notification %>
 
   <%= f.input :customer_name %>
+
+  <%= f.input :happy_customer_company_id,
+  collection: HappyCustomerCompany.order(:company_name).pluck(:company_name, :id),
+  include_blank: "Select company (recommended)" %>
+
 
   <div class="form-group row">
     <div class="col-4">
@@ -93,7 +98,7 @@
       <%= f.input :mailing_state, label: "State"%>
     </div>
     <div class="col-4">
-      <%= f.input :mailing_postal_code, label: "Zip"%>
+      <%= f.input :mailing_zipcode, label: "Zip"%>
     </div>
   </div>
 
@@ -104,7 +109,9 @@
 
   <div class="form-group row mb-0">
     <div class="col-sm-9">
-      <%= f.button :submit, class: "btn-primary" %>
+      <% submit_label = @happycustomer.persisted? ? "Update Contact" : "Create Contact" %>
+
+      <%= f.button :submit, submit_label, class: "btn-primary" %>
       <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
     </div>
   </div>

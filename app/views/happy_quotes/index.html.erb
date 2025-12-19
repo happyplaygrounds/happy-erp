@@ -14,47 +14,55 @@
   <% end %>
   <br>
   <div class="table-responsive" id="quotes-table">
-  <table class="table table-fixed">
+  <table class="table table-striped align-middle">
     <colgroup>
-      <col style="width:8%">
       <col style="width:10%">
-      <col class="col-internal-notes">   <!-- Internal Notes column -->
-      <col class="col-external-notes">   <!-- External Notes column -->
-      <col class="col-special-instructions">   <!-- External Notes column -->
-      <col style="width:5%">
-      <col style="width:5%">
       <col style="width:12%">
+      <col style="width:12%">
+      <col>
+      <col>
+      <col>
+      <col style="width:26%">
     </colgroup>
 
-    <thead>
+    <thead class="table-light">
       <tr>
-        <th>Quote</th>
-        <th>Quote Date</th>
+        <th class="text-nowrap">Quote</th>
+        <th class="text-nowrap">Quote Date</th>
+        <th class="text-nowrap text-center">Total</th>
         <th>Internal Notes</th>
         <th>External Notes</th>
-        <th>PO  Notes</th>
-        <th></th>
-        <th></th>
-        <th></th>
+        <th>PO Notes</th>
+        <th class="text-center text-nowrap">Actions</th>
       </tr>
     </thead>
 
     <tbody>
       <% @happyquote.each do |quote| %>
         <tr>
-          <td><%= quote.number %>-<%= quote.sub %></td>
-          <td><%= quote.quote_date %></td>
+          <td class="text-nowrap"><%= quote.number %>-<%= quote.sub %></td>
+          <td class="text-nowrap"><%= quote.quote_date %></td>
+          <td class="text-end text-nowrap"><%= number_to_currency(quote.total || 0) %></td>
+
           <td><%= quote.internal_notes.presence || "&nbsp;".html_safe %></td>
           <td><%= quote.external_notes.presence || "&nbsp;".html_safe %></td>
           <td><%= quote.special_instructions.presence || "&nbsp;".html_safe %></td>
-          <td><%= link_to 'Show', quote %></td>
-          <td><%= link_to 'Edit', edit_happy_quote_path(quote) %></td>
-          <td><%= link_to 'Purchase Orders', happy_quote_po_path(quote, happy_customer_id: @cust_id) %></td>
+
+          <td class="text-end text-nowrap">
+            <div class="btn-group btn-group-sm" role="group">
+              <%= link_to "Show", quote, class: "btn btn-outline-secondary" %>
+              <%= link_to "Edit", edit_happy_quote_path(quote), class: "btn btn-outline-secondary" %>
+              <%= link_to "Purchase Orders",
+                    happy_quote_po_path(quote, happy_customer_id: quote.happy_customer_id),
+                    class: "btn btn-outline-secondary" %>
+            </div>
+          </td>
         </tr>
       <% end %>
     </tbody>
   </table>
 </div>
+
   <% if  params[:customer_id] %>
      <%= link_to 'New Quote', new_happy_quote_path(happy_customer_id: params[:customer_id]) %> 
   <% end %>

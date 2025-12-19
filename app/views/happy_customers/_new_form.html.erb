@@ -1,6 +1,19 @@
 <div class="container mb-5">
-  <h2>Happy Customers</h2>
+  <!-- <h2>Happy Customers</h2> -->
+  <h2><%= @happycustomer.persisted? ? "Edit Contact" : "New Contact" %></h2>
+
   <br>
+
+  <%# show which company this contact belongs to (if selected / linked) %>
+  <% company = @happycustomer.happy_customer_company %>
+
+  <% if company.present? %>
+    <div class="mb-3">
+      <span class="text-muted">Company:</span>
+      <strong><%= company.company_name %></strong>
+    </div>
+  <% end %>
+
 
   <%#= link_to 'Home', root_path %>
 
@@ -19,7 +32,13 @@
 
   <%= f.error_notification %>
 
-  <%= f.input :customer_name %>
+  <%= f.hidden_field :happy_customer_company_id %>
+
+  <%#= f.input :customer_name, label: "Contact name" %>
+
+  <%= f.input :customer_name, label: "Contact name", placeholder: "Jane Smith / Accounts Payable" %>
+
+
 
   <div class="form-group row">
     <div class="col-4">
@@ -113,7 +132,10 @@
 
   <div class="form-group row mb-0">
     <div class="col-sm-9">
-      <%= f.button :submit, class: "btn-primary" %>
+      <% submit_label = @happycustomer.persisted? ? "Update Contact" : "Create Contact" %>
+      <%= f.button :submit, submit_label, class: "btn-primary" %>
+
+      <%#= f.button :submit, class: "btn-primary" %>
       <%= link_to "Cancel", :back, class: "btn btn-outline-secondary" %>
     </div>
   </div>

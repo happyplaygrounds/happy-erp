@@ -1,5 +1,7 @@
 class HappyQuotesController < ApplicationController
 before_action :find_quote, only: [:show, :edit, :update, :destroy]
+skip_before_action :find_quote, only: [:start, :start_create]
+
 include Reminder
 
   def index
@@ -282,15 +284,27 @@ include Reminder
   def po
     puts "Po test"
     puts params[:happy_customer_id]
+
+    quote_id = params[:happy_quote_id] || params[:id]
+    @happyquote=HappyQuote.find(quote_id)
+
     #@happyproject=HappyProject.where("happy_quote_id = ?", params[:happy_quote_id])
     #@happyproject=HappyProject.find_by("id = ?", 1)
-    @happycustomer = HappyCustomer.find(params[:happy_customer_id])
-    @happyproject=HappyProject.find_by("happy_quote_id = ?", params[:happy_quote_id])
-    @numberLocations=HappyInstallSite.where("happy_customer_id = ?", params[:happy_customer_id]).count
+
+    customer_id = params[:happy_customer_id].presence || @happyquote.happy_customer_id
+    @happycustomer = HappyCustomer.find(customer_id)
+
+    @happyproject=HappyProject.find_by("happy_quote_id = ?", quote_id)
+
+    @numberLocations=HappyInstallSite.where("happy_customer_id = ?", customer_id).count
+
     # works @happyquotevendors=HappyQuoteLine.joins(:happy_vendor).where("happy_quote_id =?",params[:happy_quote_id]).distinct.select('happy_vendor_id','happy_vendors.vendor_name', 'first_name') 
-    @happyquotevendors=HappyQuoteLine.joins(:happy_vendor).where('happy_quote_lines.happy_quote_id = ?', params[:happy_quote_id]).group('happy_quote_lines.happy_vendor_id', 'happy_vendors.vendor_name').select('happy_quote_lines.happy_vendor_id, happy_vendors.vendor_name, sum(total_line_amount) as total, sum(total_cost_amount) as cost')
+    
+    @happyquotevendors=HappyQuoteLine.joins(:happy_vendor).where('happy_quote_lines.happy_quote_id = ?', quote_id).group('happy_quote_lines.happy_vendor_id', 'happy_vendors.vendor_name').select('happy_quote_lines.happy_vendor_id, happy_vendors.vendor_name, sum(total_line_amount) as total, sum(total_cost_amount) as cost')
+
     #@happyquote = HappyQuote.includes(:happy_customer).includes(:happy_quote_lines).where("happy_vendor_id =?", params[:vendor_id]).order("happy_quote_lines.position asc").find(params[:happy_quote_id])
-    @happyquote=HappyQuote.find(params[:happy_quote_id])
+    #@happyquote=HappyQuote.find(params[:happy_quote_id])
+
     puts "Po test1"
     @happyPo=HappyPo.where("happy_quote_id =?", params[:happy_quote_id])
     #@happyPo=HappyPo.where("happy_quote_id = ?",params[:happy_quote_id])
@@ -466,6 +480,25 @@ include Reminder
     redirect_to @happyquote, notice: "Marked quote #{new_status.upcase}."
   end
 
+
+def start
+  @company_id = params[:happy_customer_company_id].presence
+  @companies  = HappyCustomerCompany.order(:company_name)
+
+  @contacts = @company_id ? HappyCustomer.where(happy_customer_company_id: @company_id).order(:customer_name) : []
+end
+
+def start_create
+  customer_id = params[:happy_customer_id].presence
+
+  if customer_id.blank?
+    redirect_to start_happy_quotes_path(happy_customer_company_id: params[:happy_customer_company_id]),
+                alert: "Please select a contact."
+    return
+  end
+
+  redirect_to new_happy_quote_path(happy_customer_id: customer_id)
+end
 
 private
 

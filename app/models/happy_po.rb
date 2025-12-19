@@ -1,4 +1,5 @@
 class HappyPo < ApplicationRecord
+  include SetsHappyCompany
   belongs_to :happy_vendor
   belongs_to :happy_customer
   #belongs_to :user

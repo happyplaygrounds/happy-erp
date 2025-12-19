@@ -1,4 +1,5 @@
 class HappyVendor < ApplicationRecord
+  include SetsHappyCompany
   has_many :happyquotelines
   has_many :happy_reminders, as: :remindable
 

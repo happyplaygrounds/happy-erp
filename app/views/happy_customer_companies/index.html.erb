@@ -1,0 +1,45 @@
+
+<div class="container">
+  <h2>Companies</h2>
+
+  <div class="customer-index-form">
+    <%= simple_form_for :search, url: happy_customer_companies_path, method: "GET", html: { class: "form-inline" } do |f| %>
+      <label>
+        <%= f.input :company_name, label: "Company", input_html: { value: @name } %>
+      </label>
+      <label>
+        <%= f.submit "Search", class: "btn btn-primary" %>
+      </label>
+    <% end %>
+  </div>
+
+  <%= page_entries_info @companies, entry_name: "Company" %>
+
+  <table class="table table-sm table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th style="width:70px;">ID</th>
+        <th>Company</th>
+        <th style="width:120px;">Contacts</th>
+        <th style="width:240px;"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @companies.each do |c| %>
+        <tr>
+          <td><%= c.id %></td>
+          <td><%= link_to c.company_name, happy_customer_company_path(c) %></td>
+          <td><%= c.contacts_count %></td>
+          <td class="text-end" style="white-space: nowrap;">
+            <%= link_to "Edit", edit_happy_customer_company_path(c) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  <%= paginate @companies, window: 2 %>
+  <%= link_to "New Company", new_happy_customer_company_path %>
+</div>
+

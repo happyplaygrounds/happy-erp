@@ -1,4 +1,5 @@
 class HappyQuote < ApplicationRecord
+  include SetsHappyCompany
   belongs_to :happy_customer
   belongs_to :user
   #has_one :happy_project

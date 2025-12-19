@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
         #root to: "happy_orders#index"
-        root to: "happy_customers#index"
+        root to: "happy_customer_companies#index"
+
+        resources :happy_customer_companies
 
         resources :happy_customers do
           resources :happy_quotes, :happy_orders
@@ -24,6 +26,11 @@ Rails.application.routes.draw do
 
 
         resources :happy_quotes do
+          collection do
+              get  :start
+              post :start_create
+          end
+
           resources :happy_quote_lines
           patch :move
           get 'po'
@@ -80,6 +87,7 @@ Rails.application.routes.draw do
 
         get '/happy_products/productinfo', action: :productinfo,  controller: 'happy_products'
         resources :happy_products
+
 
         # added for jwt 11/16/2025
         namespace :api do

@@ -1,0 +1,41 @@
+
+<div class="container">
+  <%= simple_form_for @happy_customer_company do |f| %>
+    <%= f.error_notification %>
+
+    <% if @happy_customer_company.errors.any? %>
+      <div class="alert alert-danger">
+        <ul class="mb-0">
+          <% @happy_customer_company.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= f.input :company_name %>
+
+    <%= f.input :business_phone %>
+    <%= f.input :customer_street1, label: "Street 1" %>
+    <%= f.input :customer_street2, label: "Street 2" %>
+    <%= f.input :customer_city, label: "City" %>
+    <%= f.input :customer_state,
+      label: "State",
+      as: :select,
+      collection: User::STATES,
+      include_blank: "Select state" %>
+    <%= f.input :customer_zipcode, label: "Zip" %>
+
+    <br>
+    <div class="form-group row mb-0">
+    <div class="col-sm-9">
+      <% submit_label = @happy_customer_company.persisted? ? "Update Company" : "Create Company" %>
+
+      <%= f.button :submit, submit_label, class: "btn btn-primary" %>
+      <%= link_to "Cancel", happy_customer_companies_path, class: "btn btn-outline-secondary" %>
+
+    </div>
+  </div>
+  <% end %>
+</div>
+

@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+    <div>
+      <h2 class="mb-1"><%= @happy_customer_company.company_name %></h2>
+      <div class="text-muted small">
+        Company ID: <%= @happy_customer_company.id %>
+      <% if current_user.admin? %>
+    · Norm: <code><%= @happy_customer_company.company_name_normalized %></code>
+  <% end %>
+      </div>
+    </div>
+
+    <div class="d-flex gap-2">
+      <%= link_to "Edit Company", edit_happy_customer_company_path(@happy_customer_company),
+            class: "btn btn-outline-secondary" %>
+
+      <%= link_to "Add Contact",
+            new_happy_customer_path(happy_customer: { happy_customer_company_id: @happy_customer_company.id }),
+            class: "btn btn-primary" %>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Contact Search (scoped to this company) -->
+  <%= form_with url: happy_customer_company_path(@happy_customer_company), method: :get, scope: :search, local: true do |f| %>
+    <div class="row g-2 align-items-end">
+      <div class="col-md-8">
+        <label class="form-label">Search Contacts</label>
+        <%= f.text_field :q,
+              value: @contact_search[:q],
+              class: "form-control",
+              placeholder: "Name, email, phone…" %>
+      </div>
+      <div class="col-md-4">
+        <%= f.submit "Search", class: "btn btn-outline-primary w-100" %>
+      </div>
+    </div>
+  <% end %>
+
+  <br>
+
+  <div class="d-flex justify-content-between align-items-center">
+    <h4 class="mb-0">Contacts</h4>
+    <span class="text-muted small"><%= @contacts.total_count rescue "" %></span>
+  </div>
+
+  <div class="table-responsive mt-2">
+    <table class="table table-sm table-striped align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th style="width:70px;">ID</th>
+          <th>Contact</th>
+          <th>Email</th>
+          <th style="width:160px;">Phone</th>
+          <th style="width:320px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @contacts.each do |c| %>
+          <tr>
+            <td><%= c.id %></td>
+            <td class="text-nowrap"><%= c.customer_name %></td>
+            <td class="text-nowrap"><%= c.email %></td>
+            <td class="text-nowrap"><%= c.business_phone.presence || c.home_phone %></td>
+
+            <td class="text-end" style="white-space: nowrap;">
+              <%= link_to "Edit", edit_happy_customer_path(c) %>
+              |
+              <%= link_to "Quotes",
+                    happy_quotes_path(customer_id: c.id, customer_name: c.customer_name) %>
+              |
+              <%= link_to "New Quote",
+                    new_happy_quote_path(happy_customer_id: c.id) %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <%= paginate @contacts, window: 2 if defined?(paginate) %>
+</div>
+

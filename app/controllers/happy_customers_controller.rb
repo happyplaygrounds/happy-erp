@@ -4,19 +4,27 @@ class HappyCustomersController < ApplicationController
   attr_accessor :cust_name
 
   def index
-    @customers = HappyCustomer.order("customer_name ASC").page params[:page]
-    @customers = @customers.left_joins(:happy_install_sites)
-      .select("happy_customers.*, count(happy_install_sites.id) as happy_installs_count")
-      .group("happy_customers.id")
-    @search = params["search"]
-    if @search.present? and !@search.blank?
-      @name = @search["cust_name"]
-      @customers = HappyCustomer.where("customer_name ILIKE ?", "%#{@name.strip}%").order("customer_name asc").page(params[:page])
-    end
+  @search = params.fetch(:search, {}).permit(:cust_name)
+  @name = @search[:cust_name].to_s.strip
+
+  @customers = HappyCustomer.order("customer_name ASC")
+
+  if @name.present?
+    @customers = @customers.where("customer_name ILIKE ?", "%#{@name}%")
   end
+
+  @customers = @customers
+    .left_joins(:happy_install_sites)
+    .select("happy_customers.*, COUNT(happy_install_sites.id) AS happy_installs_count")
+    .group("happy_customers.id")
+    .page(params[:page])
+end
 
   def new
     @happycustomer = HappyCustomer.new
+    if params[:happy_customer].present?
+    @happycustomer.assign_attributes(params.require(:happy_customer).permit(:happy_customer_company_id))
+  end
   end
 
   def show
@@ -38,25 +46,25 @@ class HappyCustomersController < ApplicationController
   def update
     #authorize @happycustomer
     if @happycustomer.update(happycustomer_params)
-      flash[:success] = "Happy Customer was successfully updated"
+      flash[:success] = "Happy Customer Contact was successfully updated"
       redirect_to @happycustomer
     else
       render :action => 'edit'
     end
   end
 
-  def create
-    @happycustomer = HappyCustomer.new(happycustomer_params)
-    if @happycustomer.save
-      flash[:success] = "Customer saved!"
-      redirect_to @happycustomer
-    else
-      flash[:alert] = "Customer not saved!"
-      # This line overrides the default rendering behavior, which
-      # would have been to render the "create" view.
-      render "new"
-    end
+def create
+  @happycustomer = HappyCustomer.new(happycustomer_params)
+
+  if @happycustomer.save
+    flash[:success] = "Customer Contact saved!"
+    redirect_to @happycustomer
+  else
+    flash.now[:alert] = "Customer not saved!"
+    render :new, status: :unprocessable_entity
   end
+end
+
 
   def destroy
     @happycustomer.destroy

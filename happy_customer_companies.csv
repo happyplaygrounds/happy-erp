@@ -1,0 +1,985 @@
+id,happy_company_id,company_name,customer_type,taxable,region,business_phone,cell_phone,fax,customer_geocode,customer_lat,customer_long,customer_street1,customer_street2,customer_city,customer_state,customer_country,customer_zipcode,customer_county,user_id,user_id_update,active,created_at,updated_at,lock_version,company_name_normalized
+3,1,Cherokee Nation,,f,,918-555-5555,"","",,,,855 Markoma Dr,"",Tahlequah,OK,,74464,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,cherokee nation
+4,1,Cherokee Nation Public Health,,t,,918-261-6265,"","",,,,100 S. Cherokee Ave.,"",Catoosa,OK,,74015,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,cherokee nation public health
+5,1,Cherokee Nation Tahlequah Wellness Center,,t,,918-555-5555,"","",,,,22685 Betty Sharp Smith St.,"",Tahlequah,OK,,74464,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,cherokee nation tahlequah wellness center
+7,1,CITY OF EL RENO,,f,,405-262-4070,405-262-4070 x 2003,"",,,,City of El Reno ,1300 East Elm Street,El Reno,OK,,73036,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,city of el reno
+8,1,City of Foreman,,t,,307-680-2091,307-680-2091,"",,,,147 Little River 167,"",Foreman,AR,,71836,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,city of foreman
+9,1,City of Oklahoma City,,f,,405-555-5555,"","",,,,200 N. Walker Ave.,"",Oklahoma City,OK,,73102,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,city of oklahoma city
+10,1,"City of Texarkana, AR",,t,,870-779-4943,"","",,,,216 Walnut Street,"",Texarkana,AR,,71854,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,city of texarkana ar
+11,1,City of Vinita,,t,,918-xxx-xxxx,"","",,,,"North Park, 224 W. Sequoyah Ave, ","",Vinita,OK,,74301,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,city of vinita
+12,1,Cushing Public Schools,,f,,918-625-2148,"","",,,,1401 N. Little Ave.,"",Cushing,OK,,74023,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,cushing public schools
+13,1,Deborah Brown Community School,,f,,918-855-5884,"","",,,,2 S. Elgin,"",Tulsa,OK,,74120,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,deborah brown community school
+14,1,Deer Creek Elementary,,f,,4053489100,4055208877,"",,,,4704 nw 164th,"",edmond,OK,,73013,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,deer creek elementary
+15,1,Easter Oklahoma Head Start,,f,,918-316-1029,"","",,,,26106 E. 863 Rd,"",Welling,OK,,74471,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,easter oklahoma head start
+17,1,Fort Smith Public Schools,,t,,479-785-2501,"","",,,,3205 Jenny Lind Rd,"",Fort Smith,AR,,72901,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,fort smith public schools
+18,1,Good Shepherd First Baptist Church,,t,, (580) 884-1305,"","",,,,602 S. Grand,"",Cherokee,OK,,73728,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,good shepherd first baptist church
+19,1,Greenshade Trees LLC,,t,,405.234.6478,"","",,,,1905 South Nicklas Avenue,"",Oklahoma City,OK,,73128,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,greenshade trees llc
+20,1,Ideal Construction,,t,,501208-2560,"","",,,,"803 West First Ave. Crossett, AR 71635","",Crossett,AR,,71635,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,ideal construction
+21,1,Lamar Elementary School,,f,,417-682-3567,"","",,,,600 Walnut St.,"",Lamar,MO,,64759,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,lamar elementary school
+22,1,LeFlore Public Schools,,f,,918-753-2345,"","",,,,P.O. Box 147,"",Le Flore,OK,,74942,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,leflore public schools
+24,1,Osage Nation,,f,,918-287-5344,"","",,,,1071 Grandview Lane,"",Pawhuska,OK,,74056,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,osage nation
+25,1,Planning Design Group,,t,,918-628-1255,"","",,,,"5314 S. Yale Ave,",Suite 510,Tulsa,OK,,74135,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,planning design group
+26,1,Raymond Orr Elementary School,,t,,479-200-6221,"","",,,,3609 Phoenix Ave,"",Fort Smith,AR,,72903,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,raymond orr elementary school
+27,1,Temple Israel Tulsa,,t,,9188100012,"","",,,,2004 E. 22nd Pl.,"",Tulsa,OK,,74114,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,temple israel tulsa
+28,1,Tulsa Children's Coalition,,t,,918-549-8691,"","",,,,5330 East 31st Street,"",Tulsa,OK,,74135,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,tulsa children s coalition
+29,1,Tulsa County Parks,,f,,918-698-1489,"","",,,,218 W. 6th St.,"",Tulsa,OK,,74119,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,tulsa county parks
+31,1,Tyson Foods,,t,,580-616-4851,"","",,,,201 S. Raleight Rd.,"",Enid,OK,,73701,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,tyson foods
+32,1,U.S. Army Corps of Engineers,,f,,918-799-5843,"","",,,,102 E. BK 200 Road,"",Stigler,OK,,74462,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,u s army corps of engineers
+33,1,Washington Elementary School,,f,,405-288-6190,"","",,,,201 Kerby Avenue,"",Washington,OK,,73093,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,washington elementary school
+34,1,Woodridge Estates,,t,,479-409-1932,"","",,,,652 Aspen Ridge,"",Springdale,AR,,72764,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,woodridge estates
+35,1,Zaneis Public Schools,,f,,580 668 2955,"","",,,,30515 US-70 W,"",Wilson,OK,,73463,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,zaneis public schools
+36,1,AAA Playgrounds,,t,,405-822-1109,"","",,,,3701 Spring Hill Dr.,"",Edmond,OK,,73013,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,aaa playgrounds
+38,1,Abiding Harvest Methodist Church,,f,,(918) 449-1970,"","",,,,4407 S. Olive Ave.,"",Broken Arrow,OK,,74011,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,abiding harvest methodist church
+39,1,Absentee Shawnee Tribe of Indians of Oklahoma,,t,,918.431.9905,"","",,,,2025 S. Gordon Cooper Dr.,"",Shawnee,OK,,74801,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,absentee shawnee tribe of indians of oklahoma
+40,1,Absentee Tribe Youth Camp,,f,,405-313-8313,"","",,,,19740 Alameda St.,"",Norman,OK,,73026,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,absentee tribe youth camp
+41,1,Access Academy,,t,,501-590-5150,"","",,,,1500 N. Mississippi St.,"",Little Rock,AR,,72207,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,access academy
+43,1,"ACS Playground Adventures, Inc.",,f,,405-834-5056,"","",,,,8501 Mantle Ave.,"",Oklahoma City,OK,,73132,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,acs playground adventures inc
+44,1,Action Services --Center for Exceptional Children,,t,,501-215-7508,"","",,,,1008 W Childress St,"",Morrilton,AR,,72110,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,action services center for exceptional children
+45,1,Ada City Schools - ACS12E,,t,,580-310-7200,"","",,,,324 W. 20th St.,"",Ada,OK,,74820,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ada city schools acs12e
+46,1,Agape Child Care Center,,t,,918-341-0870,"","",,,,23905 S. Hwy 66,"",Claremore,OK,,74019,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,agape child care center
+47,1,Agra Public Schools,,f,,405-332-6523,"","",,,,112 S. Main,"",Agra,OK,,74824,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,agra public schools
+49,1,Alba Griffin LLC,,f,,405-735-3477,"","",,,,313 SE 5th Street,"",Moore,OK,,73160,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,alba griffin llc
+50,1,Allison Landscape & Pools,,t,,903-818-4887,"","",,,,112 Seymore Bradley Rd.,"",Denison,TX,,75020,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,allison landscape pools
+51,1,All Souls Unitarian Church,,t,,(918) 743-2363,"","",,,,2952 S Peoria Ave,"",Tulsa,OK,,74114,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,all souls unitarian church
+53,1,Altus Parks and Rec,,t,,580-301-3123,"","",,,,601 Katy Drive,"",Altus,OK,,73522,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,altus parks and rec
+54,1,Alva Public Schools,,f,,580-327-4823,580-327-4823,"",,,,418 Flynn Street,"",Alva,OK,,73717,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,alva public schools
+55,1,Anderson Public Schools,,f,,918-740-5226,"","",,,,2195 Anderson Rd.,"",Sand Springs,OK,,74063,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,anderson public schools
+56,1,Angels and Outlaws Daycare,,t,,580-721-0509,"","",,,,807 S 9th St,"",Marlow,OK,,73055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,angels and outlaws daycare
+58,1,Apache Parks & Recreaton,,t,,740-972-2203,"","",,,,114 East Evans,"",Apache,OK,,73006,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,apache parks recreaton
+59,1,Arch Ford Educational Cooperative,,t,,501-428-1341,"","",,,,101 Bulldog Dr.,"",Plumerville,AR,,72127,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,arch ford educational cooperative
+60,1,Ardmore Youth Club,,t,,214-244-4809,"","",,,,2400 Chickasaw Blvd.,"",Ardmore,OK,,73401,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ardmore youth club
+61,1,Aristocrat Gaming,,t,,918-413-1695,"","",,,,15336 E. Admiral Pl.,"",Tulsa,OK,,74116,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,aristocrat gaming
+63,1,Arkansas Early Learning,,t,,870-931-1172,"","",,,,1901 Woodsprings Rd.,"",Jonesboro,AR ,,72401,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,arkansas early learning
+64,1,Arkansas State Parks,,t,,479-890-7477,"","",,,,"Arkansas Dept of Parks, Heritage & Tourism",1100 N Street,Little Rock,AR,,72201,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,arkansas state parks
+65,1,Arkla Park,,t,,9035593631,"","",,,,101 Arkla Circle,"",Emmet,AR,,71835,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,arkla park
+66,1,Armstrong Berger,,t,,469-995-0500,"","",,,,2611 State Street,"",Dallas,TX,,75204,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,armstrong berger
+67,1,ARSC Federal,,t,,973-439-2825,"","",,,,1487 Highway 177 S,"",Mountain Home,AR,,72653,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,arsc federal
+68,1,Ashdown Public Schools,,t,,903 278-7614,"","",,,,1323 Foster St,"",Ashdown,AR,,71822,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ashdown public schools
+69,1,Aspen Creek Elementary School,,f,,330-327-9492,"","",,,,2800 W. Florence St.,"",Broken Arrow,OK,,74011,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,aspen creek elementary school
+70,1,ASRC Federal,,t,,973-439-2825,"","",,,,817 Highway 101,"",Mountain Home,AR,,72653,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,asrc federal
+72,1,Atkins Elementary School,,t,,479-970-7817,"","",,,,611 NW 4th St.,"",Atkins,AR,,72823,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,atkins elementary school
+73,1,Atlas Paving Company,,t,,405-520-0310,"","",,,,3800 NW 8th St,"",Oklahoma City,OK,,73107,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,atlas paving company
+74,1,Aurora POA,,t,,479-841-9435,"","",,,,6807 SW Ambient St.,"",Bentonville,AR,,72713,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,aurora poa
+75,1,Bailey Booster Club,,t,,417-239-6981,"","",,,,10221 E 96th St N,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,bailey booster club
+76,1,Bald Knob School District,,t,,870-613-2736,"","",,,,103 W. Park Street,"",Bald Knob,AR,,72010,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,bald knob school district
+77,1,Banner Public Schools,,t,,405-596-7190,"","",,,,2455 N. Banner Road,"",El Reno,OK,,73036,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,banner public schools
+78,1,BAPS: Rosewood Elementary,,t,,918-555-5555,"","",,,,4300 E. Gary St.,"",Broken Arrow,OK,,74014,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,baps rosewood elementary
+79,1,Barnard Elementary,,f,,405-598-3169,"","",,,,315 E. Locust St.,"",Techumseh,OK,,74873,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,barnard elementary
+81,1,Barre Commercial Playgrounds,,t,,501-772-4020,"","",,,,41 Lieblong Rd.,"",Greenbrier,AR,,72058,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,barre commercial playgrounds
+82,1,Barron Facility Services,,t,,817-829-2473,"","",,,,6221 Southwest Blvd.,"",Fort Worth,TX,,78657,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,barron facility services
+83,1,Batesville School District (Sulphur Rock Elementary),,t,,870-793-9878,870-793-9878,"",,,,480 N Main St,"",Sulphur Rock,AR,,72579,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,batesville school district sulphur rock elementary
+84,1,Batesville School District (West Elementary),,t,,8708347863,8708347863,"",,,,850 N Hill St,"",Batesville,AR,,72501,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,batesville school district west elementary
+85,1,Battlefield State Park,,t,,479-287-5938,"","",,,,506 E. Douglas,"",Prairie Grove,AR,,72753,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,battlefield state park
+86,1,Beacon Construction,,t,,405-403-2003,"","",,,,2425 S. Bryant,"",Edmond,OK,,73034,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,beacon construction
+88,1,Bearden School District,,f,,918-623-0156,"","",,,,"372006, OK-48","",Okemah,OK,,74859,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,bearden school district
+89,1,Beggs Elementary,,t,,918-267-4916,"","",,,,1201 West 9th,"",Beggs,OK,,74421,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,beggs elementary
+90,1,Bellevue Health and Rehabilition,,t,,405-507-1682,"","",,,,6500 N. Portland Ave,"",Oklahoma City,OK,,73116,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,bellevue health and rehabilition
+91,1,B.E.N. Construction,,f,,918-894-9333,"","",,,,701 S. 11th St.,"",Broken Arrow,OK,,74012,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,b e n construction
+93,1,Bentonville Animal Services,,t,,479-696-0277,"","",,,,801 SW. 41st St.,"",Bentonville,AR,,72712,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,bentonville animal services
+94,1,Bentonville Preparatory School,,t,,479-871-3827,"","",,,,211 SE 34th St #13,"",Bentonville,AR,,72712,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,bentonville preparatory school
+95,1,Berryhill Elementary School,,f,,918-445-6023,"","",,,,2900 1/2 S. 65th West Ave.,"",Tulsa,OK,,74107,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,berryhill elementary school
+96,1,Bethany Community School,,t,,918-346-7004,"","",,,,6730 S. Sheridan Rd.,"",Tulsa,OK,,74136,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,bethany community school
+98,1,Bethel Acres Community Center,,t,,405-226-1946,"","",,,,18101 Bethel Road,"",Shawnee,OK,,74801,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,bethel acres community center
+99,1,Bethel Acres Community Park,,f,,405-788-2877,"","",,,,5 Cheyenne Dr.,"",Shawnee,OK,,74801,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,bethel acres community park
+100,1,Beth Haven Baptist Church,,f,,405-979-0500,"","",,,,12400 S. Western Ave.,"",Oklahoma City,OK,,73170,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,beth haven baptist church
+101,1,Big C Construction,,f,,918-521-9175,"","",,,,P.O. Box 831,"",Skiatook,OK,,74070,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,big c construction
+104,1,Bixby East Intermediate School,,f,,918-231-2551,"","",,,,11901 East 131st St S,"",Broken Arrow,OK,,74011,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,bixby east intermediate school
+105,1,Bixby West Elementary School,,f,,817-526-0999,"","",,,,14901 S. Harvard Ave.,"",Bixby,OK,,74008,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,bixby west elementary school
+106,1,Blanchard Public Schools,,f,,405-485-3394,"","",,,,211 N. Tyler Ave.,"",Blanchard,OK,,73010,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,blanchard public schools
+107,1,Block Multifamily Group,,t,,479-530-0598,"","",,,,401 2nd St,"",Conway,AR,,72032,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,block multifamily group
+108,1,Blue Crane LLC,,t,,214-532-7959,"","",,,,125 W. Central Ave.,"",Bentonville,AR,,72712,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,blue crane llc
+109,1,Boulder Construction,,t,,479-521-8881,"","",,,,1423 W. Cato Springs Road,"",Fayetteville,AR,,72701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,boulder construction
+111,1,Boys and Girls Club of Rogers,,t,,918-111-1111,"","",,,,408 S 8th St,"",Rogers,AR,,72756,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,boys and girls club of rogers
+112,1,Branco Enterprises,,t,,417-451-5250,"","",,,,12033 E. Hwy 86,"",Neosho,MO,,64850,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,branco enterprises
+113,1,Breene Kerr,,t,,650-302-9376,"","",,,,TBD,"",Deer Creek,OK,,74636,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,breene kerr
+114,1,Brentwood Community Park,,t,,479-530-8694,"","",,,,16381 S. Hwy 71,"",Winslow,AR,,72959,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,brentwood community park
+115,1,Briarwood Apartments,,t,,479-403-9121,"","",,,,3400 Duke Ave.,"",Ft. Smith,AR,,72908,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,briarwood apartments
+117,1,Broken Arrow Public Schools ,,f,,918-949-7009,"","",,,,1504 S. Joliet St.,"",Broken Arrow,OK,,74012,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,broken arrow public schools
+118,1,Brookstone Lake West HOA,,t,,580-504-1182,"","",,,,3416 Sardis Way,"",Yukon,OK,,73099,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,brookstone lake west hoa
+119,1,Brookwood HOA,,t,,918-934-9575,"","",,,,2104 West 109th Place South,"",Jenks,OK,,74037,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,brookwood hoa
+120,1,Brunson Elementary School,,t,,870-226-2351,"","",,,,212 Scobey Dr.,"",Warren,AR,,71671,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,brunson elementary school
+121,1,Butterfield Trail Elementary,,t,,870-919-5118,"","",,,, 3050 Old Missouri Rd,"",Fayetteville,AR,,72719,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,butterfield trail elementary
+122,1,C3 Custom Homes,,t,,479-426-3903,"","",,,,429 W. E. Centerton Blvd.,"",Centerton,AR,,72719,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,c3 custom homes
+123,1,C4L Construction,,t,,405-314-0802,"","",,,,1717 Garrett Dr.,"",Edmond,OK,,73013,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,c4l construction
+124,1,Cabot Public Schools,,t,,501-743-3528,"","",,,,103 Commerce Park Dr.,"",Cabot,AR,,72023,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cabot public schools
+126,1,Cabot Public Schools - Eastside Elementary,,t,,(501) 743-3563,"","",,,,17 Bellamy St,"",Cabot,AR,,72023,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cabot public schools eastside elementary
+127,1,Cabot Public Schools - Ward Central Elementary School,,t,,501-743-3569,"","",,,,1570 Wilson Loop,"",Ward,AR,,72176,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cabot public schools ward central elementary school
+128,1,Calara Group,,t,,479-435-8478,"","",,,,23006 Lawlis Rd,"",Siloam Springs,AR,,72761,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,calara group
+129,1,Calumet School District,,f,,405-206-7240,"","",,,,904 S. Maple Rd.,"",Calumet,OK,,73014,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,calumet school district
+130,1,Calvary Chapel in the Ozarks,,t,,316-210-8317,"","",,,,413 E. Walnut,"",Rogers,AR,,72756,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,calvary chapel in the ozarks
+132,1,CAMC LLC,,t,,405-555-5555,"","",,,,TBD,"",Norman,OK,,74072,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,camc llc
+133,1,Camden Fairview School District,,t,,8708367381 ,"","",,,,575 Dooley Womack,"",Camden,AR,,71701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,camden fairview school district
+134,1,Camden Housing Authority,,t,,870-836-9309,"","",,,,800 Monroe St NW,"",Camden,AR,,71711,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,camden housing authority
+135,1,Cameron University,,f,,580-581-2415,"","",,,,2800 W. Gore Blvd.,"",Lawton,OK,,73505,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cameron university
+136,1,Camp Barkansas,,t,,501-303-9936,"","",,,,2207 Malvern Ave,"",Hot Springs,AR,,71901,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,camp barkansas
+137,1,Canadian County Cowboy Church,,t,,405-306-8809,"","",,,,550 E Main St,"",Yukon,OK,,73099,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,canadian county cowboy church
+139,1,CAP Tulsa Briarglen,,t,,918-549-8691,"","",,,,3303 South 121st East Avenue,"",Tulsa,OK,,74146,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cap tulsa briarglen
+140,1,CAP Tulsa Disney,,t,,918-688-5113,"","",,,,11610 East 25th St.,"",Tulsa,OK,,74129,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cap tulsa disney
+141,1,CAP Tulsa Reed,,t,,918-688-5113,"","",,,,10940 E 5th St.,"",Tulsa,OK,,74128,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cap tulsa reed
+142,1,CAP Tulsa Reed ECEC,,f,,918-549-8691,"","",,,,8811 East 31st Street,"",Tulsa,OK,,74145,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cap tulsa reed ecec
+143,1,Carbondale Assembly of God,,f,,918-520-3981,"","",,,,2135 W. 51st St.,"",Tulsa,OK,,74107,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,carbondale assembly of god
+144,1,CARD,,t,,405-255-8043,"","",,,,707 W. W Lawry Rod 102,"",Claremore,OK,,74018,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,card
+145,1,Carlisle Elementary School,,t,,870-552-1189,"","",,,,520 Center St.,"",Carlisle,AR,,72024,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,carlisle elementary school
+147,1,Casady School,,t,,405-520-1350,"","",,,,9500 N. Penn Ave,"",Oklahoma City,OK,,73120,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,casady school
+148,1,Cashion Public Schools,,f,,405-433-2741,"","",,,,101 North Euclid,"",Cashion,OK,,73076,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cashion public schools
+149,1,Catamount Constructors,,t,,720-588-6091,"","",,,,1527 Cole Blvd,Suite 100,Lakewood,CO,,80401,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,catamount constructors
+150,1,Catoosa Public Schools,,f,,918-698-3618,"","",,,,2000 S Cherokee St.,"",Catoosa,OK,,74015,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,catoosa public schools
+151,1,CC Camp Community Organization,,t,,918-410-6216,"","",,,,471660 E 893 Rd,"",Stilwell,OK,,74960,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cc camp community organization
+152,1,CDSA CDC Enid,,t,,580-242-6131,"","",,,,1111 W. Broadway Ave,"",Enid,OK,,73703,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cdsa cdc enid
+155,1,Central Plains Concrete,,t,,918-724-0660,"","",,,,2610 OK-167,"",Catoosa,OK,,74015,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,central plains concrete
+156,1,Chandler Parks Department,,f,,405-258-3566,"","",,,,414 Manvel Ave.,"",Chandler,OK,,74834,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,chandler parks department
+157,1,Cherokee Elementary,,f,,580-747-4267,"","",,,,900 S. Nebraska,"",Cherokee,OK,,73728,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee elementary
+159,1,Cherokee Nation Catoosa CDC,,t,,918-625-3727,"","",,,,19244 Country Club Dr.,"",Catoosa,OK,,74015,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee nation catoosa cdc
+160,1,Cherokee Nation CDC-Stillwell,,f,,918-696-3222,"","",,,,398 N. 8th St.,"",Stilwell,OK,,74960,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee nation cdc stillwell
+161,1,Cherokee Nation Crisis Shelter,,t,,9183927083,"","",,,,W. W. Keeler Tribal Complex,17675 S. Muskogee Ave.,Tahlequah,OK,,744764,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee nation crisis shelter
+162,1,Cherokee Nation Head Start,,t,,918-639-7386,"","",,,,22675 Betty Sharp Smith St.,"",Tahlequah,OK,,74464,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee nation head start
+164,1,Cherokee Nation Housing Authority,,f,,918-458-1447,"","",,,,PO Box 1007,"",Tahlequah,OK,,74465,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee nation housing authority
+165,1,Cherokee Nation ICW,,t,,918-555-5555,"","",,,,3227 S. Muskogee Ave.,"",Tahlequah,OK,,74464,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee nation icw
+166,1,Cherokee Nation Immersion Middle School,,t,,918-639-7386,"","",,,,16489 US-62,"",Tahlequah,OK,,74464,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee nation immersion middle school
+167,1,Cherokee Nation Jay Head Start,,t,,918-453-5000,"","",,,,935 E. Melton Dr.,"",Jay,OK,,74346,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee nation jay head start
+168,1,Cherokee Nation-Nowata Head Start,,t,,000-000-0000,"","",,,,100 Lenape Dr,"",Nowata,OK,,74048,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee nation nowata head start
+170,1,Cherokee Nation Salina Head Start,,t,,918-520-1375,"","",,,,672 E. Campus Rd.,"",Salina,OK,,74365,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee nation salina head start
+171,1,Cherokee Nation Sallisaw CDC,,t,,918-555-5555,"","",,,,673 S. JT Stites St.,"",Sallisaw,OK,,74955,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee nation sallisaw cdc
+172,1,Cherokee Nation Stilwell Head Start,,t,,9185555555,"","",,,,215 W. Ash St.,"",Stilwell,OK,,74960,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee nation stilwell head start
+173,1,Cherokee Pride Construction Co.,,f,,918-260-8956,"","",,,,7 S. Park St.,"",Sapulpa,OK,,74066,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee pride construction co
+174,1,Cherokee Village,,t,,870-261-5468,870-261-5468,"",,,,80 Hualapi Dr.,"",Cherokee Village,AR,,72529,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee village
+175,1,Cheyenne Methodist Church,,f,,580-799-4208,"","",,,,404 E. Moad Ave.,"",Cheyenne,OK,,73628,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cheyenne methodist church
+177,1,Chickasaw Nation Medical Center,,f,,580-235-3437,"","",,,,1921 Stonecipher Blvd,"",Ada,OK,,74820,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,chickasaw nation medical center
+178,1,Child Care Aware WCA,,t,,501-760-6586,"","",,,,101 College Dr,"",Hot Springs,AR,,71913,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,child care aware wca
+179,1,Child Care Inc.,,t,,405-640-0511,"","",,,,3632 NW 51st St.,"",Oklahoma City,OK,,73112,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,child care inc
+180,1,Childcare Network,,t,,000-000-0000,"","",,,,5820 NW 41st Street,"",Warr Acres,OK,,73122,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,childcare network
+181,1,Children's Depot,,t,,918-230-9209,"","",,,,8931 N. Owasso Expwy,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,children s depot
+182,1,Chisholm Ranch Villas,,t,,918-633-6192,"","",,,,12196 South 103rd East Avenue,"",Bixby,Oklahoma,,74008,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,chisholm ranch villas
+183,1,Choctaw Landing,,t,,918-230-3387,"","",,,,Intersection of 259 & 259a,"",Hochatown,OK,,74728,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw landing
+185,1,Choctaw Nation CDC,,f,,918-555-5555,"","",,,,200 W. Grand,"",Pittsburgh,OK,,74560,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation cdc
+186,1,Choctaw Nation Child Care Center,,f,, 580-740-4506,"","",,,,2752 Big Lots Dr.,"",Durant,OK,,74701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation child care center
+187,1,Choctaw Nation Child Care Expansion,,t,,555-555-5555,"","",,,,3262 Afullota Hina,"",McAlester,OK,,74501,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation child care expansion
+188,1,Choctaw Nation-Grant Ballfields,,f,,580-775-0881,"","",,,,PO Box 1210,"",Durant,OK,,74702,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation grant ballfields
+189,1,Choctaw Nation Head Start,,f,,580-775-6489,"","",,,,408 N. M St.,"",Hugo,OK,,74743,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation head start
+191,1,Choctaw Nation Head Start- Idabel,,f,,580-286-7415,580-286-7930,"",,,,2412 East Lincoln Road,"",Idabel,OK,,74745,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation head start idabel
+192,1,Choctaw Nation Head Start - Valliant,,f,,918-934-9575,"","",,,,311 East Harris Street,"",Valliant,OK,,74764,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation head start valliant
+193,1,Choctaw Nation Housing Department,,f,,580-317-7083,"","",,,,209 Monroe Rd.,"",Hugo,OK,,74743,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation housing department
+194,1,Choctaw Nation Judicial Center,,f,,580-642-7063,"","",,,,2352 Big Lots Dr.,"",Durant,OK,,74701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation judicial center
+196,1,Choctaw Nation of Oklahoma - Bennington Head Start,,t,,580-642-7503,"","",,,,820 N. Perry St.,"",Bennington,OK,,74723,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation of oklahoma bennington head start
+197,1,Choctaw Nation of Oklahoma - Jones Academy,,t,,580-642-4099,"","",,,,909 Jones Academy Rd,"",Hartshorne,OK,,74547,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation of oklahoma jones academy
+198,1,Choctaw Nation of Oklahoma-Jones Academy Student Union,,t,,580-924-8280,"","",,,,1802 Chukka Hina Drive,"",Durant,OK,,74701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation of oklahoma jones academy student union
+200,1,Choctaw Nation of Oklahoma - Stigler,,t,,580-326-1115,"","",,,,208 City Lake Road,"",Stigler,OK,,74462,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation of oklahoma stigler
+201,1,Choctaw Nation of Oklahoma-Wilburton CDC,,t,,580-462-6666,"","",,,,1016 HWY 2 N,"",Wilburton,OK,,74578,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation of oklahoma wilburton cdc
+202,1,Choctaw Nation Tuskahoma,,f,,580-380-3196,"","",,,,163854 N. 4355 Rd.,"",Tuskahoma,OK,,74574,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation tuskahoma
+204,1,Christ Church on Harvard,,t,,918-237-5037,"","",,,,3515 South Harvard Avenue,"",Tulsa,OK,,74135,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,christ church on harvard
+205,1,Christ Presbyterian Church,,t,,918-749-1629,"","",,,,2706 E. 51st St.,"",Tulsa,OK,,74105,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,christ presbyterian church
+207,1,Cimarron Public Schools,,t,,555-555-5555,555-555-5555,"",,,,301 Main St,"",Lahoma,OK,,73754,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cimarron public schools
+208,1,Citizen Potawatomi Nation,,t,,405-275-3121,"","",,,,1601 S. Gordon Cooper Dr.,"",Shawnee,OK,,74801,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,citizen potawatomi nation
+209,1,"City of Ada, OK",,f,,580-310-2637,"","",,,,530 W. 5th St.,"",Ada,OK,,74820,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of ada ok
+210,1,"City of Ardmore, OK",,f,,580-221-2582,"","",,,,23 South Washington,"",Ardmore,OK,,73401,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of ardmore ok
+211,1,City of Ash Flat,,t,,870-847-3497,"","",,,,869 ASh Flat Dr,"",Ash Flat,AR,,72513,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of ash flat
+212,1,City of Atoka,,t,,580-889-2272,"","",,,,2077 W. Liberty Rd,"",Atoka,OK,,74525,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of atoka
+213,1,"City of Austin, AR",,t,,501-813-4129,"","",,,,3181 Hwy. 367 N.,"",Austin,AR,,72007,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of austin ar
+215,1,City of Batesville - Riverside Park,,t,,501-353-3018,"","",,,,1680 Chaney Drive,"",Batesville,AR,,72501,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of batesville riverside park
+216,1,City of Benton,,t,,5013710272,"","",,,,1800 Citizens Drive,"",Benton,AR,,72015,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of benton
+217,1,City of Bentonville,,t,,4792713392,"","",,,,"215 SW A St.,","",Bentonville,AR,,72712,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of bentonville
+218,1,City of Berryville,,t,,870-654-5062,"","",,,,305 E. Madison Ave.,"",Berryville,AR,,72616,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of berryville
+219,1,City of Bethany,,t,,405-789-6285,"","",,,,6700 NW 36th St,"",Bethany,OK,,73008,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of bethany
+220,1,City of Bixby - Bentley Park Improvements,,t,,918-366-0495,"","",,,,116 W Needles,"",Bixby,OK,,74008,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of bixby bentley park improvements
+221,1,City of Blackwell,,t,,580-363-7250,"","",,,,221 W. Blackwell Ave,"",Blackwell,OK,,74631,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of blackwell
+223,1,City of Broken Arrow,,f,,918-455-8004,"","",,,,1700 W. Detroit,"",Broken Arrow,OK,,74012,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of broken arrow
+224,1,City of Brookland,,t,,(870) 935-0538,"","",,,,613 Holman ,"",Brookland,AR,,72417,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of brookland
+225,1,City of Camden,,t,,870-837-5500,"","",,,,Carnes Park Dr. SE,"",Camden ,AR,,71701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of camden
+226,1,City of Cave Springs,,t,,4792481040,"","",,,,134 N. Main St.,"",Cave Springs,AR,,72718,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of cave springs
+227,1,City of Clarksville,,t,,4797546486,"","",,,,205 Walnut St,"",Clarksville,AR,,72830,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of clarksville
+228,1,"City of Coalgate, OK",,t,,405-315-8878,"","",,,,3 N. Main St.,"",Coalgate,OK,,74538,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of coalgate ok
+230,1,"City of Crossett, AR",,t,,870-500-2018,"","",,,,120 E Wellfield Rd,"",Crossett,AR,,71635,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of crossett ar
+231,1,City Of Cushing,,f,,9183993831,9183993831,"",,,,1000 S Highland Ave,"",Cushing,OK,,74023,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of cushing
+232,1,City of Delaplaine,,t,,870-212-8501,"","",,,,P.O. Box 1,"",Delaplaine,AR,,72425,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of delaplaine
+233,1,City of Edmond,,t,,(405) 3594520,"","",,,,PO Box 2970,"",Edmond,OK,,73083,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of edmond
+234,1,City of Edmond YMCA,,f,,918.587.6158,"","",,,,4701 E. 15th St.,"",Edmond,OK,,73034,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of edmond ymca
+235,1,City of Elgin,,t,,580-492-5777,"","",,,,8183 HWY 17,"",Elgin,OK,,73538,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of elgin
+236,1,City of Elk City,,f,,580-362-0043,"","",,,,510 East 3rd St.,"",Elk City,OK,,73648,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of elk city
+237,1,City of Eufaula,,t,,918-689-2534,"","",,,,17 Hospital Drive,"",Eufaula,OK,,74432,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of eufaula
+238,1,"City of Fairview, OK",,f,,580- 227-4416,"","",,,,123 S. 6th Ave.,"",Fairview,OK,,73737,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of fairview ok
+239,1,"City of Fayetteville, AR",,t,,479-575-8289,"","",,,,113 W. Mountain,"",Fayetteville,AR,,72701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of fayetteville ar
+241,1,City of Fort Worth,,t,,817-392-5700,"","",,,,100 Fort Worth Trail,"",Forth Worth,TX,,76102,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of fort worth
+242,1,"City of Green Forest, AR",,t,,870-480-2595,"","",,,,203 S. Springfield Ave.,"",Green Forest,AR,,72638,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of green forest ar
+243,1,City of Guthrie OK,,t,,405-408-4336,"","",,,,901 S. Division,"",Guthrie,OK,,73044,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of guthrie ok
+244,1,City of Guymon,,t,,580.338.0137,580.651.2000,"",,,,424 N. Main St.,"",Guymon,OK,,73942,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of guymon
+245,1,City of Harrell,,t,,501-916-9982,"","",,,,108 S Luke St,"",Harrell ,AR,,71745,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of harrell
+246,1,City of Heavener,,t,,918-935-7964,"","",,,,103 E Ave B,"",Heavener,OK,,74937,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of heavener
+247,1,City of Henryetta,,t,,918-899-1577,"","",,,,115 South 4th Street,"",Henryetta,OK,,74437,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of henryetta
+248,1,"City of Hominy, Ok",,f,,918-605-0540,"","",,,,219 West 1st St.,"",Hominy,OK,,74035,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of hominy ok
+250,1,City of Little Rock,,t,,501.371.6847,501.912.3202,"",,,,500 W Markham St # 108,"",Little Rock,AR,,72201,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of little rock
+251,1,City of McPherson Kansas,,f,,6202452535,"",6202452549,,,,PO Box 1008,400 East Kansas Ave.,McPherson,KS,,67460,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of mcpherson kansas
+252,1,City of Midwest City,,t,,405-739-1220,"","",,,,100 N. Midwest Blvd.,"",Midwest City,OK,,73110,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of midwest city
+253,1,"City of Moore, Ok",,f,,405-793-4428,"","",,,,700 S. Broadway,"",Moore,OK,,73160,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of moore ok
+254,1,"City of Muskogee, OK",,t,,918-348-9032,"","",,,,837 E. Okmulgee St.,"",Muskogee,OK,,74403,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of muskogee ok
+256,1,City of Norman,,f,,405-226-0016,"","",,,,225 N. Webster Ave.,"",Norman,OK,,73069,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of norman
+258,1,City of Owasso,,f,,918-376-1502,"","",,,,200 S. Main St.,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of owasso
+259,1,City of Pea Ridge,,t,, (479) 282-5170,"","",,,,"Carr St. / N. Curtis Ave.,","",Pea Ridge,AR,,72751,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of pea ridge
+260,1,"City of Raymore, MO",,f,,816-892-3045,"","",,,,100 Municipal Circle,"",Raymore,MO,,64083,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of raymore mo
+261,1,City of Sallisaw,,f,,9187754194,"","",,,,115 E. Choctaw,"",Sallisaw,OK,,74955,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of sallisaw
+262,1,City of Sand Springs ,,t,,918.246.2500,"","",,,,100 E. Broadway St,"",Sand Springs,OK,,74063,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of sand springs
+263,1,City of Sapulpa OK,,f,,918-605-6075,"","",,,,425 East Dewey,"",Sapulpa,OK,,74066,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of sapulpa ok
+264,1,"City of Sayre, OK",,f,,580-928-2260,"","",,,,102 W. Main St.,"",Sayre,OK,,73662,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of sayre ok
+265,1,"City of Sherwood, AR",,t,,501-864-5150,"","",,,,51 Shelby Rd.,"",Sherwood,AR,,72120,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of sherwood ar
+266,1,City of Shidler,,t,,918-793-7171,"","",,,,PO Box 335,"",Shidler,OK,,74652,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of shidler
+267,1,City of Skiatook,,t,,918-855-7081,"","",,,,110 N. Broadway,"",Skiatook,OK,,74070,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of skiatook
+269,1,City of Stillwater,,f,,405-747-4456,"","",,,,701 East 12th Ave.,"",Stillwater,OK,,74078,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of stillwater
+270,1,City of Stilwell,,f,,918-696-6075,"","",,,,503 W. Division St.,"",Stilwell,OK,,74960,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of stilwell
+271,1,City of Stroud,,t,,405-315-8878,"","",,,,212 W. Main St. ,"",Stroud,OK,,74079,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of stroud
+273,1,"City of Valley Springs, AR",,t,,501-555-5555,"","",,,,8141 Elm Road,"",Valley Springs,AR,,72682,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of valley springs ar
+274,1,City of Vilonia,,t,,5017962534,"","",,,,18 Bise Dr,"",Vilonia ,AR,,72173,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of vilonia
+275,1,"City of Vilonia, AR",,t,,501-733-1031,"","",,,,18 Bise Dr.,"",Vilonia,AR,,72173,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of vilonia ar
+276,1,City of Warren,,t,,870-403-4948,"","",,,,P.O. Box 352,"",Warren,AR,,71671,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of warren
+277,1,City of Watonga,,f,,580-623-4669,"","",,,,410 West Main St.,"",Watonga,OK,,73772,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of watonga
+278,1,City of Westville,,t,,479-301-8555,"","",,,,113 Buffington Rd.,"",Westville,OK,,74965,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of westville
+279,1,"City of Wickes, AR",,t,,870-385-2575,"","",,,,132 US-278,"",Wickes,AR,,71973,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of wickes ar
+280,1,City of Wilburton,,t,,918-424-4615,"","",,,,300 West Main St,"",Wilburton,OK,,74578,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of wilburton
+281,1,"City of Woodward, OK",,f,,580-334-0742,"","",,,,102 Temple Houston Drive,"",Woodward,OK,,73801,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of woodward ok
+282,1,City of Yukon,,t,,405-318-4414,"","",,,,P.O. Box 850500,"",Yukon,OK,,73099,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of yukon
+283,1,Claremont Elementary School,,t,,918-923-4200,"","",,,,318 E. 7th St.,"",Claremore,OK,,74017,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,claremont elementary school
+285,1,Claremore Public Schools,,t,,918.984.3255,"","",,,,102 West 10th Street,"",Claremore,OK,,74017,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,claremore public schools
+286,1,Clarendon Heights,,t,,479-899-7141,"","",,,,SW Bloomsbury Rd,"",Bentonville,AR,,72713,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,clarendon heights
+287,1,Clark Contractors,,t,,501-353-3018,"","",,,,1850 Chaney Dr,"",Batesville,AR,,72501,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,clark contractors
+288,1,CNS Communications,,t,,602-793-8432,"","",,,,16631 N. 91st St. #107,"",Scottsdale,AZ,,85620,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cns communications
+289,1,CN Stilwell Wellness Center,,t,,918-453-5000,"","",,,,471688 Hwy 51,"",Stilwell,OK,,74960,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cn stilwell wellness center
+290,1,College Hill Pre-K Center,,t,,(870) 774-9111,"","",,,,200 Artesian Street,"",Texarkana,AR,,71854,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,college hill pre k center
+292,1,Comanche Academy,,t,,405-240-1070,"","",,,,1701 NW Taft Ave,"",Lawton,OK,,73507,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,comanche academy
+293,1,Community Action Agency of Oklahoma City,,t,,405-306-4932,"","",,,,319 SW 25th St,"",Oklahoma City,OK,,73109,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,community action agency of oklahoma city
+294,1,Community Action Project,,t,,918-833-2888,"","",,,,5330 S. 31st St.,Suite 300,Tulsa,OK,,74135,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,community action project
+295,1,Community of Concerned Christians,,f,,580-504-1584,"","",,,,117 H St,"",Ringling,OK,,73456,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,community of concerned christians
+296,1,Contractor's Inc.,,t,,501-757-2033,"","",,,,7635 Counts Massie Rd.,"",North Little Rock,AR,,72213,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,contractor s inc
+297,1,Conway Public Schools,,t,, 501-450-4875,"","",,,,1900 Arkansas Avenue,"",Conway,AR,,72034,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,conway public schools
+299,1,Copper Creek Crossing HOA,,t,,405-200-5259,405-200-5259,"",,,,2905 NW 159th ST,"",Edmond,OK,,73013,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,copper creek crossing hoa
+300,1,Copper River Infrastructure,,f,,337.378.7630,"","",,,,4501 Singer Court,"",Chantilly,VA,,20151,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,copper river infrastructure
+301,1,Cornerstone Church,,t,,(918) 528-9480,"","",,,,3333 E. 41st St.,"",Tulsa,OK,,74135,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cornerstone church
+302,1,Corps of Engineers,,t,,918-697-1122 ,"","",,,,102 E BK 200 Rd,"",Stigler,OK,,74462,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,corps of engineers
+303,1,Country Lane Primary School,,f,,254-813-8482,"","",,,,301 E. Omaha St.,"",Broken Arrow,OK,,74012,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,country lane primary school
+304,1,Covenant Living at Inverness,,t,,918-638-7475,"","",,,,3800 West 71st S,"",Tulsa,OK,,74132,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,covenant living at inverness
+305,1,Coyle Public Schools,,t,,405-466-2242,"","",,,,P.O. Box 287,"",Coyle,OK,,73027,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,coyle public schools
+306,1,Creekside POA,,t,,785-320-0955,"","",,,,1051 Elizabeth Drive,"",Bentonville,AR,,72713,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,creekside poa
+308,1,Crossings Community Church,,t,,405-641-7999,"","",,,,14600 Portland Ave.,"",Oklahoma City,OK,,73134,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,crossings community church
+309,1,Crossover Preparatory School,,f,,918-555-5555,"","",,,,1010 E. 36th St. No.,"",Tulsa,OK,,74106,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,crossover preparatory school
+310,1,Crossroads Youth and Family,,t,,405-292-6440,"","",,,,1333 West Main St,"",Norman,OK,,73069,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,crossroads youth and family
+312,1,Crowley's Ridge Academy,,t,,8705650393,"","",,,,606 Academy Dr,"",Paragould,AR,,72450,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,crowley s ridge academy
+313,1,Crystal Flats,,t,,479-445-5782,"","",,,,1402 John Deshields Blvd,"",Bentonville,AR,,72712,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,crystal flats
+314,1,Curtin Pharmacy and Drug,,t,,918-528-6000,"","",,,,Address Unknown,"",Oklahoma City,OK,,73107,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,curtin pharmacy and drug
+315,1,Daisy State Park,,t,,870-845-8433,"","",,,,103 E. Park Rd.,"",Kirby,AR,,71950,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,daisy state park
+316,1,Darlington Public School,,f,,405-262-0137,"",405-262-3215,,,,4408 North HWY 81,"",El Reno,OK,,73036,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,darlington public school
+317,1,Davis Playgrounds,,t,,501-658-0732,"",501-851-4130,,,,104 Orchid Dr.,"",Maumelle,AR,,72113,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,davis playgrounds
+319,1,Decatur Public Schools,,t,,479-752-7156,"","",,,,1498 Stadium Ave,"",Decatur,AR,,72722,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,decatur public schools
+320,1,Deer Elementary School,,t,,870-428-5433,"","",,,,AR-16,"",Deer,AR,,72628,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,deer elementary school
+321,1,Deerfield Estates,,t,,918-299-9473,"","",,,,8812 S. Delaware Ave.,"",Tulsa,OK,,74137,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,deerfield estates
+323,1,Delaware Tribe,,f,,918-914-3105,"","",,,,5100 Tuxedo Blvd,"",Bartlesville,OK,,74006,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,delaware tribe
+324,1,Delco Electric,,t,,405-942-2880,"","",,,,2 NW 132nd St,"",Oklahoma City,OK,,73114,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,delco electric
+325,1,Deluxe Exterior Care,,t,,918-510-3341,"","",,,,26907 E 142ND PL S,"",COWETA,OK,,74429,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,deluxe exterior care
+326,1,Denny Price Family YMCA,,t,,817-600-4004,"","",,,,415 W. Cherokee Ave,"",Enid,OK,,73701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,denny price family ymca
+327,1,Department of Human Services,,f,,(405) 521-4333,"","",,,,PO Box 25352,"",Oklahoma City,OK,,73125-0352,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,department of human services
+328,1,Department of the Interior - Bureau of Reclamation,,t,,406-247-4037,"","",,,,Federal Building 2021 4th Avenue North,"",Billings,MT,,59101,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,department of the interior bureau of reclamation
+329,1,Dermott Elementary School,,t,,870-538-1000 ,"","",,,,525 East Speedway St.,"",Dermott,AR,,71638,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,dermott elementary school
+330,1,Destiny Christian School,,f,,405-677-6000,"","",,,,3801 SE 29th St.,"",Del City,OK,,73115,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,destiny christian school
+331,1,Devon Energy,,t,,405.228.2883,405.343.1192,"",,,,4440 Newcastle Rd,OKORC 01.003,Oklahoma City,OK,,73119,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,devon energy
+332,1,Dewar Community Center,,t,,918-319-1297,"","",,,,903 E. 6th St,"",Dewar,OK,,74431,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,dewar community center
+334,1,DeWitt Public Schools,,t,,000.000.0000,000.000.0000,"",,,,1718 Grand View,"",DeWitt,AR,,72042,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,dewitt public schools
+335,1,Dierks Elementary School,,f,,817-614-7315,"","",,,,602 S McClure St,"",Broken Bow,OK,,74728,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,dierks elementary school
+336,1,Dondlinger Construction Co.,,f,,913-579-8059,"","",,,,20055 W 183rd St,"",Spring Hill,KS,,66083,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,dondlinger construction co
+337,1,Don R. Roberts Elementary School,,t,,(501) 447-8300,"","",,,,16601 Lamarche Dr,"",Little Rock,AR,,72223,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,don r roberts elementary school
+338,1,Downtown Church of Christ,,t,,501-268-5383,"","",,,,900 N Main St,"",Searcy,AR,,72143,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,downtown church of christ
+339,1,Durant Public Schools,,f,,580-924-1276,"","",,,,"1323 Waco St., Suite A","",Durant,OK,,74701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,durant public schools
+341,1,Dustin Adams,,t,,405-416-4327,"","",,,,101 W. Broadway,"",Hollis,OK,,73550,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,dustin adams
+342,1,DVIS,,t,,9182895951,9182895951,"",,,,3124 E Apache St,"",Tulsa,OK,,74110,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,dvis
+343,1,Eagle Mountain Elementary School,,t,,870-698-9141,"","",,,,600 Eagle Mountain Blvd.,"",Batesville,AR,,72501,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,eagle mountain elementary school
+344,1,Earls Family,,t,,501-351-0515,"","",,,,1202 Brookhaven Ct.,"",Alexander,AR,,72002,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,earls family
+345,1,Early Learning Works - Tulsa Educare,,t,,918-688-2216,"","",,,,3120 East Seminole Street,"",Tulsa,OK,,74110,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,early learning works tulsa educare
+347,1,Eastern OK Head Start,,t,,918-316-1029,"","",,,,26106 E. 863 Rd,"",Welling,OK,,74471,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,eastern ok head start
+348,1,Eastern Oklahoma Tech Center,,f,,405-390-5334,"","",,,,4601 N. Choctaw Rd.,"",Choctaw,OK,,73020,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,eastern oklahoma tech center
+349,1,Eastern Shawnee Tribe of Oklahoma - Haven Program,,t,,918-554-2836,"","",,,,12755 South 705 Road,"",Wyandotte,OK,,74370,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,eastern shawnee tribe of oklahoma haven program
+350,1,Eastside Christian Church,,f,,(405)650-9938,"","",,,,916 S. Douglas Blvd.,"",Midwest City,OK,,73130,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,eastside christian church
+351,1,Eastside Elementary School,,t,,501-743-3563,"","",,,,17 Bellamy Street,"",Cabot,AR,,72023,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,eastside elementary school
+352,1,Ebenezer Campground,,f,,405-343-6015,"","",,,,Unknown Address,"",Howard County,AR,,71852,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ebenezer campground
+354,1,Ecological Design Group,,t,,501.282.2567,"","",,,,216 W. Birch St.,"",Rogers,AR,,72756,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ecological design group
+355,1,Edmond Parks Department,,f,,405-538-8372,"","",,,,2733 Marilyn Williams Dr.,"",Edmond,OK,,73003,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,edmond parks department
+356,1,Edmond Parks & Recreation,,f,,918-851-9518,19188519518,"",,,,8601 S. Oxford Ave.,"",Tulsa,OK,,74137,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,edmond parks recreation
+358,1,Edmond Public Schools - Will Rogers Elementary,,t,,405-340-2995,"","",,,,1215 E. 9th St,"",Edmond,OK,,73034,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,edmond public schools will rogers elementary
+359,1,Edmond Soccer Club,,t,,405-409-2324,"","",,,,1502 W. Danforth,"",Edmond,OK,,73003,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,edmond soccer club
+361,1,Elevation Management,,t,,479-601-4299,"","",,,,4023 Wagon Wheel Rd.,"",Springdale,AR,,72762,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,elevation management
+362,1,Elk City Housing Authority,,t,,580-302-3631,"","",,,,1510 W. 9th St.,"",Elk City,OK,,73644,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,elk city housing authority
+363,1,Ellen Smith Elementary PTO,,t,,501-555-5555,"","",,,,1601 S. Donaghey Ave.,"",Conway,AR,,72034,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ellen smith elementary pto
+364,1,Elysian Fields Development Co.,,t,,918-376-6536,"","",,,,12150 E. 96th St. No.,Ste 202,Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,elysian fields development co
+365,1,Emerson Taylor Public Schools,,t,,870-626-3303,870-904-0727,"",,,,506 E Pine St,"",Taylor,AR,,71861,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,emerson taylor public schools
+366,1,E.M. Oil Transport Inc.,,t,,562-416-1737,"","",,,,TBD,"",Mountain Home,AR,,72653,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,e m oil transport inc
+368,1,Epic Charter Schools ,,t,,9186549999,"","",,,,"2525 NW 112th St, Oklahoma City, OK 73120","",Oklahoma City,OK,,73120,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,epic charter schools
+369,1,Eric Hightower,,t,,918-695-5692,918-695-1653,"",,,,1716 E 7th St.,"",Tulsa,OK,,74104,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,eric hightower
+370,1,Estates at Ridgewood,,t,,918-376-6536,"","",,,,12150 East 96th St. North.,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,estates at ridgewood
+371,1,eStem Charter School,,t,,501-840-5881,"","",,,,112 W 3rd St.,"",LIttle Rock,AR,,72201,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,estem charter school
+372,1,Eufala Public Schools,,f,,918-441-2590,"","",,,,1630 W 119th St.,"",Eufala,OK,,74432,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,eufala public schools
+374,1,Eureka Springs KOA,,t,,309-714-2538,"","",,,,15020 Hwy 187,"",Eureka Springs,AR,,72631,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,eureka springs koa
+375,1,Fairway Breeze Apartments,,t,,(405) 295-1471 ,"","",,,,600 S. Country Club Rd.,"",El Reno,OK,,73036,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,fairway breeze apartments
+376,1,Family Safety Center,,t,, (918) 574-2900,"","",,,,2829 South Sheridan Road,"",Tulsa,OK,,74129,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,family safety center
+377,1,Fayetteville Housing Authority,,t,,479-521-3850,"","",,,,1 N. School Ave.,"",Fayetteville,AR,,72701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,fayetteville housing authority
+378,1,Fayetteville School District,,t,,479-841-5499,"","",,,,1000 West Bulldog Blvd.,"",Fayetteville,AR,,72701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,fayetteville school district
+379,1,Firebrand Construction,,t,,4058260714,"","",,,,221 E. 9th Avenue,"",Stillwater,OK,,74074,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,firebrand construction
+381,1,First Baptist Church of Atoka,,f,,580-889-1505,"","",,,,169 N. Delaware,"",Atoka,OK,,74525,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,first baptist church of atoka
+382,1,First Baptist Church of Chouteau,,f,,918-476-5311,"","",,,,28 E 12th St. North,"",Chouteau,OK,,74337,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,first baptist church of chouteau
+383,1,First Baptist Church of Clinton,,t,,501-253-4756,"","",,,,211 1st Baptist Rd.,"",Clinton,AR,,72031,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,first baptist church of clinton
+384,1,First Baptist Church of Owasso,,f,,918-951-2527,"","",,,,13307 E. 96th St. North,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,first baptist church of owasso
+385,1,First Baptist Church of Pawhuska,,f,,9182873706,9182873706,"",,,,302 E 6th St,"",Pawhuska,OK,,74056,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,first baptist church of pawhuska
+387,1,First Baptist Church of Purcell,,t,,405-238-1731,"","",,,,400 W Main St,"",Purcell,OK,,73080,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,first baptist church of purcell
+388,1,First Baptist Church of Tulsa,,f,,918-625-3932,"","",,,,420 S. Detroit,"",Tulsa,OK,,74120,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,first baptist church of tulsa
+389,1,First Christian Church,,f,,405-203-9367,"","",,,,102 S. 7th St.,"",Kingfisher,OK,,73750,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,first christian church
+390,1,First Landmark Baptist Church,,t,,870-941-2243,"","",,,,402 W Center St.,"",Sheridan,AR,,72150,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,first landmark baptist church
+391,1,First Methodist Church,,f,,918-556-8841,"","",,,,1115 S. Boulder Ave. W,"",Tulsa,OK,,74119,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,first methodist church
+392,1,First Presbyterian Church,,t,,580-370-0442,"","",,,,1922 N 15th St.,"",Perry,OK,,73077,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,first presbyterian church
+394,1,First United Methodist Church,,f,,918-440-0394,"","",,,,4715 Price Rd.,"",Bartlesville,OK,,74006,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,first united methodist church
+395,1,"Five Tool Management Consulting - Depew, OK",,t,,405-315-8878,"","",,,,405 Main St.,"",Depew,OK,,74028,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,five tool management consulting depew ok
+396,1,"Five Tool Management Consulting - Erick, OK ",,t,,405-315-8878,"","",,,,206 S. Sheb Wooley Ave.,"",Erick,OK,,73645,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,five tool management consulting erick ok
+397,1,Flagstone Church of Christ,,t,, 5012530412,"","",,,,3801 SW Eden Brooke St,"",Bentonville,AR,,72712,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,flagstone church of christ
+399,1,Flintco - OU-FYH,,t,,405-417-0663,"","",,,,1225 N Broadway,Suite 105,Oklahoma City,OK,,73103,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,flintco ou fyh
+400,1,Forest Ridge Country Club,,t,,469-888-3929,"","",,,,7501 E. Kenosha,"",Broken Arrow,OK,,74014,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,forest ridge country club
+401,1,Fort Gibson Public Schools,,f,,918-869-8191,"","",,,,500 S. Ross,"",Fort Gibson,OK,,74434,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,fort gibson public schools
+402,1,Forth Worth Park + Recreation Department,,t,,918-934-9575,"","",,,,100 Fort Worth Trail,"",Fort Worth,TX,,76102,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,forth worth park recreation department
+403,1,Fort Sill,,f,,580-307-3007,"","",,,,5445 Greble Rd.,"",Fort Sill,OK,,73503,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,fort sill
+404,1,Founders Classical Academy,,t,,479-715-6662,"","",,,,1302 Melissa Dr,Ste #100,Bentonville,AR,,72712,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,founders classical academy
+405,1,Founders Classical Academy - Rogers,,t,,479-689-1369,"","",,,,"800 S. Dodson Rd,","",Rogers,AR,,72758,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,founders classical academy rogers
+407,1,Freedom Elementary School,,f,,918-857-1923,"","",,,,9171 Freedom Rd.,"",Sapulpa,OK,,74066,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,freedom elementary school
+408,1,Freedom Trail Park,,f,,405-354-1895,"","",,,,500 W. Main St.,"",Yukon,OK,,73099,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,freedom trail park
+409,1,Fremont County SD 25,,t,,307-856-0832,"","",,,,"Fremont County SD 25, Central Office",121 North 5th Street West,Riverton,WY,,82501,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,fremont county sd 25
+410,1,Friendship Pediatric Services,,t,,843-324-6613,"","",,,,908 N Reynolds Rd,"",Bryant,AR,,72022,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,friendship pediatric services
+411,1,Frink Public Schools,,f,,918-423-2434,"","",,,,485 Frink Rd.,"",McAlester,OK,,74501,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,frink public schools
+413,1,Furniture Marketing Group,,t,,(405) 596-0678,"","",,,, 421 NW 10th St Suite 101e,"",Oklahoma City,OK,,73103,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,furniture marketing group
+414,1,Garber Public Schools,,f,,918-373-5458,"","",,,,108 W. Garber Rd.,"",Garber,OK,,73738,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,garber public schools
+415,1,Garden Walk Apartments,,t,,918-496-6240,"","",,,,28511 E. 141st St. ,"",Coweta,OK,,74429,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,garden walk apartments
+416,1,Garfield Elementary,,t,,580-366-7065,5803667065,"",,,,400 N 7th St.,"",Enid,OK,,73701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,garfield elementary
+417,1,Garfield Scholars Academy,,t,,501-253-3707,"","",,,,17784 Marshall St.,"",Garfield,AR,,72732,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,garfield scholars academy
+418,1,GBS Development,,t,,479-871-6209,"","",,,,416 Mt. Hebron Road,"",Lowell,AR,,72745,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,gbs development
+419,1,Gentry Public Schools,,t,,479-790-5889,"","",,,,1295 Pioneer Lane,"",Gentry ,AR,,72734,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,gentry public schools
+420,1,German Corner,,t,,918-771-2860,"","",,,,11516 E. 113th Pl. North,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,german corner
+422,1,Gingerbread Nursery School,,t,,405-850-3082,"","",,,,602 Villa Dr.,"",Norman,OK,,73071,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,gingerbread nursery school
+423,1,Glenpool Public School District,,f,,918-322-9500,"","",,,,461 East 146th St.,"",Glenpool,OK,,74033,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,glenpool public school district
+424,1,Glenwood Homes,,t,,918-938-6986,"","",,,,5705 E. 71st St.,"",Tulsa,OK,,74136,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,glenwood homes
+425,1,Glenwood Park,,f,,580-436-6300,"","",,,,530 W. 5th St.,"",Ada,OK,,74820,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,glenwood park
+427,1,Golden Ranch,,t,,5809823004,"","",,,,192895 US Highway 271,"",Antlers,OK,,74523,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,golden ranch
+428,1,Goldsby Church,,t,,000-000-0000,"","",,,,153 West Center Rd.,"",Goldsby,OK,,73093,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,goldsby church
+429,1,Gordon Cooper Technology Center,,t,,405-585-1914,"","",,,,1 John C  Burton Dr.,"",Shawnee,OK,,74804,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,gordon cooper technology center
+430,1,Gore Elementary School,,f,,918-577-8187,"","",,,,215 4th St.,"",Gore,OK,,74435,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,gore elementary school
+431,1,Gracemont Public Schools,,t,,405-966-2233,"","",,,,Gracemont Elementary School,417 East Gracemont Street,Gracemont,OK,,73042,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,gracemont public schools
+432,1,Grace Place,,f,,405-740-4379,"","",,,,9300 S. Anderson Rd.,"",Oklahoma City,OK,,73165,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,grace place
+433,1,Grand Assembly of God Church,,f,,(405) 224-0968,"","",,,,102 E Almar Dr,"",Chickasha,OK,,73018,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,grand assembly of god church
+434,1,Grandview Schools,,t,,918-456-5131,"","",,,,15481 North Jarvis Rd.,"",Tahlequah,OK,,74464,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,grandview schools
+435,1,Gravette Public Schools,,t,,479-787-4140,"","",,,,500 8th Avenue SE,"",Gravette,AR,,72736,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,gravette public schools
+437,1,Greene County Tech Primary School,,t,,870-236-6439,"","",,,,1300 S. Rockingchair Road,"",Paragould,AR,,72450,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,greene county tech primary school
+438,1,Greenwood Elementary School,,f,,918-708-5613,"","",,,,400 E. Ross St.,"",Tahlequah,OK,,74464,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,greenwood elementary school
+439,1,Greenwood School District,,t,, 479-996-7748,"","",,,,300 Westwood Ave.,"",Greenwood,AR,,72936,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,greenwood school district
+440,1,Ground Level LLC,,t,,(918) 370-1222,"","",,,,1250 West 420 Road,"",Adair,OK,,74330,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ground level llc
+441,1,"Grove Elementary - GROVE, OK",,f,,918-786-3003,"",ext. 1109,,,,PO BOX 450789,"",GROVE,OK,,74345,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,grove elementary grove ok
+443,1,Grove Public Schools,,f,,918-786-5573,"","",,,,801 10th St.,"",Grove,OK,,74344,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,grove public schools
+444,1,Grove Public Schools Maintenance Center,,t,,843-312-1184,"","",,,,PO Box 453335,"",Grove,OK,,74345,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,grove public schools maintenance center
+445,1,Guthrie Green,,t,,210-364-7057,"","",,,,111 E Reconciliation Way,"",Tulsa,OK,,74103,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,guthrie green
+446,1,Guymon Public Schools,,f,,580-338-0420,580-338-0420,"",,,,1501 OK 3,"",Guymon,OK,,73942,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,guymon public schools
+447,1,Guy Perkins School District,,t,,501-287-7097,"","",,,,492 AR-25,"",Guy,AR,,72061,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,guy perkins school district
+449,1,Hahn Enterprises Inc.,,f,,501-258-4495,"","",,,,10425 Fitzgerald Lane,"",North Little Rock,AR,,72113,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hahn enterprises inc
+450,1,Hammon Public Schools,,f,,000.000.0000,000.000.0000,"",,,,802 E Shockey,"",Hammon,OK,,73650,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hammon public schools
+451,1,"Happy Playgrounds, LLC",,f,,918-851-9518,9188519518,"",,,,8601 S. Oxford Ave.,"",Tulsa,OK,,74137,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,happy playgrounds llc
+452,1,Harmony Grove Elementary School,,t,,501-778-7331,"","",,,,2621 Highway 229,"",Benton,AR,,72015,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,harmony grove elementary school
+454,1,Harrah Early Learning Center,,f,,405-454-6690,"","",,,,105 Dobbs Rd.,"",Harrah,OK,,73045,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,harrah early learning center
+455,1,Harrison Public Schools,,t,,870-741-7600,"","",,,,110 South Cherry Street,"",Harrison,AR,,72601,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,harrison public schools
+458,1,Hatfield Aquatic Center,,f,,918-555-5555,"","",,,,1402 Flynn St.,"",Alva,OK,,73717,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hatfield aquatic center
+459,1,HEI,,t,,501-690-3185,"","",,,,13825 Pleasant Forest Dr.,"",Little Rock,AR,,72212,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hei
+460,1,Hennessey Methodist Church,,t,,918-605-4210,"","",,,,201 S. Cherokee St.,"",Hennessey,OK,,73742,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hennessey methodist church
+461,1,Hennessey Public Schools,,t,,405-853-4748,"","",,,,605 East Oklahoma,"",Hennessey ,OK,,73742,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hennessey public schools
+462,1,Henryetta Schools,,f,,918-652-6578,"","",,,,1800 W Division ,"",Henryetta,OK ,,74437,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,henryetta schools
+463,1,Henthorne Park,,t,,970-699-9199,970-699-9199,"",,,,4825 s Quaker ave,"",Tulsa,OK,,74105,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,henthorne park
+465,1,Heritage Elementary School,,f,,918-207-6953,"","",,,,333 Southridge Rd.,"",Tahlequah,OK,,74464,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,heritage elementary school
+466,1,Heritage Trails Elementary School,,f,,405-570-6598,"","",,,,1801 S. Bryant Ave.,"",Moore,OK,,73160,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,heritage trails elementary school
+467,1,Highland Park PTA,,f,,918-740-3555,"","",,,,7200 E. Quincy Pl,"",Broken Arrow,OK,,74014-4522,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,highland park pta
+468,1,Hobson Preschool,,t,,479-783-4452,"","",,,,116 North 12th Street,"",Fort Smith,AR,,72901,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hobson preschool
+469,1,Hodson Elementary,,f,,620-674-1755,"","",,,,14500 East 86th St. North,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hodson elementary
+470,1,Hodson Elementary PTO,,t,,918-376-6568,"","",,,,14500 East 86th St N,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hodson elementary pto
+471,1,Holcomb Elementary School,,t,,479-438-0608,"","",,,,2900 N Salem Rd.,"",Fayetteville,AR,,72704,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,holcomb elementary school
+473,1,Holt Middle School,,t,,(479) 527-3670,"","",,,,2365 N. Rupple Rd.,"",Fayetteville,AR,,72704,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,holt middle school
+474,1,Holy Trinity Catholic School,,f,,405-406-1708,"","",,,,211 Missouri Ave.,"",Okarche,OK,,73762,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,holy trinity catholic school
+475,1,Hominy Public Schools,,t,,918-605-7277,918-224-1000,"",,,,200 S. Pettite Ave,"",Hominy,OK,,74035,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hominy public schools
+476,1,Honey Creek State Park,,t,,000-000-0000,000-000-0000,"",,,,901 State Park Rd,"",Grove ,OK,,74344,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,honey creek state park
+477,1,Honey Springs Property Group,,t,,918-555-5555,9183766536,"",,,,12150 E. 96th St. North,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,honey springs property group
+478,1,Hooker Public Schools,,f,,620-428-1703,"","",,,,"502 N Jefferson St,","",Hooker,OK,,73945,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hooker public schools
+479,1,Hope Construction,,t,,850-467-5402,"","",,,,5701 N Hwy 81,"",Duncan,OK,,73533,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hope construction
+481,1,Hope Harbor,,t,, 918-343-0003,918-857-2949,"",,,,1901 E GRAND BLVD,"",Claremore,OK,,74017,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hope harbor
+482,1,Hope Kids Academy,,t,,9182662114,"","",,,,19529 E. 4th Pl.,"",Tulsa,OK,,74108,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hope kids academy
+483,1,Hot Springs Awning,,t,,501-623-7786,"","",,,,2380 Airport Road,"",Cabot,AR,,71901,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hot springs awning
+484,1,Hounds Hideaway,,t,,870-919-8287,"","",,,,1238 Mcnutt Rd,"",Conway,AR,,72034,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hounds hideaway
+485,1,Howard County Children's Center,,t,,870-845-1211,"","",,,,1577 Hwy 371 West,"",Nashville,AR,,71852,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,howard county children s center
+486,1,Hughes West,,t,,661-609-7864,"","",,,,6490 Alt 75,"",Beggs,OK,,74421,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hughes west
+488,1,Hyland Park Church,,t,,4794224240,"","",,,,900 N Crossover Rd,"",Fayetteville,AR,,72701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hyland park church
+489,1,Iconic Construction Co.,,t,,405-520-6759,"","",,,,1621 N. Broadway Ave.,"",Oklahoma City,OK,,73103,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,iconic construction co
+490,1,Idabel Central Elementary,,f,,5802868277,"","",,,,206 SE Ave. F,"",Idabel,OK,,74745,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,idabel central elementary
+491,1,Ida Freeman Elementary,,f,,405-726-3527,"","",,,,501 W. Hurd St.,"",Edmond,OK,,73003,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ida freeman elementary
+492,1,Immanuel Baptist Church,,f,,918-625-7733,"","",,,,625 S Broadway St,"",Skiatook,OK,,74070,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,immanuel baptist church
+493,1,Indiahoma Public Schools,,f,,315-783-9936,"","",,,,307 Chebahtah,"",Indiahoma,OK,,73552,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,indiahoma public schools
+495,1,Iowa Tribe,,t,,405-880-2612,"","",,,, 335588 E 750 Rd,"",Perkins,OK,,74059,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,iowa tribe
+496,1,"Ironwood Property Group, LLC",,t,,918-376-6536,9185498691,"",,,,12150 E. 96th St. North,Suite 202,Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ironwood property group llc
+497,1,Isaac Locke,,t,,405-343-6015,"","",,,,12309 S. Harrah Rd,"",McLoud,OK,,74851,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,isaac locke
+498,1,James R. Tate Elementary School,,t,,479-629-4612,"","",,,,406 Catcher Rd.,"",Van Buren,AR,,72956,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,james r tate elementary school
+499,1,Jay Public Schools,,f,,918-253-4293,"","",,,,1114 N. Main St.,"",Jay,OK,,74346,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jay public schools
+500,1,JBI Partners,,t,,405-410-4613,405-410-4613,"",,,,2121 Midway Rd,#300,Carrollton,TX,,75006,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jbi partners
+502,1,Jenks Freshman Academy,,f,,918-955-2205,"","",,,,207 East D St.,"",Jenks,OK,,74037,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jenks freshman academy
+503,1,Jenks Landing Apartments,,t,,918-695-5692,"","",,,,1716 E. 7th St.,"",Tulsa,OK,,74104,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jenks landing apartments
+504,1,Jenks Public Schools,,f,,918-955-2205,"","",,,,211 East A Street,"",Jenks,OK,,74037,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jenks public schools
+505,1,Jenks Public Works,,t,,785-534-9776,"","",,,,211 N. Elm Street,"",Jenks,OK,,74037,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jenks public works
+506,1,Jenks Youth Baseball,,t,,918-695-0224,"","",,,,201 S Koa St,"",Jenks,OK,,74037,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jenks youth baseball
+507,1,Jennings Public Schools,,f,,918-638-6224,"","",,,,414 N. Main St.,"",Jennings,OK,,74038,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jennings public schools
+509,1,Jeremy Cantrell,,t,,580-339-3800,580-339-3800,"",,,,Ackley Park,501 N Pioneer Rd,Elk City,OK ,,73644,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jeremy cantrell
+510,1,Jessica Bulleigh,,t,,918-397-5599,"","",,,,22604 N. 3972 Dr.,"",Bartlesville,OK,,74006,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jessica bulleigh
+511,1,Jessieville Public Schools,,t,,5012267075,"","",,,,7900 N Hwy 7,"",Jessieville,AR,,71949,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jessieville public schools
+513,1,Jim Norton Toyota,,t,,918-640-5398,"","",,,,9809 S. Memorial,"",Tulsa,OK,,74133,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jim norton toyota
+514,1,Joe Morgan,,t,,918-398-3619,"","",,,,397681 W. 2900 Rd,"",Ochelata,OK,,74051,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,joe morgan
+515,1,Joe Rudsell,,t,,4795268225,4795268225,"",,,,72756,"",Rogers,AR,,72756,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,joe rudsell
+516,1,John Corn,,t,,405-354-1551,"","",,,,100 S. Ranchwood Blvd,"",Yukon,OK,,73099,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,john corn
+517,1,John Ross Elementary,,f,,405-726-4101,"","",,,,1901 N. Thomas Dr.,"",Edmond,OK,,73003,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,john ross elementary
+518,1,Jones Academy,,t,,405-330-9236,"","",,,,909 Jones Academy Rd,"",Hartshorne,OK,,74547,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jones academy
+519,1,Jonesboro Public Schools,,t,,870-530-3232,"","",,,,2506 Southwest Square,"",Jonesboro,AR,,72401,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jonesboro public schools
+521,1,JP Construction Co.,,t,,918-664-6190,"","",,,,4235 S. 75th East Ave.,"",Tulsa,OK,,74145,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jp construction co
+522,1,Justus-Tiawah Public Schools,,f,,(918) 615-2225,"","",,,,824 West Jasper Street,"",Broken Arrow,OK,,74011,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,justus tiawah public schools
+523,1,Kamp Family,,t,,918-294-8000,"","",,,,3603 W. 108th Ct.,"",Jenks,OK,,74037,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kamp family
+524,1,Kansas Public Schools,,t,,918-706-6348,"","",,,,700 N. Woods Ave.,"",Kansas,OK,,74347,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kansas public schools
+525,1,Kaw Nation,,f,,405-762-2844,"","",,,,96 Charles Curtis Dr.,"",Newkirk,OK,,74647,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kaw nation
+526,1,Kelly B. Todd Center,,t,,918-683-4621,"","",,,,1111 N. 36th St.,"",Muskogee,OK,,74401,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kelly b todd center
+527,1,Kellyville Public Schools,,f,,000.000.0000,"","",,,,144 S. Elm,"",Kellyville,OK,,74039,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kellyville public schools
+529,1,Ketchum Public School District,,t,,(918) 782-4481,"","",,,,404 N. Boston ,"",Ketchum,OK,,74349,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ketchum public school district
+530,1,Key Construction,,t,,918-855-3404,918-362-3201,"",,,,5477 South 108th East Avenue,"",Tulsa,OK,,74146,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,key construction
+531,1,Key Construction Co.,,t,,918-362-3201,"","",,,,5477 S 108th E Ave,"",Tulsa,OK,,74146,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,key construction co
+532,1,Keys Public Schools,,t,,405-202-7686,"","",,,,19061 E 840 Rd,"",Park Hill,OK,,74451,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,keys public schools
+533,1,Khristen Duffy,,t,,214-714-6110,"","",,,,39210 Wren Lane,"",Wister,OK,,74966,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,khristen duffy
+534,1,Kiefer Elementary School,,f,,918-321-5444,"","",,,,27 W. Indiana,"",Kiefer,OK,,74041,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kiefer elementary school
+536,1,Kinco Constructors,,t,,501-804-5734,"","",,,,12600 Lawson Road,"",Little Rock,AR,,72210,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kinco constructors
+537,1,Kindercare,,t,,404-840-0971,"","",,,,P.O. Box 6330,"",Portland,OR,,97228,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kindercare
+538,1,Kinder Care Learning center,,t,,405-330-5829,"","",,,,17645 N penn,"",Oklahoma City,OK,,73012,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kinder care learning center
+539,1,Kiowa Tribe After Care Anadarko,,t,,580-654-6402,"","",,,,1602 American St,"",Anadarko,OK,,73005,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kiowa tribe after care anadarko
+540,1,Kiowa Tribe Anadarko Head Start,,t,,405-815-0044,"","",,,,BranMar Construction,225 East Parker McKenzie Rd,Anadarko,OK,,73005,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kiowa tribe anadarko head start
+542,1,Kiowa Tribe Daycare Center,,t,,405-815-0044,"","",,,,1602 American Street,"",Anadarko,OK,,73005,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kiowa tribe daycare center
+543,1,Kiowa Tribe Lawton Head Start,,t,,405-815-0044,"","",,,,BranMar Construction,1401 N.E. Lawrie Tatum Rd B,Lawton,OK,,73507,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kiowa tribe lawton head start
+544,1,Kirks Excavation,,t,,870-480-2818,"","",,,,11 Co Rd 613,"",Green Forest,AR,,72638,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kirks excavation
+545,1,Korean Church of Tulsa,,f,,678-267-6619,"","",,,,13000 E. 68th St.,"",Broken Arrow,OK,,74012,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,korean church of tulsa
+546,1,Kremlin Hillsdale Schools,,t,,580-603-0803,580-603-0803,"",,,,705 5th St.,"",Kremlin,OK,,73753,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kremlin hillsdale schools
+547,1,KV Construction,,f,,620-245-5259,1-620-245-5259,"",,,,1182 Moccasin Road,"",Mcpherson,KS,,67460,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kv construction
+548,1,L5 Construction Co.,,t,,405-762-1443,"","",,,,7725 W. Reno Ave.,Suite #400,Oklahoma City,OK,,73127,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,l5 construction co
+549,1,La Fortune Park,,t,,918-934-9575,"","",,,,5434 South Hudson,"",Tulsa,OK,,74135,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,la fortune park
+550,1,Lake Church,,f,,918-804-7573,"","",,,,35903 OK-51,"",Mannford,OK,,74044,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lake church
+552,1,Lake Frierson State Park,,t,,870.932.2615,"","",,,,7904 Highway 141 South,"",Jonesboro,AR,,72401,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lake frierson state park
+553,1,Lake Hamilton School District,,t,,501-767-2306,"","",,,,205 Wolf St.,"",Pearcy,AR,,71964,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lake hamilton school district
+554,1,Lake McMurtry Friends,,t,,405-880-2027,405-747-8085,"",,,,29180 Chisholm Curve,"",Stillwater,OK,,74075,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lake mcmurtry friends
+555,1,Lake Poinsett Park,,t,,870-578-2064,"","",,,,5752 State Park Rd.,"",Harrisburg,AR,,72432,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lake poinsett park
+556,1,Landmark Outdoor Service Group,,t,,918-622-5296,"","",,,,10901 E 11th St.,"",Tulsa,OK,,74128,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,landmark outdoor service group
+558,1,Laud Studio,,f,,(405) 823-1213,"","",,,,"220 NW 13th, Suite 1","",Oklahoma City,OK,,73103,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,laud studio
+561,1,Leach Public School,,t,,918-513-2434,"","",,,,55979 S 530,"",Rose,OK,,74364,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,leach public school
+562,1,Leadership Properties,,t,,314-803-3643,"","",,,,4407 S Scissortail Dr.,"",Bentonville,AR,,72713,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,leadership properties
+563,1,Lefore Public Schools,,t,,918-753-2345,"","",,,,43172 S. Booth Ave,"",Le Flore,OK,,74942,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lefore public schools
+564,1,Legacy Christian School,,t,,303-917-5790,"","",,,,3412 W. University,"",Durant,OK,,74701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,legacy christian school
+565,1,Liberty Mounds Elementary,,t,,918-444-4444,"","",,,,2727 E. 201st St. South,"",Mounds,OK,,74047,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,liberty mounds elementary
+566,1,Liberty School,,f,,918-427-3808,"","",,,,476490 E 1060 Rd,"",Muldrow,OK,,74948,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,liberty school
+568,1,Lifeway Christian School,,t,,479-795-9322,"","",,,,351 W. Centerton Blvd.,"",Centerton ,AR,,72719,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lifeway christian school
+569,1,Lift Community Action Agency,,t,,580-372-2661,"","",,,,209 North 4th Street,"",Hugo,OK,,74743,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lift community action agency
+570,1,Lincoln Learning Center,,t,,405-262-1941,"","",,,,425 Mercy Dr,"",El Reno,OK,,73036,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lincoln learning center
+571,1,"Lingo Construction Services, Inc.",,f,, 405.627.9782,"","",,,,1135 N. Robinson Ave.,"",Oklahoma City,OK,,73103,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lingo construction services inc
+573,1,Little Rock School District,,t,,(501) 447-5324,501-298-6377,"",,,,3601 S. Bryant St.,"",Little Rock,AR,,72204,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,little rock school district
+574,1,Little Rock Soccer Complex,,t,,501-555-5555,"","",,,,1015 Embassy Suites Dr.,"",Little Rock,AR,,72211,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,little rock soccer complex
+575,1,Little Rock Zoo,,t,,501-733-3438,"","",,,,1 Zoo Dr.,"",Little Rock,AR,,72205,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,little rock zoo
+576,1,L&M Office Furniture,,t,,9186641010,"","",,,,12424 East 55th Street,"",Tulsa,OK,,74146,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,l m office furniture
+577,1,Lonoke Public Schools,,t,,501-676-2042,"","",,,,800 Lincoln St.,"",Lonoke,AR,,72086,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lonoke public schools
+578,1,Lower Elementary School,,f,,918-786-5573,"","",,,,801 10th St.,"",Grove,OK,,74344,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lower elementary school
+579,1,Lowrey School District,,f,,918-456-4053,"","",,,,21132 E. 640 Rd.,"",Tahlequah,OK,,74464,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lowrey school district
+581,1,Lyons Estates,,t,,405-799-1120,"","",,,,215 N. Eastern,"",Moore,OK,,73160,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lyons estates
+582,1,Mabe Family,,t,,903.243.4759,"","",,,,801 S. Greathouse Dr.,"",Atoka,OK,,74525,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mabe family
+583,1,Madison Heights & Granite Mountain,,f,,409-720-7107,"","",,,,1400 Madison Rd,"",Little Rock,AR,,72204,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,madison heights granite mountain
+584,1,Magnolia School District,,t,,870-626-3129,"","",,,,1501 Pittman St.,"",Magnolia,AR,,71753,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,magnolia school district
+585,1,Magnum Construction Co.,,f,,(918) 251-8667,"","",,,,P.O. Box 707,"",Broken Arrow,OK,,74013,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,magnum construction co
+586,1,Magnum Public Schools,,t,,9188519518,"","",,,,401 N Oklahoma Ave,"",Magnum,OK,,73554,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,magnum public schools
+588,1,Mammoth Springs State Park,,t,,870-378-3266,"","",,,,17 US Hwy 63 North,"",Mammoth Springs,AR,,72554,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mammoth springs state park
+589,1,Mangum Public School District,,f,,580-318-2737,"","",,,,401 N Oklahoma Ave,"",Mangum,OK,,73554,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mangum public school district
+590,1,Manhattan Construction Company,,t,,918-583-6900,"","",,,,5601 S. 122nd E. Ave. ,"",Tulsa,OK,,74146,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,manhattan construction company
+591,1,Manila Elementary School,,t,,870-561-4815,"","",,,,120 S. Davis St.,"",Manila,AR,,72442,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,manila elementary school
+592,1,Maple School,,t,,405-650-8443,405-650-8443,"",,,,904 S Maple Rd,"",Calumet,OK,,73014,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,maple school
+594,1,MAPS 4 - Family Justice Center,,t,,1 620-762-3621,+1 620-429-1414,"",,,,1135 North Hudson Avenue ,"",Oklahoma City,OK,,73103,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,maps 4 family justice center
+595,1,Marble City Community Center,,t,,918-392-7083,"","",,,,111 S. Main St.,"",Marble City,OK,,74945,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,marble city community center
+596,1,Marietta Daycare and Preschool,,t,,580-768-3410,"","",,,,800 Hwy 77,"",Marietta,OK,,73448,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,marietta daycare and preschool
+597,1,Marion Parks Department,,t,,901-487-8972,"","",,,,3821 Complex Dr.,"",Marion,AR,,72364,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,marion parks department
+598,1,Marlow Elementary School,,f,,580-641-0725,"","",,,,510 W Main St,"",Marlow,OK,,73055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,marlow elementary school
+599,1,Marshall Elementary School,,f,,918-473-5832,"","",,,,205 W. Owens St.,"",Checotah,OK,,74426,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,marshall elementary school
+601,1,Mathias Elementary School,,t,,479-200-7640,"","",,,,1609 N. 24th St.,"",Rogers,AR,,72756,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mathias elementary school
+602,1,Maumelle Parks & Recreation,,t,,501-851-6990 ,501-960-6406,"",,,,1100 Edgewood Drive,"",Maumelle,AR,,72113,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,maumelle parks recreation
+603,1,Mayflower Public Schools,,t,,501-454-2744,"","",,,,4 Grove St.,"",Mayflower,AR,,72106,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mayflower public schools
+604,1,McGee Valley Baptist Church,,f,,940-399-7069,"","",,,,11034 N. Gabbart Rd.,"",Stringtown,OK,,74569,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mcgee valley baptist church
+605,1,Mc Gregor Homes,,t,,405-315-0252,405-330-2555,"",,,,7614 Sunset Sail Ave,"",Edmond,OK,,73034,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mc gregor homes
+607,1,Mcmillan Welding,,t,,918-521-6889,"","",,,,501 Mike Powers Blvd.,"",Inola,OK,,74036,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mcmillan welding
+608,1,Meeker Public Schools,,t,,405-788-4540,"","",,,,400 Culver St.,"",Meeker,OK,,74855,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,meeker public schools
+609,1,"Melrose Lane Investment Co., LLC",,t,,918-859-5584,"","",,,,12150 E. 96th St. North,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,melrose lane investment co llc
+611,1,Mena Public Schools,,t,,479-216-6651,"","",,,,501 Hickory Ave,"",Mena,AR,,71953,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mena public schools
+613,1,Merryman Builders,,t,,580-264-9533,"","",,,,600 S. Washington St.,"",Ardmore,OK,,73401,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,merryman builders
+614,1,Metro Christian,,f,,918-745-9868,"","",,,, 6363 S. Trenton Ave.,"",Tulsa,OK,,74136,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,metro christian
+615,1,Metropolitan Bible Church OKC,,f,,405-722-2550,"","",,,,7201 West Britton Road,"",Oklahoma City,OK,,73132,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,metropolitan bible church okc
+616,1,MidAmerica Industrial Park,,t,,918.825.3500,"","",,,,4057 Sanders Mitchell St,"",Pryor,OK,,74361,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,midamerica industrial park
+617,1,Mid-Del Schools,,f,,405-671-8670,405-739-1615,ext. 7702,,,,7217 SE 15th Street,"",Midwest City,OK,,73110,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mid del schools
+619,1,MidStates Recreation,,f,,614-855-3790,"","",,,,1279 Hazelton-Etna Road SW,"",Pataskala,OH,,43062,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,midstates recreation
+620,1,Midwest City-Del City I.S.D. No. 52,,f,,405-570-0418,"","",,,,7217 SE 15th St.,"",Midwest City,OK,,73110,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,midwest city del city i s d no 52
+621,1,Milestone Construction Company,,t,,479 799-4455,"","",,,,2002 S. 48th Street,Suite A,Springdale,AR,,72762,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,milestone construction company
+622,1,Miller Tippens Construction Co.,,t,,918-720-1976,"","",,,,437 E. 141st St.,"",Glenpool,OK,,74033,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,miller tippens construction co
+623,1,Mizel Jewish Community Day School,,t,,(561) 301-0889,"","",,,,2021 E. 71st St.,"",Tulsa,OK,,74136,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mizel jewish community day school
+624,1,Moffett Schools,,t,,918-875-3668,"","",,,,701 Belt ave,"",Moffett,OK,,74946,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,moffett schools
+626,1,Moore Public School District,,f,,405-735-4149,405-213-7205,"",,,,1500 SE 4th St.,"",Moore,OK,,73160,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,moore public school district
+627,1,Morgan Creek HOA,,t,,405-314-9443,405-314-9443,"",,,,9421 NW 122nd,"",Yukon,OK,,73099,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,morgan creek hoa
+628,1,Morris Public Schools,,f,,918-733-9072,"","",,,,307 S. 6th St.,"",Morris,OK,,74445,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,morris public schools
+629,1,Mosaic Church OKC,,t,,405-464-5241,"","",,,,5821 Northwest Expy,"",Warr Acres,OK,,74132,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mosaic church okc
+630,1,Moss-Carpenter Construction Company,,t,,901-508-2210,"","",,,,9700 Village Circle,Suite 300,Lakeland,TN,,38002,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,moss carpenter construction company
+632,1,Mountain Home Public School,,t,,555-555-5555,"","",,,,1439 South College,"",Mountain Home,AR,,72653,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mountain home public school
+633,1,Mountain Station Apartments,,t,,870-405-4248,"","",,,,1749 Glenbriar Drive,"",Mountain Home,AR,,72653,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mountain station apartments
+634,1,Mowery Retail Center,,t,,918-636-1283,"","",,,,102 S. Main St.,"",Owass,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mowery retail center
+635,1,Mt. Comfort Church of Christ,,t,,479-461-2346,"","",,,,3249 W Mt. Comfort Rd,"",Fayetteville,AR,,72704,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mt comfort church of christ
+636,1,Mt. Comfort Sonshine Schools,,t,,479-461-2346,"","",,,,3249 W. Mt. Comfort Rd.,"",Fayetteville,AR,,72704,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mt comfort sonshine schools
+637,1,Mt Olive Lutheran Church,,t,,000.000.0000,918-541-0234,"",,,,2237 N Main St,"",Miami,OK,,74354,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mt olive lutheran church
+638,1,Muntage Apartments,,t,,405-946-0588,"","",,,,3041 NW 41st St.,"",Oklahoma City,OK,,73112,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,muntage apartments
+640,1,Muscogee Nation - Head Start Pre-School,,t,,918.752.5928,"","",,,,PO BOX 580,"",Okmulgee,OK,,74447,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,muscogee nation head start pre school
+641,1,Muscogee Nation Housing - Okemah,,t,,918-623-1647,"","",,,,"112 Fus Cate Okemah, OK","",Okemah,OK,,74859,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,muscogee nation housing okemah
+642,1,Muscogee Nation Reintegration Program,,t,,918.549.2629,"","",,,,615 E. Corporation St.,"",Henryetta,OK,,74437,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,muscogee nation reintegration program
+644,1,Mustang Public Schools,,t,,405-830-0059,"","",,,,12400 SW 15th St,"",Yukon,OK,,73099,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mustang public schools
+645,1,Nabholz Construction,,t,,870-281-7349,"","",,,,3415 1 Place,"",Jonesboro,AR,,72405,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,nabholz construction
+646,1,Nabholz Construction Services,,t,,918-550-1743,"","",,,,13219 Kimberly Clark P,"",Jenks,OK,,74037,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,nabholz construction services
+647,1,Native American Association,,t,,9185709269,"","",,,,Interesection of Grand and Main,"",Ketchum,OK,,74349,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,native american association
+648,1,NEAEC-Corning ABC Preschool,,t,,870-886-7717,"","",,,,510 Wynn Park Street,"",Corning,AR,,72434,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,neaec corning abc preschool
+650,1,NEAEC-Hoxie ABC Preschool,,t,,870-886-7717,"","",,,,397 SW Alice Street,"",Hoxie,AR,,72433,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,neaec hoxie abc preschool
+651,1,NEAEC-Maynard ABC Preschool,,t,,870-886-7717,"","",,,,48 Walnut Street,"",Maynard,AR,,72444,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,neaec maynard abc preschool
+652,1,NEAEC-Piggott ABC Preschool,,t,,870-886-7717,"","",,,,895 East Main Street,"",Piggot,AR,,72454,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,neaec piggott abc preschool
+653,1,NEAEC-Sloan-Hendrix ABC Preschool,,t,,870-886-7717,"","",,,,#1 Greyhound Drive,"",Imboden,AR,,72434,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,neaec sloan hendrix abc preschool
+654,1,NEAEC-Walnut Ridge ABC Preschool,,t,,870-886-7717,"","",,,,513 East Free Street,"",Walnut Ridge,AR,,72476,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,neaec walnut ridge abc preschool
+655,1,Newkirk Public Schools,,f,,918-625-2148,"","",,,,701 W. South St.,"",Newkirk,OK,,74647,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,newkirk public schools
+656,1,NexGen Lawns,,t,,	 918-671-8428,"","",,,,1102 N. Garnett Rd.,Suite 107,Tulsa,OK,,74116,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,nexgen lawns
+658,1,Noble Elementary,,t,,870-853-9851,870-853-6974,"",,,,206 S. Bartlett St,"",Hamburg,AR,,71646,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,noble elementary
+659,1,Noble's Smoking Joes Bbq,,t,,405-407-6133,"","",,,,405 S. Main St.,"",Noble,OK,,73068,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,noble s smoking joes bbq
+661,1,Norman Nature Park,,f,,(918) 628-1255,"","",,,,201 W. Gray St.,"",Norman,OK,,73070,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,norman nature park
+663,1,"Norris Services & Construction, Inc.",,t,,479-883-0546,"","",,,,1821 Phoenix Ave Suite I,"",Fort Smith,AR,,72901,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,norris services construction inc
+664,1,Northern Hills Elementary School,,t,,405-340-2975,"","",,,,901 East Wayne St.,"",Edmond,OK,,73030,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,northern hills elementary school
+665,1,North Little Rock School District,,t,,501-779-2594,"","",,,,1800 Fairway Ave.,"",North Little Rock,AR,,72116,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,north little rock school district
+667,1,North Rock Creek Schools,,t,,405-275-3473,405-275-3473,"",,,,42400 Garrett's Lake Rd,"",Shawnee,OK,,74804,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,north rock creek schools
+668,1,Norwood School District,,t,,918-555-5555,"","",,,,7966 W. 790 Rd.,"",Hulbert,OK,,74441,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,norwood school district
+669,1,NWAESC,,t,,479-267-5960,"","",,,,4 N Double Springs Rd,"",Farmington,AR,,72730,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,nwaesc
+670,1,"NWA LD, LLC",,t,,479.301.6639,479.301.6639,"",,,,4058 North College Avenue,Ste 300,Fayetteville,AR,,72703,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,nwa ld llc
+671,1,Oak Hall Episcopal School,,f,,580-504-7777,"","",,,,2815 Mt. Washington Rd.,"",Ardmore,OK,,73401,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,oak hall episcopal school
+672,1,Oak Hills Country Club,,t,,870-830-0104,"","",,,,77 Oak Hills Dr.,"",DeWitt,AR,,72042,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,oak hills country club
+673,1,Oakridge Park,,t,,918-230-5990,"","",,,,183rd East Ave,"",Tulsa,OK,,74134,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,oakridge park
+674,1,Oaks Mission Elementary School,,f,,918-207-9176,"","",,,,357 W. Main St.,"",Tahlequah,OK,,74464,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,oaks mission elementary school
+675,1,Oak Tree Children's Academy,,t,,000-000-0000,"","",,,,1314 S. Western Rd,"",Stillwater,OK,,74074,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,oak tree children s academy
+676,1,Okarche Elementary,,f,,405-314-5674,"","",,,,P.O. Box 276,"",Okarche,OK,,73762,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,okarche elementary
+678,1,OKCO Behavioral Care Center - Flintco,,t,,405-764-5139,"","",,,,1225 North Broadway,Suite 105,Oklahoma City,OK,,73103,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,okco behavioral care center flintco
+679,1,Oklahoma City Public Schools,,t,,405-587-0000,"","",,,,615 N. Classen Blvd,"",Oklahoma City,OK,,73106,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,oklahoma city public schools
+680,1,Oklahoma City Zoo,,f,,405-426-5087,"","",,,,2101 N.E. 50th St.,"",Oklahoma City,OK,,73111,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,oklahoma city zoo
+681,1,Oklahoma Custom Awnings,,f,,(405) 702-1500,"","",,,,3030 S Ann Arbor Ave,"",Oklahoma City,OK,,73179,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,oklahoma custom awnings
+682,1,Oliver Middle School,,t,,918-555-5555,"","",,,,3100 W. New Orleans St.,"",Broken Arrow,OK,,74011,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,oliver middle school
+683,1,One Fire Holdings,,t,,(918) 518-6701,"","",,,,300 Riverwalk Terrace #280,"",Jenks,OK,,74037,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,one fire holdings
+685,1,OSU IT- Residential Life,,f,,918-629-5767,"","",,,,1801 E. 4th St.,"",Okmulgee,OK,,74447,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,osu it residential life
+686,1,Ouachita Behavior Health Services - CLIMB,,t,,(501) 624-7111,000.000.0000,"",,,,125 Wellness Way,"",Hot Springs ,AR,,71913,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ouachita behavior health services climb
+687,1,Owasso Land Trust,,t,,918-859-5584,"","",,,,12150 E 96th St N,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,owasso land trust
+688,1,Ozark Kindergarten Center,,t,,(479) 667-3021,"","",,,,700 N 12th St,"",Ozark,AR,,72949,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ozark kindergarten center
+689,1,Ozark School District,,t,,479-209-7803,"","",,,,1609 Walden Dr. ,"",Ozark,AR,,72949,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ozark school district
+691,1,Paragould Parks Department,,t,,870-239-7510,"","",,,,301 W. Court St.,"",Paragould,AR,,72450,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,paragould parks department
+692,1,Paragould Primary,,t,,(870) 240-2201,"","",,,,1600 Country Club Rd.,427 E. Poplar St.,Paragould,AR,,72450,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,paragould primary
+693,1,Paragould School District,,t,,870-239-2105,"","",,,,1501 West Court Street,"",Paragould,AR,,72450,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,paragould school district
+694,1,Parenting Services - Oklahoma City,,t,,405-773-6914,405-773-6914,"",,,,7900 Devore Dr.,"",Oklahoma City,OK,,73162,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,parenting services oklahoma city
+695,1,Parker Village Development,,t,,918-376-6536,"","",,,,204 E. 26th Place,"",Tulsa,OK,,74114,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,parker village development
+697,1,Parkview Baptist Church,,f,,918-494-3755,"","",,,,5805 S. Sheridan Rd.,"",Tulsa,OK,,74145,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,parkview baptist church
+698,1,Parkview Elementary,,t,,000-000-0000,"","",,,,619 Parkview Ave,"",Van Buren,AR,,72956,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,parkview elementary
+699,1,Parthenon City Park,,t,,870-577-7789,"","",,,,TBD,"",Parthenon,AR,,72666,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,parthenon city park
+700,1,Pauls Valley Intermediate School,,f,,405-238-4052,"","",,,,301 West Burt,"",Pauls Valley,OK,,73075,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,pauls valley intermediate school
+701,1,Pauls Valley Schools,,f,,405-238-6453,"","",,,,301 North Chickasaw,"",Pauls Valley,OK,,73075,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,pauls valley schools
+702,1,P.B. Odom III Construction Co.,,t,,405-691-8797,"","",,,,2501 SW 134th St.,"",Oklahoma City,OK,,73170,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,p b odom iii construction co
+704,1,Peachey Landscaping,,t,,479.525.6042,"","",,,,160 Fowler Street,"",Gentry,AR,,72734,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,peachey landscaping
+705,1,Peggs School District,,f,,918-598-3412,"","",,,,10821 Hickory Ave.,"",Peggs,OK,,74452,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,peggs school district
+706,1,Peoria Tribe of Indians of Oklahoma,,t,,918-544-6389,"","",,,,118 S Eight Tribe Trail,"",Miami,OK,,74354,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,peoria tribe of indians of oklahoma
+707,1,Perfection Outdoor Solutions,,t,,(918) 984-7336,(918) 984-7336,"",,,,"5401 S Sheridan Rd, #201","",Tulsa,OK,,74145,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,perfection outdoor solutions
+708,1,Perkins-Tryon School District,,f,,(405) 547-5741,"","",,,,1114 E. Kirk St.,"",Perkins,OK,,74059,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,perkins tryon school district
+709,1,Perona Family,,t,,918-812-3948,"","",,,,5001 E. 106th St.,"",Tulsa,OK,,74137,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,perona family
+711,1,Phillips Development Corporation,,t,,(501)441-6800,"","",,,,1405 N. Pierce St. ,Suite 211,Little Rock,AR,,72207,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,phillips development corporation
+713,1,Piedmont Schools Childcare Center,,f,,405-373-2311,"","",,,,615 Edmond Rd. NW,"",Piedmont,OK,,73078,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,piedmont schools childcare center
+714,1,"Pinstripe Lawn & Landscape, LLC",,t,,580-583-8334,580-583-8334,"",,,,Will Get from Customer,"",Gutherie,OK ,,74033,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,pinstripe lawn landscape llc
+715,1,Platinum Playgrounds,,t,,405-408-4693,"","",,,,7300 NW 164th St suite 9,"",Edmond,OK,,73013,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,platinum playgrounds
+716,1,"Play by Design, Inc.",,t,,918-550-1829,"","",,,,2929 E. 56th Pl.,"",Tulsa,OK,,74137,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,play by design inc
+717,1,"Playgrounds Etc., LLC",,t,,724-816-4708,"","",,,,355 Warrick Drive,"",Seven Fields,PA,,16046,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,playgrounds etc llc
+718,1,"Play Mart, Inc.",,t,,606-679-2572,"","",,,,170 Allens Way,"",Somerset,KY,,42501,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,play mart inc
+719,1,Play & Park Structures ,,t,,405.394.0275,405.394.0275,"",,,,PO Box 381,"",Choctaw,OK,,73020,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,play park structures
+721,1,Pleasant Forest HOA,,t,,501-246-1739,"","",,,,12008 Desoto Forest Dr.,"",Little Rock,AR,,72212,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,pleasant forest hoa
+722,1,Pleasant Vale Elementary School,,f,,580-234-9628,"","",,,,6020 E Willow Rd,"",Enid,OK,,73701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,pleasant vale elementary school
+723,1,Pocola Elementary School,,f,,918-436-2561,"","",,,,1000 Pryor Ave. E,"",Pocola,OK,,74902,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,pocola elementary school
+724,1,Ponca City Charity Angel Ambucs,,f,,580-762-2366,"","",,,,PO Box 1393,"",Ponca City,OK,,74602,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ponca city charity angel ambucs
+725,1,Ponca City Parks Dept.,,t,,580-763-0575,"","",,,,905 W Hartford Ave,"",Ponca City,OK,,74601,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ponca city parks dept
+726,1,Porter Public Schools,,f,, 918-483-2401,"","",,,,125 N. Main St.,"",Porter,OK,,74454,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,porter public schools
+728,1,Powers Design Build,,t,,918-645-6509,"","",,,,8810 S. Yale Ave.,"",Tulsa,OK,,74136,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,powers design build
+729,1,Prairie Vale Elementary School,,f,,316-650-0726,"","",,,,22522 N. Pennsylvania Ave.,"",Edmond,OK,,73025,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,prairie vale elementary school
+730,1,Preston Public Schools,,t,,918-759-0224,"","",,,,10165 Pringley Ave.,"",Okmulgee,OK,,74447,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,preston public schools
+731,1,Primerose Path Daycare & Preschool,,t,,000.000.0000,000.000.0000,"",,,,715 W 2nd St,"",Waldron,AR,,72958,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,primerose path daycare preschool
+732,1,Primrose - NW Ok City,,t,,405.721.2200,405.721.2200,"",,,,6101 NW 139th St.,"",Oklahoma City,OK,,73142,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,primrose nw ok city
+733,1,Pryor Child Development Center,,t,,479-783-2480,"","",,,,3340 W. 530 ,"",Pryor,OK,,74361,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,pryor child development center
+735,1,Pulaski County Parks & Rec,,t,,000.000.0000,000.000.0000,"",,,,"201 S Broadway, Ste 400","",Little Rock,AR,,72201,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,pulaski county parks rec
+736,1,Pulaski County Road & Bridge,,t,,501-340-6810,"","",,,,3200 Brown Street,"",Little Rock,AR,,72204,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,pulaski county road bridge
+737,1,Quail Hollow Apartments,,t,,918-355-1678,918-355-1678,"",,,,2607 E Albany St,"",Broken Arrow,OK,,74011,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,quail hollow apartments
+738,1,Quitman Public Schools,,t,,501-589-2554,"","",,,,6275 Heber Springs Rd W,"",Quitman,AR,,72131,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,quitman public schools
+739,1,Ramsey Jr. High,,t,,479-831-5975,"","",,,,3201 Jenny Lind,"",Fort Smith,AR,,72901,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ramsey jr high
+740,1,Ranch Academy,,t,,000-000-0000,000-000-0000,"",,,,64 West Cadron Ridge Rd,"",Greenbrier,AR,,72058,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ranch academy
+742,1,Reco Construction Co,,t,,918-237-6445,"","",,,,7033 E 40th St,"",Tulsa,OK,,74145,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,reco construction co
+743,1,Rector School District,,t,,870-595-3151,"","",,,,700 West 5th Street,"",Rector,AR,,72461,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,rector school district
+744,1,Redbud Elementary,,t,,405-340-2280,"","",,,,Edmond Public Schools,3800 N. Douglas Blvd,Arcadia,OK,,73007,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,redbud elementary
+745,1,Regency Point Apartments,,t,,918-492-8464,"","",,,,5477 E. 71st St,"",Tulsa,OK,,74136,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,regency point apartments
+746,1,Regent Preparatory School,,f,,918-232-6558,"","",,,,8621 S. Memorial Dr.,"",Tulsa,OK,,74133,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,regent preparatory school
+747,1,Regina's In Home Day Care,,t,,918-864-1793,"","",,,,3292 E. 490,"",Pryor,OK,,74361,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,regina s in home day care
+748,1,Rejoice Christian School,,t,,918-671-5801,"","",,,,13407 E. 106th St. N ,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,rejoice christian school
+750,1,Renaissance Park Addition,,t,,(918) 271-9792,"","",,,,20586 E. 35th St.,"",Broken Arrow,OK,,74014,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,renaissance park addition
+751,1,Renewing Life Church,,f,,405-550-6858,"","",,,,PO Box 275,"",Wynnewood,OK,,73098,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,renewing life church
+752,1,Residential,,t,,479-530-2701,"","",,,,10740 Terpening Rd,"",Prairie Grove,AR,,72753,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,residential
+753,1,Rex Playgrounds,,f,,405-942-2880,"","",,,,2727 NW 10th St.,"",Oklahoma City,OK,,73107,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,rex playgrounds
+754,1,RGL CONSTRUCTION LLC,,t,,870-219-0507,"","",,,,19916 AR-18,"",Monette,AR,,72447,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,rgl construction llc
+755,1,Rhema Child Development Center,,f,,918-258-0594,"","",,,,1025 W. Kenosha St,"",Broken Arrow,OK,,74012,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,rhema child development center
+757,1,Right Path Riding Academy,,f,,918-555-5555,"","",,,,16620 Old Shamrock Hwy,"",Drumright,OK,,74030,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,right path riding academy
+758,1,Ringling Public Schools,,f,,580-662-2388,"","",,,,706 N. 5th St.,"",Ringling,OK,,73456,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ringling public schools
+759,1,Ringwood Public Schools,,f,,580-883-2203,"","",,,,101 5th St.,"",Ringwood,OK,,73768,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ringwood public schools
+761,1,River Parks Authority,,t,,(918) 596-2008,"","",,,,2121 S. Columbia Ave.,Suite 205,Tulsa,OK,,74114,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,river parks authority
+763,1,Roadrunner Ranch RV Resort,,t,,817-713-1527,"","",,,,12100 Burkhart Road,"",Marietta,OK,,73448,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,roadrunner ranch rv resort
+764,1,Robson Properties Management,,t,,918-994-6062,918-994-6062,"",,,,901 N. Forest Ridge Blvd.,"",Broken Arrow,OK,,74014,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,robson properties management
+765,1,Rockwell RV Resort,,t,,405-787-5992,405-787-5992,"",,,,720 S Rockwell Ave,"",Oklahoma City,OK,,73128,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,rockwell rv resort
+766,1,Rockworth Group,,t,,501-352-3572,"","",,,,8201 TriStar Dr.,"",Irving,TX,,75063,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,rockworth group
+767,1,Rod Robbins,,t,,405-623-0971,405-623-0971,"",,,,5000 120th Ave NE,"",Norman,OK,,73026,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,rod robbins
+768,1,Rogers Public Schools,,t,,479-200-7640,"","",,,,2815 South 1st Street,"",Rogers,AR,,72756,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,rogers public schools
+770,1,Roma Berry Senior Center,,t,,918-584-8689,"","",,,,4821 S. 72nd E. Ave.,"",Tulsa,OK,,74145,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,roma berry senior center
+771,1,Ronnie Mac LLC,,t,,405-534-9405,"","",,,,6701 N. Broadway,"",Oklahoma City,OK,,73116,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ronnie mac llc
+772,1,Rose Dew Park,,f,,918-407-6834,"","",,,,1028 East 6th St,"",Tulsa,OK,,74120,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,rose dew park
+773,1,Rose Union Elementary School,,f,,405-359-3188,"","",,,,5100 Coffee Creek Rd.,"",Edmond,OK,,73025,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,rose union elementary school
+774,1,Ross Construction Group,,t,, 417.860.0824,"","",,,,3100 E. Division,"",Springfield,MO,,65802,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ross construction group
+775,1,R & R Homes,,t,,405-693-7550,"","",,,,3006 S. Sunnylane Rd,"",Moore,OK,,73160,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,r r homes
+777,1,Salina Public Schools,,t,,918-260-8240,918-260-8240,"",,,,212 E Ferry St,"",Salina,OK,,74395,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,salina public schools
+778,1,Sand Hills Apartments,,t,,(580) 475-7429,"","",,,,1312 N. Midwest City Blvd.,"",Midwest City,OK,,73110,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,sand hills apartments
+779,1,Sand Springs Early Childhood Center,,f,,918-246-1572,"","",,,,1701 Park Rd.,"",Sand Springs,OK,,74063,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,sand springs early childhood center
+780,1,Sand Springs Park & Rec,,f,,918-633-9083,"","",,,,1060 W. Wekiwa Rd.,"",Sand Springs,OK,,74063,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,sand springs park rec
+781,1,Sand Springs Public Schools,,f,,918-246-1530,"","",,,,11 W. Broadway,"",Sand Springs,OK,,74063,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,sand springs public schools
+783,1,Sapulpa Boys and Girls Club,,t,,918-224-4415,"","",,,,1721 S. Hickory St.,"",Sapulpa,OK,,74066,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,sapulpa boys and girls club
+784,1,Sapulpa Public Schools,,f,,918-555-5555,"","",,,,511 East Lee,"",Sapulpa,OK,,74066,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,sapulpa public schools
+785,1,Sargent Contracting,,t,,479-305-0379,"","",,,,P.O. Box 1292,"",Tontitown,AR,,72770,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,sargent contracting
+786,1,Save the Children,,t,,479-970-6136,"","",,,,613 S. Main St.,"",Hamburg,AR,,71646,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,save the children
+787,1,Sayan Construction,,t,,801-710-3688,"","",,,,4801 Spring Valley Rd.  ,Suite 94,Farmers Branch,TX,,75244,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,sayan construction
+788,1,Schwartz Elementary,,t,,405-739-1640,"","",,,,12001 SE 104th St.,"",Oklahoma City,OK,,73165,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,schwartz elementary
+789,1,Seiling Public Schools,,f,,580-254-1442,"","",,,,100 N Elm,"",Seiling,OK,,73663,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,seiling public schools
+790,1,Seneca-Cayuga Nation,,t,,918-791-6055,"","",,,,23701 S. 655 Rd.,"",Grove,OK,,74344,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,seneca cayuga nation
+791,1,Shadow Trails HOA,,t,,9180000000,"","",,,,6620 S Palm Ave,"",Broken Arrow,OK,,74011,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,shadow trails hoa
+793,1,Shawnee Elks Lodge,,t,,4054098669,405-409-8669,"",,,,13500 Acme Rd.,"",Shawnee,OK,,74804,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,shawnee elks lodge
+794,1,Shawnee Learning Center,,t,,000-000-0000,"","",,,,14202 US-177,"",Shawnee,OK,,74804,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,shawnee learning center
+795,1,Shawnee Park Apartments,,t,,405-985-6382,"","",,,,14201 Transportation Pkwy,"",Shawnee,OK,,74804,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,shawnee park apartments
+796,1,Shawnee Public Schools,,f,,(405) 273-0653,"","",,,,326 N. Union Ave.,"",Shawnee,OK,,74801,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,shawnee public schools
+798,1,Shidler Public Schools,,t,,918-793-2051,"","",,,,213 W.G. Ward,"",Shidler,OK,,74652,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,shidler public schools
+799,1,Shields and Associates,,t,,501-944-2857,"","",,,,116 Challain Dr.,"",Little Rock,AR,,72223,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,shields and associates
+800,1,Silo at Smith Farms,,t,,918-376-6536,"","",,,,12150 E. 96th St. North,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,silo at smith farms
+801,1,Simmons Kourtis,,t,,918-519-4665,"","",,,,12150 East 96th St. North.,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,simmons kourtis
+802,1,Sloan-Hendrix Elementary,,t,,501-454-4144,"","",,,,#1 Greyhound Circle,"",Imboden,AR,,72434,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,sloan hendrix elementary
+803,1,Smackover Elementary School,,t,,870-833-0400,"","",,,,112 East 8th St.,"",Smackover,AR,,71762,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,smackover elementary school
+804,1,Smith Center Municipal Airport,,t,,785-282-4732,"","",,,,119 West Court,"",Smith Center,KS,,66967,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,smith center municipal airport
+806,1,South Barber School District,,t,,620-213-2210,"","",,,,710 S. Main,"",Kiowa,KS,,67070,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,south barber school district
+807,1,Southern Hills Baptist Church,,t,,405-416-8400,"","",,,,8601 S. Penn,"",Oklahoma City,OK,,73159,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,southern hills baptist church
+808,1,Southern Hills Country Club,,f,,918- 477-5273,"","",,,,2636 E. 61st St.,"",Tulsa,OK,,74136,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,southern hills country club
+809,1,Southlake Elementary,,f,,405-735-4660,405-735-4660,405-913-7093,,,,12701 S. Portland Ave ,"",Oklahoma City,OK,,73069,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,southlake elementary
+810,1,Southside Bee Branch,,t,,501-745-1496,"","",,,,334 South Side Road,"",Bee Branch,AR,,72013,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,southside bee branch
+812,1,Southside Elementary School,,t,,405-762-0548,"","",,,,15289 OK-72,"",Coweta,OK,,74429,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,southside elementary school
+813,1,South Tulsa Baptist Church,,f,,918-299-0904,"","",,,,10310 S. Sheridan Rd.,"",Tulsa,OK,,74133,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,south tulsa baptist church
+815,1,Spring Creek Assembly of God,,f,,405-826-6336,"","",,,,1600 E. 15th St.,"",Edmond,OK,,73013,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,spring creek assembly of god
+816,1,Spring Creek Elementary,,t,,405-715-9898,"","",,,,15400 N. Rockwell,"",Edmond,OK,,73013,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,spring creek elementary
+817,1,Springdale Parks Department,,t,,479-263-8834,"","",,,,1906 Cambridge St.,"",Springdale,AR,,72762,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,springdale parks department
+818,1,SSI INC OF NORTHWEST ARKANSAS,,t,,4793055125,"","",,,,400 JEAN MARY AVENUE,"",Springdale,AR,,72762,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ssi inc of northwest arkansas
+820,1,Stanley Hupfeld Academy,,f,,405.408.8414,"","",,,,1508 NW 106th St.,"",Oklahoma City,OK,,73114,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,stanley hupfeld academy
+821,1,Steep Creek LLC,,t,,870-504-3304,"","",,,,65 Moore Ave.,"",Batesville,AR,,72501,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,steep creek llc
+822,1,Stephens Elementary,,t,,501-661-7220,513 499 6326,"",,,,3700 W 18th St,"",Little Rock,AR,,72204,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,stephens elementary
+823,1,St. Francis Children's Hospital,,f,,918-812-2959,"","",,,,6161 S. Yale,"",Tulsa,OK,,74136,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,st francis children s hospital
+824,1,Stidham Public School,,f,,918-490-3591,"","",,,,113074 N 4110 Rd.,"",Eufaula,OK,,74432,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,stidham public school
+825,1,Stilwell Public Schools,,t,,918-696-7001,913-669-5699,"",,,,1801 W Locust Street,"",Stilwell,OK,,74960,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,stilwell public schools
+826,1,St. Joan of Arc School,,f,,504-909-3290,"","",,,,529 N. 5th St.,"",LaPlace,LA,,70068,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,st joan of arc school
+828,1,St Joseph Catholic School,,t,,918-687-1351,000.000.0000,"",,,,321 N Virginia St,"",Muskogee,OK,,74403,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,st joseph catholic school
+829,1,St. Louis Parks Dept.,,f,,314-622-3535,"","",,,,1200 Market St.,"",St. Louis,MO,,63103,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,st louis parks dept
+830,1,St Mary's Catholic Church,,t,,479-209-4726,479-209-4726,"",,,,5118 St Mary's Ln,"",Altus,AR,,72821,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,st mary s catholic church
+831,1,St. Matthew's United Methodist Church,,t,,405-740-4379,"","",,,,300 N Air Depot Blvd,"",Midwest City,OK,,73110,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,st matthew s united methodist church
+832,1,St. Matthew United Methodist Church,,f,,405-740-4379,"","",,,,300 N. Air Depot Blvd.,"",Midwest City,OK,,73110,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,st matthew united methodist church
+833,1,Stonehaven Villas,,t,,918-361-1373,"","",,,,8110 S 107th E Ave,"",Tulsa,OK,,74133,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,stonehaven villas
+834,1,Stout Construction,,t,,918-824-5582,"","",,,,P.O. Box 1168,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,stout construction
+836,1,Summit Christian Academy,,f,,918-798-0251,"","",,,,200 East Broadway Ave.,"",Broken Arrow,OK,,74012,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,summit christian academy
+837,1,SunHive Collective Inc.,,t,,405-863-5233,"","",,,,3651 Cascade Blvd.,"",Norman,OK,,73072,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,sunhive collective inc
+838,1,Sunset Elementary School PTO,,t,,405-340-2990,"","",,,,"400 W. 8th St.,","",Edmond,OK,,73003,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,sunset elementary school pto
+839,1,Susan Wilson,,t,,405-626-8869,"","",,,,3527 E. 102nd St.,"",Tulsa,OK,,74137,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,susan wilson
+841,1,Sweetwater School District No 1 ,,t,,307-352-3400,307-352-3400,"",,,,PO Box 1089,"",Rock Springs,CO,,82901,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,sweetwater school district no 1
+842,1,"Swift Recreation, LLC",,t,,(479) 263-8834,(479) 263-8834,"",,,,PO Box 792110,"",New Orleans,LA,,70179,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,swift recreation llc
+843,1,Tahlequah Public Schools,,f,,(918) 458-4167,"","",,,,225 N Water Ave,"",Tahlequah,OK,,74464,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tahlequah public schools
+844,1,Talihina Public Schools,,t,,918-567-9939,"","",,,,600 1st Street,"",Talihina,OK,,74571,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,talihina public schools
+845,1,"Tayler Playgrounds, LLC",,t,,816-550-5555,8165505555,"",,,,6237 N. Topping Ave.,"",Kansas City,MO,,64119,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tayler playgrounds llc
+846,1,Taylor Ponds HOA,,t,,918-206-5012,"","",,,,14564 Jordan Ct.,"",Glenpool,OK,,74033,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,taylor ponds hoa
+848,1,Tecumseh Early Childhood Center,,f,,405-820-8757,"","",,,,1406 N. 6th St. ,"",Tecumseh,OK,,74873,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tecumseh early childhood center
+849,1,Test Customer,,f,,9180000000,9180000000,"",,,,0000 S Sheridan Ave,"",Tulsa,OK,,74137,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,test customer
+850,1,Texarkana School District,,f,,870-772-1401,"","",,,,1500 Jefferson Avenue,"",Texarkana,AR,,71854,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,texarkana school district
+851,1,The Bridge Church,,t,,918.394.4336,918.394.4336,"",,,,7731 E 119th Dr,"",Bixby,OK,,74008,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,the bridge church
+853,1,The Chickasaw Nation,,t,,580-762-7027,"","",,,,500 South Highland ,"",ADA,OK,,74820,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,the chickasaw nation
+854,1,The Chickasaw Nation-Tishomingo Community Center,,t,,580-559-0973,"","",,,,520 E. Arlington,"",Ada,OK,,74820,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,the chickasaw nation tishomingo community center
+855,1,The Common Good,,f,,918-282-4109,"","",,,,19 S. 49th West Ave.,"",Tulsa,OK,,74127,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,the common good
+856,1,The Estates at Ridgewood,,t,,918-274-0406,918-859-5584,"",,,,12150 East 96th Street North,Suite 200,Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,the estates at ridgewood
+857,1,Themed Concepts,,f,,855-724-3270,"","",,,,15171 Freeland Ave.,"",Hugo,MN,,55038,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,themed concepts
+858,1,The Patriot Golf Club,,t,,918-272-1270,918-408-0206,ext. 235,,,,5790 North Patriot Drive,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,the patriot golf club
+859,1,The Peel Compton Foundation,,t,,810-275-8283,"","",,,,700 SW 16th St.,"",Bentonville ,AR,,72712,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,the peel compton foundation
+860,1,The Ridge Apartments,,t,,(580) 475-7429,"","",,,,3834 N Oak Grove Dr.,"",Midwest City,OK,,73110,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,the ridge apartments
+862,1,The Spaniard Apartment Complex,,t,,310-409-5570 ,"","",,,,1305 N. Classen,"",Oklahoma City,OK,,73103,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,the spaniard apartment complex
+863,1,The Trails Property Group,,t,,9183766536,918549869`,"",,,,12150 E. 96th St. North,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,the trails property group
+865,1,Thompson Construction,,t,,918-496-1000,"","",,,,9856 E. 82nd Pl,"",Tulsa,OK,,74133,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,thompson construction
+866,1,Th Rock Jonesboro,,t,,870-932-7618,"","",,,,4318 E. Johnson Ave.,"",Jonesboro,AR,,72401,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,th rock jonesboro
+867,1,Tilles Elementary School,,t,,479-785-5606,"","",,,,815 North 16th St.,"",Fort Smith,AR,,72901,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tilles elementary school
+868,1,Timberlake Construction,,t,,918 998-0887 ,918 859 3649 ,"",,,,7613 North Classen Boulevard,"",Oklahoma City,OK,,73116,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,timberlake construction
+870,1,Tiny Tots Child Care Academy,,t,,918-218-3400,"","",,,,10421 E. 112th St.,"",Bixby,OK,,74008,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tiny tots child care academy
+871,1,Tom's Outdoor Living,,t,,918-695-1653,918-695-5692,"",,,,1716 E 7th St,"",Tulsa,OK,,74104,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tom s outdoor living
+872,1,Tontz Law PLLC,,t,,405-202-5925,"","",,,,301 E. Eufala St.,"",Norman,OK,,73069,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tontz law pllc
+873,1,Townhomes @ East 32nd Street,,t,, 720-651-2780,"","",,,,10149 E. 32nd St.,"",Tulsa,OK,,74146,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,townhomes east 32nd street
+874,1,"Town of Adair, OK",,t,,9187852432,"","",,,,533 E. Main St.,"",Adair,OK,,74330,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of adair ok
+875,1,Town of Amber,,f,,405-222-2175,"","",,,,404 Holly,"",Amber,OK,,73004,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of amber
+876,1,Town of Burlington,,t,,580-431-2550,580-431-2550,"",,,,502 Maple St,"",Burlington,OK,,73722,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of burlington
+877,1,"Town of Cove, AR",,t,,870-387-5791,"","",,,,US HIGHWAY 71,"",Cove,AR,,71937,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of cove ar
+878,1,Town of Dell Arkansas,,t,,870-564-2659,"","",,,,100 N. Main St.,"",Dell,AR,,72426,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of dell arkansas
+879,1,Town of Fargo,,t,,580-698-2635,"","",,,,202 S. Main St.,"",Fargo,OK,,73840,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of fargo
+880,1,Town of Gateway,,t,,749-656-3944,"","",,,,19812 Highway 62,"",Garfield,AR,,72372,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of gateway
+882,1,Town of Hochatown,,f,,580-494-7390,940-600-2713,"",,,,101 Rock Oak Lane,PO Box 439 Broken Bow,Hochatown,OK,,74728,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of hochatown
+883,1,"Town of Kansas, Oklahoma",,t,,918-555-5555,"","",,,,150 S. Cherokee St.,"",Kansas,OK,,74347,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of kansas oklahoma
+884,1,Town of Okemah,,t,,539-299-1769,"","",,,,202 South 3rd Street,"",Okemah,OK,,74859,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of okemah
+885,1,"Town of Prague, Oklahoma",,f,,405-315-8878,"","",,,,820 Jim Thorpe Blvd.,"",Prague,OK,,74864,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of prague oklahoma
+886,1,Town of Pryor,,t,,(918) 825-7179,"",https://www.pryorcreek.org/people/frank-powell,,,,504 E. Graham,"",Pryor,OK,,74361,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of pryor
+887,1,"Town of Ringwood, OK",,f,,580-883-5550,"","",,,,200 N. Main St.,"",Ringwood,OK,,73768,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of ringwood ok
+888,1,Town of Shidler,,f,,918-793-7171,"","",,,,351 N. Cosden,"",Shidler,OK,,74652,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of shidler
+890,1,Town Of Talala,,f,,918-215-4203,918-231-1003,"",,,,102 West Watova Street,"",Talala,OK,,74080,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of talala
+891,1,Town of Wanette,,f,,405-383-2246,"","",,,,P.O. Box 142,"",Wanette,OK,,74878,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of wanette
+892,1,Town of Washington,,f,,405-543-0253,405-288-2578,"",,,,204 North Main Street #127,"",Washington,OK,,73093,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of washington
+893,1,"Town of Wellston, Oklahoma",,f,,405-315-8878,"","",,,,211 Cedar St.,"",Wellston,OK,,74881,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of wellston oklahoma
+894,1,Town of West Siloam Springs,,t,,918-868-4404,"","",,,,4880 Cedar Dr.,"",Colcord,OK,,74338,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of west siloam springs
+896,1,Townsend Elementary-Willowbrook,,t,,405-224-1554,"","",,,,4000 Epperly Dr,"",Del City,OK,,73115,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,townsend elementary willowbrook
+897,1,Transformation Church,,t,,918-582-3580,"","",,,,10441 S. Regal Rd,"",Tulsa,OK,,74133,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,transformation church
+898,1,Treehouse Academy,,t,,918-392-7852,"","",,,,6605 E. 93rd St.,"",Tulsa,OK,,74133,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,treehouse academy
+899,1,Trinity Baptist Church,,f,,580-332-6317,"","",,,,123 N. Mississippi Ave.,"",Ada,OK,,74820,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,trinity baptist church
+900,1,Trinity Episcopal Cathedral,,t,,501-912-3479,"","",,,,310 W. 17th St.,"",Little Rock,AR,,72206,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,trinity episcopal cathedral
+901,1,Trinity Lutheran School,,t,,9184961401,"","",,,,15060 S. Harrels Ferry Rd.,"",Baton Rouge,LA,,70816,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,trinity lutheran school
+902,1,Trinity Woods Tulsa,,t,,918-740-4117,"","",,,,4134 E. 31st St.,"",Tulsa,OK,,74135,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,trinity woods tulsa
+904,1,TSET Healthy Living Program,,f,,405-375-2413,"","",,,,421 W. Bowman Ave.,"",Kingfisher,OK,,73750,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tset healthy living program
+905,1,Tulsa Airports Improvements Trust,,t,,(539) 240-4127,"","",,,,7777 Airport Drive,"",Tulsa,OK,,74115,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tulsa airports improvements trust
+906,1,Tulsa Bible Church,,f,,918-499-1513,"","",,,,5838 S. Sheridan Rd,"",Tulsa,OK,,74145,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tulsa bible church
+907,1,Tulsa CAP,,t,,918-549-8691,"","",,,,5330 East 31st Street,"",Tulsa,OK,,74135,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tulsa cap
+908,1,Tulsa City Parks Dept.,,f,,918-527-0210,"","",,,,175 E. 2nd St.,"",Tulsa,OK,,74103,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tulsa city parks dept
+909,1,Tulsa Classical Academy,,t,,918-688-3440,"","",,,,9815 S. Sheridan Rd.,"",Tulsa,OK,,74133,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tulsa classical academy
+910,1,Tulsa Country Club,,t,,918-555-5555,"","",,,,701 N. Union Ave.,"",Tulsa,OK,,74127,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tulsa country club
+911,1,Tulsa County,,f,,918-582-7595,"","",,,,218 W. 6th St.,"",Tulsa,OK,,74119,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tulsa county
+913,1,Tulsa Korean Methodist Church,,t,,501-551-1144,"","",,,,13322 E. 31st. St. ,"",Tulsa,OK,,74134,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tulsa korean methodist church
+914,1,Tulsa Metro Baptist Network,,t,,918-812-1729,"","",,,,4502 E 29th St,"",Tulsa,OK,,74117,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tulsa metro baptist network
+915,1,Turner Public Schools,,f,,580-276-1307,"","",,,,PO Box 159,"",Burneyville,OK,,73430,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,turner public schools
+916,1,Tuttle Public Schools,,t,,405-381-2368,"","",,,,515 E. Main St,"",Tuttle,OK,,73089,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tuttle public schools
+918,1,TWG Development LLC,,t,,2195086265,"","",,,,3317 SW 74th St,"",Oklahoma City,OK,,73159,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,twg development llc
+919,1,Twin Bridges HOA,,t,,210-410-1006,210-410-1006,"",,,,5016 Pont Neuf Rd,"",Edmond,OK,,73034,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,twin bridges hoa
+920,1,Tyler Rickey,,f,,580-603-2010,"","",,,,100 Campus Dr.,"",Weatherford,OK,,73096,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tyler rickey
+921,1,Tyson Morton Agriculture,,t,,580-763-4855,"","",,,,1551 East Home Road ,"",Newkirk,OK,,74647,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tyson morton agriculture
+922,1,UAMS - Kids First Playground,,t,,501-574-1138,"","",,,,333 Executive Court,"",Little Rock,AR,,72205,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,uams kids first playground
+923,1,UCP Adult ,,t,,501-228-3805,"","",,,,10400 W. 36th St.,"",Little Rock,AR,,72204,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ucp adult
+924,1,ULTRASITE,,t,,618-282-8200,"","",,,,1675 Locust St.,"",Red Bud,IL,,62278,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ultrasite
+925,1,UMOS,,f,,4172053489,"","",,,,505 Burkhart,"",Malden,MO,,63863,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,umos
+927,1,US Fish & Wildlife Service,,f,,870-625-3350,"","",,,,302 Fish Hatchery Lane,"",Mammoth Springs,AR,,72554,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,us fish wildlife service
+928,1,Valley View Elementary School,,t,,870-935-1910,"","",,,,5603 Kersey Lane,"",Jonesboro,AR,,72404,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,valley view elementary school
+929,1,Valley View Intermediate,,t,,870-935-1910,"","",,,,2115 Valley View Drive,"",Jonesboro,AR,,72404,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,valley view intermediate
+930,1,Van Buren School District,,t,,479-471-3120,"","",,,,505 Northridge Drive East,"",Van Buren,AR,,72956,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,van buren school district
+932,1,Vance Air Force Base,,t,,(580) 213-7049,"","",,,,400 Young Rd,"",Vance Air Force Base,OK,,73705-5508,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,vance air force base
+933,1,Vandergriff Elementary,,t,,870-321-2721,"","",,,,2200 North Vandergriff Drive,"",Fayetteville,AR,,72703,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,vandergriff elementary
+934,1,Velma-Alma School District,,f,,580-467-4163,"","",,,,901 W. Main St.,"",Velma,OK,,73491,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,velma alma school district
+935,1,Velma Elementary School,,t,,(580) 203-3702,"","",,,,1111 Main St.,"",Velma,OK,,73491,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,velma elementary school
+936,1,Victim Safety Center,,t,,918-758-5553,"","",,,,P.O. Box 580,"",Okmulgee,OK,,74447,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,victim safety center
+937,1,Victory Hispanic Church,,t,,918-600-7577,"","",,,,10811 E. 41st St.,"",Tulsa,OK,,74146,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,victory hispanic church
+938,1,Villages at Coffee Creek,,t,,405-255-4703,"","",,,,700 Prairie Village Dr,"",Edmond,OK,,73003,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,villages at coffee creek
+940,1,Vilonia School District ,,t,,501-796-4651,"","",,,,11 Eagle Street,"",Vilonia,AR,,72173,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,vilonia school district
+941,1,Virgil Helton,,t,,918-864-6735,"","",,,,10615 W. 660 Rd. ,"",Hulbert,OK,,74441,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,virgil helton
+942,1,Vortex Roof,,t,,405-496-8535,"","",,,,1362 SW Airport Rd.,"",Cache,OK,,73527,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,vortex roof
+943,1,Voy Construction Co.,,f,,918-994-1160,"","",,,,8500 E. 41st St.,"",Tulsa,OK,,74145,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,voy construction co
+944,1,Wagner General Contractors,,t,,(901)827-7692,"","",,,,1711 Higginson St.,"",Searcy,AR,,72143,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,wagner general contractors
+945,1,WalMart Child Care Center,,t,,989-859-6024,"","",,,,2001 SE 10th St.,"",Bentonville,AR,,72712,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,walmart child care center
+946,1,Warner Public Schools ,,t,,918-316-2478,"","",,,,1012 5th Ave,"",Warner,OK,,74469,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,warner public schools
+948,1,Watonga Public Schools,,f,,405-380-5332,"","",,,,PO Box 310,"",Watonga,OK,,73772,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,watonga public schools
+949,1,Watts Holiness Church,,t,,865-202-8905,"","",,,,110287 S. 4563 Rd.,"",Sallisaw,OK,,74955,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,watts holiness church
+950,1,W&B Service Company,,t,,405-495-4030,405-495-4030,"",,,,900 South Morgan Rd,"",Oklahoma City,OK,,73128,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,w b service company
+951,1,WCC Bear Cub Pre-K,,t,,501-729-4292,"","",,,,3259 Hwy 157,"",Judsonia,AR,,72081,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,wcc bear cub pre k
+952,1,Welch Public Schools,,f,,918-625-2148,"","",,,,707 S. Curtis St.,"",Welch,OK,,74369,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,welch public schools
+953,1,Western Sportsman Club,,t,,405-284-6398,"","",,,,20975 Pearl Lane,"",Hinton,OK,,73047,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,western sportsman club
+955,1,Westpointe HOA,,t,,405-990-0484,"","",,,,601 Regiment Way,"",Yukon,OK,,73099,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,westpointe hoa
+956,1,Westside Elementary School,,f,,918-923-4201,"","",,,,2600 Holly Rd.,"",Claremore,OK,,74017,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,westside elementary school
+957,1,West View Baptist Church,,t,,580-665-5974,"","",,,,701 W Morgan St.,"",Paragould,AR,,72450,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,west view baptist church
+958,1,Westwood Elementary School,,t,,479-996-7748,"","",,,,300 Westwood Ave.,"",Greenwood,AR,,72936,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,westwood elementary school
+959,1,Whitefield Elementary School,,f,,918-967-8572,"","",,,,107 Redding St.,"",Whitefield,OK,,74472,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,whitefield elementary school
+960,1,WIC Osage Nation,,f,,918-645-4799,"","",,,,1301 Grandview,"",Pawhuska,OK,,74056,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,wic osage nation
+961,1,Wiggins Properties,,t,,405-371-0291,"","",,,,5100 North Brookline Ave,"",Oklahoma City,OK,,73112,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,wiggins properties
+1,1,Arkansas Arts Academy,,t,,479-636-2272,"","",,,,2005 S. 12th St.,"",Rogers,AR,,72758,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,arkansas arts academy
+2,1,Bureau of Reclamation,,f,,406-247-4037,"","",,,,13101 Alameda Dr,"",Norman,OK,,73026,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,bureau of reclamation
+6,1,Choctaw Nation Head Start- Broken Bow Head Start ,,f,,580-920-7072,580-584-6680,"",,,,201 Chahta Road,"",Broken Bow,OK,,74728,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,choctaw nation head start broken bow head start
+16,1,First Baptist Church,,t,,870-270-8004,"","",,,,507 N. Rosser St.,"",Forrest City,AR,,72335,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,first baptist church
+23,1,Muscogee Nation - Department of Housing,,f,,918-549-2741,"","",,,,PO Box 580,"",Okmulgee,OK,,74447,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,muscogee nation department of housing
+30,1,Tulsa Educare,,f,,9185082253,"","",,,,3420 N. Peoria Ave.,"",Tulsa,OK,,74106,,,,t,2025-12-13 20:22:00.438122,2025-12-13 20:22:00.438122,0,tulsa educare
+37,1,ABC Playgrounds,,t,,501-912-3479,"","",,,,15109 Elm St.,"",Alexander,AR,,72002,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,abc playgrounds
+42,1,Acorn Learning Center,,t,,405-640-0024,"","",,,,3601 NW 51st St.,"",Oklahoma City,OK,,73112,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,acorn learning center
+48,1,Alabama Quassarte Childcare Center,,t,,918-716-0841,"","",,,,2122 Hwy 27,"",Wetumka,OK,,74883,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,alabama quassarte childcare center
+52,1,Altus Air Force Base,,f,,580-481-7903,"","",,,,1866 W. River Dr.,"",Altus AFB,OK,,73523,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,altus air force base
+57,1,Antler Day Care,,f,,405-531-9103,"","",,,,4704 NW 164th St.,"",Edmond,AR,,73013,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,antler day care
+62,1,"Arkansas Dept of Parks, Heritage, & Tourism",,t,,501-682-0813,"","",,,,1 Capitol Mall,Suite 4B-215,Little Rock,AR,,72201,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,arkansas dept of parks heritage tourism
+71,1,ASRC Federal Field Services,,f,,580-213-7176,"","",,,,400 Young Rd.,Suite 122,Vance AFB,OK,,73705-5508,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,asrc federal field services
+80,1,Barnes Elementary/Midwest City-Del City Schools,,t,,405-739-1640,"","",,,,7217 S.E. 15th Street,"",Midwest City,OK,,73110,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,barnes elementary midwest city del city schools
+87,1,Beacon HOA Management LLC,,t,,918-710-0531,"","",,,,PO Box 744,"",Bixby,OK,,74008,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,beacon hoa management llc
+92,1,Benton Public School District,,t,,501-860-5791,"","",,,,207 W. Conway,"",Benton,AR,,72015,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,benton public school district
+97,1,Bethany First Church of The Nazarene,,t,,580-504-3227,405-789-2050,"",,,,6789 NW 39th Expressway,"",Bethany,OK,,73008,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,bethany first church of the nazarene
+102,1,Bixby Central Elementary PTO,,t,,9184130954,"","",,,,201 S Main St,"",Bixby,OK,,74008,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,bixby central elementary pto
+103,1,Bixby East Elementary PTO,,f,,918-231-2551,"","",,,,11901 East 131st St S,"",Broken Arrow,OK,,74011,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,bixby east elementary pto
+110,1,Bowring Elementary,,f,,918-336-6892,"","",,,,87 County Road 3304,"",Pawhuska,OK,,74056,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,bowring elementary
+116,1,Bristow Public Schools,,f,,918-367-5555,918-645-2995,918-367-5557,,,,420 North Main Street,"",Bristow,OK,,74010,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,bristow public schools
+125,1,Cabot Public Schools-Early Childhood,,t,,918-555-5555,"","",,,,103 Commerce Park Dr.,"",Cabot,AR,,72023,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cabot public schools early childhood
+131,1,Cal-West Products Inc.,,t,,858-566-8484,"","",,,,7538 Trade Street,"",San Diego,CA,,92121,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cal west products inc
+138,1,Canton Public Schools,,f,,940-735-1672,9189349575,"",,,,300 East Main Street,"",Canton,OK,,73724,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,canton public schools
+964,1,Willowbrook Construction,,t,, 405-892-9325,"","",,,,620 NE 36th St.,"",Oklahoma City,OK,,73105,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,willowbrook construction
+966,1,"Windrush Apartments, IRT Living",,t,,405-348-1000,405-348-1000,"",,,,200 W 15th St,"",Edmond,OK,,73013,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,windrush apartments irt living
+967,1,Winfield Property Management,,t,,479-841-5693,"","",,,,1510 S. Powell St.,"",Springdale,AR,,72764,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,winfield property management
+968,1,Wister Elementary School,,f,,918-655-7381,"","",,,,201 Logan St.,"",Wister,OK,,74966,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,wister elementary school
+969,1,Withrow Springs State Park,,t,, 479-559-2593,"","",,,,33424 Spur 23,"",Huntsville,AR,,72740,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,withrow springs state park
+970,1,W.L. McNatt & Co.,,t,,405-232-7245,"","",,,,217 East Sheridan Ave.,"",Oklahoma City,OK,,73104,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,w l mcnatt co
+971,1,Wonderview Elementary,,t,,501-354-8668,"","",,,,2436 AR-95,"",Hattieville,AR,,72063,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,wonderview elementary
+973,1,Wonderview Schools,,t,,501-354-8668,"","",,,,2436 AR-95,"",Hattieville,AR,,72063,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,wonderview schools
+974,1,Woodall Elementary School,,f,,918-555-5555,"","",,,,14090 W 835 Rd.,"",Tahlequah,OK,,74464,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,woodall elementary school
+975,1,Woodland Hills Baptist Church,,f,,405-392-5500,"","",,,,313 Oklahoma 76,"",Newcastle,OK,,73065,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,woodland hills baptist church
+976,1,Woodlands at Elm Creek,,t,,918-376-6536,"","",,,,Address Unknown,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,woodlands at elm creek
+977,1,Woodland Trails at Washington Lane,,t,,918-859-5584,"","",,,,12150 E. 96th St. No.,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,woodland trails at washington lane
+979,1,YMCA of Greater Oklahoma City,,t,,(405) 206-6615,(405) 206-6615,"",,,,2901 Marilyn Williams Drive,"",Edmond,OK ,,73003,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ymca of greater oklahoma city
+980,1,Yorktown HOA,,t,,918-845-5870,"","",,,,12713 South 1st Street,"",Jenks,OK,,74037,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,yorktown hoa
+981,1,Yukon Public Schools,,f,,405-403-8317,"","",,,,600 Maple Ave.,"",Yukon,OK,,73099,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,yukon public schools
+982,1,Zay's Place,,t,,918-269-7423,"","",,,,1423 S Garnett ,"",Tulsa,OK,,74128,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,zay s place
+983,1,Zion's Gate Ministries,,f,,918-402-3081,"","",,,,8720 E. 61st St.,"",Tulsa,OK,,74133,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,zion s gate ministries
+984,1,Zoo Orientation Plaza,,t,,918-555-5555,"","",,,,2000 Remington Pl.,"",Oklahoma City,OK,,73111,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,zoo orientation plaza
+146,1,Carney Public Schools,,f,,903-261-4864,"","",,,,710 S Main St,"",Carney,OK,,74832,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,carney public schools
+153,1,Cedar Glades Park,,t,,501-627-2826,"","",,,,1040 Cedar Glade Rd.,"",Hot Springs,AR,,71901,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cedar glades park
+154,1,Center for Victim Services,,t,,918-732-7979,"","",,,,P.O. Box 580,"",Okmulgee,OK,,74447,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,center for victim services
+158,1,Cherokee Elementary School,,f,,918-458-4110,"","",,,,800 Goingsnake St.,"",Tahlequah,OK,,74464,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee elementary school
+163,1,Cherokee Nation Health,,t,,918-781-6521,918-506-9940,"",,,,1001 South 41st Street East,"",Muscogee,OK,,74403,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee nation health
+169,1,Cherokee Nation - One Fire Victim Services,,t,,918-458-7695,"","",,,,P.O. Box 948,"",Tahlequah,OK,,74465,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cherokee nation one fire victim services
+176,1,Chickasaw Housing Maintenance Service,,t,, 580-436-2603,"","",,,,111 Rosedale Rd,"",Ada,OK,,74820,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,chickasaw housing maintenance service
+184,1,Choctaw Nation Affordable Housing,,f,,580-642-6389,"","",,,,1802 Chukka Hina Dr.,"",Durant,OK,,74701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation affordable housing
+190,1,Choctaw Nation Head Start - Coalgate,,t,,580-924-8280,"","",,,,1802 Chukka Hina,"",Durant,OK,,74701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation head start coalgate
+195,1,Choctaw Nation of Oklahoma,,f,,580-579-2261,"","",,,,2351 Big Lots Parkway,"",Durant,OK,,74701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation of oklahoma
+199,1,Choctaw Nation of Oklahoma - Spiro,,f,,9999999999,9189349575,"",,,,600 West Broadway,"",Broadway,Oklahoma,,74959,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation of oklahoma spiro
+203,1,Choctaw Nation - Tuskahoma Capitol Museum Playground,,t,,918-934-9575,"","",,,,10 Council House Road,"",Tuskahoma,OK,,74574,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,choctaw nation tuskahoma capitol museum playground
+206,1,Churchill Park HOA,,t,,918-688-0051,918-688-0051,"",,,,Don't know for sure St,"",Jenks,OK,,74037,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,churchill park hoa
+214,1,City of Bartlesville,,f,,(918) 338-4151,(918) 440-1317,"",,,,1721 W. 5th Street,"",Bartlesville,OK,,74003,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of bartlesville
+222,1,City of Blytheville,,t,,870-776-6600,870-776-6600,"",,,,124 W Walnut St,"",Blytheville,AR,,72315,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of blytheville
+229,1,City of Collinsville,,t,,918-371-1010,000.000.0000,"",,,,106 N 12th St,PO Box 730,Collinsville,OK,,74021,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of collinsville
+240,1,City of Fort Smith,,t,,479-784-1006,"","",,,,3301 South M Street,"",Fort Smith,AR,,72903,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of fort smith
+249,1,City of Jenks,,t,,918-691-8245,"","",,,,305 S.. Birch St.,"",Jenks,OK,,74037,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of jenks
+255,1,City of Nichols Hills,,t,,405-843-5222,"","",,,,1009 NW 75th St,"",Nichols Hills,OK,,73116,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of nichols hills
+257,1,City of Oklahoma City Fire Department,,t,, 405-297-3600,"","",,,,820 NW 5th Street,"",Oklahoma City,OK,,73106,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of oklahoma city fire department
+268,1,City of Spencer,,f,,4057064868,"","",,,,8200 NE 36th,"",Spencer,OK,,73084,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of spencer
+272,1,City of Tahlequah Parks & Recreation Department,,f,,918-931-1958,"","",,,,951 Cessna Ave.,"",Tahlequah,OK,,74464,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,city of tahlequah parks recreation department
+284,1,Claremore Museum of History,,f,,918-510-9070,"","",,,,121 N Weenonah Ave,"",Claremore,OK,,74017,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,claremore museum of history
+291,1,Columbia Public Schools,,t,,573-214-3400,"","",,,,Columbia Public Schools, 1818 W. Worley,Columbia,MO,,65203,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,columbia public schools
+298,1,Cooper-Anthony Mercy Child Advocacy Center,,t,,501-622-2531,"",501-620-4595,,,,216 McAuley Court,"",Hot Springs,AR,,71913,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cooper anthony mercy child advocacy center
+307,1,Crescent View PH 1 HOA,,t,,501-351-0958,"","",,,,416 Mt Hebron Rd.,"",Lowell,AR,,72745,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,crescent view ph 1 hoa
+311,1,Cross Timbers Elementary School,,f,,(405) 780-0259,"","",,,,4800 N. Kelly Av.e,"",Edmond,OK,,73025,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,cross timbers elementary school
+318,1,DCLA Elementary School,,f,,580-267-3241,"","",,,,313 Main St.,"",Deer Creek,OK,,74636,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,dcla elementary school
+322,1,Delaware Nation  Vocational Rehabilitation Program,,f,,1-877-297-3139,405-632-3749,405-632-9753,,,,7249 South Western,"",Oklahoma City,OK,,73139,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,delaware nation vocational rehabilitation program
+333,1,Dewey Public Schools,,t,,918-440-1373,9189349575,"",,,,1 Bulldogger Road,"",Dewey,OK,,74029,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,dewey public schools
+340,1,Durbin Feeling Cultural Center,,t,,918-878-3369,"","",,,,16489 US 62,"",Tahlequah,OK,,74464,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,durbin feeling cultural center
+346,1,Eastern Hills Baptist Church,,t,,918-978-5711,"","",,,,16912 E. 480 Rd. ,"",Claremore,OK,,74019,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,eastern hills baptist church
+353,1,ECM Car Wash dba Swash,,t,,4057559274,"","",,,,712 NW 41st St,"",Oklahoma City,OK,,73118,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ecm car wash dba swash
+357,1,Edmond Public Schools,,f,,405-340-2988,"","",,,,200 N. Kelly Ave,"",Edmond,OK,,73003,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,edmond public schools
+360,1,EJ Community Development Corp.,,t,,870-815-1225,"","",,,,501 Magnolia St.,"",Osceala,AR,,72370,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ej community development corp
+367,1,Enformed Construction Services,,t,,479-644-3113,"","",,,,1705 S. Walton Blvd.,"",Bentonville,AR,,72712,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,enformed construction services
+373,1,Eureka Springs Elementary School,,t,,479-253-5999,"","",,,,156 Greenwood Hollow Rd.,"",Eureka Springs,AR,,72632,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,eureka springs elementary school
+380,1,Firm Foundation Child Development Center,,t,,620-306-1077,"","",,,,209 S. Choctaw Ave,"",Bartlesville,OK,,74003,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,firm foundation child development center
+386,1,First Baptist Church of Pocasset,,t,,405-320-1267,"","",,,,230 S. Washington St,"",Pocasset,OK,,73079,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,first baptist church of pocasset
+393,1,First Presbyterian Church of OKC,,f,,405-525-6584,"","",,,,1001 NW 25th S,"",Oklahoma City,OK,,73106,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,first presbyterian church of okc
+398,1,Flat Rock Ridge Development,,t,,918-376-6536,9183766536,"",,,,12150 East 96th St. North,"",Owasso,OK,,74055,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,flat rock ridge development
+406,1,Founders Classical Academy - West Little Rock,,t,,501-472-0539,"","",,,,1815 Rahling Rd,"",Little Rock,AR,,72223,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,founders classical academy west little rock
+412,1,Frost Early Childhood Education Center,,t,,918.688.5113,"","",,,,203 W. 28th St. North,"",Tulsa,OK,,74106,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,frost early childhood education center
+421,1,G&H Outdoor Services,,t,,918-781-2672,"","",,,, 1551 E Highway 62,"",Fort Gibson,OK,,74434,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,g h outdoor services
+426,1,Gloria Ainsworth Child Care & Learning Center,,t,,253-316-2434,"","",,,,502 G Street NE,"",Ardmore,OK,,73401,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,gloria ainsworth child care learning center
+436,1,Great Plains Head Start,,t,,405 301 4424,"","",,,,901 S. Broadway,"",Hobart,OK,,73651,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,great plains head start
+442,1,Grove Elementary School,,f,,405-426-7833,"",ext 1109,,,,2800 N. Bryan,"",Grove,OK,,74804,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,grove elementary school
+448,1,Hackett FUN Park,,t,,479-785-2651,"","",,,,110 Johnson Park Dr.,"",Hackett,AR,,72937,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hackett fun park
+453,1,Harmony Grove Special Education Department,,t,,870-574-0961,"","",,,,401 Ouchita 88,"",Camden,AR,,71701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,harmony grove special education department
+456,1,Harvest Baptist Church,,t,,870-476-4853,"","",,,,4100 Linwood Dr.,"",Paragould,AR,,72450,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,harvest baptist church
+457,1,Harvey Jones Elementary School,,t,,479-750-8865,"","",,,,900 S Powell St,"",Springdale,AR,,72764,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,harvey jones elementary school
+464,1,Heritage Adventist School,,f,,918-283-2243,360-510-3882,"",,,,20555 S 4170 Road,"",Claremore,OK,,74017,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,heritage adventist school
+472,1,Holmes Park Elementary School,,f,,918-227-6800,"","",,,,1231 East Dewey,"",Sapulpa,OK,,74066,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,holmes park elementary school
+480,1,Hope Crossings HOA,,t,,000.000.0000,"","",,,,PO Box 381,"",Piedmont,OK,,73078,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hope crossings hoa
+487,1,Hugo Public School,,t,,(580) 204-5860,"","",,,,1603 East Kirk Street,"",Hugo,OK,,74743,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,hugo public school
+494,1,Inola Elementary School,,f,,918-629-8525,"","",,,,450 B St. NW,"",Inola,OK,,74036,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,inola elementary school
+501,1,Jefferson Elementary School,,f,,580-223-2474,"","",,,,333 Carter St. SE,"",Ardmore,OK,, 73401,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jefferson elementary school
+508,1,Jeremiah Davis,,t,,940-452-6885,940-452-6885,"",,,,141 El Dorado Trail,"",Millsap,TX,,76066,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jeremiah davis
+512,1,Jim Loomis,,t,,580-772-4347,"","",,,,3000 Logan Road,"",Weatherford,OK,,73096,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,jim loomis
+520,1,Joyland Child Development Center,,t,,918-231-1062,"","",,,,707 N. Main,"",Wagoner,OK,,74467,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,joyland child development center
+528,1,Kenwood Community Center,,t,,918-906-4417,"","",,,,1210 County Road 487,"",Salina,OK,,74365,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kenwood community center
+535,1,Kiefer Public Schools,,f,,918.364.1386,"","",,,,4600 West 151st Street South,"",Kiefer,OK,,74041,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kiefer public schools
+541,1,Kiowa Tribe Carnegie Head Start,,t,,405-815-0044,"","",,,,BranMar Construction,100 Kiowa Way,Carnegie,OK,,73015,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,kiowa tribe carnegie head start
+551,1,Lake Eufaula State Park,,t,,918-689-5311,918-689-5311,"",,,,111563 Hwy 150,"",Checotah,OK,,74426,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lake eufaula state park
+557,1,Las Cumbres Community Services,,t,,505-753-4123,"","",,,,102 N. Coronado Ave,"",Espanola,NM,,87532,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,las cumbres community services
+559,1,Laura Dester Children's Center,,t,,918-728-6700,"","",,,,7318 E. Pine St.,"",Tulsa,OK,,74115,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,laura dester children s center
+560,1,Lawton Public Schools,,t,,580-695-1735,"","",,,,19th and W. Lee Blvd,"",Lawton,OK,,73501,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lawton public schools
+567,1,Life Skills for Youth,,t,,501-282-6361,"","",,,,13000 Baseline Rd.,"",Little Rock,AR,,72210,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,life skills for youth
+572,1,Little Rock Air Force Base,,t,,501-454-7933,"","",,,,1500 Vandenberg Blvd,"",Little Rock AFB,AR,,72099,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,little rock air force base
+580,1,Lynco Properties,,t,,918-488-8485,918-488-8485,"",,,,6859 S Canton Ave,"",Tulsa,OK,,74136,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,lynco properties
+587,1,Make-A-Wish Oklahoma,,f,,918-990-9848,"","",,,,4606 E. 67th St.,#313,Tulsa,OK,,74136,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,make a wish oklahoma
+593,1,MAPS 3 Senior Health & Wellness 4,,f,,405-361-7960,"","",,,,13660 S. Western Ave.,"",Oklahoma City,OK,,73170,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,maps 3 senior health wellness 4
+600,1,Maryetta Public Schools,,t,,918-797-0208,"","",,,,100 Maryetta Rd.,"",Stilwell,OK,,74960,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,maryetta public schools
+606,1,McGregor Homes,,t,,405-330-2555,405-684-7916,"",,,,3325 French Park Drive ,"",Edmond,OK,,73034,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mcgregor homes
+610,1,Memorial Drive Church of Christ,,f,,918-698-9208,"","",,,,1438 S. Indianapolis Ave.,"",Tulsa,OK,,74112,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,memorial drive church of christ
+612,1,Merritt Companies,,f,,405-850-0720,"","",,,,917B N. Tulsa Ave.,"",Oklahoma City,OK,,73107,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,merritt companies
+618,1,Mid Delta Community Services,,t,,870-338-6404 ,"","",,,,PO Box 745,610 S. Biscoe,Helena,AR,,72342,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mid delta community services
+625,1,Mojo's Mercantile and Coffee House,,t,, 918-260-2408, 918-260-2408,"",,,,407 West A Street,"",Jenks,OK,,74037,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mojo s mercantile and coffee house
+631,1,Mountainburg Public Schools,,t,,479-414-3675,"","",,,,2015 Lake Fort Smith Road,"",Mountainburg,AR,,72946,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,mountainburg public schools
+639,1,Muscogee Nation,,t,,918-623-1647,"","",,,,101 Este Cate St.,"",Okemah,OK,,74859,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,muscogee nation
+643,1,Muscogee Nation - Tribal Construction,,t,,539-244-3715,"","",,,,P.O. Box 580,"",Okmulgee,OK,,74447,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,muscogee nation tribal construction
+649,1,NEAEC-Hillcrest ABC Preschool,,t,,870-886-7717,"","",,,,146 South Main Street,"",Strawberry,AR,,71469,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,neaec hillcrest abc preschool
+657,1,Noah's Park & Playground,,f,,877-248-5444,"","",,,,"14710 Metro Plaza Blvd., Ste. A","",Edmond,OK,,73013,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,noah s park playground
+660,1,Noland Construction,,t,,501-289-2190,"","",,,,Null,"",Moorefield,AR,,72501,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,noland construction
+662,1,Norman Public Schools,,f,,405-664-3238,"","",,,,430 24th Ave. SE,"",Norman,OK,,73071,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,norman public schools
+666,1,North Little Rock School District - Crestwood Elementary,,t,,501-920-5893,"","",,,,1901 Crestwood Rd. ,"",Little Rock,AR,,72116,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,north little rock school district crestwood elementary
+677,1,OKC Boathouse Foundation,,t,,405-552-4040,"","",,,,800 Riversport Dr.,"",Oklahoma City,OK,,73129,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,okc boathouse foundation
+684,1,OSU Institute of Technology,,f,,918-293-4940,"","",,,,1801 E. 4th St.,"",Okmulgee,OK,,74447,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,osu institute of technology
+690,1,Panama Public Schools,,t,,918-963-0416,"","",,,,401 High School Dr.,"",Panama,OK,,74951,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,panama public schools
+696,1,Parkin Archeological State Park,,t,,870-755-2330,"","",,,,60 Hwy 184 North,"",Parkin,AR,,72373,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,parkin archeological state park
+703,1,Peaches N Pirates Preschool,,t,,9182326396,"","",,,, 217 S. 6th St. ,"",Porter,OK,,74454,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,peaches n pirates preschool
+710,1,Petit Jean State Park,,t,,479-427-8012,"","",,,,1285 Petit Jean Mountain Road,"",Morrilton,AR,,72110,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,petit jean state park
+712,1,Pick-it Construction Inc.,,t,,479-225-2533,479-973-5109,"",,,,10024 Cambell Road,"",Fayetteville,AR,,72701,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,pick it construction inc
+720,1,Play to Learn ,,t,,405-740-1765,"","",,,,4420 E I-240 Service Road,"",Oklahoma City,OK,,73135,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,play to learn
+727,1,Potlatch Deltic Corporation,,t,,501-555-5555,"","",,,,Champagnolle Park,16800 Champagnolle Dr.,Little Rock,AR,,72211,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,potlatch deltic corporation
+734,1,Pryor First United Methodist Church,,t,,9188250346,"","",,,,400 E. Graham Ave. ,"",Pryor,OK,,74361,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,pryor first united methodist church
+741,1,Rausch Coleman Homes,,t,,918-218-8843,"","",,,,4058 North College Avenue,"Suite 300, Box 9",Fayetteville,AR,,72703,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,rausch coleman homes
+749,1,Renaissance Apartments at Lakeshore,,t,,409-720-7107,"","",,,,920 Procter St.,"",Port Arthur,TX,,77640,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,renaissance apartments at lakeshore
+756,1,Ridge at South County HOA,,t,,727-278-7448,"","",,,,5955 East 142nd Place South,"",Bixby,OK,,74008,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,ridge at south county hoa
+760,1,River Bend Estates,,t,,405-209-8424,"","",,,,6612 Sandlewood Dr.,"",Oklahoma City,OK,,73132,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,river bend estates
+762,1,River West Apartments,,t,, 918-240-8619,"","",,,,800 W. 21st St.,"",Tulsa,OK,,74107,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,river west apartments
+769,1,Rollingwood Elementary,,t,,405-818-2867,"","",,,,6301 N Ann Arbor Ave,"",Oklahoma City,OK,,73122,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,rollingwood elementary
+776,1,Rural Special School District,,t,,870-213-8361,"","",,,,13237 Highway 263,"",Fox,AR,,72051,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,rural special school district
+782,1,Santa Fe Hills Charter School,,f,,405-429-0407,"","",,,,6921 Plaza Mayor Boulevard,"",Oklahoma City,OK,,73149,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,santa fe hills charter school
+792,1,Sharon Holtsclaw,,f,,816-262-0719,"","",,,,320 N. Ryans Way,"",St. Joseph,MO,,64506,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,sharon holtsclaw
+797,1,Shawnee Public Schools - EWF 2025,,t,,405.416.4440,"","",,,,326 North Union Avenue,"",Shawnee,OK,,74801,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,shawnee public schools ewf 2025
+805,1,Soldier Creek Elementary School,,f,,405-739-1676,"","",,,,9021 SE 15th St.,"",Midwest City,OK,,73130,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,soldier creek elementary school
+811,1,Southside Elementary,,t,,501-743-3567,"","",,,,2600 South Pine Street,"",Cabot,AR,,72023,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,southside elementary
+814,1,South Yukon Church of Christ,,f,,405-618-8211,"","",,,,11700 NW 10th St.,"",Yukon,OK,,73099,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,south yukon church of christ
+819,1,Stagecoach Elementary School,,t,,501-259-8130,"","",,,,850 S. Stagecoach Rd.,"",Cabot,AR,,72023,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,stagecoach elementary school
+827,1,St. John Nepomuk Catholic School,,t,,405-354-2743,405-203-0346,"",,,,600 S. Garth Brooks Blvd,"",Yukon,OK,,73099,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,st john nepomuk catholic school
+835,1,Stuart Public Schools,,t,,918-546-2627,"","",,,,8837 4th Street,"",Stuart,OK,,74570,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,stuart public schools
+840,1,Sweetwater Elementary School,,f,,580-729-2411,"","",,,,11107 OK-30,"",Sweetwater,OK,,73666,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,sweetwater elementary school
+847,1,Tecumseh Cross Timbers Elementary,,t,,832-418-9207,"","",,,,1111 W. Highland,"",Techumseh,OK,,74873,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tecumseh cross timbers elementary
+852,1,The Center For Individuals With Physical Challenges,,t,,918-794-4507,"","",,,,815 S. Utica,"",Tulsa,OK,,74104,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,the center for individuals with physical challenges
+861,1,The Rock - Jonesboro,,t,,870-932-7618,"","",,,,4318 E. Johnson Ave.,"",Jonesboro,AR,,72401,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,the rock jonesboro
+864,1,The Urban Mission,,t,,405-946-1556,"","",,,,3737 N. Portland Ave.,"",Oklahoma City,OK,,73112,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,the urban mission
+869,1,Timberland Partners - Sullivan Square Apartments,,t,,479-715-1134,"","",,,,1102 SW Sullivan Way,"",Bentonville,AR,,72712,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,timberland partners sullivan square apartments
+881,1,Town of Gore - Ray Fine Memorial Park,,f,,918-489-2636,"","",,,,305 Ray Fine Dr,"",Gore,OK,,74435,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of gore ray fine memorial park
+889,1,Town of Slaughterville,,f,,918-628-1255,"","",,,,10701 US Highway 77,"",Lexington,OK,,73051,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,town of slaughterville
+895,1,Townsend Elementary-Midwest City-Del City Schools,,t,,405-739-1640,"","",,,,7217 S.E. 15th Street,"",Midwest City,OK,,73110,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,townsend elementary midwest city del city schools
+903,1,Trumann Sports and Recreation,,t,,8702841402,"","",,,,16179 Pecan Grove Road,"",Trumann,AR,,72472,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,trumann sports and recreation
+912,1,Tulsa Expo Square,,t,,620-210-0927,"","",,,,4145 E. 21st St.,"",Tulsa,OK,,74114,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,tulsa expo square
+917,1,Twenty One Installers,,t,,214-718-0720,"","",,,,1233 Hilltop Dr.,"",Cedar Hill,TX,,75104,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,twenty one installers
+926,1,University of Tulsa,,t,,918-631-5060,"","",,,,326 S. College Ave.,"",Tulsa,OK,,74104,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,university of tulsa
+931,1,Van Buren School District - Rena Elementary,,t,,479-719-6772,"","",,,,Rena Elementary,720 Rena Rd,Van Buren,AR,,72956,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,van buren school district rena elementary
+939,1,Villas at Emerald Falls,,t,,(918) 859-5584,"","",,,,30550 E 65th St S,"",Broken Arrow,OK,,74014,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,villas at emerald falls
+947,1,Washington Middle School,,t,,405-288-2428,"","",,,,503 Turner,"",Washington,OK,,73093,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,washington middle school
+954,1,West Plains Housing Authority,,f,,417-862-0558,"","",,,,160 Crestwood Circle,"",West Plains,MO,,65775,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,west plains housing authority
+962,1,Wilburton Public Schools,,f,,918-465-2245,"","",,,,301 West Caddo Avenue,"",Wilburton,OK,,74578,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,wilburton public schools
+963,1,Wilhoit Properties- Elizabeth Place Apartments,,t,,405-262-3621,"","",,,,1955 South Shepherd Ave,"",El Reno,OK,,73036,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,wilhoit properties elizabeth place apartments
+965,1,Wilma Mankiller Capitol Park,,t,,918-237-8567,"","",,,,18050 S. Muskogee Ave.,"",Tahlequah,OK,,74464,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,wilma mankiller capitol park
+972,1,Wonderview Elementary School,,t,,501-354-8668,"","",,,,2436 Hwy 95,"",Hattieville,AR,,72063,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,wonderview elementary school
+978,1,Wright Christian Academy,,f,,918-438-0922,"","",,,,11391 E. Admiral Pl.,"",Tulsa,OK,,74116,,,,t,2025-12-13 20:22:47.116955,2025-12-13 20:22:47.116955,0,wright christian academy

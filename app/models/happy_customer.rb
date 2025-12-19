@@ -1,10 +1,15 @@
 class HappyCustomer < ApplicationRecord
+  include SetsHappyCompany
   has_many :happy_quotes
   has_many :happy_orders
   has_many :happy_reminders, as: :remindable
   has_many :happy_install_sites
   geocoded_by :address, latitude: :mailing_lat, longitude: :mailing_long
   #belongs_to :user
+  belongs_to :happy_customer_company, optional: true
+
+  validates :happy_customer_company_id, presence: true, on: :create
+
 
   validates :customer_name,      presence: true
   validates :first_name,      presence: true
