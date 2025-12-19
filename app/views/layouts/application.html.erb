@@ -21,30 +21,33 @@
       <%= render 'layouts/navigation' %>
     </header>
     <div class="container">
-
-      <%# Accessing the flash hash and removing the :timedout key %>
-
       <% if flash[:timedout] %>
-
         <% flash.delete(:timedout) %>
-
-        <%# Now, the :timedout key is no longer in the flash hash %>
-
       <% end %>
 
+    <% if devise_controller? %>
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-6 col-lg-5">
+          <% flash.each do |name, msg| %>
+            <%= content_tag(:div, class: "alert alert-#{name}") do %>
+              <%= msg %>
+              <button type="button" class="close" data-bs-dismiss="alert">&times;</button>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    <% else %>
       <% flash.each do |name, msg| %>
-        <%= content_tag(:div, class: "alert alert-#{name}") do%>
-            <%=msg%>
-            <button type="button" class="close" data-bs-dismiss="alert">&times;</button>
-        <%end%>
+        <%= content_tag(:div, class: "alert alert-#{name}") do %>
+          <%= msg %>
+          <button type="button" class="close" data-bs-dismiss="alert">&times;</button>
+        <% end %>
       <% end %>
-    <!-- <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
     <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %> -->
-    <%= yield %>
+
+<%= yield %>
+
+
     </div>
   </body>
     <footer>
