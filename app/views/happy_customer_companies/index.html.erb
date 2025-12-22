@@ -20,7 +20,7 @@
       <tr>
         <th style="width:70px;">ID</th>
         <th>Company</th>
-        <th style="width:120px;">Contacts</th>
+        <th style="width:120px;">Customers</th>
         <th style="width:240px;"></th>
       </tr>
     </thead>
@@ -29,7 +29,7 @@
         <tr>
           <td><%= c.id %></td>
           <td><%= link_to c.company_name, happy_customer_company_path(c) %></td>
-          <td><%= c.contacts_count %></td>
+          <td><%= c.customers_count %></td>
           <td class="text-end" style="white-space: nowrap;">
             <%= link_to "Edit", edit_happy_customer_company_path(c) %>
           </td>

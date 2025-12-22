@@ -13,25 +13,25 @@ class HappyCustomerCompaniesController < ApplicationController
 
     @companies = @companies
       .left_joins(:happy_customers)
-      .select("happy_customer_companies.*, COUNT(happy_customers.id) AS contacts_count")
+      .select("happy_customer_companies.*, COUNT(happy_customers.id) AS customers_count")
       .group("happy_customer_companies.id")
 
     @companies = @companies.page(params[:page])
   end
 
   def show
-  @contact_search = params.fetch(:search, {}).permit(:q)
-  q = @contact_search[:q].to_s.strip
+  @customer_search = params.fetch(:search, {}).permit(:q)
+  q = @customer_search[:q].to_s.strip
 
-  @contacts = @happy_customer_company.happy_customers.order("customer_name ASC")
+  @customers = @happy_customer_company.happy_customers.order("customer_name ASC")
   if q.present?
-    @contacts = @contacts.where(
+    @customers = @customers.where(
       "customer_name ILIKE :q OR email ILIKE :q OR business_phone ILIKE :q",
       q: "%#{q}%"
     )
   end
 
-  @contacts = @contacts.page(params[:page])
+  @customers = @customers.page(params[:page])
 end
 
   def new

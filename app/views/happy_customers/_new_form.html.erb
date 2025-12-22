@@ -1,10 +1,10 @@
 <div class="container mb-5">
   <!-- <h2>Happy Customers</h2> -->
-  <h2><%= @happycustomer.persisted? ? "Edit Contact" : "New Contact" %></h2>
+  <h2><%= @happycustomer.persisted? ? "Edit Customer" : "New Customer" %></h2>
 
   <br>
 
-  <%# show which company this contact belongs to (if selected / linked) %>
+  <%# show which company this customer belongs to (if selected / linked) %>
   <% company = @happycustomer.happy_customer_company %>
 
   <% if company.present? %>
@@ -34,9 +34,9 @@
 
   <%= f.hidden_field :happy_customer_company_id %>
 
-  <%#= f.input :customer_name, label: "Contact name" %>
+  <%#= f.input :customer_name, label: "Customer name" %>
 
-  <%= f.input :customer_name, label: "Contact name", placeholder: "Jane Smith / Accounts Payable" %>
+  <%= f.input :customer_name, label: "Customer name", placeholder: "Jane Smith / Accounts Payable" %>
 
 
 
@@ -132,7 +132,7 @@
 
   <div class="form-group row mb-0">
     <div class="col-sm-9">
-      <% submit_label = @happycustomer.persisted? ? "Update Contact" : "Create Contact" %>
+      <% submit_label = @happycustomer.persisted? ? "Update Customer" : "Create Customer" %>
       <%= f.button :submit, submit_label, class: "btn-primary" %>
 
       <%#= f.button :submit, class: "btn-primary" %>

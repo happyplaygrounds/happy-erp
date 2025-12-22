@@ -14,7 +14,7 @@
       <%= link_to "Edit Company", edit_happy_customer_company_path(@happy_customer_company),
             class: "btn btn-outline-secondary" %>
 
-      <%= link_to "Add Contact",
+      <%= link_to "Add Customer",
             new_happy_customer_path(happy_customer: { happy_customer_company_id: @happy_customer_company.id }),
             class: "btn btn-primary" %>
     </div>
@@ -22,13 +22,13 @@
 
   <hr>
 
-  <!-- Contact Search (scoped to this company) -->
+  <!-- Customer Search (scoped to this company) -->
   <%= form_with url: happy_customer_company_path(@happy_customer_company), method: :get, scope: :search, local: true do |f| %>
     <div class="row g-2 align-items-end">
       <div class="col-md-8">
-        <label class="form-label">Search Contacts</label>
+        <label class="form-label">Search Customers</label>
         <%= f.text_field :q,
-              value: @contact_search[:q],
+              value: @customer_search[:q],
               class: "form-control",
               placeholder: "Name, email, phone…" %>
       </div>
@@ -41,8 +41,8 @@
   <br>
 
   <div class="d-flex justify-content-between align-items-center">
-    <h4 class="mb-0">Contacts</h4>
-    <span class="text-muted small"><%= @contacts.total_count rescue "" %></span>
+    <h4 class="mb-0">Customers</h4>
+    <span class="text-muted small"><%= @customers.total_count rescue "" %></span>
   </div>
 
   <div class="table-responsive mt-2">
@@ -50,14 +50,14 @@
       <thead class="table-dark">
         <tr>
           <th style="width:70px;">ID</th>
-          <th>Contact</th>
+          <th>Customer</th>
           <th>Email</th>
           <th style="width:160px;">Phone</th>
           <th style="width:320px;"></th>
         </tr>
       </thead>
       <tbody>
-        <% @contacts.each do |c| %>
+        <% @customers.each do |c| %>
           <tr>
             <td><%= c.id %></td>
             <td class="text-nowrap"><%= c.customer_name %></td>
@@ -79,6 +79,6 @@
     </table>
   </div>
 
-  <%= paginate @contacts, window: 2 if defined?(paginate) %>
+  <%= paginate @customers, window: 2 if defined?(paginate) %>
 </div>
 

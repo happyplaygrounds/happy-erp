@@ -1,5 +1,5 @@
 <div class="container mb-5">
-  <h2>Edit - Happy Contacts</h2>
+  <h2>Edit - Happy Customers</h2>
   <%#= link_to 'Home', root_path %>
 
   <% company = @happycustomer.happy_customer_company %>
@@ -33,7 +33,7 @@
 
   <%= f.hidden_field :happy_customer_company_id %>
 
-  <%= f.input :customer_name, label: "Contact name", placeholder: "Jane Smith / Accounts Payable" %>
+  <%= f.input :customer_name, label: "Customer name", placeholder: "Jane Smith / Accounts Payable" %>
 
   <%#= f.input :customer_name %>
 
@@ -127,7 +127,7 @@
 
   <div class="form-group row mb-0">
     <div class="col-sm-9">
-      <% submit_label = @happycustomer.persisted? ? "Update Contact" : "Create Contact" %>
+      <% submit_label = @happycustomer.persisted? ? "Update Customer" : "Create Customer" %>
       <%= f.button :submit, submit_label, class: "btn-primary" %>
 
       <%#= f.button :submit, class: "btn-primary" %>

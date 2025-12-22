@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Customer Contactss</h2>
+  <h2>Customers</h2>
   <br>
 
   <%= link_to 'Home', root_path %>
@@ -109,7 +109,7 @@
 
   <div class="form-group row mb-0">
     <div class="col-sm-9">
-      <% submit_label = @happycustomer.persisted? ? "Update Contact" : "Create Contact" %>
+      <% submit_label = @happycustomer.persisted? ? "Update Customer" : "Create Customer" %>
 
       <%= f.button :submit, submit_label, class: "btn-primary" %>
       <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
