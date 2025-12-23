@@ -485,7 +485,7 @@ def start
   @company_id = params[:happy_customer_company_id].presence
   @companies  = HappyCustomerCompany.order(:company_name)
 
-  @contacts = @company_id ? HappyCustomer.where(happy_customer_company_id: @company_id).order(:customer_name) : []
+  @customers = @company_id ? HappyCustomer.where(happy_customer_company_id: @company_id).order(:customer_name) : []
 end
 
 def start_create
@@ -493,7 +493,7 @@ def start_create
 
   if customer_id.blank?
     redirect_to start_happy_quotes_path(happy_customer_company_id: params[:happy_customer_company_id]),
-                alert: "Please select a contact."
+                alert: "Please select a customer."
     return
   end
 

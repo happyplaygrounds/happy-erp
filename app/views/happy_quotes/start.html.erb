@@ -3,7 +3,7 @@
   <h2>Start a Quote</h2>
   <br>
 
-  <!-- Step 1: pick company (GET reloads page to populate contacts) -->
+  <!-- Step 1: pick company (GET reloads page to populate customers) -->
   <%= form_with url: start_happy_quotes_path, method: :get, local: true do %>
     <div class="row align-items-end">
       <div class="col-md-8">
@@ -25,16 +25,16 @@
 
   <br>
 
-  <!-- Step 2: pick contact (POST redirects into existing quote new flow) -->
+  <!-- Step 2: pick customers (POST redirects into existing quote new flow) -->
   <%= form_with url: start_create_happy_quotes_path, method: :post, local: true do %>
     <%= hidden_field_tag :happy_customer_company_id, @company_id %>
 
     <div class="row align-items-end">
       <div class="col-md-8">
-        <label class="form-label">Contact</label>
-        <select name="happy_customer_id" class="form-select" <%= "disabled" if @contacts.empty? %>>
-          <option value=""><%= @contacts.empty? ? "Select a company first…" : "Select a contact…" %></option>
-          <% @contacts.each do |c| %>
+        <label class="form-label">Customer</label>
+        <select name="happy_customer_id" class="form-select" <%= "disabled" if @customers.empty? %>>
+          <option value=""><%= @customers.empty? ? "Select a company first…" : "Select a customer…" %></option>
+          <% @customers.each do |c| %>
             <option value="<%= c.id %>"><%= c.customer_name %></option>
           <% end %>
         </select>
@@ -42,11 +42,11 @@
 
       <div class="col-md-4">
         <% if @company_id.present? %>
-          <%= link_to "New Contact",
+          <%= link_to "New Customer",
                 new_happy_customer_path(happy_customer: { happy_customer_company_id: @company_id }),
                 class: "btn btn-outline-secondary w-100" %>
         <% else %>
-          <button class="btn btn-outline-secondary w-100" disabled>New Contact</button>
+          <button class="btn btn-outline-secondary w-100" disabled>New Customer</button>
         <% end %>
       </div>
     </div>
