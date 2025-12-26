@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_12_10_000916) do
+ActiveRecord::Schema[7.1].define(version: 2025_12_24_144209) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_12_10_000916) do
   end
 
   create_table "happy_categories", force: :cascade do |t|
-    t.bigint "happy_company_id"
+    t.bigint "happy_company_id", default: 1, null: false
     t.bigint "happy_profit_center_id"
     t.bigint "happy_vendor_id"
     t.string "category"
@@ -60,7 +60,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_12_10_000916) do
   end
 
   create_table "happy_customer_companies", force: :cascade do |t|
-    t.bigint "happy_company_id"
+    t.bigint "happy_company_id", default: 1, null: false
     t.string "company_name"
     t.string "customer_type"
     t.boolean "taxable", default: true
@@ -86,11 +86,11 @@ ActiveRecord::Schema[7.1].define(version: 2025_12_10_000916) do
     t.integer "lock_version", default: 0
     t.string "company_name_normalized"
     t.index ["company_name"], name: "index_happy_customer_companies_on_company_name"
-    t.index ["happy_company_id"], name: "index_happy_customer_companies_on_happy_companies_id", unique: true
+    t.index ["happy_company_id", "company_name_normalized"], name: "uniq_hcc_norm_name_per_tenant", unique: true, where: "((company_name_normalized IS NOT NULL) AND ((company_name_normalized)::text <> ''::text))"
   end
 
   create_table "happy_customers", force: :cascade do |t|
-    t.bigint "happy_company_id"
+    t.bigint "happy_company_id", default: 1, null: false
     t.bigint "happy_profit_center_id"
     t.bigint "happy_customer_company_id"
     t.string "customer_name"
@@ -124,6 +124,9 @@ ActiveRecord::Schema[7.1].define(version: 2025_12_10_000916) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "lock_version", default: 0
+    t.index "happy_company_id, lower(TRIM(BOTH FROM email))", name: "idx_happy_customers_email_per_tenant", where: "((email IS NOT NULL) AND (TRIM(BOTH FROM email) <> ''::text))"
+    t.index "happy_company_id, lower(TRIM(BOTH FROM email))", name: "uniq_happy_customers_email_per_tenant", unique: true, where: "((email IS NOT NULL) AND (TRIM(BOTH FROM email) <> ''::text))"
+    t.index ["happy_customer_company_id"], name: "idx_happy_customers_company_id"
     t.index ["id"], name: "index_happy_customers_on_id", unique: true
     t.index ["id"], name: "primary_customer_index", unique: true
     t.index ["last_name"], name: "index_happy_customers_on_last_name"
@@ -214,7 +217,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_12_10_000916) do
 
   create_table "happy_po_receiver_logs", force: :cascade do |t|
     t.bigint "happy_po_line_id"
-    t.bigint "happy_company_id"
+    t.bigint "happy_company_id", default: 1, null: false
     t.bigint "happy_profit_center_id"
     t.bigint "happy_vendor_id", null: false
     t.string "number", null: false
@@ -239,7 +242,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_12_10_000916) do
 
   create_table "happy_po_receivers", force: :cascade do |t|
     t.bigint "happy_po_line_id"
-    t.bigint "happy_company_id"
+    t.bigint "happy_company_id", default: 1, null: false
     t.bigint "happy_profit_center_id"
     t.bigint "happy_vendor_id", null: false
     t.string "number", null: false
@@ -263,7 +266,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_12_10_000916) do
   end
 
   create_table "happy_pos", force: :cascade do |t|
-    t.bigint "happy_company_id"
+    t.bigint "happy_company_id", default: 1, null: false
     t.bigint "happy_profit_center_id"
     t.bigint "happy_customer_id"
     t.bigint "happy_vendor_id"
@@ -366,7 +369,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_12_10_000916) do
   end
 
   create_table "happy_products", force: :cascade do |t|
-    t.bigint "happy_company_id"
+    t.bigint "happy_company_id", default: 1, null: false
     t.bigint "happy_profit_center_id"
     t.bigint "happy_category_id"
     t.bigint "happy_vendor_id"
@@ -397,7 +400,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_12_10_000916) do
   end
 
   create_table "happy_profit_centers", force: :cascade do |t|
-    t.bigint "happy_company_id"
+    t.bigint "happy_company_id", default: 1, null: false
     t.string "profit_center_name"
     t.string "sales_region"
     t.string "business_phone"
@@ -606,7 +609,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_12_10_000916) do
   end
 
   create_table "happy_quotes", force: :cascade do |t|
-    t.bigint "happy_company_id"
+    t.bigint "happy_company_id", default: 1, null: false
     t.bigint "happy_profit_center_id"
     t.bigint "happy_customer_id"
     t.string "number"
@@ -850,7 +853,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_12_10_000916) do
   end
 
   create_table "happy_vendor_companies", force: :cascade do |t|
-    t.bigint "happy_company_id"
+    t.bigint "happy_company_id", default: 1, null: false
     t.string "company_name"
     t.string "vendor_type"
     t.boolean "taxable", default: true
@@ -887,7 +890,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_12_10_000916) do
   end
 
   create_table "happy_vendor_pricelists", force: :cascade do |t|
-    t.bigint "happy_company_id"
+    t.bigint "happy_company_id", default: 1, null: false
     t.bigint "happy_profit_center_id"
     t.bigint "happy_vendor_id"
     t.string "pricelist_name"
@@ -906,7 +909,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_12_10_000916) do
   end
 
   create_table "happy_vendors", force: :cascade do |t|
-    t.bigint "happy_company_id"
+    t.bigint "happy_company_id", default: 1, null: false
     t.bigint "happy_profit_center_id"
     t.bigint "happy_vendor_company_id"
     t.string "vendor_name"
