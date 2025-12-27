@@ -14,16 +14,17 @@
   <% end %>
   <br>
   <div class="table-responsive" id="quotes-table">
-  <table class="table table-striped align-middle">
-    <colgroup>
-      <col style="width:10%">
-      <col style="width:12%">
-      <col style="width:12%">
-      <col>
-      <col>
-      <col>
-      <col style="width:26%">
-    </colgroup>
+    <table class="table table-striped align-middle table-fixed">
+      <colgroup>
+        <col style="width: 95px">   <!-- Quote -->
+        <col style="width: 110px">  <!-- Date -->
+        <col style="width: 110px">  <!-- Total -->
+        <col style="width: 180px">  <!-- Internal -->
+        <col style="width: 180px">  <!-- External -->
+        <col style="width: 180px">  <!-- PO -->
+        <col style="width: 200px">  <!-- Actions -->
+      </colgroup>
+
 
     <thead class="table-light">
       <tr>
@@ -44,19 +45,28 @@
           <td class="text-nowrap"><%= quote.quote_date %></td>
           <td class="text-end text-nowrap"><%= number_to_currency(quote.total || 0) %></td>
 
-          <td><%= quote.internal_notes.presence || "&nbsp;".html_safe %></td>
-          <td><%= quote.external_notes.presence || "&nbsp;".html_safe %></td>
-          <td><%= quote.special_instructions.presence || "&nbsp;".html_safe %></td>
 
-          <td class="text-end text-nowrap">
-            <div class="btn-group btn-group-sm" role="group">
-              <%= link_to "Show", quote, class: "btn btn-outline-secondary" %>
-              <%= link_to "Edit", edit_happy_quote_path(quote), class: "btn btn-outline-secondary" %>
-              <%= link_to "Purchase Orders",
-                    happy_quote_po_path(quote, happy_customer_id: quote.happy_customer_id),
-                    class: "btn btn-outline-secondary" %>
-            </div>
+          <td class="notes-cell" title="<%= quote.internal_notes.to_s %>">
+              <%= quote.internal_notes.present? ? simple_format(h(quote.internal_notes)) : "&nbsp;".html_safe %>
           </td>
+          <td class="notes-cell" title="<%= quote.external_notes.to_s %>">
+              <%= quote.external_notes.present? ? simple_format(h(quote.external_notes)) : "&nbsp;".html_safe %>
+          </td>
+          <td class="notes-cell" title="<%= quote.special_instructions.to_s %>">
+              <%= quote.special_instructions.present? ? simple_format(h(quote.special_instructions)) : "&nbsp;".html_safe %>
+          </td>
+
+      <td class="text-end">
+      <div class="d-grid gap-1">
+        <%= link_to "Show", quote, class: "btn btn-outline-secondary btn-sm" %>
+        <%= link_to "Edit", edit_happy_quote_path(quote), class: "btn btn-outline-secondary btn-sm" %>
+        <%= link_to "Purchase Orders",
+          happy_quote_po_path(quote, happy_customer_id: quote.happy_customer_id),
+          class: "btn btn-outline-secondary btn-sm" %>
+      </div>
+      </td>
+
+
         </tr>
       <% end %>
     </tbody>

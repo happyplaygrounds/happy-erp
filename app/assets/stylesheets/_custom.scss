@@ -99,4 +99,35 @@ h1 {
   padding-bottom: .75rem;
 }
 
+/* css for happy quote table */
+.table-fixed {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.notes-cell {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  vertical-align: top;
+}
+
+/* clamp to 3 lines */
+.notes-cell > p {
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#quotes-table .btn-group {
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+#quotes-table .btn-group .btn {
+  white-space: nowrap;
+}
 
