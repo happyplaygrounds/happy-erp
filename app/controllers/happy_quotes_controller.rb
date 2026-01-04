@@ -10,7 +10,7 @@ include Reminder
   @search_number = @search[:number].presence
 
   if @search_number
-    @happyquote = HappyQuote.find_by(id: @search_number)
+    @happyquote = HappyQuote.find_by(number: @search_number)
 
     if @happyquote.nil?
       flash.now[:alert] = "Quote #{@search_number} not found!"
