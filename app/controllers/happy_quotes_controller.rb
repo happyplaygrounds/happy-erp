@@ -16,9 +16,12 @@ include Reminder
       flash.now[:alert] = "Quote #{@search_number} not found!"
       @search_number = nil   # clears the input after invalid search
     else
-      @cust_id = @happyquote.happy_customer_id
+     # @cust_id = @happyquote.happy_customer_id
+     # @happyquote = HappyQuote.where(
+     #   happy_customer_id: @cust_id,
+     #   number: @search_number
+     # ).order(:number)
       @happyquote = HappyQuote.where(
-        happy_customer_id: @cust_id,
         number: @search_number
       ).order(:number)
     end
